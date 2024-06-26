@@ -1,10 +1,20 @@
-<problems>
+<problemas>
+
 <problem>
-<src> IMOSL 2022A1 </src>
-<txt> 
+<src>IMOSL 2022 A1</src>
+<done>0</done>
+<txt>
 Let $(a_n)_{n\geq 1}$ be a sequence of positive real numbers with the property that
 $$(a_{n+1})^2 + a_na_{n+2} \leq a_n + a_{n+2}$$for all positive integers $n$. Show that $a_{2022}\leq 1$.
 </txt>
-<id>1</id>
+<id>633974672407561</id>
 </problem>
-</problems>
+<problem>
+<src>IMOSL 2022 A2</src>
+<done>0</done>
+<txt>
+Let $k\ge2$ be an integer. Find the smallest integer $n \ge k+1$ with the property that there exists a set of $n$ distinct real numbers such that each of its elements can be written as a sum of $k$ other distinct elements of the set.
+</txt>
+<id>1837105952530316058</id>
+</problem>
+</problemas>

@@ -1,0 +1,7 @@
+<problem>
+<src>IMOSL 2022 A2</src>
+<done>0</done>
+<txt> 
+Let $k\ge2$ be an integer. Find the smallest integer $n \ge k+1$ with the property that there exists a set of $n$ distinct real numbers such that each of its elements can be written as a sum of $k$ other distinct elements of the set.
+</txt>
+</problem>
