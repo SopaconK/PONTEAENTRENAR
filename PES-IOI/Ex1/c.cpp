@@ -2,8 +2,8 @@
 using namespace std;
 #define pb push_back
 using lli=long long int;
-#define deb(x) ;
-//#define endl '\n'
+#define deb(x) cout<<#x<<": "<<x<<endl;
+#define endl '\n'
 
 
 auto comp=[](pair<lli,lli> a, pair<lli,lli> b){
@@ -29,12 +29,12 @@ struct segtree{
 
     void add1(lli a, lli b, lli c){
         if(a>b) return;
-        deb("sum-----------------");
-        deb(a);
-        deb(b);
-        deb(c);
-        deb(l);
-        deb(r);
+//        deb("sum-----------------");
+  //      deb(a);
+    //    deb(b);
+      //  deb(c);
+        //deb(l);
+       // deb(r);
         if(a<=l && r<=b){
             sum1+=c;
             return;
@@ -57,10 +57,10 @@ struct segtree{
 
     lli val1(lli ind){
         if(ind<l || r<ind) return 0;
-         deb(ind);
-        deb(l);
-        deb(r);
-        deb(sum1);
+//         deb(ind);
+  //      deb(l);
+    //    deb(r);
+      //  deb(sum1);
         if(l==r) return sum1;
         return sum1+left->val1(ind)+right->val1(ind);
     }
@@ -115,14 +115,14 @@ void solve(){
         }
         lli ini=v[asdas].second;
         vector<pair<lli,lli>> rangos2;
-        deb(ini);
+//        deb(ini);
         for(lli i=0; i<rangos.size(); ++i){
             lli l=rangos[i].first;
             lli r=rangos[i].second;
             lli cost=ini+tree->val2(l);
-            deb(l);
-            deb(r);
-            deb(cost);
+  //          deb(l);
+    //        deb(r);
+      //      deb(cost);
             while(l<r-1){
                 lli m=(l+r)/2;
                 if(queries[m].first<cost){
@@ -132,10 +132,10 @@ void solve(){
                     r=m-1;
                 }
             }
-            deb(l);
-            deb(r);
-            deb(queries[l].first);
-            deb(queries[r].first);
+        //    deb(l);
+          //  deb(r);
+            //deb(queries[l].first);
+            //deb(queries[r].first);
             if(queries[r].first<cost){
                 l=r;
             }
@@ -146,7 +146,7 @@ void solve(){
                 if(l+1<=rangos[i].second){
                     rangos2.pb({l+1,rangos[i].second});
                 }
-                deb("xd");
+           //     deb("xd");
             }
             else{
                tree->add1(l, rangos[i].second,1 );
@@ -160,8 +160,8 @@ void solve(){
         rangos=rangos2;
     }
     for(lli i=0; i<k; ++i){
-            deb(queries[i].second);
-            deb(tree->val1(i));
+    //        deb(queries[i].second);
+      //      deb(tree->val1(i));
                 ans[queries[i].second]+=tree->val1(i);
            //     queries[i].first-=tree->val2(i);
             }
