@@ -107,12 +107,12 @@ void solve(){
     val2.pb(0);
     for(lli asdas=0; asdas<n; ++asdas){
         cont++;
-        if(cont==15){
+        if(cont>=15){
             cont=1;
             for(lli i=0; i<rangos.size(); ++i){
                 for(lli j=rangos[i].first; j<=rangos[i].second; ++j){
                     ans[queries[j].second]+=val1[i];
-                    queries[i].first-=val2[i];
+                    queries[j].first-=val2[i];
                 }
             }
    //         tree=new segtree(0,k-1);
@@ -175,13 +175,8 @@ void solve(){
         val1=val1aux;
         val2=val2aux;
         rangos=rangos2;
-        for(lli i=0; i<rangos.size(); ++i){
-            //deb(val1[i]);
-          //  deb(val2[i]);
-        //    deb(rangos[i].first);
-      //      deb(rangos[i].second);
-    //        deb("-----------");
-        }
+
+
     }
     for(lli i=0; i<rangos.size(); ++i){
                 for(lli j=rangos[i].first; j<=rangos[i].second; ++j){
