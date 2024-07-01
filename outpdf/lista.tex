@@ -1,0 +1,1286 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{ amssymb }
+\usepackage[dvipsnames]{xcolor}
+\definecolor{red1}{RGB}{255, 153, 153}
+\definecolor{green1}{RGB}{204, 255, 204}
+\definecolor{blue1}{RGB}{204, 255, 255}
+\definecolor{yellow1}{RGB}{255, 247, 160}
+
+\definecolor{red2}{RGB}{255, 102, 102}
+\definecolor{green2}{RGB}{108, 255, 108}
+\definecolor{blue2}{RGB}{94, 204, 255}
+\definecolor{yellow2}{RGB}{255, 250, 104}
+
+\definecolor{red2.5}{RGB}{255,76,76}
+\definecolor{green2.5}{RGB}{54, 247, 54}
+\definecolor{blue2.5}{RGB}{51, 189, 255}
+\definecolor{yellow2.5}{RGB}{255, 242, 52}
+
+
+\definecolor{red3}{RGB}{255, 51, 51}
+\definecolor{green3}{RGB}{0, 240, 0}
+\definecolor{blue3}{RGB}{9, 175, 255}
+\definecolor{yellow3}{RGB}{255, 234, 0}
+
+\definecolor{red3.5}{RGB}{229, 25, 25}
+\definecolor{green3.5}{RGB}{0, 194, 0}
+\definecolor{blue3.5}{RGB}{4, 143, 209}
+\definecolor{yellow3.5}{RGB}{255,220,0}
+
+\definecolor{red4}{RGB}{204, 0, 0}
+\definecolor{green4}{RGB}{0, 149, 0}
+\definecolor{blue4}{RGB}{0, 111, 164}
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\newcommand{\camod}[1]{\frac{\ZZ}{#1 \ZZ}}
+\newcommand{\modm}[1]{\text{ mod } #1}
+\newcommand{\campm}[1]{\frac{\ZZ}{m\ZZ}}
+\newcommand{\paren}[1]{\left(  #1 \right)}
+\newcommand{\proc}[1]{Esto va a aparecer si no procrastino :S (Procrastinando desde #1)}
+
+
+\title{matateiker}
+\subtitle{PONTE A ENTRENAR}
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Problemas}
+\begin{problem}[733773583946080]
+$AB$ and $AC$ are tangents to a circle $\omega$ with center $O$ at $B,C$ respectively. Point $P$ is a variable point on minor arc $BC$. The tangent at $P$ to $\omega$ meets $AB,AC$ at $D,E$ respectively. $AO$ meets $BP,CP$ at $U,V$ respectively. The line through $P$ perpendicular to $AB$ intersects $DV$ at $M$, and the line through $P$ perpendicular to $AC$ intersects $EU$ at $N$. Prove that as $P$ varies, $MN$ passes through a fixed point.
+\end{problem}
+\begin{problem}[651308339506337942]
+Given a convex pentagon $ ABCDE. $ Let $ A_1 $ be the intersection of $ BD $ with $ CE $ and define $ B_1, C_1, D_1, E_1 $ similarly, $ A_2 $ be the second intersection of $ \odot (ABD_1),\odot (AEC_1) $ and define $ B_2, C_2, D_2, E_2 $ similarly. Prove that $ AA_2, BB_2, CC_2, DD_2, EE_2 $ are concurrent.
+\end{problem}
+\begin{problem}[5299971832672937326]
+Let $ABCD$ be a cyclic quadrilateral. Points $K, L, M, N$ are chosen on $AB, BC, CD, DA$ such that $KLMN$ is a rhombus with $KL \parallel AC$ and $LM \parallel BD$. Let $\omega_A, \omega_B, \omega_C, \omega_D$ be the incircles of $\triangle ANK, \triangle BKL, \triangle CLM, \triangle DMN$.
+
+Prove that the common internal tangents to $\omega_A$, and $\omega_C$ and the common internal tangents to $\omega_B$ and $\omega_D$ are concurrent.
+\end{problem}
+\begin{problem}[3838489129977355762]
+Two triangles $ABC$ and $A'B'C'$ are on the plane. It is known that each side length of triangle $ABC$ is not less than $a$, and each side length of triangle $A'B'C'$ is not less than $a'$. Prove that we can always choose two points in the two triangles respectively such that the distance between them is not less than $\sqrt{\dfrac{a^2+a'^2}{3}}$.
+\end{problem}
+\begin{problem}[5441518070935718077]
+	Let $ABC$ be an acute-angled triangle. The line through $C$ perpendicular to $AC$ meets the external angle bisector of $\angle ABC$ at $D$. Let $H$ be the foot of the perpendicular from $D$ onto $BC$. The point $K$ is chosen on $AB$ so that $KH \parallel AC$. Let $M$ be the midpoint of $AK$. Prove that $MC = MB + BH$.
+\end{problem}
+\begin{problem}[8053761138620448460]
+	Let $ABC$ be a scalene triangle, and points $O$ and $H$ be its circumcenter and orthocenter, respectively. Point $P$ lies inside triangle $AHO$ and satisfies $\angle AHP = \angle POA$. Let $M$ be the midpoint of segment $\overline{OP}$. Suppose that $BM$ and $CM$ intersect with the circumcircle of triangle $ABC$ again at $X$ and $Y$, respectively.
+
+Prove that line $XY$ passes through the circumcenter of triangle $APO$.
+\end{problem}
+\begin{problem}[836909183133087]
+Given a triangle $ \triangle{ABC} $ with circumcircle $ \Omega $. Denote its incenter and $ A $-excenter by $ I, J $, respectively. Let $ T $ be the reflection of $ J $ w.r.t $ BC $ and $ P $ is the intersection of $ BC $ and $ AT $. If the circumcircle of $ \triangle{AIP} $ intersects $ BC $ at $ X \neq P $ and there is a point $ Y \neq A $ on $ \Omega $ such that $ IA = IY $. Show that $ \odot\left(IXY\right) $ tangents to the line $ AI $.
+\end{problem}
+\begin{problem}[6116877365036470315]
+	Determine all functions $f$ defined on the set of all positive integers and taking non-negative integer values, satisfying the three conditions:
+$(i)$ $f(n) \neq 0$ for at least one $n$;
+$(ii)$ $f(x y)=f(x)+f(y)$ for every positive integers $x$ and $y$;
+$(iii)$ there are infinitely many positive integers $n$ such that $f(k)=f(n-k)$ for all $k<n$.
+\end{problem}
+\begin{problem}[5867489266334805897]
+	Let $ABCDE$ be a pentagon inscribed in a circle $\Omega$. A line parallel to the segment $BC$ intersects $AB$ and $AC$ at points $S$ and $T$, respectively. Let $X$ be the intersection of the line $BE$ and $DS$, and $Y$ be the intersection of the line $CE$ and $DT$.
+
+Prove that, if the line $AD$ is tangent to the circle $\odot(DXY)$, then the line $AE$ is tangent to the circle $\odot(EXY)$.
+\end{problem}
+\begin{problem}[952584318797289]
+Show that the inequality\[\sum_{i=1}^n \sum_{j=1}^n \sqrt{|x_i-x_j|}\leqslant \sum_{i=1}^n \sum_{j=1}^n \sqrt{|x_i+x_j|}\]holds for all real numbers $x_1,\ldots x_n.$
+\end{problem}
+\begin{problem}[8639636622304457736]
+Let $\triangle ABC$ be a triangle, and let $S$ and $T$ be the midpoints of the sides $BC$ and $CA$, respectively. Suppose $M$ is the midpoint of the segment $ST$ and the circle $\omega$ through $A, M$ and $T$ meets the line $AB$ again at $N$. The tangents of $\omega$ at $M$ and $N$ meet at $P$. Prove that $P$ lies on $BC$ if and only if the triangle $ABC$ is isosceles with apex at $A$.
+\end{problem}
+\begin{problem}[7017112574129036660]
+	Let $ABC$ be a triangle with $AB<AC$, and let $I_a$ be its $A$-excenter. Let $D$ be the projection of $I_a$ to $BC$. Let $X$ be the intersection of $AI_a$ and $BC$, and let $Y,Z$ be the points on $AC,AB$, respectively, such that $X,Y,Z$ are on a line perpendicular to $AI_a$. Let the circumcircle of $AYZ$ intersect $AI_a$ again at $U$. Suppose that the tangent of the circumcircle of $ABC$ at $A$ intersects $BC$ at $T$, and the segment $TU$ intersects the circumcircle of $ABC$ at $V$. Show that $\angle BAV=\angle DAC$.
+\end{problem}
+\begin{problem}[855628849330783]
+  Let $m$ and $n$ be positive integers.
+  The cells of a $2m \times 2n$ grid are colored black and white.
+  Suppose that for any cell $c$, a rook placed on $c$ attacks
+  more cells of the opposite color (not including $c$ itself).
+  Prove that every row and column contains
+  an equal number of black and white cells.
+\end{problem}
+\begin{problem}[9153191064326230951]
+Let scalene triangle $ABC$ have altitudes $AD, BE, CF$ and circumcenter $O$. The circumcircles of $\triangle ABC$ and $\triangle ADO$ meet at $P \ne A$. The circumcircle of $\triangle ABC$ meets lines $PE$ at $X \ne P$ and $PF$ at $Y \ne P$. Prove that $XY \parallel BC$.
+\end{problem}
+\begin{problem}[3470579368412517052]
+	A hunter and an invisible rabbit play a game on an infinite square grid. First the hunter fixes a colouring of the cells with finitely many colours. The rabbit then secretly chooses a cell to start in. Every minute, the rabbit reports the colour of its current cell to the hunter, and then secretly moves to an adjacent cell that it has not visited before (two cells are adjacent if they share an edge). The hunter wins if after some finite time either:
+the rabbit cannot move; or
+the hunter can determine the cell in which the rabbit started.
+Decide whether there exists a winning strategy for the hunter.
+\end{problem}
+\begin{problem}[275429739915708]
+Consider a $100\times 100$ square unit lattice $\textbf{L}$ (hence $\textbf{L}$ has $10000$ points). Suppose $\mathcal{F}$ is a set of polygons such that all vertices of polygons in $\mathcal{F}$ lie in $\textbf{L}$ and every point in $\textbf{L}$ is the vertex of exactly one polygon in $\mathcal{F}.$ Find the maximum possible sum of the areas of the polygons in $\mathcal{F}.$
+\end{problem}
+\begin{problem}[6136318250466883786]
+  Each of the $41$ dashed unit segments below is independently colored
+  either black or white, each randomly with probability $\half$.
+  The black segments thus form the walls of a maze
+  (but the white segments are passable).
+  \begin{center}
+  \begin{asy}
+  unitsize(1cm);
+  dotfactor *= 1.5;
+  draw(box((0,0), (6,5)), black+1.5);
+  label("$A$", (0.5,2.5), fontsize(12pt));
+  label("$B$", (5.5,2.5), fontsize(12pt));
+  for (int i=1; i<=5; ++i) {
+  draw((i,0)--(i,5), dashed+heavygray);
+  }
+  for (int j=1; j<=4; ++j) {
+  draw((1,j)--(5,j), dashed+heavygray);
+  }
+  for (int i=1; i<=5; ++i) {
+  for (int j=1; j<=4; ++j) {
+  dot((i,j));
+  }
+  }
+  \end{asy}
+  \end{center}
+  What is the probability that there will exist a
+  path from side $A$ to side $B$ that does not cross any of the black lines?
+\end{problem}
+\begin{problem}[639126468624733]
+Let $ABCDEF$ be a hexagon inscribed in a circle $\Omega$ such that triangles $ACE$ and $BDF$ have the same orthocenter. Suppose that segments $BD$ and $DF$ intersect $CE$ at $X$ and $Y$, respectively. Show that there is a point common to $\Omega$, the circumcircle of $DXY$, and the line through $A$ perpendicular to $CE$.
+\end{problem}
+\begin{problem}[3353450172272500341]
+Let $ABCD$ be a cyclic quadrilateral. Let $DA$ and $BC$ intersect at $E$ and let $AB$ and $CD$
+intersect at $F$. Assume that $A, E, F$ all lie on the same side of $BD$. Let $P$ be on segment $DA$
+such that $\angle CPD = \angle CBP$, and let $Q$ be on segment $CD$ such that $\angle DQA = \angle QBA$. Let $AC$ and $PQ$ meet at $X$. Prove that, if $EX = EP$, then $EF$ is perpendicular to $AC$.
+\end{problem}
+\begin{problem}[8690567757444826166]
+	A social network has $2019$ users, some pairs of whom are friends. Whenever user $A$ is friends with user $B$, user $B$ is also friends with user $A$. Events of the following kind may happen repeatedly, one at a time:
+Three users $A$, $B$, and $C$ such that $A$ is friends with both $B$ and $C$, but $B$ and $C$ are not friends, change their friendship statuses such that $B$ and $C$ are now friends, but $A$ is no longer friends with $B$, and no longer friends with $C$. All other friendship statuses are unchanged.
+Initially, $1010$ users have $1009$ friends each, and $1009$ users have $1010$ friends each. Prove that there exists a sequence of such events after which each user is friends with at most one other user.
+
+\end{problem}
+\begin{problem}[781756252908608]
+Let $n\geqslant 2$ be a positive integer and $a_1,a_2, \ldots ,a_n$ be real numbers such that\[a_1+a_2+\dots+a_n=0.\]Define the set $A$ by
+\[A=\left\{(i, j)\,|\,1 \leqslant i<j \leqslant n,\left|a_{i}-a_{j}\right| \geqslant 1\right\}\]Prove that, if $A$ is not empty, then
+\[\sum_{(i, j) \in A} a_{i} a_{j}<0.\]
+\end{problem}
+\begin{problem}[1580707630770476037]
+Two triangles intersect to form seven finite disjoint regions, six of which are triangles with area 1. The last region is a hexagon with area \(A\). Compute the minimum possible value of \(A\).
+\end{problem}
+\begin{problem}[6193947856984766386]
+Let $ABCD$ be a cyclic quadrilateral. Assume that the points $Q, A, B, P$ are collinear in this order, in such a way that the line $AC$ is tangent to the circle $ADQ$, and the line $BD$ is tangent to the circle $BCP$. Let $M$ and $N$ be the midpoints of segments $BC$ and $AD$, respectively. Prove that the following three lines are concurrent: line $CD$, the tangent of circle $ANQ$ at point $A$, and the tangent to circle $BMP$ at point $B$.
+\end{problem}
+\begin{problem}[5664985199661230516]
+In every row of a grid $100 \times n$ is written a permutation of the numbers $1,2 \ldots, 100$. In one move you can choose a row and swap two non-adjacent numbers with difference $1$. Find the largest possible $n$, such that at any moment, no matter the operations made, no two rows may have the same permutations.
+\end{problem}
+\begin{problem}[607556370102952]
+Let $\Omega$ be the circumcircle of an acute triangle $ABC$. Points $D$, $E$, $F$ are the midpoints of the inferior arcs $BC$, $CA$, $AB$, respectively, on $\Omega$. Let $G$ be the antipode of $D$ in $\Omega$. Let $X$ be the intersection of lines $GE$ and $AB$, while $Y$ the intersection of lines $FG$ and $CA$. Let the circumcenters of triangles $BEX$ and $CFY$ be points $S$ and $T$, respectively. Prove that $D$, $S$, $T$ are collinear.
+\end{problem}
+\begin{problem}[215375559035207]
+$ABC$ is an isosceles triangle, with $AB=AC$. $D$ is a moving point such that $AD\parallel BC$, $BD>CD$. Moving point $E$ is on the arc of $BC$ in circumcircle of $ABC$ not containing $A$, such that $EB<EC$. Ray $BC$ contains point $F$ with $\angle ADE=\angle DFE$. If ray $FD$ intersects ray $BA$ at $X$, and intersects ray $CA$ at $Y$, prove that $\angle XEY$ is a fixed angle.
+\end{problem}
+\begin{problem}[6302540840099076878]
+Let $ABC$ be an isosceles triangle with $BC=CA$, and let $D$ be a point inside side $AB$ such that $AD< DB$. Let $P$ and $Q$ be two points inside sides $BC$ and $CA$, respectively, such that $\angle DPB = \angle DQA = 90^{\circ}$. Let the perpendicular bisector of $PQ$ meet line segment $CQ$ at $E$, and let the circumcircles of triangles $ABC$ and $CPQ$ meet again at point $F$, different from $C$.
+Suppose that $P$, $E$, $F$ are collinear. Prove that $\angle ACB = 90^{\circ}$.
+\end{problem}
+\begin{problem}[2212576839999739806]
+	One hundred sages play the following game. They are waiting in some fixed order in front of a room. The sages enter the room one after another. When a sage enters the room, the following happens - the guard in the room chooses two arbitrary distinct numbers from the set {$1,2,3$}, and announces them to the sage in the room. Then the sage chooses one of those numbers, tells it to the guard, and leaves the room, and the next enters, and so on. During the game, before a sage chooses a number, he can ask the guard what were the chosen numbers of the previous two sages. During the game, the sages cannot talk to each other. At the end, when everyone has finished, the game is considered as a failure if the sum of the 100 chosen numbers is exactly $200$; else it is successful. Prove that the sages can create a strategy, by which they can win the game.
+\end{problem}
+\begin{problem}[727078403801409]
+Let $ABC$ be a triangle with incenter $I$ and circumcircle $\Omega$. A point $X$ on $\Omega$ which is different from $A$ satisfies $AI=XI$. The incircle touches $AC$ and $AB$ at $E, F$, respectively. Let $M_a, M_b, M_c$ be the midpoints of sides $BC, CA, AB$, respectively. Let $T$ be the intersection of the lines $M_bF$ and $M_cE$. Suppose that $AT$ intersects $\Omega$ again at a point $S$.
+
+Prove that $X, M_a, S, T$ are concyclic.
+\end{problem}
+\begin{problem}[8330669807899443473]
+Let $ABC$ be an acute scalene triangle, and let $A_1, B_1, C_1$ be the feet of the altitudes from $A, B, C$. Let $A_2$ be the intersection of the tangents to the circle $ABC$ at $B, C$ and define $B_2, C_2$ similarly. Let $A_2A_1$ intersect the circle $A_2B_2C_2$ again at $A_3$ and define $B_3, C_3$ similarly. Show that the circles $AA_1A_3, BB_1B_3$, and $CC_1C_3$ all have two common points, $X_1$ and $X_2$ which both lie on the Euler line of the triangle $ABC$.
+\end{problem}
+\begin{problem}[528504335909385]
+Given a triangle $ \triangle{ABC} $ whose incenter is $ I $ and $ A $-excenter is $ J $. $ A' $ is point so that $ AA' $ is a diameter of $ \odot\left(\triangle{ABC}\right) $. Define $ H_{1}, H_{2} $ to be the orthocenters of $ \triangle{BIA'} $ and $ \triangle{CJA'} $. Show that $ H_{1}H_{2} \parallel BC $
+\end{problem}
+\begin{problem}[549441013338848]
+	What is the minimal number of operations needed to repaint a entirely white grid $100 \times 100$ to be entirely black, if on one move we can choose $99$ cells from any row or column and change their color?
+\end{problem}
+\begin{problem}[15595788767204175]
+Let \(ABC\) be an acute scalene triangle with orthocenter \(H\). Line \(BH\) intersects \(\overline{AC}\) at \(E\) and line \(CH\) intersects \(\overline{AB}\) at \(F\). Let \(X\) be the foot of the perpendicular from \(H\) to the line through \(A\) parallel to \(\overline{EF}\). Point \(B_1\) lies on line \(XF\) such that \(\overline{BB_1}\) is parallel to \(\overline{AC}\), and point \(C_1\) lies on line \(XE\) such that \(\overline{CC_1}\) is parallel to \(\overline{AB}\). Prove that points \(B\), \(C\), \(B_1\), \(C_1\) are concyclic.
+\end{problem}
+\begin{problem}[702587891849077]
+	Given an integer $n \geqslant 2$. Suppose there is a point $P$ inside a convex cyclic $2n$-gon $A_1 \ldots A_{2n}$ satisfying$$\angle PA_1A_2 = \angle PA_2A_3 = \ldots = \angle PA_{2n}A_1,$$prove that$$ \prod_{i=1}^{n} \left|A_{2i - 1}A_{2i} \right| = \prod_{i=1}^{n} \left|A_{2i}A_{2i+1} \right|,$$where $A_{2n + 1} = A_1$.
+\end{problem}
+\begin{problem}[6734490609685717062]
+	Let $I,G,O$ be the incenter, centroid and the circumcenter of triangle $ABC$, respectively. Let $X,Y,Z$ be on the rays $BC, CA, AB$ respectively so that $BX=CY=AZ$. Let $F$ be the centroid of $XYZ$.
+
+Show that $FG$ is perpendicular to $IO$.
+\end{problem}
+\begin{problem}[183354438240037]
+Let $I$, $O$, $H$, and $\Omega$ be the incenter, circumcenter, orthocenter, and the circumcircle of the triangle $ABC$, respectively. Assume that line $AI$ intersects with $\Omega$ again at point $M\neq A$, line $IH$ and $BC$ meets at point $D$, and line $MD$ intersects with $\Omega$ again at point $E\neq M$. Prove that line $OI$ is tangent to the circumcircle of triangle $IHE$.
+\end{problem}
+\begin{problem}[669395675904242]
+	Two squirrels, Bushy and Jumpy, have collected 2021 walnuts for the winter. Jumpy numbers the walnuts from 1 through 2021, and digs 2021 little holes in a circular pattern in the ground around their favourite tree. The next morning Jumpy notices that Bushy had placed one walnut into each hole, but had paid no attention to the numbering. Unhappy, Jumpy decides to reorder the walnuts by performing a sequence of 2021 moves. In the $k$-th move, Jumpy swaps the positions of the two walnuts adjacent to walnut $k$.
+
+Prove that there exists a value of $k$ such that, on the $k$-th move, Jumpy swaps some walnuts $a$ and $b$ such that $a<k<b$.
+\end{problem}
+\begin{problem}[423911944927735]
+In acute $\triangle ABC$, $O$ is the circumcenter, $I$ is the incenter. The incircle touches $BC,CA,AB$ at $D,E,F$. And the points $K,M,N$ are the midpoints of $BC,CA,AB$ respectively.
+
+a) Prove that the lines passing through $D,E,F$ in parallel with $IK,IM,IN$ respectively are concurrent.
+
+b) Points $T,P,Q$ are the middle points of the major arc $BC,CA,AB$ on $\odot ABC$. Prove that the lines passing through $D,E,F$ in parallel with $IT,IP,IQ$ respectively are concurrent.
+\end{problem}
+\begin{problem}[303061622555285]
+A teacher and her 30 students play a game on an infinite cell grid. The teacher starts first, then each of the 30 students makes a move, then the teacher and so on. On one move the person can color one unit segment on the grid. A segment cannot be colored twice. The teacher wins if, after the move of one of the 31 players, there is a $1\times 2$ or $2\times 1$ rectangle , such that each segment from it's border is colored, but the segment between the two adjacent squares isn't colored. Prove that the teacher can win.
+\end{problem}
+\begin{problem}[8670333331361701457]
+	Let $n$ be a given positive integer. Sisyphus performs a sequence of turns on a board consisting of $n + 1$ squares in a row, numbered $0$ to $n$ from left to right. Initially, $n$ stones are put into square $0$, and the other squares are empty. At every turn, Sisyphus chooses any nonempty square, say with $k$ stones, takes one of these stones and moves it to the right by at most $k$ squares (the stone should say within the board). Sisyphus' aim is to move all $n$ stones to square $n$.
+Prove that Sisyphus cannot reach the aim in less than
+\[ \left \lceil \frac{n}{1} \right \rceil + \left \lceil \frac{n}{2} \right \rceil + \left \lceil \frac{n}{3} \right \rceil + \dots + \left \lceil \frac{n}{n} \right \rceil \]turns. (As usual, $\lceil x \rceil$ stands for the least integer not smaller than $x$. )
+\end{problem}
+\begin{problem}[290912955085727393]
+Let $n \geqslant 3$ be a positive integer and let $\left(a_{1}, a_{2}, \ldots, a_{n}\right)$ be a strictly increasing sequence of $n$ positive real numbers with sum equal to 2. Let $X$ be a subset of $\{1,2, \ldots, n\}$ such that the value of
+\[
+\left|1-\sum_{i \in X} a_{i}\right|
+\]is minimised. Prove that there exists a strictly increasing sequence of $n$ positive real numbers $\left(b_{1}, b_{2}, \ldots, b_{n}\right)$ with sum equal to 2 such that
+\[
+\sum_{i \in X} b_{i}=1.
+\]
+\end{problem}
+\begin{problem}[300334293164389]
+	Kid and Karlsson play a game. Initially they have a square piece of chocolate $2019\times 2019$ grid with $1\times 1$ cells . On every turn Kid divides an arbitrary piece of chololate into three rectanglular pieces by cells, and then Karlsson chooses one of them and eats it. The game finishes when it's impossible to make a legal move. Kid wins if there was made an even number of moves, Karlsson wins if there was made an odd number of moves.
+Who has the winning strategy?
+\end{problem}
+\begin{problem}[456772085666528]
+Let $\triangle ABC$ be an acute triangle with incenter $I$ and circumcenter $O$. The incircle touches sides $BC,CA,$ and $AB$ at $D,E,$ and $F$ respectively, and $A'$ is the reflection of $A$ over $O$. The circumcircles of $ABC$ and $A'EF$ meet at $G$, and the circumcircles of $AMG$ and $A'EF$ meet at a point $H\neq G$, where $M$ is the midpoint of $EF$. Prove that if $GH$ and $EF$ meet at $T$, then $DT\perp EF$.
+\end{problem}
+\begin{problem}[596902679696332]
+Find all positive integers $n \geqslant 2$ for which there exist $n$ real numbers $a_1<\cdots< a_n$ and a real number $r>0$ such that the $\tfrac{1}{2}n(n-1)$ differences $a_j-a_i$ for $1 \leqslant i<j \leqslant n$ are equal, in some order, to the numbers $r^1,r^2,\ldots,r^{\frac{1}{2}n(n-1)}$.
+\end{problem}
+\begin{problem}[2201137214247796233]
+A neighborhood consists of $10 \times 10$ squares. On New Year's Eve it snowed for the first time and since then exactly $10$ cm of snow fell on each square every night (and snow fell only at night). Every morning, the janitor selects one row or column and shovels all the snow from there onto one of the adjacent rows or columns (from each cell to the adjacent side). For example, he can select the seventh column and from each of its cells shovel all the snow into the cell of the left of it. You cannot shovel snow outside the neighborhood. On the evening of the 100th day of the year, an inspector will come to the city and find the cell with the snowdrift of maximal height. The goal of the janitor is to ensure that this height is minimal. What height of snowdrift will the inspector find?
+\end{problem}
+\begin{problem}[3417358984411200361]
+Let $ABC$ be a triangle with circumcircle $\Omega$, circumcenter $O$ and orthocenter $H$. Let $S$ lie on $\Omega$ and $P$ lie on $BC$ such that $\angle ASP=90^\circ$, line $SH$ intersects the circumcircle of $\triangle APS$ at $X\neq S$. Suppose $OP$ intersects $CA,AB$ at $Q,R$, respectively, $QY,RZ$ are the altitude of $\triangle AQR$. Prove that $X,Y,Z$ are collinear.
+\end{problem}
+\begin{problem}[457324036151847]
+Let $O$ and $H$ be the circumcenter and the orthocenter, respectively, of an acute triangle $ABC$. Points $D$ and $E$ are chosen from sides $AB$ and $AC$, respectively, such that $A$, $D$, $O$, $E$ are concyclic. Let $P$ be a point on the circumcircle of triangle $ABC$. The line passing $P$ and parallel to $OD$ intersects $AB$ at point $X$, while the line passing $P$ and parallel to $OE$ intersects $AC$ at $Y$. Suppose that the perpendicular bisector of $\overline{HP}$ does not coincide with $XY$, but intersect $XY$ at $Q$, and that points $A$, $Q$ lies on the different sides of $DE$. Prove that $\angle EQD = \angle BAC$.
+\end{problem}
+\begin{problem}[6246999615324043054]
+	A site is any point $(x, y)$ in the plane such that $x$ and $y$ are both positive integers less than or equal to 20.
+
+Initially, each of the 400 sites is unoccupied. Amy and Ben take turns placing stones with Amy going first. On her turn, Amy places a new red stone on an unoccupied site such that the distance between any two sites occupied by red stones is not equal to $\sqrt{5}$. On his turn, Ben places a new blue stone on any unoccupied site. (A site occupied by a blue stone is allowed to be at any distance from any other occupied site.) They stop as soon as a player cannot place a stone.
+
+Find the greatest $K$ such that Amy can ensure that she places at least $K$ red stones, no matter how Ben places his blue stones.
+\end{problem}
+\begin{problem}[969197144236847]
+	Each girl among $100$ girls has $100$ balls; there are in total $10000$ balls in $100$ colors, from each color there are $100$ balls. On a move, two girls can exchange a ball (the first gives the second one of her balls, and vice versa). The operations can be made in such a way, that in the end, each girl has $100$ balls, colored in the $100$ distinct colors. Prove that there is a sequence of operations, in which each ball is exchanged no more than 1 time, and at the end, each girl has $100$ balls, colored in the $100$ colors.
+\end{problem}
+\begin{problem}[6566259136811987209]
+	Let $\Omega$ be the $A$-excircle of triangle $ABC$, and suppose that $\Omega$ is tangent to lines $BC$, $CA$, and $AB$ at points $D$, $E$, and $F$, respectively. Let $M$ be the midpoint of segment $EF$. Two more points $P$ and $Q$ are on $\Omega$ such that $EP$ and $FQ$ are both parallel to $DM$. Let $BP$ meet $CQ$ at point $X$. Prove that the line $AM$ is the angle bisector of $\angle XAD$.
+\end{problem}
+\begin{problem}[6029540617185205962]
+On a social network, no user has more than ten friends ( the state "friendship" is symmetrical). The network is connected: if, upon learning interesting news a user starts sending it to its friends, and these friends to their own friends and so on, then at the end, all users hear about the news.
+Prove that the network administration can divide users into groups so that the following conditions are met:
+each user is in exactly one group
+each group is connected in the above sense
+one of the groups contains from $1$ to $100$ members and the remaining from $100$ to $900$.
+\end{problem}
+\begin{problem}[3159161448000677570]
+Let $a > 1$ be a positive integer and $d > 1$ be a positive integer coprime to $a$. Let $x_1=1$, and for $k\geq 1$, define
+$$x_{k+1} = \begin{cases}
+x_k + d &\text{if } a \text{ does not divide } x_k \\
+x_k/a & \text{if } a \text{ divides } x_k
+\end{cases}$$Find, in terms of $a$ and $d$, the greatest positive integer $n$ for which there exists an index $k$ such that $x_k$ is divisible by $a^n$.
+\end{problem}
+\begin{problem}[119129720704350]
+Let $H$ be the orthocenter of a given triangle $ABC$. Let $BH$ and $AC$ meet at a point $E$, and $CH$ and $AB$ meet at $F$. Suppose that $X$ is a point on the line $BC$. Also suppose that the circumcircle of triangle $BEX$ and the line $AB$ intersect again at $Y$, and the circumcircle of triangle $CFX$ and the line $AC$ intersect again at $Z$.
+Show that the circumcircle of triangle $AYZ$ is tangent to the line $AH$.
+\end{problem}
+\begin{problem}[493735785757154]
+	Given is a graph $G$ of $n+1$ vertices, which is constructed as follows: initially there is only one vertex $v$, and one a move we can add a vertex and connect it to exactly one among the previous vertices. The vertices have non-negative real weights such that $v$ has weight $0$ and each other vertex has a weight not exceeding the avarage weight of its neighbors, increased by $1$. Prove that no weight can exceed $n^2$.
+\end{problem}
+\begin{problem}[1613309914397651478]
+Let $ABCD$ be a convex quadrilateral with $\angle B < \angle A < 90^{o}$. Let $I$ be the midpoint of $AB$ and $S$ the intersection of $AD$ and $BC$. Let $R$ be a variable point inside the triangle $SAB$ such that $\angle ASR = \angle BSR$. On the straight lines $AR, BR$ , take the points $E, F$, respectively so that $BE , AF$ are parallel to $RS$. Suppose that $EF$ intersects the circumcircle of triangle $SAB$ at points $H, K$. On the segment $AB$, take points $M , N$ such that $\angle AHM =\angle BHI$ , $\angle BKN = \angle AKI$.
+
+a) Prove that the center $J$ of the circumcircle of triangle $SMN$ lies on a fixed line.
+
+b) On $BE, AF$ , take the points $P, Q$ respectively so that $CP$ is parallel to $SE$ and $DQ$ is parallel to $SF$. The lines $SE, SF$ intersect the circle $(SAB)$, respectively, at $U, V$. Let $G$ be the intersection of $AU$ and $BV$. Prove that the median of vertex $G$ of the triangle $GPQ$ always passes through a fixed point .
+\end{problem}
+\begin{problem}[259897104343709]
+	There is a queue of $n{}$ girls on one side of a tennis table, and a queue of $n{}$ boys on the other side. Both the girls and the boys are numbered from $1{}$ to $n{}$ in the order they stand. The first game is played by the girl and the boy with the number $1{}$ and then, after each game, the loser goes to the end of their queue, and the winner remains at the table. After a while, it turned out that each girl played exactly one game with each boy. Prove that if $n{}$ is odd, then a girl and a boy with odd numbers played in the last game.
+\end{problem}
+\begin{problem}[522990139281725]
+	For any odd prime $p$ and any integer $n,$ let $d_p (n) \in \{ 0,1, \dots, p-1 \}$ denote the remainder when $n$ is divided by $p.$ We say that $(a_0, a_1, a_2, \dots)$ is a p-sequence, if $a_0$ is a positive integer coprime to $p,$ and $a_{n+1} =a_n + d_p (a_n)$ for $n \geqslant 0.$
+(a) Do there exist infinitely many primes $p$ for which there exist $p$-sequences $(a_0, a_1, a_2, \dots)$ and $(b_0, b_1, b_2, \dots)$ such that $a_n >b_n$ for infinitely many $n,$ and $b_n > a_n$ for infinitely many $n?$
+(b) Do there exist infinitely many primes $p$ for which there exist $p$-sequences $(a_0, a_1, a_2, \dots)$ and $(b_0, b_1, b_2, \dots)$ such that $a_0 <b_0,$ but $a_n >b_n$ for all $n \geqslant 1?$
+\end{problem}
+\begin{problem}[8059760967121829853]
+	Let $n\geqslant 3$ be an integer. Prove that there exists a set $S$ of $2n$ positive integers satisfying the following property: For every $m=2,3,...,n$ the set $S$ can be partitioned into two subsets with equal sums of elements, with one of subsets of cardinality $m$.
+\end{problem}
+\begin{problem}[6837149463099766937]
+	Let $n \ge 3$ be an odd integer. In a $2n \times 2n$ board, we colour $2(n-1)^2$ cells. What is the largest number of three-square corners that can surely be cut out of the uncoloured figure?
+\end{problem}
+\begin{problem}[8569243655022492300]
+	Given a $ \triangle ABC $ and a point $ P. $ Let $ O, D, E, F $ be the circumcenter of $ \triangle ABC, \triangle BPC, \triangle CPA, \triangle APB, $ respectively and let $ T $ be the intersection of $ BC $ with $ EF. $ Prove that the reflection of $ O $ in $ EF $ lies on the perpendicular from $ D $ to $ PT. $
+\end{problem}
+\begin{problem}[9187468721920084868]
+  Each lattice point of $\ZZ^2$ is colored with one of three colors,
+  with every color used at least once.
+  Show that one can find a right triangle with pairwise distinct colored vertices.
+\end{problem}
+\begin{problem}[4892352754475215646]
+	We say that a set $S$ of integers is rootiful if, for any positive integer $n$ and any $a_0, a_1, \cdots, a_n \in S$, all integer roots of the polynomial $a_0+a_1x+\cdots+a_nx^n$ are also in $S$. Find all rootiful sets of integers that contain all numbers of the form $2^a - 2^b$ for positive integers $a$ and $b$.
+\end{problem}
+\begin{problem}[4308913658510445082]
+Let $ABCD$ be a convex quadrilateral, the incenters of $\triangle ABC$ and $\triangle ADC$ are $I,J$, respectively. It is known that $AC,BD,IJ$ concurrent at a point $P$. The line perpendicular to $BD$ through $P$ intersects with the outer angle bisector of $\angle BAD$ and the outer angle bisector $\angle BCD$ at $E,F$, respectively. Show that $PE=PF$.
+\end{problem}
+\begin{problem}[4738483219849723703]
+On a circle there're $1000$ marked points, each colored in one of $k$ colors. It's known that among any $5$ pairwise intersecting segments, endpoints of which are $10$ distinct marked points, there're at least $3$ segments, each of which has its endpoints colored in different colors. Determine the smallest possible value of $k$ for which it's possible.
+\end{problem}
+\begin{problem}[931951248564234]
+Let $n > 3$ be a positive integer. Suppose that $n$ children are arranged in a circle, and $n$ coins are distributed between them (some children may have no coins). At every step, a child with at least 2 coins may give 1 coin to each of their immediate neighbors on the right and left. Determine all initial distributions of the coins from which it is possible that, after a finite number of steps, each child has exactly one coin.
+\end{problem}
+\begin{problem}[3245291910836201005]
+	Let $P$ be a point inside triangle $ABC$. Let $AP$ meet $BC$ at $A_1$, let $BP$ meet $CA$ at $B_1$, and let $CP$ meet $AB$ at $C_1$. Let $A_2$ be the point such that $A_1$ is the midpoint of $PA_2$, let $B_2$ be the point such that $B_1$ is the midpoint of $PB_2$, and let $C_2$ be the point such that $C_1$ is the midpoint of $PC_2$. Prove that points $A_2, B_2$, and $C_2$ cannot all lie strictly inside the circumcircle of triangle $ABC$.
+\end{problem}
+\begin{problem}[6975633259976638169]
+On the round necklace there are $n> 3$ beads, each painted in red or blue. If a bead has adjacent beads painted the same color, it can be repainted (from red to blue or from blue to red). For what $n$ for any initial coloring of beads it is possible to make a necklace in which all beads are painted equally?
+\end{problem}
+\begin{problem}[852531542088551]
+	Given a triangle $ABC$ for which $\angle BAC \neq 90^{\circ}$, let $B_1, C_1$ be variable points on $AB,AC$, respectively. Let $B_2,C_2$ be the points on line $BC$ such that a spiral similarity centered at $A$ maps $B_1C_1$ to $C_2B_2$. Denote the circumcircle of $AB_1C_1$ by $\omega$. Show that if $B_1B_2$ and $C_1C_2$ concur on $\omega$ at a point distinct from $B_1$ and $C_1$, then $\omega$ passes through a fixed point other than $A$.
+\end{problem}
+\begin{problem}[3192129869376364982]
+Let $u_1, u_2, \dots, u_{2019}$ be real numbers satisfying\[u_{1}+u_{2}+\cdots+u_{2019}=0 \quad \text { and } \quad u_{1}^{2}+u_{2}^{2}+\cdots+u_{2019}^{2}=1.\]Let $a=\min \left(u_{1}, u_{2}, \ldots, u_{2019}\right)$ and $b=\max \left(u_{1}, u_{2}, \ldots, u_{2019}\right)$. Prove that
+\[
+a b \leqslant-\frac{1}{2019}.
+\]
+\end{problem}
+\begin{problem}[825542457780626]
+Yuri is looking at the great Mayan table. The table has $200$ columns and $2^{200}$ rows. Yuri knows that each cell of the table depicts the sun or the moon, and any two rows are different (i.e. differ in at least one column). Each cell of the table is covered with a sheet. The wind has blown aways exactly two sheets from each row. Could it happen that now Yuri can find out for at least $10000$ rows what is depicted in each of them (in each of the columns)?
+\end{problem}
+\begin{problem}[1810915585111530473]
+	Given a scalene triangle $ \triangle ABC $. $ B', C' $ are points lie on the rays $ \overrightarrow{AB}, \overrightarrow{AC}  $ such that $ \overline{AB'} = \overline{AC}, \overline{AC'} = \overline{AB} $. Now, for an arbitrary point $ P $ in the plane. Let $ Q $ be the reflection point of $ P $ w.r.t $ \overline{BC} $. The intersections of $ \odot{\left(BB'P\right)} $ and $ \odot{\left(CC'P\right)} $ is $ P' $ and the intersections of $ \odot{\left(BB'Q\right)} $ and $ \odot{\left(CC'Q\right)} $ is $ Q' $. Suppose that $ O, O' $ are circumcenters of $ \triangle{ABC}, \triangle{AB'C'} $ Show that
+
+1. $ O', P', Q' $ are colinear
+
+2. $  \overline{O'P'} \cdot  \overline{O'Q'} = \overline{OA}^{2} $
+\end{problem}
+\begin{problem}[2252133047011954512]
+On a flat plane in Camelot, King Arthur builds a labyrinth $\mathfrak{L}$ consisting of $n$ walls, each of which is an infinite straight line. No two walls are parallel, and no three walls have a common point. Merlin then paints one side of each wall entirely red and the other side entirely blue.
+
+At the intersection of two walls there are four corners: two diagonally opposite corners where a red side and a blue side meet, one corner where two red sides meet, and one corner where two blue sides meet. At each such intersection, there is a two-way door connecting the two diagonally opposite corners at which sides of different colours meet.
+
+After Merlin paints the walls, Morgana then places some knights in the labyrinth. The knights can walk through doors, but cannot walk through walls.
+
+Let $k(\mathfrak{L})$ be the largest number $k$ such that, no matter how Merlin paints the labyrinth $\mathfrak{L},$ Morgana can always place at least $k$ knights such that no two of them can ever meet. For each $n,$ what are all possible values for $k(\mathfrak{L}),$ where $\mathfrak{L}$ is a labyrinth with $n$ walls?
+\end{problem}
+\begin{problem}[4451072691230235426]
+A convex quadrilateral $ABCD$ has an inscribed circle with center $I$. Let $I_a, I_b, I_c$ and $I_d$ be the incenters of the triangles $DAB, ABC, BCD$ and $CDA$, respectively. Suppose that the common external tangents of the circles $AI_bI_d$ and $CI_bI_d$ meet at $X$, and the common external tangents of the circles $BI_aI_c$ and $DI_aI_c$ meet at $Y$. Prove that $\angle{XIY}=90^{\circ}$.
+\end{problem}
+\begin{problem}[457934969594281]
+	A positive integer $n$ is given. A cube $3\times3\times3$ is built from $26$ white and $1$ black cubes $1\times1\times1$ such that the black cube is in the center of $3\times3\times3$-cube. A cube $3n\times 3n\times 3n$ is formed by $n^3$ such $3\times3\times3$-cubes. What is the smallest number of white cubes which should be colored in red in such a way that every white cube will have at least one common vertex with a red one.
+\end{problem}
+\begin{problem}[8528437132500966626]
+	Let $ABC$ be an acute triangle with orthocenter $H$ and circumcircle $\Gamma$. Let $BH$ intersect $AC$ at $E$, and let $CH$ intersect $AB$ at $F$. Let $AH$ intersect $\Gamma$ again at $P \neq A$. Let $PE$ intersect $\Gamma$ again at $Q \neq P$. Prove that $BQ$ bisects segment $\overline{EF}$.
+\end{problem}
+\begin{problem}[122001240071629]
+	Vasya has $100$ cards of $3$ colors, and there are not more than $50$ cards of same color. Prove that he can create $10\times 10$ square, such that every cards of same color have not common side.
+\end{problem}
+\begin{problem}[117986541208663]
+Given a triangle $ABC$. $D$ is a moving point on the edge $BC$. Point $E$ and Point $F$ are on the edge $AB$ and $AC$, respectively, such that $BE=CD$ and $CF=BD$. The circumcircle of $\triangle BDE$ and $\triangle CDF$ intersects at another point $P$ other than $D$. Prove that there exists a fixed point $Q$, such that the length of $QP$ is constant.
+\end{problem}
+\begin{problem}[326164407850848]
+Two boys are given a bag of potatoes, each bag containing $150$ tubers. They take turns transferring the potatoes, where in each turn they transfer a non-zero tubers from their bag to the other boy's bag. Their moves must satisfy the following condition: In each move, a boy must move more tubers than he had in his bag before any of his previous moves (if there were such moves). So, with his first move, a boy can move any non-zero quantity, and with his fifth move, a boy can move $200$ tubers, if before his first, second, third and fourth move, the numbers of tubers in his bag was less than $200$. What is the maximal total number of moves the two boys can do?
+\end{problem}
+\begin{problem}[8916142707013964275]
+	Let $k$ be a positive integer. The organising commitee of a tennis tournament is to schedule the matches for $2k$ players so that every two players play once, each day exactly one match is played, and each player arrives to the tournament site the day of his first match, and departs the day of his last match. For every day a player is present on the tournament, the committee has to pay $1$ coin to the hotel. The organisers want to design the schedule so as to minimise the total cost of all players' stays. Determine this minimum cost.
+\end{problem}
+\begin{problem}[723258861624579]
+Let $n\geq 2$ be an integer and let $a_1, a_2, \ldots, a_n$ be positive real numbers with sum $1$. Prove that$$\sum_{k=1}^n \frac{a_k}{1-a_k}(a_1+a_2+\cdots+a_{k-1})^2 < \frac{1}{3}.$$
+\end{problem}
+\begin{problem}[80567267310692]
+Let $n$ be a positive integer. Given is a subset $A$ of $\{0,1,...,5^n\}$ with $4n+2$ elements. Prove that there exist three elements $a<b<c$ from $A$ such that $c+2a>3b$.
+\end{problem}
+\begin{problem}[8895719454292056765]
+Given a non-right triangle $ABC$ with $BC>AC>AB$. Two points $P_1 \neq P_2$ on the plane satisfy that, for $i=1,2$, if $AP_i, BP_i$ and $CP_i$ intersect the circumcircle of the triangle $ABC$ at $D_i, E_i$, and $F_i$, respectively, then $D_iE_i \perp D_iF_i$ and $D_iE_i = D_iF_i \neq 0$. Let the line $P_1P_2$ intersects the circumcircle of $ABC$ at $Q_1$ and $Q_2$. The Simson lines of $Q_1$, $Q_2$ with respect to $ABC$ intersect at $W$.
+
+Prove that $W$ lies on the nine-point circle of $ABC$.
+\end{problem}
+\begin{problem}[2003233604438068678]
+Given a triangle $ABC$ and a point $O$ on a plane. Let $\Gamma$ be the circumcircle of $ABC$. Suppose that $CO$ intersects with $AB$ at $D$, and $BO$ and $CA$ intersect at $E$. Moreover, suppose that $AO$ intersects with $\Gamma$ at $A,F$. Let $I$ be the other intersection of $\Gamma$ and the circumcircle of $ADE$, and $Y$ be the other intersection of $BE$ and the circumcircle of $CEI$, and $Z$ be the other intersection of $CD$ and the circumcircle of $BDI$. Let $T$ be the intersection of the two tangents of $\Gamma$ at $B,C$, respectively. Lastly, suppose that $TF$ intersects with $\Gamma$ again at $U$, and the reflection of $U$ w.r.t. $BC$ is $G$.
+
+Show that $F,I,G,O,Y,Z$ are concyclic.
+\end{problem}
+\begin{problem}[4742951979457606021]
+There are $2021$ points on a circle. Kostya marks a point, then marks the adjacent point to the right, then he marks the point two to its right, then three to the next point's right, and so on. Which move will be the first time a point is marked twice?
+\end{problem}
+\begin{problem}[5897111412933990257]
+Let $ABC$ be a triangle with circumcircle $\Gamma$, and points $E$ and $F$ are chosen from sides $CA$, $AB$, respectively. Let the circumcircle of triangle $AEF$ and $\Gamma$ intersect again at point $X$. Let the circumcircles of triangle $ABE$ and $ACF$ intersect again at point $K$. Line $AK$ intersect with $\Gamma$ again at point $M$ other than $A$, and $N$ be the reflection point of $M$ with respect to line $BC$. Let $XN$ intersect with $\Gamma$ again at point $S$ other that $X$.
+
+Prove that $SM$ is parallel to $BC$.
+\end{problem}
+\begin{problem}[4429559846138102630]
+An interstellar hotel has $100$ rooms with capacities $101,102,\ldots, 200$ people. These rooms are occupied by $n$ people in total. Now a VIP guest is about to arrive and the owner wants to provide him with a personal room. On that purpose, the owner wants to choose two rooms $A$ and $B$ and move all guests from $A$ to $B$ without exceeding its capacity. Determine the largest $n$ for which the owner can be sure that he can achieve his goal no matter what the initial distribution of the guests is.
+\end{problem}
+\begin{problem}[5835156231907738776]
+Given triangle $ABC$ with $A$-excenter $I_A$, the foot of the perpendicular from $I_A$ to $BC$ is $D$. Let the midpoint of segment $I_AD$ be $M$, $T$ lies on arc $BC$(not containing $A$) satisfying $\angle BAT=\angle DAC$, $I_AT$ intersects the circumcircle of $ABC$ at $S\neq T$. If $SM$ and $BC$ intersect at $X$, the perpendicular bisector of $AD$ intersects $AC,AB$ at $Y,Z$ respectively, prove that $AX,BY,CZ$ are concurrent.
+\end{problem}
+\begin{problem}[4059278924956282558]
+In a card game, each card is associated with a numerical value from 1 to 100, with each card beating less, with one exception: 1 beats 100. The player knows that 100 cards with different values lie in front of him. The dealer who knows the order of these cards can tell the player which card beats the other for any pair of cards he draws. Prove that the dealer can make one hundred such messages, so that after that the player can accurately determine the value of each card.
+\end{problem}
+\begin{problem}[829271701496996]
+Pasha and Vova play the following game, making moves in turn; Pasha moves first. Initially, they have a large piece of plasticine. By a move, Pasha cuts one of the existing pieces into three(of arbitrary sizes), and Vova merges two existing pieces into one. Pasha wins if at some point there appear to be $100$ pieces of equal weights. Can Vova prevent Pasha's win?
+\end{problem}
+\begin{problem}[208441124738479]
+Let $f : \{ 1, 2, 3, \dots \} \to \{ 2, 3, \dots \}$ be a function such that $f(m + n) | f(m) + f(n) $ for all pairs $m,n$ of positive integers. Prove that there exists a positive integer $c > 1$ which divides all values of $f$.
+\end{problem}
+\begin{problem}[6025085618534905645]
+	Let $ABCD$ be a cyclic quadrilateral whose sides have pairwise different lengths. Let $O$ be the circumcenter of $ABCD$. The internal angle bisectors of $\angle ABC$ and $\angle ADC$ meet $AC$ at $B_1$ and $D_1$, respectively. Let $O_B$ be the center of the circle which passes through $B$ and is tangent to $\overline{AC}$ at $D_1$. Similarly, let $O_D$ be the center of the circle which passes through $D$ and is tangent to $\overline{AC}$ at $B_1$.
+
+Assume that $\overline{BD_1} \parallel \overline{DB_1}$. Prove that $O$ lies on the line $\overline{O_BO_D}$.
+\end{problem}
+\begin{problem}[5261846980754565299]
+	Let $A,B,C$ be the midpoints of the three sides $B'C', C'A', A'B'$ of the triangle $A'B'C'$ respectively. Let $P$ be a point inside $\Delta ABC$, and $AP,BP,CP$ intersect with $BC, CA, AB$ at $P_a,P_b,P_c$, respectively. Lines $P_aP_b, P_aP_c$ intersect with $B'C'$ at $R_b, R_c$ respectively, lines $P_bP_c, P_bP_a$ intersect with $C'A'$ at $S_c, S_a$ respectively. and lines $P_cP_a, P_cP_b$ intersect with $A'B'$ at $T_a, T_b$, respectively. Given that $S_c,S_a, T_a, T_b$ are all on a circle centered at $O$.
+
+Show that $OR_b=OR_c$.
+\end{problem}
+\begin{problem}[181463134716189]
+	In kindergarten, nurse took $n>1$ identical cardboard rectangles and distributed them to $n$ children; every child got one rectangle. Every child cut his (her) rectangle into several identical squares (squares of different children could be different). Finally, the total number of squares was prime. Prove that initial rectangles was squares.
+\end{problem}
+\begin{problem}[4375421764909014892]
+	Find all positive integers $n\geq1$ such that there exists a pair $(a,b)$ of positive integers, such that $a^2+b+3$ is not divisible by the cube of any prime, and$$n=\frac{ab+3b+8}{a^2+b+3}.$$
+\end{problem}
+\begin{problem}[528087142744727]
+	Let $ABC$ be a scalene triangle with orthocenter $H$ and circumcenter $O$. Let $P$ be the midpoint of $\overline{AH}$ and let $T$ be on line $BC$ with $\angle TAO=90^{\circ}$. Let $X$ be the foot of the altitude from $O$ onto line $PT$. Prove that the midpoint of $\overline{PX}$ lies on the nine-point circle* of $\triangle ABC$.
+
+*The nine-point circle of $\triangle ABC$ is the unique circle passing through the following nine points: the midpoint of the sides, the feet of the altitudes, and the midpoints of $\overline{AH}$, $\overline{BH}$, and $\overline{CH}$.
+\end{problem}
+\begin{problem}[6558910862034852540]
+Let $\mathbb{R}^+$ denote the set of positive real numbers. Find all functions $f: \mathbb{R}^+ \to \mathbb{R}^+$ such that for each $x \in \mathbb{R}^+$, there is exactly one $y \in \mathbb{R}^+$ satisfying$$xf(y)+yf(x) \leq 2$$
+\end{problem}
+\begin{problem}[8609709793627283757]
+	Define the sequence $a_0,a_1,a_2,\hdots$ by $a_n=2^n+2^{\lfloor n/2\rfloor}$. Prove that there are infinitely many terms of the sequence which can be expressed as a sum of (two or more) distinct terms of the sequence, as well as infinitely many of those which cannot be expressed in such a way.
+\end{problem}
+\begin{problem}[7948249970111159954]
+	A $\pm 1$-sequence is a sequence of $2022$ numbers $a_1, \ldots, a_{2022},$ each equal to either $+1$ or $-1$. Determine the largest $C$ so that, for any $\pm 1$-sequence, there exists an integer $k$ and indices $1 \le t_1 < \ldots < t_k \le 2022$ so that $t_{i+1} - t_i \le 2$ for all $i$, and$$\left| \sum_{i = 1}^{k} a_{t_i} \right| \ge C.$$
+\end{problem}
+\begin{problem}[645068477920006]
+There are several gentlemen in the meeting of the Diogenes Club, some of which are friends with each other (friendship is mutual). Let's name a participant unsociable if he has exactly one friend among those present at the meeting. By the club rules, the only friend of any unsociable member can leave the meeting (gentlemen leave the meeting one at a time). The purpose of the meeting is to achieve a situation in which that there are no friends left among the participants. Prove that if the goal is achievable, then the number of participants remaining at the meeting does not depend on who left and in what order.
+\end{problem}
+\begin{problem}[221552874820768]
+The incircle of a scalene triangle $ABC$ touches the sides $BC, CA$, and $AB$ at points $D, E$, and $F$, respectively. Triangles $APE$ and $AQF$ are constructed outside the triangle so that\[AP =PE, AQ=QF, \angle APE=\angle ACB,\text{ and }\angle AQF =\angle ABC.\]Let $M$ be the midpoint of $BC$. Find $\angle QMP$ in terms of the angles of the triangle $ABC$.
+\end{problem}
+\begin{problem}[9055967412808709037]
+Baron Munchhausen has a collection of stones, such that they are of $1000$ distinct whole weights, $2^{1000}$ stones of every weight. Baron states that if one takes exactly one stone of every weight, then the weight of all these $1000$ stones chosen will be less than $2^{1010}$, and there is no other way to obtain this weight by picking another set of stones of the collection.
+Can this statement happen to be true?
+\end{problem}
+\begin{problem}[8152181601565653036]
+Let \(D\) be a point on segment \(PQ\). Let \(\omega\) be a fixed circle passing through \(D\), and let \(A\) be a variable point on \(\omega\). Let \(X\) be the intersection of the tangent to the circumcircle of \(\triangle ADP\) at \(P\) and the tangent to the circumcircle of \(\triangle ADQ\) at \(Q\). Show that as \(A\) varies, \(X\) lies on a fixed line.
+\end{problem}
+\begin{problem}[1736102587052874498]
+Some language has only three letters - $A, B$ and $C$. A sequence of letters is called a word iff it contains exactly 100 letters such that exactly 40 of them are consonants and other 60 letters are all $A$. What is the maximum numbers of words one can pick such that any two picked words have at least one position where they both have consonants, but different consonants?
+\end{problem}
+\begin{problem}[627600286851318227]
+Find all triples $(a,b,p)$ of positive integers with $p$ prime and\[ a^p=b!+p. \]
+\end{problem}
+\begin{problem}[428632191392819]
+Initially, $10$ ones are written on a blackboard. Grisha and Gleb are playing game, by taking turns; Grisha goes first. On one move Grisha squares some $5$ numbers on the board. On his move, Gleb picks a few (perhaps none) numbers on the board and increases each of them by $1$. If in $10,000$ moves on the board a number divisible by $2023$ appears, Gleb wins, otherwise Grisha wins. Which of the players has a winning strategy?
+\end{problem}
+\begin{problem}[712971117639738]
+Let $\mathcal{A}$ denote the set of all polynomials in three variables $x, y, z$ with integer coefficients. Let $\mathcal{B}$ denote the subset of $\mathcal{A}$ formed by all polynomials which can be expressed as
+\begin{align*}
+(x + y + z)P(x, y, z) + (xy + yz + zx)Q(x, y, z) + xyzR(x, y, z)
+\end{align*}with $P, Q, R \in \mathcal{A}$. Find the smallest non-negative integer $n$ such that $x^i y^j z^k \in \mathcal{B}$ for all non-negative integers $i, j, k$ satisfying $i + j + k \geq n$.
+\end{problem}
+\begin{problem}[591652153716935]
+	Let $M$ be the midpoint of $BC$ of triangle $ABC$. The circle with diameter $BC$, $\omega$, meets $AB,AC$ at $D,E$ respectively. $P$ lies inside $\triangle ABC$ such that $\angle PBA=\angle PAC, \angle PCA=\angle PAB$, and $2PM\cdot DE=BC^2$. Point $X$ lies outside $\omega$ such that $XM\parallel AP$, and $\frac{XB}{XC}=\frac{AB}{AC}$. Prove that $\angle BXC +\angle BAC=90^{\circ}$.
+\end{problem}
+\begin{problem}[5066939379306191291]
+Let $ABC$ be an acute triangle with circumcenter $O$ and circumcircle $\Omega$. Choose points $D, E$ from sides $AB, AC$, respectively, and let $\ell$ be the line passing through $A$ and perpendicular to $DE$. Let $\ell$ intersect the circumcircle of triangle $ADE$ and $\Omega$ again at points $P, Q$, respectively. Let $N$ be the intersection of $OQ$ and $BC$, $S$ be the intersection of $OP$ and $DE$, and $W$ be the orthocenter of triangle $SAO$.
+
+Prove that the points $S$, $N$, $O$, $W$ are concyclic.
+\end{problem}
+\begin{problem}[8782897210450267045]
+Let $\mathbb{Q}_{>0}$ denote the set of all positive rational numbers. Determine all functions $f:\mathbb{Q}_{>0}\to \mathbb{Q}_{>0}$ satisfying$$f(x^2f(y)^2)=f(x)^2f(y)$$for all $x,y\in\mathbb{Q}_{>0}$
+\end{problem}
+\begin{problem}[241697479443718]
+  A convex polyhedron is floating in the Aegean sea.
+  Can $90 \%$ of its volume be below the water level
+  while more than half of its surface area is above the water level?
+\end{problem}
+\begin{problem}[239934686230450]
+Let triangle$ABC(AB<AC)$ with incenter $I$ circumscribed in $\odot O$. Let $M,N$ be midpoint of arc $\widehat{BAC}$ and $\widehat{BC}$, respectively. $D$ lies on $\odot O$ so that $AD//BC$, and $E$ is tangency point of $A$-excircle of $\bigtriangleup ABC$. Point $F$ is in $\bigtriangleup ABC$ so that $FI//BC$ and $\angle BAF=\angle EAC$. Extend $NF$ to meet $\odot O$ at $G$, and extend $AG$ to meet line $IF$ at L. Let line $AF$ and $DI$ meet at $K$. Proof that $ML\bot NK$.
+\end{problem}
+\begin{problem}[2139114147569608698]
+Let $O$ be the circumcenter of an acute triangle $ABC$. Line $OA$ intersects the altitudes of $ABC$ through $B$ and $C$ at $P$ and $Q$, respectively. The altitudes meet at $H$. Prove that the circumcenter of triangle $PQH$ lies on a median of triangle $ABC$.
+\end{problem}
+\begin{problem}[9026100911884959358]
+Let $n$ be a positive integer, and set $N=2^{n}$. Determine the smallest real number $a_{n}$ such that, for all real $x$,
+\[
+\sqrt[N]{\frac{x^{2 N}+1}{2}} \leqslant a_{n}(x-1)^{2}+x .
+\]
+\end{problem}
+\begin{problem}[409149115429190]
+	On the $n\times n$ checker board, several cells were marked in such a way that lower left ($L$) and upper right($R$) cells are not marked and that for any knight-tour from $L$ to $R$, there is at least one marked cell. For which $n>3$, is it possible that there always exists three consective cells going through diagonal for which at least two of them are marked?
+\end{problem}
+\begin{problem}[8866273454792491736]
+	Let $r>1$ be a rational number. Alice plays a solitaire game on a number line. Initially there is a red bead at $0$ and a blue bead at $1$. In a move, Alice chooses one of the beads and an integer $k \in \mathbb{Z}$. If the chosen bead is at $x$, and the other bead is at $y$, then the bead at $x$ is moved to the point $x'$ satisfying $x'-y=r^k(x-y)$.
+
+Find all $r$ for which Alice can move the red bead to $1$ in at most $2021$ moves.
+\end{problem}
+\begin{problem}[5101270312905584526]
+The exam has $25$ topics, each of which has $8$ questions. On a test, there are $4$ questions of different topics.
+Is it possible to make $50$ tests so that each question was asked exactly once, and for any two topics there is a test where are questions of both topics?
+\end{problem}
+\begin{problem}[8612979541975584705]
+	Let $G$ be a connected graph and let $X, Y$ be two disjoint subsets of its vertices, such that there are no edges between them. Given that $G/X$ has $m$ connected components and $G/Y$ has $n$ connected components, what is the minimal number of connected components of the graph $G/(X \cup Y)$?
+\end{problem}
+\begin{problem}[6209707374283278028]
+Let $ABC$ be a triangle and $D$ be a point inside triangle $ABC$. $\Gamma$ is the circumcircle of triangle $ABC$, and $DB$, $DC$ meet $\Gamma$ again at $E$, $F$ , respectively. $\Gamma_1$, $\Gamma_2$ are the circumcircles of triangle $ADE$ and $ADF$ respectively. Assume $X$ is on $\Gamma_2$ such that $BX$ is tangent to $\Gamma_2$. Let $BX$ meets $\Gamma$ again at $Z$. Prove that the line $CZ$ is tangent to $\Gamma_1$ .
+\end{problem}
+\begin{problem}[876239022447910]
+	Let $ABCC_1B_1A_1$ be a convex hexagon such that $AB=BC$, and suppose that the line segments $AA_1, BB_1$, and $CC_1$ have the same perpendicular bisector. Let the diagonals $AC_1$ and $A_1C$ meet at $D$, and denote by $\omega$ the circle $ABC$. Let $\omega$ intersect the circle $A_1BC_1$ again at $E \neq B$. Prove that the lines $BB_1$ and $DE$ intersect on $\omega$.
+\end{problem}
+\begin{problem}[526922799283626]
+	For each $1\leq i\leq 9$ and $T\in\mathbb N$, define $d_i(T)$ to be the total number of times the digit $i$ appears when all the multiples of $1829$ between $1$ and $T$ inclusive are written out in base $10$.
+
+Show that there are infinitely many $T\in\mathbb N$ such that there are precisely two distinct values among $d_1(T)$, $d_2(T)$, $\dots$, $d_9(T)$
+\end{problem}
+\begin{problem}[518384374486289]
+	Let $O$ be the center of the equilateral triangle $ABC$. Pick two points $P_1$ and $P_2$ other than $B$, $O$, $C$ on the circle $\odot(BOC)$ so that on this circle $B$, $P_1$, $P_2$, $O$, $C$ are placed in this order. Extensions of $BP_1$ and $CP_1$ intersects respectively with side $CA$ and $AB$ at points $R$ and $S$. Line $AP_1$ and $RS$ intersects at point $Q_1$. Analogously point $Q_2$ is defined. Let $\odot(OP_1Q_1)$ and $\odot(OP_2Q_2)$ meet again at point $U$ other than $O$.
+
+Prove that $2\,\angle Q_2UQ_1 + \angle Q_2OQ_1 = 360^\circ$.
+
+Remark. $\odot(XYZ)$ denotes the circumcircle of triangle $XYZ$.
+\end{problem}
+\begin{problem}[156060759856343521]
+Let $ABC$ be an acute triangle with $\angle ACB>2 \angle ABC$. Let $I$ be the incenter of $ABC$, $K$ is the reflection of $I$ in line $BC$. Let line $BA$ and $KC$ intersect at $D$. The line through $B$ parallel to $CI$ intersects the minor arc $BC$ on the circumcircle of $ABC$ at $E(E \neq B)$. The line through $A$ parallel to $BC$ intersects the line $BE$ at $F$.
+Prove that if $BF=CE$, then $FK=AD$.
+\end{problem}
+\begin{problem}[685138775901874]
+The cells of a $100 \times 100$ table are colored white. In one move, it is allowed to select some $99$ cells from the same row or column and recolor each of them with the opposite color. What is the smallest number of moves needed to get a table with a chessboard coloring?
+\end{problem}
+\begin{problem}[4118541811915047639]
+	In a country there are $n>100$ cities and initially no roads. The government randomly determined the cost of building a two-way road between any two cities, using all amounts from $1$ to $\frac{n(n-1)}{2}$ thalers once (all options are equally likely). The mayor of each city chooses the cheapest of the $n-1$ roads emanating from that city and it is built (this may be the mutual desired of the mayors of both cities being connected, or only one of the two).
+After the construction of these roads, the cities are divided into $M$ connected components (between cities of the same connected component, you can get along the constructed roads, possibly via other cities, but this is not possible for cities of different components). Find the expected value of the random variable $M$.
+\end{problem}
+\begin{problem}[8317584744128058138]
+	One side of a square sheet of paper is colored red, the other - in blue. On both sides, the sheet is divided into $n^2$ identical square cells. In each of these $2n^2$ cells is written a number from $1$ to $k$. Find the smallest $k$,for which the following properties hold simultaneously:
+(i) on the red side, any two numbers in different rows are distinct;
+(ii) on the blue side, any two numbers in different columns are different;
+(iii) for each of the $n^2$ squares of the partition, the number on the blue side is not equal to the number on the red side.
+\end{problem}
+\begin{problem}[302701281403387]
+  Each point of a three-dimensional space is colored
+  with one of two colors such that
+  whenever an isosceles triangle $ABC$ with $AB = AC$
+  has vertices of the same color $c$ it follows that
+  the midpoint of $BC$ also is colored with $c$.
+  Prove that there exists a perpendicular square prism
+  with all vertices of equal color.
+\end{problem}
+\begin{problem}[616860610609120]
+	A few (at least $5$) integers are put on a circle, such that each of them is divisible by the sum of its neighbors. If the sum of all numbers is positive, what is its minimal value?
+\end{problem}
+\begin{problem}[599825051147866097]
+Show that $n!=a^{n-1}+b^{n-1}+c^{n-1}$ has only finitely many solutions in positive integers.
+\end{problem}
+\begin{problem}[4000488814786935591]
+A group of $100$ kids has a deck of $101$ cards numbered by $0, 1, 2,\dots, 100$. The first kid takes the deck, shuffles it, and then takes the cards one by one; when he takes a card (not the last one in the deck), he computes the average of the numbers on the cards he took up to that moment, and writes down this average on the blackboard. Thus, he writes down $100$ numbers, the first of which is the number on the first taken card. Then he passes the deck to the second kid which shuffles the deck and then performs the same procedure, and so on. This way, each of $100$ kids writes down $100$ numbers. Prove that there are two equal numbers among the $10000$ numbers on the blackboard.
+\end{problem}
+\begin{problem}[1168447466971762345]
+	Let $I, O, \omega, \Omega$ be the incenter, circumcenter, the incircle, and the circumcircle, respectively, of a scalene triangle $ABC$. The incircle $\omega$ is tangent to side $BC$ at point $D$. Let $S$ be the point on the circumcircle $\Omega$ such that $AS, OI, BC$ are concurrent. Let $H$ be the orthocenter of triangle $BIC$. Point $T$ lies on $\Omega$ such that $\angle ATI$ is a right angle. Prove that the points $D, T, H, S$ are concyclic.
+\end{problem}
+\begin{problem}[264456837378391]
+Let $ABC$ be a triangle such that the angular bisector of $\angle BAC$, the $B$-median and the perpendicular bisector of $AB$ intersect at a single point $X$. Let $H$ be the orthocenter of $ABC$. Show that $\angle BXH = 90^{\circ}$.
+\end{problem}
+\begin{problem}[3923745101517032298]
+	Let $a_0,a_1,a_2,\dots $ be a sequence of real numbers such that $a_0=0, a_1=1,$ and for every $n\geq 2$ there exists $1 \leq k \leq n$ satisfying\[ a_n=\frac{a_{n-1}+\dots + a_{n-k}}{k}. \]Find the maximum possible value of $a_{2018}-a_{2017}$.
+\end{problem}
+\begin{problem}[8534263250311217423]
+	In acute triangle $\triangle {ABC}$, $\angle 
+A > \angle B > \angle C$. $\triangle {AC_1B}$ and $\triangle {CB_1A}$ are isosceles triangles such that $\triangle {AC_1B} \stackrel{+}{\sim}  \triangle {CB_1A}$. Let lines $BB_1, CC_1$ intersects at ${T}$. Prove that if all points mentioned above are distinct, $\angle ATC$ isn't a right angle.
+\end{problem}
+\begin{problem}[162618813015033]
+In $\triangle {ABC}$, tangents of the circumcircle $\odot {O}$ at $B, C$ and at $A, B$ intersects at $X, Y$ respectively. $AX$ cuts $BC$ at ${D}$ and $CY$ cuts $AB$ at ${F}$. Ray $DF$ cuts arc $AB$ of the circumcircle at ${P}$. $Q, R$ are on segments $AB, AC$ such that $P, Q, R$ are collinear and $QR \parallel BO$. If $PQ^2=PR \cdot QR$, find $\angle ACB$.
+\end{problem}
+\begin{problem}[6135851041251773220]
+$200$ natural numbers are written in a row. For any two adjacent numbers of the row, the right one is either $9$ times greater than the left one, $2$ times smaller than the left one. Can the sum of all these 200 numbers be equal to $24^{2022}$?
+\end{problem}
+\begin{problem}[231259391294064]
+Every two of the $n$ cities of Ruritania are connected by a direct flight of one from two airlines. Promonopoly Committee wants at least $k$ flights performed by one company. To do this, he can at least every day to choose any three cities and change the ownership of the three flights connecting these cities each other (that is, to take each of these flights from a company that performs it, and pass the other). What is the largest $k$ committee knowingly will be able to achieve its goal in no time, no matter how the flights are distributed hour?
+\end{problem}
+\begin{problem}[318208660266829737]
+Let $ABC$ be an acute-angled triangle with $AB \ne AC$, and let $I$ and $O$ be its incenter and circumcenter, respectively. Let the incircle touch $BC, CA$ and $AB$ at $D, E$ and $F$, respectively. Assume that the line through $I$ parallel to $EF$, the line through $D$ parallel to$ AO$, and the altitude from $A$ are concurrent. Prove that the concurrency point is the orthocenter of the triangle $ABC$.
+\end{problem}
+\begin{problem}[16776483958513]
+Find all pairs $(k,n)$ of positive integers such that\[ k!=(2^n-1)(2^n-2)(2^n-4)\cdots(2^n-2^{n-1}). \]
+\end{problem}
+\begin{problem}[409530198849693]
+In a cyclic convex hexagon $ABCDEF$, $AB$ and $DC$ intersect at $G$, $AF$ and $DE$ intersect at $H$. Let $M, N$ be the circumcenters of $BCG$ and $EFH$, respectively. Prove that the $BE$, $CF$ and $MN$ are concurrent.
+\end{problem}
+\begin{problem}[2211812924503059239]
+	We are given $n$ coins of different weights and $n$ balances, $n>2$. On each turn one can choose one balance, put one coin on the right pan and one on the left pan, and then delete these coins out of the balance. It's known that one balance is wrong (but it's not known ehich exactly), and it shows an arbitrary result on every turn. What is the smallest number of turns required to find the heaviest coin?
+\end{problem}
+\begin{problem}[5347245479409093202]
+Let $G$ be a graph with $400$ vertices. For any edge $AB$ we call a cuttlefish the set of all edges from $A$ and $B$ (including $AB$). Each edge of the graph is assigned a value of $1$ or $-1$. It is known that the sum of edges at any cuttlefish is greater than or equal to $1$.
+Prove that the sum of the numbers at all edges is at least $-10^4$.
+\end{problem}
+\begin{problem}[1837105952530316058]
+Let $k\ge2$ be an integer. Find the smallest integer $n \ge k+1$ with the property that there exists a set of $n$ distinct real numbers such that each of its elements can be written as a sum of $k$ other distinct elements of the set.
+\end{problem}
+\begin{problem}[245448917471703]
+  In a $2 \times n$ array of positive real numbers,
+  the sum of the two real numbers in each of the $n$ columns is $1$.
+  Prove that it's possible to select one number from each column
+  such that the sum of the selected numbers in each row is
+  at most $\frac{n+1}{4}$.
+\end{problem}
+\begin{problem}[6576585943791349484]
+Regular hexagon is divided to equal rhombuses, with sides, parallels to hexagon sides. On the three sides of the hexagon, among which there are no neighbors, is set directions in order of traversing the hexagon against hour hand. Then, on each side of the rhombus, an arrow directed just as the side of the hexagon parallel to this side. Prove that there is not a closed path going along the arrows.
+\end{problem}
+\begin{problem}[1011347878697645666]
+  On a circle we write $2n$ real numbers with a positive sum.
+  For each number, there are two sets of $n$ numbers such that this number is on the end.
+  Prove that at least one of the numbers has a positive sum for both these sets.
+\end{problem}
+\begin{problem}[682786464566571]
+Let $ABCD$ be a parallelogram with $AC=BC.$ A point $P$ is chosen on the extension of ray $AB$ past $B.$ The circumcircle of $ACD$ meets the segment $PD$ again at $Q.$ The circumcircle of triangle $APQ$ meets the segment $PC$ at $R.$ Prove that lines $CD,AQ,BR$ are concurrent.
+\end{problem}
+\begin{problem}[1620616963605432410]
+Given an isosceles triangle $\triangle ABC$, $AB=AC$. A line passes through $M$, the midpoint of $BC$, and intersects segment $AB$ and ray $CA$ at $D$ and $E$, respectively. Let $F$ be a point of $ME$ such that $EF=DM$, and $K$ be a point on $MD$. Let $\Gamma_1$ be the circle passes through $B,D,K$ and $\Gamma_2$ be the circle passes through $C,E,K$. $\Gamma_1$ and $\Gamma_2$ intersect again at $L \neq K$. Let $\omega_1$ and $\omega_2$ be the circumcircle of $\triangle LDE$ and $\triangle LKM$. Prove that, if $\omega_1$ and $\omega_2$ are symmetric wrt $L$, then $BF$ is perpendicular to $BC$.
+\end{problem}
+\begin{problem}[120381541018683]
+Given any set $S$ of positive integers, show that at least one of the following two assertions holds:
+
+(1) There exist distinct finite subsets $F$ and $G$ of $S$ such that $\sum_{x\in F}1/x=\sum_{x\in G}1/x$;
+
+(2) There exists a positive rational number $r<1$ such that $\sum_{x\in F}1/x\neq r$ for all finite subsets $F$ of $S$.
+\end{problem}
+\begin{problem}[47893544380608]
+	Let $p$ be an odd prime, and put $N=\frac{1}{4} (p^3 -p) -1.$ The numbers $1,2, \dots, N$ are painted arbitrarily in two colors, red and blue. For any positive integer $n \leqslant N,$ denote $r(n)$ the fraction of integers $\{ 1,2, \dots, n \}$ that are red.
+Prove that there exists a positive integer $a \in \{ 1,2, \dots, p-1\}$ such that $r(n) \neq a/p$ for all $n = 1,2, \dots , N.$
+\end{problem}
+\begin{problem}[8402748184217471405]
+In $\Delta ABC$, $AD \perp BC$ at $D$. $E,F$ lie on line $AB$, such that $BD=BE=BF$. Let $I,J$ be the incenter and $A$-excenter. Prove that there exist two points $P,Q$ on the circumcircle of $\Delta ABC$ , such that $PB=QC$, and $\Delta PEI \sim \Delta QFJ$ .
+\end{problem}
+\begin{problem}[2989958142304279488]
+Given is a set of $2n$ cards numbered $1,2, \cdots, n$, each number appears twice. The cards are put on a table with the face down. A set of cards is called good if no card appears twice. Baron Munchausen claims that he can specify $80$ sets of $n$ cards, of which at least one is sure to be good. What is the maximal $n$ for which the Baron's words could be true?
+\end{problem}
+\begin{problem}[308110166188097]
+Let $A,B$ be two fixed points on the unit circle $\omega$, satisfying $\sqrt{2} < AB < 2$. Let $P$ be a point that can move on the unit circle, and it can move to anywhere on the unit circle satisfying $\triangle ABP$ is acute and $AP>AB>BP$. Let $H$ be the orthocenter of $\triangle ABP$ and $S$ be a point on the minor arc $AP$ satisfying $SH=AH$. Let $T$ be a point on the minor arc $AB$ satisfying $TB || AP$. Let $ST\cap BP = Q$.
+
+Show that (recall $P$ varies) the circle with diameter $HQ$ passes through a fixed point.
+\end{problem}
+\begin{problem}[915997916422887]
+	Let $ABC$ and $A'B'C'$ be two triangles so that the midpoints of $\overline{AA'}, \overline{BB'}, \overline{CC'}$ form a triangle as well. Suppose that for any point $X$ on the circumcircle of $ABC$, there exists exactly one point $X'$ on the circumcircle of $A'B'C'$ so that the midpoints of $\overline{AA'}, \overline{BB'}, \overline{CC'}$ and $\overline{XX'}$ are concyclic. Show that $ABC$ is similar to $A'B'C'$.
+\end{problem}
+\begin{problem}[1293772592063302344]
+In non-isosceles acute ${}{\triangle ABC}$, $AP$, $BQ$, $CR$ is the height of the triangle. $A_1$ is the midpoint of $BC$, $AA_1$ intersects $QR$ at $K$, $QR$ intersects a straight line that crosses ${A}$ and is parallel to $BC$ at point ${D}$, the line connecting the midpoint of $AH$ and ${K}$ intersects $DA_1$ at $A_2$. Similarly define $B_2$, $C_2$. ${}\triangle A_2B_2C_2$ is known to be non-degenerate, and its circumscribed circle is $\omega$. Prove that: there are circles $\odot A'$, $\odot B'$, $\odot C'$ tangent to and INSIDE $\omega$ satisfying:
+(1) $\odot A'$ is tangent to $AB$ and $AC$, $\odot B'$ is tangent to $BC$ and $BA$, and $\odot C'$ is tangent to $CA$ and $CB$.
+(2) $A'$, $B'$, $C$' are different and collinear.
+\end{problem}
+\begin{problem}[8700998965901287095]
+Let \(ABC\) be an acute triangle with circumcircle \(\omega\). Let \(P\) be a variable point on the arc \(BC\) of \(\omega\) not containing \(A\). Squares \(BPDE\) and \(PCFG\) are constructed such that \(A\), \(D\), \(E\) lie on the same side of line \(BP\) and \(A\), \(F\), \(G\) lie on the same side of line \(CP\). Let \(H\) be the intersection of lines \(DE\) and \(FG\). Show that as \(P\) varies, \(H\) lies on a fixed circle.
+\end{problem}
+\begin{problem}[5873161915777778529]
+In the acute-angled triangle $ABC$, the point $F$ is the foot of the altitude from $A$, and $P$ is a point on the segment $AF$. The lines through $P$ parallel to $AC$ and $AB$ meet $BC$ at $D$ and $E$, respectively. Points $X \ne A$ and $Y \ne A$ lie on the circles $ABD$ and $ACE$, respectively, such that $DA = DX$ and $EA = EY$.
+Prove that $B, C, X,$ and $Y$ are concyclic.
+\end{problem}
+\begin{problem}[210358073900610]
+Let triangle $ABC$ have altitudes $BE$ and $CF$ which meet at $H$. The reflection of $A$ over $BC$ is $A'$. Let $(ABC)$ meet $(AA'E)$ at $P$ and $(AA'F)$ at $Q$. Let $BC$ meet $PQ$ at $R$. Prove that $EF \parallel HR$.
+\end{problem}
+\begin{problem}[1790114062253914451]
+	Given a triangle $ \triangle{ABC} $ and a point $ O $. $ X $ is a point on the ray $ \overrightarrow{AC} $. Let $ X' $ be a point on the ray $ \overrightarrow{BA} $ so that $ \overline{AX} = \overline{AX_{1}} $ and $ A $ lies in the segment $ \overline{BX_{1}} $. Then, on the ray $ \overrightarrow{BC} $, choose $ X_{2} $ with $ \overline{X_{1}X_{2}} \parallel \overline{OC} $.
+
+Prove that when $ X $ moves on the ray $ \overrightarrow{AC} $, the locus of circumcenter of $ \triangle{BX_{1}X_{2}} $ is a part of a line.
+\end{problem}
+\begin{problem}[796349431725149]
+An acute, non-isosceles triangle $ABC$ is inscribed in a circle with centre $O$. A line go through $O$ and midpoint $I$ of $BC$ intersects $AB, AC$ at $E, F$ respectively. Let $D, G$ be reflections to $A$ over $O$ and circumcentre of $(AEF)$, respectively. Let $K$ be the reflection of $O$ over circumcentre of $(OBC)$.
+$a)$ Prove that $D, G, K$ are collinear.
+$b)$ Let $M, N$ are points on $KB, KC$ that $IM\perp AC$, $IN\perp AB$. The midperpendiculars of $IK$ intersects $MN$ at $H$. Assume that $IH$ intersects $AB, AC$ at $P, Q$ respectively. Prove that the circumcircle of $\triangle APQ$ intersects $(O)$ the second time at a point on $AI$.
+\end{problem}
+\begin{problem}[161342796381450]
+For each integer $n\ge 1,$ compute the smallest possible value of\[\sum_{k=1}^{n}\left\lfloor\frac{a_k}{k}\right\rfloor\]over all permutations $(a_1,\dots,a_n)$ of $\{1,\dots,n\}.$
+\end{problem}
+\begin{problem}[181878217485192]
+$1000$ children, no two of the same height, lined up. Let us call a pair of different children $(a,b)$ good if between them there is no child whose height is greater than the height of one of $a$ and $b$, but less than the height of the other. What is the greatest number of good pairs that could be formed? (Here, $(a,b)$ and $(b,a)$ are considered the same pair.)
+\end{problem}
+\begin{problem}[625002281186392279]
+	Let $\Gamma$ be the circumcircle of acute triangle $ABC$. Points $D$ and $E$ are on segments $AB$ and $AC$ respectively such that $AD = AE$. The perpendicular bisectors of $BD$ and $CE$ intersect minor arcs $AB$ and $AC$ of $\Gamma$ at points $F$ and $G$ respectively. Prove that lines $DE$ and $FG$ are either parallel or they are the same line.
+\end{problem}
+\begin{problem}[6978535805224432571]
+	The Fibonacci numbers $F_0, F_1, F_2, . . .$ are defined inductively by $F_0=0, F_1=1$, and $F_{n+1}=F_n+F_{n-1}$ for $n \ge 1$. Given an integer $n \ge 2$, determine the smallest size of a set $S$ of integers such that for every $k=2, 3, . . . , n$ there exist some $x, y \in S$ such that $x-y=F_k$.
+\end{problem}
+\begin{problem}[105422576188851]
+A short-sighted rook is a rook that beats all squares in the same column and in the same row for which he can not go more than $60$-steps.
+What is the maximal amount of short-sighted rooks that don't beat each other that can be put on a $100\times 100$ chessboard.
+\end{problem}
+\begin{problem}[4948608980214807448]
+	Let $ABC$ be a scalene triangle with circumcenter $O$ and orthocenter $H$. Let $AYZ$ be another triangle sharing the vertex $A$ such that its circumcenter is $H$ and its orthocenter is $O$. Show that if $Z$ is on $BC$, then $A,H,O,Y$ are concyclic.
+\end{problem}
+\begin{problem}[902621191535073]
+Given six points $ A, B, C, D, E, F $ such that $ \triangle BCD \stackrel{+}{\sim} \triangle ECA \stackrel{+}{\sim} \triangle BFA $ and let $ I $ be the incenter of $ \triangle ABC. $ Prove that the circumcenter of $ \triangle AID, \triangle BIE, \triangle CIF $ are collinear.
+\end{problem}
+\begin{problem}[684265043263216]
+Let $\mathbb{Z}$ be the set of integers. Determine all functions $f: \mathbb{Z} \rightarrow \mathbb{Z}$ such that, for all integers $a$ and $b$,$$f(2a)+2f(b)=f(f(a+b)).$$
+\end{problem}
+\begin{problem}[5949258338135822858]
+In $10\times 10$ square we choose $n$ cells. In every chosen cell we draw one arrow from the angle to opposite angle. It is known, that for any two arrows, or the end of one of them coincides with the beginning of the other, or
+the distance between their ends is at least 2. What is the maximum possible value of $n$?
+\end{problem}
+\begin{problem}[2265193939454652363]
+	A circle $\omega$ with radius $1$ is given. A collection $T$ of triangles is called good, if the following conditions hold:
+each triangle from $T$ is inscribed in $\omega$;
+no two triangles from $T$ have a common interior point.
+Determine all positive real numbers $t$ such that, for each positive integer $n$, there exists a good collection of $n$ triangles, each of perimeter greater than $t$.
+\end{problem}
+\begin{problem}[3048608408918882691]
+	Is it possible to arrange everything in all cells of an infinite checkered plane all natural numbers (once) so that for each $n$ in each square $n \times n$ the sum of the numbers is a multiple of $n$?
+\end{problem}
+\begin{problem}[458902414604417]
+	A class has $25$ students. The teacher wants to stock $N$ candies, hold the Olympics and give away all $N$ candies for success in it (those who solve equally tasks should get equally, those who solve less get less, including, possibly, zero candies). At what smallest $N$ this will be possible, regardless of the number of tasks on Olympiad and the student successes?
+\end{problem}
+\begin{problem}[260804315613681]
+  Suppose a $a' \times b' \times c'$ rectangular prism fits
+  inside an $a \times b \times c$ rectangular prism.
+  Is it possible that $a' + b' + c' > a + b + c$?
+\end{problem}
+\begin{problem}[297274918587198]
+	Find all positive integers $n$ with the following property: the $k$ positive divisors of $n$ have a permutation $(d_1,d_2,\ldots,d_k)$ such that for $i=1,2,\ldots,k$, the number $d_1+d_2+\cdots+d_i$ is a perfect square.
+\end{problem}
+\begin{problem}[132497611943266]
+Suppose that $a,b,c,d$ are positive real numbers satisfying $(a+c)(b+d)=ac+bd$. Find the smallest possible value of
+$$\frac{a}{b}+\frac{b}{c}+\frac{c}{d}+\frac{d}{a}.$$
+\end{problem}
+\begin{problem}[208479683430579745]
+	There are $18$ children in the class. Parents decided to give children from this class a cake. To do this, they first learned from each child the area of the piece he wants to get. After that, they showed a square-shaped cake, the area of which is exactly equal to the sum of $18$ named numbers. However, when they saw the cake, the children wanted their pieces to be squares too. The parents cut the cake with lines parallel to the sides of the cake (cuts do not have to start or end on the side of the cake). For what maximum k the parents are guaranteed to cut out $k$ square pieces from the cake, which you can give to $k$ children so that each of them gets what they want?
+\end{problem}
+\begin{problem}[2918584823978789760]
+A point $T$ is chosen inside a triangle $ABC$. Let $A_1$, $B_1$, and $C_1$ be the reflections of $T$ in $BC$, $CA$, and $AB$, respectively. Let $\Omega$ be the circumcircle of the triangle $A_1B_1C_1$. The lines $A_1T$, $B_1T$, and $C_1T$ meet $\Omega$ again at $A_2$, $B_2$, and $C_2$, respectively. Prove that the lines $AA_2$, $BB_2$, and $CC_2$ are concurrent on $\Omega$.
+\end{problem}
+\begin{problem}[748616641641895]
+Let $ABC$ be a triangle. Let $ABC_1, BCA_1, CAB_1$ be three equilateral triangles that do not overlap with $ABC$.
+Let $P$ be the intersection of the circumcircles of triangle $ABC_1$ and $CAB_1$.
+Let $Q$ be the point on the circumcircle of triangle $CAB_1$ so that $PQ$ is parallel to $BA_1$. Let $R$ be the point on the circumcircle of triangle $ABC_1$ so that $PR$ is parallel to $CA_1$.
+
+Show that the line connecting the centroid of triangle $ABC$ and the centroid of triangle $PQR$ is parallel to $BC$.
+\end{problem}
+\begin{problem}[227919487650283]
+Let $ABC$ be an acute triangle with orthocenter $H$ and circumcircle $\Omega$. Let $M$ be the midpoint of side $BC$. Point $D$ is chosen from the minor arc $BC$ on $\Gamma$ such that $\angle BAD = \angle MAC$. Let $E$ be a point on $\Gamma$ such that $DE$ is perpendicular to $AM$, and $F$ be a point on line $BC$ such that $DF$ is perpendicular to $BC$. Lines $HF$ and $AM$ intersect at point $N$, and point $R$ is the reflection point of $H$ with respect to $N$.
+
+Prove that $\angle AER + \angle DFR = 180^\circ$.
+\end{problem}
+\begin{problem}[571352513856417722]
+	A cyclic quadrilateral $ABCD$ has circumcircle $\Gamma$, and $AB+BC=AD+DC$. Let $E$ be the midpoint of arc $BCD$, and $F (\neq C)$ be the antipode of $A$ wrt $\Gamma$. Let $I,J,K$ be the incenter of $\triangle ABC$, the $A$-excenter of $\triangle ABC$, the incenter of $\triangle BCD$, respectively.
+Suppose that a point $P$ satisfies $\triangle BIC \stackrel{+}{\sim} \triangle KPJ$. Prove that $EK$ and $PF$ intersect on $\Gamma.$
+\end{problem}
+\begin{problem}[86986480818494]
+Given a scalene triangle $ABC$ inscribed in the circle $(O)$. Let $(I)$ be its incircle and $BI,CI$ cut $AC,AB$ at $E,F$ respectively. A circle passes through $E$ and touches $OB$ at $B$ cuts $(O)$ again at $M$. Similarly, a circle passes through $F$ and touches $OC$ at $C$ cuts $(O)$ again at $N$. $ME,NF$ cut $(O)$ again at $P,Q$. Let $K$ be the intersection of $EF$ and $BC$ and let $PQ$ cuts $BC$ and $EF$ at $G,H$, respectively. Show that the median correspond to $G$ of the triangle $GHK$ is perpendicular to $IO$.
+\end{problem}
+\begin{problem}[915478364939250]
+Consider the convex quadrilateral $ABCD$. The point $P$ is in the interior of $ABCD$. The following ratio equalities hold:
+\[\angle PAD:\angle PBA:\angle DPA=1:2:3=\angle CBP:\angle BAP:\angle BPC\]Prove that the following three lines meet in a point: the internal bisectors of angles $\angle ADP$ and $\angle PCB$ and the perpendicular bisector of segment $AB$.
+\end{problem}
+\begin{problem}[4389998719836463980]
+Let $ABCD$ be a parallelogram with $AC=BC.$ A point $P$ is chosen on the extension of ray $AB$ past $B.$ The circumcircle of $ACD$ meets the segment $PD$ again at $Q.$ The circumcircle of triangle $APQ$ meets the segment $PC$ at $R.$ Prove that lines $CD,AQ,BR$ are concurrent.
+\end{problem}
+\begin{problem}[70043882336455]
+Let $A$ be a point in the plane, and $\ell$ a line not passing through $A$. Evan does not have a straightedge, but instead has a special compass which has the ability to draw a circle through three distinct noncollinear points. (The center of the circle is not marked in this process.) Additionally, Evan can mark the intersections between two objects drawn, and can mark an arbitrary point on a given object or on the plane.
+
+(i) Can Evan construct* the reflection of $A$ over $\ell$?
+
+(ii) Can Evan construct the foot of the altitude from $A$ to $\ell$?
+
+*To construct a point, Evan must have an algorithm which marks the point in finitely many steps.
+\end{problem}
+\begin{problem}[537574018594693]
+Let $ABC$ be a triangle with $O$ as its circumcenter. A circle $\Gamma$ tangents $OB, OC$ at $B, C$, respectively. Let $D$ be a point on $\Gamma$ other than $B$ with $CB=CD$, $E$ be the second intersection of $DO$ and $\Gamma$, and $F$ be the second intersection of $EA$ and $\Gamma$. Let $X$ be a point on the line $AC$ so that $XB\perp BD$. Show that one half of $\angle ADF$ is equal to one of $\angle BDX$ and $\angle BXD$.
+\end{problem}
+\begin{problem}[8972547734710795566]
+Let incircle $(I)$ of triangle $ABC$ touch the sides $BC,CA,AB$ at $D,E,F$ respectively. Let $(O)$ be the circumcircle of $ABC$. Ray $EF$ meets $(O)$ at $M$. Tangents at $M$ and $A$ of $(O)$ meet at $S$. Tangents at $B$ and $C$ of $(O)$ meet at $T$. Line $TI$ meets $OA$ at $J$. Prove that $\angle ASJ=\angle IST$.
+\end{problem}
+\begin{problem}[796313598765903]
+  There are three boxes of stones.
+  Each hour, Sisyphus moves a stone from one box to another.
+  For each transfer of a stone, he receives from Zeus a number of coins
+  equal to the number of stones in the box from which the stone is drawn
+  minus the number of stones in the recipient box,
+  with the stone Sisyphus just carried not counted.
+  If this number is negative, Sisyphus pays the corresponding amount
+  (and can pay later if he is broke).
+
+  After $8760$ hours, all the stones lie in their initial boxes.
+  What is the greatest possible earning of Sisyphus at that moment,
+  in terms of the initial quantities in the three boxes?
+\end{problem}
+\begin{problem}[409146991986056]
+For each prime $p$, construct a graph $G_p$ on $\{1,2,\ldots p\}$, where $m\neq n$ are adjacent if and only if $p$ divides $(m^{2} + 1-n)(n^{2} + 1-m)$. Prove that $G_p$ is disconnected for infinitely many $p$
+\end{problem}
+\begin{problem}[822921222405372]
+Let $n\ge 3$ be a fixed integer. There are $m\ge n+1$ beads on a circular necklace. You wish to paint the beads using $n$ colors, such that among any $n+1$ consecutive beads every color appears at least once. Find the largest value of $m$ for which this task is $\emph{not}$ possible.
+\end{problem}
+\begin{problem}[1336030836839904136]
+Let $ABCDE$ be a convex pentagon with $CD= DE$ and $\angle EDC \ne 2 \cdot \angle ADB$.
+Suppose that a point $P$ is located in the interior of the pentagon such that $AP =AE$ and $BP= BC$.
+Prove that $P$ lies on the diagonal $CE$ if and only if area $(BCD)$ + area $(ADE)$ = area $(ABD)$ + area $(ABP)$.
+\end{problem}
+\begin{problem}[7243491713649826569]
+In the triangle $ABC$ let $B'$ and $C'$ be the midpoints of the sides $AC$ and $AB$ respectively and $H$ the foot of the altitude passing through the vertex $A$. Prove that the circumcircles of the triangles $AB'C'$,$BC'H$, and $B'CH$ have a common point $I$ and that the line $HI$ passes through the midpoint of the segment $B'C'.$
+\end{problem}
+\begin{problem}[4992489807901310938]
+Let $ABC$ be a triangle and $\ell_1,\ell_2$ be two parallel lines. Let $\ell_i$ intersects line $BC,CA,AB$ at $X_i,Y_i,Z_i$, respectively. Let $\Delta_i$ be the triangle formed by the line passed through $X_i$ and perpendicular to $BC$, the line passed through $Y_i$ and perpendicular to $CA$, and the line passed through $Z_i$ and perpendicular to $AB$. Prove that the circumcircles of $\Delta_1$ and $\Delta_2$ are tangent.
+\end{problem}
+\begin{problem}[3859961452154270883]
+	A deck of $n > 1$ cards is given. A positive integer is written on each card. The deck has the property that the arithmetic mean of the numbers on each pair of cards is also the geometric mean of the numbers on some collection of one or more cards.
+For which $n$ does it follow that the numbers on the cards are all equal?
+\end{problem}
+\begin{problem}[1427062131747349943]
+Let $ABC$ be a triangle with circumcenter $O$ and orthocenter $H$ such that $OH$ is parallel to $BC$. Let $AH$ intersects again with the circumcircle of $ABC$ at $X$, and let $XB, XC$ intersect with $OH$ at $Y, Z$, respectively. If the projections of $Y,Z$ to $AB,AC$ are $P,Q$, respectively, show that $PQ$ bisects $BC$.
+\end{problem}
+\begin{problem}[8963205841174892420]
+	Let $ABCD$ be a convex quadrilateral with pairwise distinct side lengths such that $AC\perp BD$. Let $O_1,O_2$ be the circumcenters of $\Delta ABD, \Delta CBD$, respectively. Show that $AO_2, CO_1$, the Euler line of $\Delta ABC$ and the Euler line of $\Delta ADC$ are concurrent.
+
+(Remark: The Euler line of a triangle is the line on which its circumcenter, centroid, and orthocenter lie.)
+\end{problem}
+\begin{problem}[633974672407561]
+Let $(a_n)_{n\geq 1}$ be a sequence of positive real numbers with the property that
+$$(a_{n+1})^2 + a_na_{n+2} \leq a_n + a_{n+2}$$for all positive integers $n$. Show that $a_{2022}\leq 1$.
+\end{problem}
+\begin{problem}[797215984506934]
+	Let $ABC$ be a triangle. Circle $\Gamma$ passes through $A$, meets segments $AB$ and $AC$ again at points $D$ and $E$ respectively, and intersects segment $BC$ at $F$ and $G$ such that $F$ lies between $B$ and $G$. The tangent to circle $BDF$ at $F$ and the tangent to circle $CEG$ at $G$ meet at point $T$. Suppose that points $A$ and $T$ are distinct. Prove that line $AT$ is parallel to $BC$.
+\end{problem}
+\begin{problem}[7268978143074030034]
+Given two circles $\omega_1$ and $\omega_2$ where $\omega_2$ is inside $\omega_1$. Show that there exists a point $P$ such that for any line $\ell$ not passing through $P$, if $\ell$ intersects circle $\omega_1$ at $A,B$ and $\ell$ intersects circle $\omega_2$ at $C,D$, where $A,C,D,B$ lie on $\ell$ in this order, then $\angle APC=\angle BPD$.
+\end{problem}
+\begin{problem}[1440964279096111130]
+	Let $a$ be a positive integer. We say that a positive integer $b$ is $a$-good if $\tbinom{an}{b}-1$ is divisible by $an+1$ for all positive integers $n$ with $an \geq b$. Suppose $b$ is a positive integer such that $b$ is $a$-good, but $b+2$ is not $a$-good. Prove that $b+1$ is prime.
+\end{problem}
+\begin{problem}[297728211754501]
+The board used for playing a game consists of the left and right parts. In each part there are several fields and there’re several segments connecting two fields from different parts (all the fields are connected.) Initially, there is a violet counter on a field in the left part, and a purple counter on a field in the right part. Lyosha and Pasha alternatively play their turn, starting from Pasha, by moving their chip (Lyosha-violet, and Pasha-purple) over a segment to other field that has no chip. It’s prohibited to repeat a position twice, i.e. can’t move to position that already been occupied by some earlier turns in the game. A player losses if he can’t make a move. Is there a board and an initial positions of counters that Pasha has a winning strategy?
+\end{problem}
+\begin{problem}[844684477828422]
+Let point $H$ be the orthocenter of a scalene triangle $ABC$. Line $AH$ intersects with the circumcircle $\Omega$ of triangle $ABC$ again at point $P$. Line $BH, CH$ meets with $AC,AB$ at point $E$ and $F$, respectively. Let $PE, PF$ meet $\Omega$ again at point $Q,R$, respectively. Point $Y$ lies on $\Omega$ so that lines $AY,QR$ and $EF$ are concurrent. Prove that $PY$ bisects $EF$.
+\end{problem}
+\begin{problem}[937132258882447]
+	$n$ coins lies in the circle. If two neighbour coins lies both head up or both tail up, then we can flip both. How many variants of coins are available that can not be obtained from each other by applying such operations?
+\end{problem}
+\begin{problem}[569685816807741]
+Determine all pairs $(n, k)$ of distinct positive integers such that there exists a positive integer $s$ for which the number of divisors of $sn$ and of $sk$ are equal.
+\end{problem}
+\begin{problem}[482459214391384]
+	On a table with $25$ columns and $300$ rows, Kostya painted all its cells in three colors. Then, Lesha, looking at the table, for each row names one of the three colors and marks in that row all cells of that color (if there are no cells of that color in that row, he does nothing). After that, all columns that have at least a marked square will be deleted.
+Kostya wants to be left as few as possible columns in the table, and Lesha wants there to be as many as possible columns in the table. What is the largest number of columns Lesha can guarantee to leave?
+\end{problem}
+\begin{problem}[574223786384294]
+Find all integers $n \geq 3$ for which there exist real numbers $a_1, a_2, \dots a_{n + 2}$ satisfying $a_{n + 1} = a_1$, $a_{n + 2} = a_2$ and
+$$a_ia_{i + 1} + 1 = a_{i + 2},$$for $i = 1, 2, \dots, n$.
+\end{problem}
+\begin{problem}[233559801569582]
+Let $n$ be a positive integer. Find the number of permutations $a_1$, $a_2$, $\dots a_n$ of the
+sequence $1$, $2$, $\dots$ , $n$ satisfying
+$$a_1 \le 2a_2\le 3a_3 \le \dots \le na_n$$
+\end{problem}
+\begin{problem}[221644122066923]
+A straight road consists of green and red segments in alternating colours, the first and last segment being green. Suppose that the lengths of all segments are more than a centimeter and less than a meter, and that the length of each subsequent segment is larger than the previous one. A grasshopper wants to jump forward along the road along these segments, stepping on each green segment at least once an without stepping on any red segment (or the border between neighboring segments). Prove that the grasshopper can do this in such a way that among the lengths of his jumps no more than $8$ different values occur.
+\end{problem}
+\begin{problem}[402654566950359]
+Let $a_1$, $a_2$, $\ldots$ be an infinite sequence of positive integers. Suppose that there is an integer $N > 1$ such that, for each $n \geq N$, the number
+$$\frac{a_1}{a_2} + \frac{a_2}{a_3} + \cdots + \frac{a_{n-1}}{a_n} + \frac{a_n}{a_1}$$is an integer. Prove that there is a positive integer $M$ such that $a_m = a_{m+1}$ for all $m \geq M$.
+\end{problem}
+\begin{problem}[883811987981100]
+Let $ABC$ be a triangle with $AB=AC$, and let $M$ be the midpoint of $BC$. Let $P$ be a point such that $PB<PC$ and $PA$ is parallel to $BC$. Let $X$ and $Y$ be points on the lines $PB$ and $PC$, respectively, so that $B$ lies on the segment $PX$, $C$ lies on the segment $PY$, and $\angle PXM=\angle PYM$. Prove that the quadrilateral $APXY$ is cyclic.
+\end{problem}
+\begin{problem}[282712203118607]
+	Let $ABC$ be an acute-angled triangle with $AC > AB$, let $O$ be its circumcentre, and let $D$ be a point on the segment $BC$. The line through $D$ perpendicular to $BC$ intersects the lines $AO, AC,$ and $AB$ at $W, X,$ and $Y,$ respectively. The circumcircles of triangles $AXY$ and $ABC$ intersect again at $Z \ne A$.
+Prove that if $W \ne D$ and $OW = OD,$ then $DZ$ is tangent to the circle $AXY.$
+\end{problem}
+\begin{problem}[4218160072471349910]
+Given is a natural number $n>4$. There are $n$ points marked on the plane, no three of which lie on the same line. Vasily draws one by one all the segments connecting pairs of marked points. At each step, drawing the next segment $S$, Vasily marks it with the smallest natural number, which hasn't appeared on a drawn segment that has a common end with $S$. Find the maximal value of $k$, for which Vasily can act in such a way that he can mark some segment with the number $k$?
+\end{problem}
+\begin{problem}[967014444176640]
+Let $m,n \geqslant 2$ be integers, let $X$ be a set with $n$ elements, and let $X_1,X_2,\ldots,X_m$ be pairwise distinct non-empty, not necessary disjoint subset of $X$. A function $f \colon X \to \{1,2,\ldots,n+1\}$ is called nice if there exists an index $k$ such that\[\sum_{x \in X_k} f(x)>\sum_{x \in X_i} f(x) \quad \text{for all } i \ne k.\]Prove that the number of nice functions is at least $n^n$.
+\end{problem}
+\begin{problem}[7500559455615129254]
+For every positive integer $N$, determine the smallest real number $b_{N}$ such that, for all real $x$,
+\[
+\sqrt[N]{\frac{x^{2 N}+1}{2}} \leqslant b_{N}(x-1)^{2}+x .
+\]
+\end{problem}
+\begin{problem}[8417327567048605288]
+Let $ABCDE$ be a convex pentagon such that $BC=DE$. Assume that there is a point $T$ inside $ABCDE$ with $TB=TD,TC=TE$ and $\angle ABT = \angle TEA$. Let line $AB$ intersect lines $CD$ and $CT$ at points $P$ and $Q$, respectively. Assume that the points $P,B,A,Q$ occur on their line in that order. Let line $AE$ intersect $CD$ and $DT$ at points $R$ and $S$, respectively. Assume that the points $R,E,A,S$ occur on their line in that order. Prove that the points $P,S,Q,R$ lie on a circle.
+\end{problem}
+\begin{problem}[571373387028298]
+Let $ABC$ be a triangle with $\angle BAC > 90 ^{\circ}$, and let $O$ be its circumcenter and $\omega$ be its circumcircle. The tangent line of $\omega$ at $A$ intersects the tangent line of $\omega$ at $B$ and $C$ respectively at point $P$ and $Q$. Let $D,E$ be the feet of the altitudes from $P,Q$ onto $BC$, respectively. $F,G$ are two points on $\overline{PQ}$ different from $A$, so that $A,F,B,E$ and $A,G,C,D$ are both concyclic. Let M be the midpoint of $\overline{DE}$. Prove that $DF,OM,EG$ are concurrent.
+\end{problem}
+\begin{problem}[857598260795435]
+Let $ ABCD $ be a rhombus with center $ O. $ $ P $ is a point lying on the side $ AB. $ Let $ I, $ $ J, $ and $ L $ be the incenters of triangles $ PCD, $ $ PAD, $ and $PBC, $ respectively. Let $ H $ and $ K $ be orthocenters of triangles $ PLB $ and $ PJA, $ respectively.
+
+Prove that $ OI \perp HK. $
+\end{problem}
+\begin{problem}[1527496195334546428]
+On the table, there're $1000$ cards arranged on a circle. On each card, a positive integer was written so that all $1000$ numbers are distinct. First, Vasya selects one of the card, remove it from the circle, and do the following operation: If on the last card taken out was written positive integer $k$, count the $k^{th}$ clockwise card not removed, from that position, then remove it and repeat the operation. This continues until only one card left on the table. Is it possible that, initially, there's a card $A$ such that, no matter what other card Vasya selects as first card, the one that left is always card $A$?
+\end{problem}
+\begin{problem}[6654677204410680146]
+In the plane, there are $n \geqslant 6$ pairwise disjoint disks $D_{1}, D_{2}, \ldots, D_{n}$ with radii $R_{1} \geqslant R_{2} \geqslant \ldots \geqslant R_{n}$. For every $i=1,2, \ldots, n$, a point $P_{i}$ is chosen in disk $D_{i}$. Let $O$ be an arbitrary point in the plane. Prove that\[O P_{1}+O P_{2}+\ldots+O P_{n} \geqslant R_{6}+R_{7}+\ldots+R_{n}.\](A disk is assumed to contain its boundary.)
+\end{problem}
+\begin{problem}[1222382895728709073]
+	Given a triangle $ABC$, a circle $\Omega$ is tangent to $AB,AC$ at $B,C,$ respectively. Point $D$ is the midpoint of $AC$, $O$ is the circumcenter of triangle $ABC$. A circle $\Gamma$ passing through $A,C$ intersects the minor arc $BC$ on $\Omega$ at $P$, and intersects $AB$ at $Q$. It is known that the midpoint $R$ of minor arc $PQ$ satisfies that $CR \perp AB$. Ray $PQ$ intersects line $AC$ at $L$, $M$ is the midpoint of $AL$, $N$ is the midpoint of $DR$, and $X$ is the projection of $M$ onto $ON$. Prove that the circumcircle of triangle $DNX$ passes through the center of $\Gamma$.
+\end{problem}
+\begin{problem}[4678973565823282552]
+Four positive integers $x,y,z$ and $t$ satisfy the relations
+\[ xy - zt = x + y = z + t. \]Is it possible that both $xy$ and $zt$ are perfect squares?
+\end{problem}
+\begin{problem}[4875666253256352039]
+Supppose that there are roads $AB$ and $CD$ but there are no roads $BC$ and $AD$ between four cities $A$, $B$, $C$, and $D$. Define restructing to be the changing a pair of roads $AB$ and $CD$ to the pair of roads $BC$ and $AD$. Initially there were some cities in a country, some of which were connected by roads and for every city there were exactly $100$ roads starting in it. The minister drew a new scheme of roads, where for every city there were also exactly $100$ roads starting in it. It's known also that in both schemes there were no cities connected by more than one road.
+Prove that it's possible to obtain the new scheme from the initial after making a finite number of restructings.
+\end{problem}
+\begin{problem}[7220404010846068686]
+	Let $ABC$ be a acute, non-isosceles triangle. $D,\ E,\ F$ are the midpoints of sides $AB,\ BC,\ AC$, resp. Denote by $(O),\ (O')$ the circumcircle and Euler circle of $ABC$. An arbitrary point $P$ lies inside triangle $DEF$ and $DP,\ EP,\ FP$ intersect $(O')$ at $D',\ E',\ F'$, resp. Point $A'$ is the point such that $D'$ is the midpoint of $AA'$. Points $B',\ C'$ are defined similarly.
+a. Prove that if $PO=PO'$ then $O\in(A'B'C')$;
+b. Point $A'$ is mirrored by $OD$, its image is $X$. $Y,\ Z$ are created in the same manner. $H$ is the orthocenter of $ABC$ and $XH,\ YH,\ ZH$ intersect $BC, AC, AB$ at $M,\ N,\ L$ resp. Prove that $M,\ N,\ L$ are collinear.
+\end{problem}
+\begin{problem}[1872712387771032593]
+Let $H$ be the orthocenter of triangle $ABC$, and $AD$, $BE$, $CF$ be the three altitudes of triangle $ABC$. Let $G$ be the orthogonal projection of $D$ onto $EF$, and $DD'$ be the diameter of the circumcircle of triangle $DEF$. Line $AG$ and the circumcircle of triangle $ABC$ intersect again at point $X$. Let $Y$ be the intersection of $GD'$ and $BC$, while $Z$ be the intersection of $AD'$ and $GH$. Prove that $X$, $Y$, and $Z$ are collinear.
+\end{problem}
+\begin{problem}[8757490679465390171]
+	Color every vertex of $2008$-gon with two colors, such that adjacent vertices have different color. If sum of angles of vertices of first color is same as sum of angles of vertices of second color, than we call $2008$-gon as interesting.
+Convex $2009$-gon one vertex is marked. It is known, that if remove any unmarked vertex, then we get interesting $2008$-gon. Prove, that if we remove marked vertex, then we get interesting $2008$-gon too.
+\end{problem}
+\begin{problem}[5990443173263547430]
+	Given a fixed circle $(O)$ and two fixed points $B, C$ on that circle, let $A$ be a moving point on $(O)$ such that $\triangle ABC$ is acute and scalene. Let $I$ be the midpoint of $BC$ and let $AD, BE, CF$ be the three heights of $\triangle ABC$. In two rays $\overrightarrow{FA}, \overrightarrow{EA}$, we pick respectively $M,N$ such that $FM = CE, EN = BF$. Let $L$ be the intersection of $MN$ and $EF$, and let $G \neq L$ be the second intersection of $(LEN)$ and $(LFM)$.
+
+a) Show that the circle $(MNG)$ always goes through a fixed point.
+
+b) Let $AD$ intersects $(O)$ at $K \neq A$. In the tangent line through $D$ of $(DKI)$, we pick $P,Q$ such that $GP \parallel AB, GQ \parallel AC$. Let $T$ be the center of $(GPQ)$. Show that $GT$ always goes through a fixed point.
+\end{problem}
+\begin{problem}[799773800583372]
+	A square grid $100 \times 100$ is tiled in two ways - only with dominoes and only with squares $2 \times 2$. What is the least number of dominoes that are entirely inside some square $2 \times 2$?
+\end{problem}
+\begin{problem}[165465510156789]
+	Let $\Omega$ be the circumcircle of an isosceles trapezoid $ABCD$, in which $AD$ is parallel to $BC$. Let $X$ be the reflection point of $D$ with respect to $BC$. Point $Q$ is on the arc $BC$ of $\Omega$ that does not contain $A$. Let $P$ be the intersection of $DQ$ and $BC$. A point $E$ satisfies that $EQ$ is parallel to $PX$, and $EQ$ bisects $\angle BEC$. Prove that $EQ$ also bisects $\angle AEP$.
+\end{problem}
+\begin{problem}[15195306726194]
+There are two piles of stones: $1703$ stones in one pile and $2022$ in the other. Sasha and Olya
+play the game, making moves in turn, Sasha starts. Let before the player's move the heaps contain $a$ and $b$ stones, with $a \geq b$. Then, on his own move, the player is allowed take from the pile with $a$ stones any number of stones from $1$ to $b$. A player loses if he can't make a move. Who wins?
+
+Remark: For 10.4, the initial numbers are $(444,999)$
+\end{problem}
+\begin{problem}[8811824418974048155]
+$ABCDE$ is a cyclic pentagon, with circumcentre $O$. $AB=AE=CD$. $I$ midpoint of $BC$. $J$ midpoint of $DE$. $F$ is the orthocentre of $\triangle ABE$, and $G$ the centroid of $\triangle AIJ$.$CE$ intersects $BD$ at $H$, $OG$ intersects $FH$ at $M$. Show that $AM\perp CD$.
+\end{problem}
+\begin{problem}[1637184643761804371]
+Initially, on the lower left and right corner of a $2018\times 2018$ board, there're two horses, red and blue, respectively. $A$ and $B$ alternatively play their turn, $A$ start first. Each turn consist of moving their horse ($A$-red, and $B$-blue) by, simultaneously, $20$ cells respect to one coordinate, and $17$ cells respect to the other; while preserving the rule that the horse can't occupied the cell that ever occupied by any horses in the game. The player who can't make the move loss, who has the winning strategy?
+\end{problem}
+\begin{problem}[587866144613888]
+The Bank of Oslo issues two types of coin: aluminum (denoted A) and bronze (denoted B). Marianne has $n$ aluminum coins and $n$ bronze coins arranged in a row in some arbitrary initial order. A chain is any subsequence of consecutive coins of the same type. Given a fixed positive integer $k \leq 2n$, Gilberty repeatedly performs the following operation: he identifies the longest chain containing the $k^{th}$ coin from the left and moves all coins in that chain to the left end of the row. For example, if $n=4$ and $k=4$, the process starting from the ordering $AABBBABA$ would be $AABBBABA \to BBBAAABA \to AAABBBBA \to BBBBAAAA \to ...$
+
+Find all pairs $(n,k)$ with $1 \leq k \leq 2n$ such that for every initial ordering, at some moment during the process, the leftmost $n$ coins will all be of the same type.
+\end{problem}
+\begin{problem}[908587245178389]
+Let $I$ be the incenter of triangle $ABC$, and $\ell$ be the perpendicular bisector of $AI$. Suppose that $P$ is on the circumcircle of triangle $ABC$, and line $AP$ and $\ell$ intersect at point $Q$. Point $R$ is on $\ell$ such that $\angle IPR = 90^{\circ}$.Suppose that line $IQ$ and the midsegment of $ABC$ that is parallel to $BC$ intersect at $M$. Show that $\angle AMR = 90^{\circ}$
+
+(Note: In a triangle, a line connecting two midpoints is called a midsegment.)
+\end{problem}
+\begin{problem}[296367141382799]
+Given a triangle $ \triangle{ABC} $ with orthocenter $ H $. On its circumcenter, choose an arbitrary point $ P $ (other than $ A,B,C $) and let $ M $ be the mid-point of $ HP $. Now, we find three points $ D,E,F $ on the line $ BC, CA, AB $, respectively, such that $ AP \parallel HD, BP \parallel HE, CP \parallel HF $. Show that $ D, E, F, M $ are colinear.
+\end{problem}
+\begin{problem}[493493847475466779]
+Let $ABC$ be a triangle and let $H$ be the orthogonal projection of $A$ on the line $BC$. Let $K$ be a point on the segment $AH$ such that $AH = 3 KH$. Let $O$ be the circumcenter of triangle $ABC$ and let $M$ and $N$ be the midpoints of sides $AC$ and $AB$ respectively. The lines $KO$ and $MN$ meet at a point $Z$ and the perpendicular at $Z$ to $OK$ meets lines $AB, AC$ at $X$ and $Y$ respectively. Show that $\angle XKY = \angle CKB$.
+\end{problem}
+\begin{problem}[240654526717277]
+Let $\Gamma$ be a circle with centre $I$, and $A B C D$ a convex quadrilateral such that each of the segments $A B, B C, C D$ and $D A$ is tangent to $\Gamma$. Let $\Omega$ be the circumcircle of the triangle $A I C$. The extension of $B A$ beyond $A$ meets $\Omega$ at $X$, and the extension of $B C$ beyond $C$ meets $\Omega$ at $Z$. The extensions of $A D$ and $C D$ beyond $D$ meet $\Omega$ at $Y$ and $T$, respectively. Prove that\[A D+D T+T X+X A=C D+D Y+Y Z+Z C.\]
+\end{problem}
+\begin{problem}[521339998508550]
+There are $998$ cities in a country. Some pairs of cities are connected by two-way flights. According to the law, between any pair cities should be no more than one flight. Another law requires that for any group of cities there will be no more than $5k+10$ flights connecting two cities from this group, where $k$ is the number number of cities in the group. Prove that several new flights can be introduced so that laws still hold and the total number of flights in the country is equal to $5000$.
+\end{problem}
+\begin{problem}[2672133756769464425]
+Is there a scalene triangle $ABC$ similar to triangle $IHO$, where $I$, $H$, and $O$ are the incenter, orthocenter, and circumcenter, respectively, of triangle $ABC$?
+\end{problem}
+\begin{problem}[6497483389877629432]
+Initially, a word of $250$ letters with $125$ letters $A$ and $125$ letters $B$ is written on a blackboard. In each operation, we may choose a contiguous string of any length with equal number of letters $A$ and equal number of letters $B$, reverse those letters and then swap each $B$ with $A$ and each $A$ with $B$ (Example: $ABABBA$ after the operation becomes $BAABAB$). Decide if it possible to choose initial word, so that after some operations, it will become the same as the first word, but in reverse order.
+\end{problem}
+\begin{problem}[3866807698726339637]
+Let $n$ and $k$ be two integers with $n>k\geqslant 1$. There are $2n+1$ students standing in a circle. Each student $S$ has $2k$ neighbors - namely, the $k$ students closest to $S$ on the left, and the $k$ students closest to $S$ on the right.
+
+Suppose that $n+1$ of the students are girls, and the other $n$ are boys. Prove that there is a girl with at least $k$ girls among her neighbors.
+\end{problem}
+\begin{problem}[989812634983805]
+Let $n>2$ be a positive integer. Masha writes down $n$ natural numbers along a circle. Next, Taya performs the following operation: Between any two adjacent numbers $a$ and $b$, she writes a divisor of the number $a+b$ greater than $1$, then Taya erases the original numbers and obtains a new set of $n$ numbers along the circle. Can Taya always perform these operations in such a way that after some number of operations, all the numbers are equal?
+\end{problem}
+\begin{problem}[175452544956824]
+In the city built are $2019$ metro stations. Some pairs of stations are connected. tunnels, and from any station through the tunnels you can reach any other. The mayor ordered to organize several metro lines: each line should include several different stations connected in series by tunnels (several lines can pass through the same tunnel), and in each station must lie at least on one line. To save money no more than $k$ lines should be made. It turned out that the order of the mayor is not feasible. What is the largest $k$ it could to happen?
+\end{problem}
+\begin{problem}[961350373727093]
+Given a positive integer $k$ show that there exists a prime $p$ such that one can choose distinct integers $a_1,a_2\cdots, a_{k+3} \in \{1, 2, \cdots ,p-1\}$ such that p divides $a_ia_{i+1}a_{i+2}a_{i+3}-i$ for all $i= 1, 2, \cdots, k$.
+\end{problem}
+\begin{problem}[9103148252094553273]
+	The kingdom of Anisotropy consists of $n$ cities. For every two cities there exists exactly one direct one-way road between them. We say that a path from $X$ to $Y$ is a sequence of roads such that one can move from $X$ to $Y$ along this sequence without returning to an already visited city. A collection of paths is called diverse if no road belongs to two or more paths in the collection.
+
+Let $A$ and $B$ be two distinct cities in Anisotropy. Let $N_{AB}$ denote the maximal number of paths in a diverse collection of paths from $A$ to $B$. Similarly, let $N_{BA}$ denote the maximal number of paths in a diverse collection of paths from $B$ to $A$. Prove that the equality $N_{AB} = N_{BA}$ holds if and only if the number of roads going out from $A$ is the same as the number of roads going out from $B$.
+\end{problem}
+\begin{problem}[719467452801051]
+Let $ABC$ be a triangle with circumcircle $\Omega$ and incentre $I$. A line $\ell$ intersects the lines $AI$, $BI$, and $CI$ at points $D$, $E$, and $F$, respectively, distinct from the points $A$, $B$, $C$, and $I$. The perpendicular bisectors $x$, $y$, and $z$ of the segments $AD$, $BE$, and $CF$, respectively determine a triangle $\Theta$. Show that the circumcircle of the triangle $\Theta$ is tangent to $\Omega$.
+\end{problem}
+\begin{problem}[8255863576892581507]
+	Let $ABC$ be an acute triangle with orthocenter $H$, and let $P$ be a point on the nine-point circle of $ABC$. Lines $BH, CH$ meet the opposite sides $AC, AB$ at $E, F$, respectively. Suppose that the circumcircles $(EHP), (FHP)$ intersect lines $CH, BH$ a second time at $Q,R$, respectively. Show that as $P$ varies along the nine-point circle of $ABC$, the line $QR$ passes through a fixed point.
+\end{problem}
+\begin{problem}[2117883853443241027]
+On the circle, 99 points are marked, dividing this circle into 99 equal arcs. Petya and Vasya play the game, taking turns. Petya goes first; on his first move, he paints in red or blue any marked point. Then each player can paint on his own turn, in red or blue, any uncolored marked point adjacent to the already painted one. Vasya wins, if after painting all points there is an equilateral triangle, all three vertices of which are colored in the same color. Could Petya prevent him?
+\end{problem}
+\begin{problem}[6955756846906975678]
+If there are several heaps of stones on the table, it is said that there are $\textit{many}$ stones on the table, if we can find $50$ piles and number them with the numbers from $1$ to $50$ so that the first pile contains at least one stone, the second - at least two stones,..., the $50$-th has at least $50$ stones. Let the table be initially contain $100$ piles of $100$ stones each. Find the largest $n \leq 10 000$ such that after removing any $n$ stones, there will still be $\textit{many}$ stones left on the table.
+\end{problem}
+\begin{problem}[2749225075653830789]
+	In a regular 100-gon, 41 vertices are colored black and the remaining 59 vertices are colored white. Prove that there exist 24 convex quadrilaterals $Q_{1}, \ldots, Q_{24}$ whose corners are vertices of the 100-gon, so that
+the quadrilaterals $Q_{1}, \ldots, Q_{24}$ are pairwise disjoint, and
+every quadrilateral $Q_{i}$ has three corners of one color and one corner of the other color.
+\end{problem}
+\begin{problem}[651490142085731]
+	Let $I$ be the incenter of triangle $ABC$, and let $\omega$ be its incircle. Let $E$ and $F$ be the points of tangency of $\omega$ with $CA$ and $AB$, respectively. Let $X$ and $Y$ be the intersections of the circumcircle of $BIC$ and $\omega$. Take a point $T$ on $BC$ such that $\angle AIT$ is a right angle. Let $G$ be the intersection of $EF$ and $BC$, and let $Z$ be the intersection of $XY$ and $AT$. Prove that $AZ$, $ZG$, and $AI$ form an isosceles triangle.
+\end{problem}
+\begin{problem}[6783316811528119504]
+Let $S$ be an infinite set of positive integers, such that there exist four pairwise distinct $a,b,c,d \in S$ with $\gcd(a,b) \neq \gcd(c,d)$. Prove that there exist three pairwise distinct $x,y,z \in S$ such that $\gcd(x,y)=\gcd(y,z) \neq \gcd(z,x)$.
+\end{problem}
+\begin{problem}[677860185151955]
+	The checker moves from the lower left corner of the board $100 \times 100$ to the right top corner, moving at each step one cell to the right or one cell up. Let $a$ be the number of paths in which exactly $70$ steps the checker take under the diagonal going from the lower left corner to the upper right corner, and $b$ is the number of paths in which such steps are exactly $110$. What is more: $a$ or $b$?
+\end{problem}
+\begin{problem}[966139221944695]
+Stierlitz wants to send an encryption to the Center, which is a code containing $100$ characters, each a "dot" or a "dash". The instruction he received from the Center the day before about conspiracy reads:
+
+i) when transmitting encryption over the radio, exactly $49$ characters should be replaced with their opposites;
+
+ii) the location of the "wrong" characters is decided by the transmitting side and the Center is not informed of it.
+
+Prove that Stierlitz can send $10$ encryptions, each time choosing some $49$ characters to flip, such that when the Center receives these $10$ ciphers, it may unambiguously restore the original code.
+\end{problem}
+\begin{problem}[2134021625648303394]
+The infinite sequence $a_0,a _1, a_2, \dots$ of (not necessarily distinct) integers has the following properties: $0\le a_i \le i$ for all integers $i\ge 0$, and\[\binom{k}{a_0} + \binom{k}{a_1} + \dots + \binom{k}{a_k} = 2^k\]for all integers $k\ge 0$. Prove that all integers $N\ge 0$ occur in the sequence (that is, for all $N\ge 0$, there exists $i\ge 0$ with $a_i=N$).
+\end{problem}
+\begin{problem}[6919176010062551987]
+Find all positive integers $n>2$ such that
+$$ n! \mid \prod_{ p<q\le n, p,q \, \text{primes}} (p+q)$$
+\end{problem}
+\begin{problem}[57940096937913]
+Let $ABC$ be an acute-angled triangle and let $D, E$, and $F$ be the feet of altitudes from $A, B$, and $C$ to sides $BC, CA$, and $AB$, respectively. Denote by $\omega_B$ and $\omega_C$ the incircles of triangles $BDF$ and $CDE$, and let these circles be tangent to segments $DF$ and $DE$ at $M$ and $N$, respectively. Let line $MN$ meet circles $\omega_B$ and $\omega_C$ again at $P \ne M$ and $Q \ne N$, respectively. Prove that $MP = NQ$.
+\end{problem}
+\begin{problem}[6306108494297192985]
+Carl is given three distinct non-parallel lines $\ell_1, \ell_2, \ell_3$ and a circle $\omega$ in the plane. In addition to a normal straightedge, Carl has a special straightedge which, given a line $\ell$ and a point $P$, constructs a new line passing through $P$ parallel to $\ell$. (Carl does not have a compass.) Show that Carl can construct a triangle with circumcircle $\omega$ whose sides are parallel to $\ell_1,\ell_2,\ell_3$ in some order.
+\end{problem}
+\begin{problem}[314213229221479]
+	Given is a natural number $n > 5$. On a circular strip of paper is written a sequence of zeros and ones. For each sequence $w$ of $n$ zeros and ones we count the number of ways to cut out a fragment from the strip on which is written $w$. It turned out that the largest number $M$ is achieved for the sequence $11 00...0$ ($n-2$ zeros) and the smallest - for the sequence $00...011$ ($n-2$ zeros). Prove that there is another sequence of $n$ zeros and ones that occurs exactly $M$ times.
+\end{problem}
+\begin{problem}[8851048763094130212]
+	Let $ABCD$ be a quadrilateral inscribed in a circle $\Omega.$ Let the tangent to $\Omega$ at $D$ meet rays $BA$ and $BC$ at $E$ and $F,$ respectively. A point $T$ is chosen inside $\triangle ABC$ so that $\overline{TE}\parallel\overline{CD}$ and $\overline{TF}\parallel\overline{AD}.$ Let $K\ne D$ be a point on segment $DF$ satisfying $TD=TK.$ Prove that lines $AC,DT,$ and $BK$ are concurrent.
+\end{problem}
+\begin{problem}[7553717274310387624]
+Let $ABC$ be a triangle with incentre $I$ and circumcircle $\omega$. The incircle of the triangle $ABC$
+touches the sides $BC$, $CA$ and $AB$ at $D$, $E$ and $F$, respectively. The circumcircle of triangle $ADI$ crosses $\omega$ again at $P$, and the lines $PE$ and $PF$ cross $\omega$ again at $X$and $Y$, respectively. Prove that the lines $AI$, $BX$ and $CY$ are concurrent.
+\end{problem}
+\begin{problem}[4439711278400170990]
+	$N$ oligarchs built a country with $N$ cities with each one of them owning one city. In addition, each oligarch built some roads such that the maximal amount of roads an oligarch can build between two cities is $1$ (note that there can be more than $1$ road going through two cities, but they would belong to different oligarchs).
+A total of $d$ roads were built. Some oligarchs wanted to create a corporation by combining their cities and roads so that from any city of the corporation you can go to any city of the corporation using only corporation roads (roads can go to other cities outside corporation) but it turned out that no group of less than $N$ oligarchs can create a corporation. What is the maximal amount that $d$ can have?
+\end{problem}
+\begin{problem}[728988632553727]
+Let $ABCD$ be a convex quadrilateral with $\angle ABC>90$, $CDA>90$ and $\angle DAB=\angle BCD$. Denote by $E$ and $F$ the reflections of $A$ in lines $BC$ and $CD$, respectively. Suppose that the segments $AE$ and $AF$ meet the line $BD$ at $K$ and $L$, respectively. Prove that the circumcircles of triangles $BEK$ and $DFL$ are tangent to each other.
+\end{problem}
+\begin{problem}[7494618588207758150]
+	An anti-Pascal triangle is an equilateral triangular array of numbers such that, except for the numbers in the bottom row, each number is the absolute value of the difference of the two numbers immediately below it. For example, the following is an anti-Pascal triangle with four rows which contains every integer from $1$ to $10$.
+\[\begin{array}{
+c@{\hspace{4pt}}c@{\hspace{4pt}}
+c@{\hspace{4pt}}c@{\hspace{2pt}}c@{\hspace{2pt}}c@{\hspace{4pt}}c
+} \vspace{4pt}
+ & & & 4 & & &  \\\vspace{4pt}
+ & & 2 & & 6 & &  \\\vspace{4pt}
+ & 5 & & 7 & & 1 & \\\vspace{4pt}
+ 8 & & 3 & & 10 & & 9 \\\vspace{4pt}
+\end{array}\]Does there exist an anti-Pascal triangle with $2018$ rows which contains every integer from $1$ to $1 + 2 + 3 + \dots + 2018$?
+
+\end{problem}
+\begin{problem}[6612845742708555351]
+	Cyclic quadrilateral $ABCD$ has circumcircle $(O)$. Points $M$ and $N$ are the midpoints of $BC$ and $CD$, and $E$ and $F$ lie on $AB$ and $AD$ respectively such that $EF$ passes through $O$ and $EO=OF$. Let $EN$ meet $FM$ at $P$. Denote $S$ as the circumcenter of $\triangle PEF$. Line $PO$ intersects $AD$ and $BA$ at $Q$ and $R$ respectively. Suppose $OSPC$ is a parallelogram. Prove that $AQ=AR$.
+\end{problem}
+\begin{problem}[437956241529021]
+	In a country, there are ${}N{}$ cities and $N(N-1)$ one-way roads: one road from $X{}$ to $Y{}$ for each ordered pair of cities $X \neq Y$. Every road has a maintenance cost. For each $k = 1,\ldots, N$ let's consider all the ways to select $k{}$ cities and $N - k{}$ roads so that from each city it is possible to get to some selected city, using only selected roads.
+
+We call such a system of cities and roads with the lowest total maintenance cost $k{}$-optimal. Prove that cities can be numbered from $1{}$ to $N{}$ so that for each $k = 1,\ldots, N$ there is a $k{}$-optimal system of roads with the selected cities numbered $1,\ldots, k$.
+\end{problem}
+\begin{problem}[1121095467606378762]
+	Let $\Gamma, \Gamma_1, \Gamma_2$ be mutually tangent circles. The three circles are also tangent to a line $l$. Let $\Gamma, \Gamma_1$ be tangent to each other at $B_1$, $\Gamma, \Gamma_2$ be tangent to each other at $B_2$, $\Gamma_1, \Gamma_2$ be tangent to each other at $C$. $\Gamma, \Gamma_1, \Gamma_2$ are tangent to $l$ at $A, A_1, A_2$ respectively, where $A$ is between $A_1,A_2$. Let $D_1 = A_1C \cap A_2B_2, D_2 = A_2C \cap A_1B_1$. Prove that $D_1D_2$ is parallel to $l$.
+\end{problem}
+\begin{problem}[4415914581303660291]
+$24$ students attend a mathematical circle. For any team consisting of $6$ students, the teacher considers it to be either GOOD or OK. For the tournament of mathematical battles, the teacher wants to partition all the students into $4$ teams of $6$ students each. May it happen that every such partition contains either $3$ GOOD teams or exactly one GOOD team and both options are present?
+\end{problem}
+\begin{problem}[6020628633767269011]
+Let \(ABCDE\) be a regular pentagon. Let \(P\) be a variable point on the interior of segment \(AB\) such that \(PA\ne PB\). The circumcircles of \(\triangle PAE\) and \(\triangle PBC\) meet again at \(Q\). Let \(R\) be the circumcenter of \(\triangle DPQ\). Show that as \(P\) varies, \(R\) lies on a fixed line.
+\end{problem}
+\begin{problem}[5514383858686655851]
+Determine all functions $f:(0,\infty)\to\mathbb{R}$ satisfying$$\left(x+\frac{1}{x}\right)f(y)=f(xy)+f\left(\frac{y}{x}\right)$$for all $x,y>0$.
+\end{problem}
+\begin{problem}[8024569764169071557]
+$12$ schoolchildren are engaged in a circle of patriotic songs, each of them knows a few songs (maybe none). We will say that a group of schoolchildren can sing a song if at least one member of the group knows it. Supervisor the circle noticed that any group of $10$ circle members can sing exactly $20$ songs, and any group of $8$ circle members - exactly $16$ songs. Prove that the group of all $12$ circle members can sing exactly $24$ songs.
+\end{problem}
+\begin{problem}[448881061747528]
+A magician intends to perform the following trick. She announces a positive integer $n$, along with $2n$ real numbers $x_1 < \dots < x_{2n}$, to the audience. A member of the audience then secretly chooses a polynomial $P(x)$ of degree $n$ with real coefficients, computes the $2n$ values $P(x_1), \dots , P(x_{2n})$, and writes down these $2n$ values on the blackboard in non-decreasing order. After that the magician announces the secret polynomial to the audience. Can the magician find a strategy to perform such a trick?
+\end{problem}
+\begin{problem}[1891712635906763103]
+	Let $BM$ be a median in an acute-angled triangle $ABC$. A point $K$ is chosen on the line through $C$ tangent to the circumcircle of $\vartriangle BMC$ so that $\angle KBC = 90^\circ$. The segments $AK$ and $BM$ meet at $J$. Prove that the circumcenter of $\triangle BJK$ lies on the line $AC$.
+\end{problem}
+\begin{problem}[1248852037865425410]
+Let $n>1$ be a positive integer. Each cell of an $n\times n$ table contains an integer. Suppose that the following conditions are satisfied:
+Each number in the table is congruent to $1$ modulo $n$.
+The sum of numbers in any row, as well as the sum of numbers in any column, is congruent to $n$ modulo $n^2$.
+Let $R_i$ be the product of the numbers in the $i^{\text{th}}$ row, and $C_j$ be the product of the number in the $j^{\text{th}}$ column. Prove that the sums $R_1+\hdots R_n$ and $C_1+\hdots C_n$ are congruent modulo $n^4$.
+\end{problem}
+\begin{problem}[302438226120877]
+	Given triangle $ABC$. Let $BPCQ$ be a parallelogram ($P$ is not on $BC$). Let $U$ be the intersection of $CA$ and $BP$, $V$ be the intersection of $AB$ and $CP$, $X$ be the intersection of $CA$ and the circumcircle of triangle $ABQ$ distinct from $A$, and $Y$ be the intersection of $AB$ and the circumcircle of triangle $ACQ$ distinct from $A$.
+Prove that $\overline{BU} = \overline{CV}$ if and only if the lines $AQ$, $BX$, and $CY$ are concurrent.
+\end{problem}
+\begin{problem}[6183425212304704085]
+	A positive integer $k$ is given. Initially, $N$ cells are marked on an infinite checkered plane. We say that the cross of a cell $A$ is the set of all cells lying in the same row or in the same column as $A$. By a turn, it is allowed to mark an unmarked cell $A$ if the cross of $A$ contains at least $k$ marked cells. It appears that every cell can be marked in a sequence of such turns. Determine the smallest possible value of $N$.
+\end{problem}
+\begin{problem}[660403976209529]
+A number is called Norwegian if it has three distinct positive divisors whose sum is equal to $2022$. Determine the smallest Norwegian number.
+(Note: The total number of positive divisors of a Norwegian number is allowed to be larger than $3$.)
+\end{problem}
+\begin{problem}[813804034055493]
+In a circle there are $2019$ plates, on each lies one cake. Petya and Vasya are playing a game. In one move, Petya points at a cake and calls number from $1$ to $16$, and Vasya moves the specified cake to the specified number of
+check clockwise or counterclockwise (Vasya chooses the direction each time). Petya wants at least some $k$ pastries to accumulate on one of the plates and Vasya wants to stop him. What is the largest $k$ Petya can succeed?
+\end{problem}
+\begin{problem}[7997372712267182584]
+Let $ABCDE$ be a convex pentagon such that $AB=BC=CD$, $\angle{EAB}=\angle{BCD}$, and $\angle{EDC}=\angle{CBA}$. Prove that the perpendicular line from $E$ to $BC$ and the line segments $AC$ and $BD$ are concurrent.
+\end{problem}
+\begin{problem}[308215997593136]
+Misha came to country with $n$ cities, and every $2$ cities are connected by the road. Misha want visit some cities, but he doesn`t visit one city two time. Every time, when Misha goes from city $A$ to city $B$, president of country destroy $k$ roads from city $B$(president can`t destroy road, where Misha goes). What maximal number of cities Misha can visit, no matter how president does?
+\end{problem}
+\begin{problem}[3813623497653179264]
+	The real numbers $a, b, c, d$ are such that $a\geq b\geq c\geq d>0$ and $a+b+c+d=1$. Prove that
+\[(a+2b+3c+4d)a^ab^bc^cd^d<1\]
+\end{problem}
+\begin{problem}[697045850918084]
+	In the country there're $N$ cities and some pairs of cities are connected by two-way airlines (each pair with no more than one). Every airline belongs to one of $k$ companies. It turns out that it's possible to get to any city from any other, but it fails when we delete all airlines belonging to any one of the companies. What is the maximum possible number of airlines in the country ?
+\end{problem}
+\begin{problem}[5363953658134647103]
+Let $ABC$ be a triangle with incenter $I$. The line through $I$, perpendicular to $AI$, intersects the circumcircle of $ABC$ at points $P$ and $Q$. It turns out there exists a point $T$ on the side $BC$ such that $AB + BT = AC + CT$ and $AT^2 =  AB \cdot AC$. Determine all possible values of the ratio $IP/IQ$.
+\end{problem}
+\begin{problem}[1965233157265405983]
+Given a triangle $ \triangle{ABC} $. Denote its incircle and circumcircle by $ \omega, \Omega $, respectively. Assume that $ \omega $ tangents the sides $ AB, AC $ at $ F, E $, respectively. Then, let the intersections of line $ EF $ and $ \Omega $ to be $ P,Q $. Let $ M $ to be the mid-point of $ BC $. Take a point $ R $ on the circumcircle of $ \triangle{MPQ} $, say $ \Gamma $, such that $ MR \perp EF $. Prove that the line $ AR $, $ \omega $ and $ \Gamma $ intersect at one point.
+\end{problem}
+\begin{problem}[3435532350205377704]
+Find all functions $f:\mathbb Z_{>0}\to \mathbb Z_{>0}$ such that $a+f(b)$ divides $a^2+bf(a)$ for all positive integers $a$ and $b$ with $a+b>2019$.
+\end{problem}
+\begin{problem}[561375932085594939]
+Petya has $10, 000$ balls, among them there are no two balls of equal weight. He also has a device, which works as follows: if he puts exactly $10$ balls on it, it will report the sum of the weights of some two of them (but he doesn't know which ones). Prove that Petya can use the device a few times so that after a while he will be able to choose one of the balls and accurately tell its weight.
+\end{problem}
+\begin{problem}[7550072974614174968]
+Let $n \geqslant 3$ be an integer, and let $x_1,x_2,\ldots,x_n$ be real numbers in the interval $[0,1]$. Let $s=x_1+x_2+\ldots+x_n$, and assume that $s \geqslant 3$. Prove that there exist integers $i$ and $j$ with $1 \leqslant i<j \leqslant n$ such that
+\[2^{j-i}x_ix_j>2^{s-3}.\]
+\end{problem}
+\begin{problem}[623590906176957]
+	The Bank of Bath issues coins with an $H$ on one side and a $T$ on the other. Harry has $n$ of these coins arranged in a line from left to right. He repeatedly performs the following operation: if there are exactly $k>0$ coins showing $H$, then he turns over the $k$th coin from the left; otherwise, all coins show $T$ and he stops. For example, if $n=3$ the process starting with the configuration $THT$ would be $THT \to HHT  \to HTT \to TTT$, which stops after three operations.
+
+(a) Show that, for each initial configuration, Harry stops after a finite number of operations.
+
+(b) For each initial configuration $C$, let $L(C)$ be the number of operations before Harry stops. For example, $L(THT) = 3$ and $L(TTT) = 0$. Determine the average value of $L(C)$ over all $2^n$ possible initial configurations $C$.
+\end{problem}
+\begin{problem}[579228243242060]
+Let $ABCD$ be a parallelogram. A line through $C$ crosses the side $AB$ at an interior point $X$,
+and the line $AD$ at $Y$. The tangents of the circle $AXY$ at $X$ and $Y$, respectively, cross at $T$.
+Prove that the circumcircles of triangles $ABD$ and $TXY$ intersect at two points, one lying on the line $AT$ and the other one lying on the line $CT$.
+\end{problem}
+\begin{problem}[499788610931519]
+	Andryusha has $100$ stones of different weight and he can distinguish the stones by appearance, but does not know their weight. Every evening, Andryusha can put exactly $10$ stones on the table and at night the brownie will order them in increasing weight. But, if the drum also lives in the house then surely he will in the morning change the places of some $2$ stones.Andryusha knows all about this but does not know if there is a drum in his house. Can he find out?
+\end{problem}
+\begin{problem}[709461884323637120]
+Among 16 coins there are 8 heavy coins with weight of 11 g, and 8 light coins with weight of 10 g, but it's unknown what weight of any coin is. One of the coins is anniversary. How to know, is anniversary coin heavy or light, via three weighings on scales with two cups and without any weight?
+\end{problem}
+\begin{problem}[258585206260584]
+Let $n \geqslant 100$ be an integer. Ivan writes the numbers $n, n+1, \ldots, 2 n$ each on different cards. He then shuffles these $n+1$ cards, and divides them into two piles. Prove that at least one of the piles contains two cards such that the sum of their numbers is a perfect square.
+\end{problem}
+\begin{problem}[8608387455131778331]
+  Calvin and Hobbes play a game.
+  First, Hobbes picks a family $\mathcal F$ of subsets
+  of $\{1, 2, \dots, 2020\}$, known to both players.
+  Then, Calvin and Hobbes take turns choosing a number
+  from $\{1, 2, \dots, 2020\}$
+  which is not already chosen, with Calvin going first,
+  until all numbers are taken (i.e., each player has $1010$ numbers).
+  Calvin wins if he has chosen all the elements
+  of some member of $\mathcal F$, otherwise Hobbes wins.
+  What is the largest possible size of a family $\mathcal F$ that Hobbes
+  could pick while still having a winning strategy?
+\end{problem}
+\begin{problem}[436681276656848]
+For the quadrilateral $ABCD$, let $AC$ and $BD$ intersect at $E$, $AB$ and $CD$ intersect at $F$, and $AD$ and $BC$ intersect at $G$. Additionally, let $W, X, Y$, and $Z$ be the points of symmetry to $E$ with respect to $AB, BC, CD,$ and $DA$ respectively. Prove that one of the intersection points of $\odot(FWY)$ and $\odot(GXZ)$ lies on the line $FG$.
+\end{problem}
+\begin{problem}[8799177804774743019]
+In each square of a garden shaped like a $2022 \times 2022$ board, there is initially a tree of height $0$. A gardener and a lumberjack alternate turns playing the following game, with the gardener taking the first turn:
+The gardener chooses a square in the garden. Each tree on that square and all the surrounding squares (of which there are at most eight) then becomes one unit taller.
+The lumberjack then chooses four different squares on the board. Each tree of positive height on those squares then becomes one unit shorter.
+We say that a tree is majestic if its height is at least $10^6$. Determine the largest $K$ such that the gardener can ensure there are eventually $K$ majestic trees on the board, no matter how the lumberjack plays.
+\end{problem}
+\begin{problem}[689874125173032]
+Let $\omega_1,\omega_2$ be two non-intersecting circles, with circumcenters $O_1,O_2$ respectively, and radii $r_1,r_2$ respectively where $r_1 < r_2$. Let $AB,XY$ be the two internal common tangents of $\omega_1,\omega_2$, where $A,X$ lie on $\omega_1$, $B,Y$ lie on $\omega_2$. The circle with diameter $AB$ meets $\omega_1,\omega_2$ at $P$ and $Q$ respectively. If$$\angle AO_1P+\angle BO_2Q=180^{\circ},$$find the value of $\frac{PX}{QY}$ (in terms of $r_1,r_2$).
+\end{problem}
+\begin{problem}[4527883777563937913]
+10000 children came to a camp; every of them is friend of exactly eleven other children in the camp (friendship is mutual). Every child wears T-shirt of one of seven rainbow's colours; every two friends' colours are different. Leaders demanded that some children (at least one) wear T-shirts of other colours (from those seven colours). Survey pointed that 100 children didn't want to change their colours [translator's comment: it means that any of these 100 children (and only them) can't change his (her) colour such that still every two friends' colours will be different]. Prove that some of other children can change colours of their T-shirts such that as before every two friends' colours will be different.
+\end{problem}
+\begin{problem}[3906812380515301028]
+Given a triangle $ \triangle ABC $. Denote its incenter and orthocenter by $ I, H $, respectively. If there is a point $ K $ with$$ AH+AK = BH+BK = CH+CK $$Show that $ H, I, K $ are collinear.
+\end{problem}
+\begin{problem}[695330092247108707]
+There is an integer $n > 1$. There are $n^2$ stations on a slope of a mountain, all at different altitudes. Each of two cable car companies, $A$ and $B$, operates $k$ cable cars; each cable car provides a transfer from one of the stations to a higher one (with no intermediate stops). The $k$ cable cars of $A$ have $k$ different starting points and $k$ different finishing points, and a cable car which starts higher also finishes higher. The same conditions hold for $B$. We say that two stations are linked by a company if one can start from the lower station and reach the higher one by using one or more cars of that company (no other movements between stations are allowed). Determine the smallest positive integer $k$ for which one can guarantee that there are two stations that are linked by both companies.
+\end{problem}
+\begin{problem}[8005762280394288133]
+A school has $450$ students. Each student has at least $100$ friends among the others and among any $200$ students, there are always two that are friends. Prove that $302$ students can be sent on a kayak trip such that each of the $151$ two seater kayaks contain people who are friends.
+\end{problem}
+\begin{problem}[5395714337110519657]
+The vertices of a convex $2550$-gon are colored black and white as follows: black, white, two black, two white, three black, three white, ..., 50 black, 50 white. Dania divides the polygon into quadrilaterals with diagonals that have no common points. Prove that there exists a quadrilateral among these, in which two adjacent vertices are black and the other two are white.
+\end{problem}
+\begin{problem}[329951351081287]
+  You're given an $n \times n$ matrix of real numbers.
+  In an operation, you may negate the entries of any row or column.
+  Prove that in a finite number of operations,
+  you can ensure every row and every column of the matrix has nonnegative sum.
+\end{problem}
+\begin{problem}[443006607452241]
+Let $x_1, x_2, \dots, x_n$ be different real numbers. Prove that
+\[\sum_{1 \leqslant i \leqslant n} \prod_{j \neq i} \frac{1-x_{i} x_{j}}{x_{i}-x_{j}}=\left\{\begin{array}{ll}
+0, & \text { if } n \text { is even; } \\
+1, & \text { if } n \text { is odd. }
+\end{array}\right.\]
+\end{problem}
+\begin{problem}[684771433215596]
+In triangle $ABC$, point $A_1$ lies on side $BC$ and point $B_1$ lies on side $AC$. Let $P$ and $Q$ be points on segments $AA_1$ and $BB_1$, respectively, such that $PQ$ is parallel to $AB$. Let $P_1$ be a point on line $PB_1$, such that $B_1$ lies strictly between $P$ and $P_1$, and $\angle PP_1C=\angle BAC$. Similarly, let $Q_1$ be the point on line $QA_1$, such that $A_1$ lies strictly between $Q$ and $Q_1$, and $\angle CQ_1Q=\angle CBA$.
+
+Prove that points $P,Q,P_1$, and $Q_1$ are concyclic.
+\end{problem}
+\begin{problem}[819328919046836]
+Which positive integers $n$ make the equation\[\sum_{i=1}^n \sum_{j=1}^n \left\lfloor \frac{ij}{n+1} \right\rfloor=\frac{n^2(n-1)}{4}\]true?
+\end{problem}
+\begin{problem}[37921131297270]
+	You are given a set of $n$ blocks, each weighing at least $1$; their total weight is $2n$. Prove that for every real number $r$ with $0 \leq r \leq 2n-2$ you can choose a subset of the blocks whose total weight is at least $r$ but at most $r + 2$.
+\end{problem}
+\begin{problem}[7088779505939683183]
+Find all triples $(a, b, c)$ of positive integers such that $a^3 + b^3 + c^3 = (abc)^2$.
+\end{problem}
+\begin{problem}[614247648874042]
+Misha has a $100$x$100$ chessboard and a bag with $199$ rooks. In one move he can either put one rook from the bag on the lower left cell of the grid, or remove two rooks which are on the same cell, put one of them on the adjacent square which is above it or right to it, and put the other in the bag. Misha wants to place exactly $100$ rooks on the board, which don't beat each other. Will he be able to achieve such arrangement?
+\end{problem}
+\begin{problem}[35724831608408]
+	We will say that a set of real numbers $A = (a_1,... , a_{17})$ is stronger than the set of real numbers $B = (b_1, . . . , b_{17})$, and write $A >B$ if among all inequalities $a_i > b_j$ the number of true inequalities is at least $3$ times greater than the number of false. Prove that there is no chain of sets $A_1, A_2, .  .  .  , A_N$ such that $A_1>A_2> \cdots A_N>A_1$.
+
+Remark: For 11.4, the constant $3$ is changed to $2$ and $N=3$ and $17$ is changed to $m$ and $n$ in the definition (the number of elements don't have to be equal).
+\end{problem}
+\begin{problem}[193788212098506]
+  In a convex $n$-gon $\mathcal P$, we draw several diagonals.
+  A drawn diagonal is \emph{good} if it intersects
+  exactly one other drawn diagonal in the interior of $\mathcal P$.
+  Over all choices of diagonals to draw,
+  find the maximum possible number of good diagonals.
+\end{problem}
+
+\end{document}

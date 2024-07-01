@@ -1,0 +1,139 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{ amssymb }
+\usepackage[dvipsnames]{xcolor}
+\definecolor{red1}{RGB}{255, 153, 153}
+\definecolor{green1}{RGB}{204, 255, 204}
+\definecolor{blue1}{RGB}{204, 255, 255}
+\definecolor{yellow1}{RGB}{255, 247, 160}
+
+\definecolor{red2}{RGB}{255, 102, 102}
+\definecolor{green2}{RGB}{108, 255, 108}
+\definecolor{blue2}{RGB}{94, 204, 255}
+\definecolor{yellow2}{RGB}{255, 250, 104}
+
+\definecolor{red2.5}{RGB}{255,76,76}
+\definecolor{green2.5}{RGB}{54, 247, 54}
+\definecolor{blue2.5}{RGB}{51, 189, 255}
+\definecolor{yellow2.5}{RGB}{255, 242, 52}
+
+
+\definecolor{red3}{RGB}{255, 51, 51}
+\definecolor{green3}{RGB}{0, 240, 0}
+\definecolor{blue3}{RGB}{9, 175, 255}
+\definecolor{yellow3}{RGB}{255, 234, 0}
+
+\definecolor{red3.5}{RGB}{229, 25, 25}
+\definecolor{green3.5}{RGB}{0, 194, 0}
+\definecolor{blue3.5}{RGB}{4, 143, 209}
+\definecolor{yellow3.5}{RGB}{255,220,0}
+
+\definecolor{red4}{RGB}{204, 0, 0}
+\definecolor{green4}{RGB}{0, 149, 0}
+\definecolor{blue4}{RGB}{0, 111, 164}
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\newcommand{\camod}[1]{\frac{\ZZ}{#1 \ZZ}}
+\newcommand{\modm}[1]{\text{ mod } #1}
+\newcommand{\campm}[1]{\frac{\ZZ}{m\ZZ}}
+\newcommand{\paren}[1]{\left(  #1 \right)}
+\newcommand{\proc}[1]{Esto va a aparecer si no procrastino :S (Procrastinando desde #1)}
+
+
+\title{SL22}
+\subtitle{PONTE A ENTRENAR}
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Problemas}
+\begin{problem}[IMOSL 2022 C4]
+Let $n > 3$ be a positive integer. Suppose that $n$ children are arranged in a circle, and $n$ coins are distributed between them (some children may have no coins). At every step, a child with at least 2 coins may give 1 coin to each of their immediate neighbors on the right and left. Determine all initial distributions of the coins from which it is possible that, after a finite number of steps, each child has exactly one coin.
+\end{problem}
+\begin{problem}[IMOSL 2022 C2]
+The Bank of Oslo issues two types of coin: aluminum (denoted A) and bronze (denoted B). Marianne has $n$ aluminum coins and $n$ bronze coins arranged in a row in some arbitrary initial order. A chain is any subsequence of consecutive coins of the same type. Given a fixed positive integer $k \leq 2n$, Gilberty repeatedly performs the following operation: he identifies the longest chain containing the $k^{th}$ coin from the left and moves all coins in that chain to the left end of the row. For example, if $n=4$ and $k=4$, the process starting from the ordering $AABBBABA$ would be $AABBBABA \to BBBAAABA \to AAABBBBA \to BBBBAAAA \to ...$
+
+Find all pairs $(n,k)$ with $1 \leq k \leq 2n$ such that for every initial ordering, at some moment during the process, the leftmost $n$ coins will all be of the same type.
+\end{problem}
+\begin{problem}[IMOSL 2022 G3]
+Let $ABCD$ be a cyclic quadrilateral. Assume that the points $Q, A, B, P$ are collinear in this order, in such a way that the line $AC$ is tangent to the circle $ADQ$, and the line $BD$ is tangent to the circle $BCP$. Let $M$ and $N$ be the midpoints of segments $BC$ and $AD$, respectively. Prove that the following three lines are concurrent: line $CD$, the tangent of circle $ANQ$ at point $A$, and the tangent to circle $BMP$ at point $B$.
+\end{problem}
+\begin{problem}[IMOSL 2022 N5]
+	For each $1\leq i\leq 9$ and $T\in\mathbb N$, define $d_i(T)$ to be the total number of times the digit $i$ appears when all the multiples of $1829$ between $1$ and $T$ inclusive are written out in base $10$.
+
+Show that there are infinitely many $T\in\mathbb N$ such that there are precisely two distinct values among $d_1(T)$, $d_2(T)$, $\dots$, $d_9(T)$
+\end{problem}
+\begin{problem}[IMOSL 2022 G2]
+In the acute-angled triangle $ABC$, the point $F$ is the foot of the altitude from $A$, and $P$ is a point on the segment $AF$. The lines through $P$ parallel to $AC$ and $AB$ meet $BC$ at $D$ and $E$, respectively. Points $X \ne A$ and $Y \ne A$ lie on the circles $ABD$ and $ACE$, respectively, such that $DA = DX$ and $EA = EY$.
+Prove that $B, C, X,$ and $Y$ are concyclic.
+\end{problem}
+\begin{problem}[IMOSL 2022 A2]
+Let $k\ge2$ be an integer. Find the smallest integer $n \ge k+1$ with the property that there exists a set of $n$ distinct real numbers such that each of its elements can be written as a sum of $k$ other distinct elements of the set.
+\end{problem}
+\begin{problem}[IMOSL 2022 N1]
+A number is called Norwegian if it has three distinct positive divisors whose sum is equal to $2022$. Determine the smallest Norwegian number.
+(Note: The total number of positive divisors of a Norwegian number is allowed to be larger than $3$.)
+\end{problem}
+\begin{problem}[IMOSL 2022 A1]
+Let $(a_n)_{n\geq 1}$ be a sequence of positive real numbers with the property that
+$$(a_{n+1})^2 + a_na_{n+2} \leq a_n + a_{n+2}$$for all positive integers $n$. Show that $a_{2022}\leq 1$.
+\end{problem}
+\begin{problem}[IMOSL 2022 C5]
+Let $m,n \geqslant 2$ be integers, let $X$ be a set with $n$ elements, and let $X_1,X_2,\ldots,X_m$ be pairwise distinct non-empty, not necessary disjoint subset of $X$. A function $f \colon X \to \{1,2,\ldots,n+1\}$ is called nice if there exists an index $k$ such that\[\sum_{x \in X_k} f(x)>\sum_{x \in X_i} f(x) \quad \text{for all } i \ne k.\]Prove that the number of nice functions is at least $n^n$.
+\end{problem}
+\begin{problem}[IMOSL 2022 N2]
+Find all positive integers $n>2$ such that
+$$ n! \mid \prod_{ p<q\le n, p,q \, \text{primes}} (p+q)$$
+\end{problem}
+\begin{problem}[IMOSL 2022 N4]
+Find all triples $(a,b,p)$ of positive integers with $p$ prime and\[ a^p=b!+p. \]
+\end{problem}
+\begin{problem}[IMOSL 2022 N3]
+Let $a > 1$ be a positive integer and $d > 1$ be a positive integer coprime to $a$. Let $x_1=1$, and for $k\geq 1$, define
+$$x_{k+1} = \begin{cases}
+x_k + d &\text{if } a \text{ does not divide } x_k \\
+x_k/a & \text{if } a \text{ divides } x_k
+\end{cases}$$Find, in terms of $a$ and $d$, the greatest positive integer $n$ for which there exists an index $k$ such that $x_k$ is divisible by $a^n$.
+\end{problem}
+\begin{problem}[IMOSL 2022 C3]
+In each square of a garden shaped like a $2022 \times 2022$ board, there is initially a tree of height $0$. A gardener and a lumberjack alternate turns playing the following game, with the gardener taking the first turn:
+The gardener chooses a square in the garden. Each tree on that square and all the surrounding squares (of which there are at most eight) then becomes one unit taller.
+The lumberjack then chooses four different squares on the board. Each tree of positive height on those squares then becomes one unit shorter.
+We say that a tree is majestic if its height is at least $10^6$. Determine the largest $K$ such that the gardener can ensure there are eventually $K$ majestic trees on the board, no matter how the lumberjack plays.
+\end{problem}
+\begin{problem}[IMOSL 2022 C1]
+	A $\pm 1$-sequence is a sequence of $2022$ numbers $a_1, \ldots, a_{2022},$ each equal to either $+1$ or $-1$. Determine the largest $C$ so that, for any $\pm 1$-sequence, there exists an integer $k$ and indices $1 \le t_1 < \ldots < t_k \le 2022$ so that $t_{i+1} - t_i \le 2$ for all $i$, and$$\left| \sum_{i = 1}^{k} a_{t_i} \right| \ge C.$$
+\end{problem}
+\begin{problem}[IMOSL 2022 A5]
+Find all positive integers $n \geqslant 2$ for which there exist $n$ real numbers $a_1<\cdots<a_n$ and a real number $r>0$ such that the $\tfrac{1}{2}n(n-1)$ differences $a_j-a_i$ for $1 \leqslant i<j \leqslant n$ are equal, in some order, to the numbers $r^1,r^2,\ldots,r^{\frac{1}{2}n(n-1)}$.
+\end{problem}
+\begin{problem}[IMOSL 2022 A3]
+Let $\mathbb{R}^+$ denote the set of positive real numbers. Find all functions $f: \mathbb{R}^+ \to \mathbb{R}^+$ such that for each $x \in \mathbb{R}^+$, there is exactly one $y \in \mathbb{R}^+$ satisfying$$xf(y)+yf(x) \leq 2$$
+\end{problem}
+\begin{problem}[IMOSL 2022 G4]
+	Let $ABC$ be an acute-angled triangle with $AC > AB$, let $O$ be its circumcentre, and let $D$ be a point on the segment $BC$. The line through $D$ perpendicular to $BC$ intersects the lines $AO, AC,$ and $AB$ at $W, X,$ and $Y,$ respectively. The circumcircles of triangles $AXY$ and $ABC$ intersect again at $Z \ne A$.
+Prove that if $W \ne D$ and $OW = OD,$ then $DZ$ is tangent to the circle $AXY.$
+\end{problem}
+\begin{problem}[IMOSL 2022 G5]
+Let $ABC$ be a triangle and $\ell_1,\ell_2$ be two parallel lines. Let $\ell_i$ intersects line $BC,CA,AB$ at $X_i,Y_i,Z_i$, respectively. Let $\Delta_i$ be the triangle formed by the line passed through $X_i$ and perpendicular to $BC$, the line passed through $Y_i$ and perpendicular to $CA$, and the line passed through $Z_i$ and perpendicular to $AB$. Prove that the circumcircles of $\Delta_1$ and $\Delta_2$ are tangent.
+\end{problem}
+\begin{problem}[IMOSL 2022 A4]
+Let $n \geqslant 3$ be an integer, and let $x_1,x_2,\ldots,x_n$ be real numbers in the interval $[0,1]$. Let $s=x_1+x_2+\ldots+x_n$, and assume that $s \geqslant 3$. Prove that there exist integers $i$ and $j$ with $1 \leqslant i<j \leqslant n$ such that
+\[2^{j-i}x_ix_j>2^{s-3}.\]
+\end{problem}
+\begin{problem}[IMOSL 2022 G1]
+Let $ABCDE$ be a convex pentagon such that $BC=DE$. Assume that there is a point $T$ inside $ABCDE$ with $TB=TD,TC=TE$ and $\angle ABT = \angle TEA$. Let line $AB$ intersect lines $CD$ and $CT$ at points $P$ and $Q$, respectively. Assume that the points $P,B,A,Q$ occur on their line in that order. Let line $AE$ intersect $CD$ and $DT$ at points $R$ and $S$, respectively. Assume that the points $R,E,A,S$ occur on their line in that order. Prove that the points $P,S,Q,R$ lie on a circle.
+\end{problem}
+
+\end{document}

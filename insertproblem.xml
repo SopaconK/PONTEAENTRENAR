@@ -1,7 +1,9 @@
 <problem>
-<src>IMOSL 2022 A2</src>
+<src>USAMO 2024/5</src>
 <done>0</done>
-<txt> 
-Let $k\ge2$ be an integer. Find the smallest integer $n \ge k+1$ with the property that there exists a set of $n$ distinct real numbers such that each of its elements can be written as a sum of $k$ other distinct elements of the set.
+<txt> 	
+Point $D$ is selected inside acute $\triangle ABC$ so that $\angle DAC = \angle ACB$ and $\angle BDC = 90^{\circ} + \angle BAC$. Point $E$ is chosen on ray $BD$ so that $AE = EC$. Let $M$ be the midpoint of $BC$.
+
+Show that line $AB$ is tangent to the circumcircle of triangle $BEM$.
 </txt>
 </problem>

@@ -106,6 +106,7 @@ void GenerarListas(){
     lli mostrarsrc;
     cout<<"Quieres mostrar la fuente?"<<endl<<"1. Vacio"<<endl<<"2. Pon la id"<<endl<<"3. Fuentes"<<endl<<"4.Fuentes aparte"<<endl;
     cin>>mostrarsrc;
+    
     if(type==1){
         list=lista;
     }
@@ -135,7 +136,24 @@ void GenerarListas(){
         }
         } while(id!=0);
     }
-
+    if(type!=4){
+        shuffle(list.begin(), list.end(), rnd);
+    }
+    lli cant;
+    if(type!=4){
+        cout<<"Cuantos problemas quieres? (-1 es todos)"<<endl;
+        cin>>cant;
+        if(cant==-1){
+            cant=list.size();
+        }
+        cant=min(cant, (lli) list.size());
+        vector<Problem> temp;
+        for(lli i=0; i<cant; ++i){
+            temp.pb(list[i]);
+        }
+        list=temp;
+    }
+    filename="outpdf/"+filename;
     ifstream ArchivoE("template.tex");
     ofstream ArchivoS (filename);
     string line;
@@ -149,6 +167,7 @@ void GenerarListas(){
     auxi2+="end{problem}";
     auxi4+="ref";
     auxi5+="title{";
+    
     while(getline(ArchivoE, line)){
         if (line.find(auxi5) != string::npos){
             ArchivoS<<auxi5<<title<<"}"<<endl;
@@ -185,17 +204,18 @@ void GenerarListas(){
              else if(mostrarsrc==4){
                 for(Problem p: list){
                     ArchivoS<<auxi1<<endl;
-                    ArchivoS<<"\label{"<<p.id<<"}"<<endl;
+                    ArchivoS<<(char) 92<<"label{"<<p.id<<"}"<<endl;
                     for(string s: p.text){
                         ArchivoS<<s<<endl;
                     }
                     ArchivoS<<auxi2<<endl;
                 }
-                ArchivoS<<"\section{Fuentes}"<<endl;
+                ArchivoS<<(char) 92<<"section{Fuentes}"<<endl;
                 ArchivoS<<auxi3<<endl;
                 for(Problem p: list){
-                    ArchivoS<<"\item"<<auxi4<<"{"<<p.id<<"} "<<p.src<<endl;
+                    ArchivoS<<(char) 92<<"item "<<auxi4<<"{"<<p.id<<"} "<<p.src<<endl;
                 }
+                ArchivoS<<(char) 92<<"end{itemize}"<<endl;
             }
         }
         else{
@@ -251,13 +271,23 @@ int main(){
     int type;
     bool seguir=true;
     while(seguir){
-        cout<<"Que quieres hacer?"<<endl<<"1. Agregar un nuevo problema (pon la info en insertproblem.xml)"<<endl<<"2. Hacer lista"<<endl<<"3.Terminar"<<endl;
+        cout<<"Que quieres hacer?"<<endl<<"1. Agregar un nuevo problema (pon la info en insertproblem.xml)"<<endl<<"2. Hacer lista"<<endl<<"3.Ver fuente con id"<<endl<<"4.Terminar"<<endl;
         cin>>type;
         if(type==1){
             Insertar();
         }
         else if(type==2){
             GenerarListas();
+        }
+        else if(type==3){
+            lli sid;
+            cout<<"Dame la id"<<endl;
+            cin>>sid;
+            for(Problem p: lista ){
+                if(p.id==sid){
+                    cout<<p.src<<endl;
+                }
+            }
         }
         else{
             seguir=false;
