@@ -13,7 +13,25 @@ void solve(){
     for(lli i=0; i<n; ++i){
         cin>>v[i];
     }
-    
+    while(m--){
+        lli l,r;
+        cin>>l>>r;
+        l--;
+        r--;
+        vector<pair<lli,lli>> sv;
+        for(lli i=l; i<=r; ++i){
+            sv.pb({v[i], i});
+        }
+        sort(sv.begin(), sv.end());
+        lli ans=0;
+        lli ant=sv[0].second;
+        for(lli i=1; i<sv.size(); ++i){
+            ans+=abs(sv[i].second-ant);
+            ant=sv[i].second;
+        }
+        cout<<ans<<endl;
+    }
+
 }
 
 
