@@ -3,7 +3,7 @@ using namespace std;
 #define pb push_back
 using lli=long long int;
 #define deb(x) cout<<#x<<": "<<x<<endl;
-#define endl '\n'
+//#define endl '\n'
 
 
 auto comp=[](pair<lli,lli> a, pair<lli,lli> b){
@@ -98,31 +98,43 @@ void solve(){
 
     lli cont=0;
  //   vector<lli> aux (k,0);
-    segtree *tree= new segtree(0,k-1);
+ //   segtree *tree= new segtree(0,k-1);
     vector<pair<lli,lli>> rangos;
+    vector<lli> val1;
+    vector<lli> val2;
     rangos.pb({0,k-1});
+    val1.pb(0);
+    val2.pb(0);
     for(lli asdas=0; asdas<n; ++asdas){
         cont++;
         if(cont==15){
             cont=1;
-            for(lli i=0; i<k; ++i){
-                ans[queries[i].second]+=tree->val1(i);
-                queries[i].first-=tree->val2(i);
+            for(lli i=0; i<rangos.size(); ++i){
+                for(lli j=rangos[i].first; j<=rangos[i].second; ++j){
+                    ans[queries[j].second]+=val1[i];
+                    queries[i].first-=val2[i];
+                }
             }
-            tree=new segtree(0,k-1);
+   //         tree=new segtree(0,k-1);
             rangos={{0,k-1}};
+            val1={0};
+            val2={0};
             sort(queries.begin(), queries.end());
         }
+        
         lli ini=v[asdas].second;
         vector<pair<lli,lli>> rangos2;
+        vector<lli> val1aux;
+        vector<lli> val2aux;
 //        deb(ini);
         for(lli i=0; i<rangos.size(); ++i){
+      //      deb(i);
             lli l=rangos[i].first;
             lli r=rangos[i].second;
-            lli cost=ini+tree->val2(l);
-  //          deb(l);
-    //        deb(r);
-      //      deb(cost);
+            lli cost=ini+val2[i];
+    //        deb(l);
+  //          deb(r);
+//            deb(cost);
             while(l<r-1){
                 lli m=(l+r)/2;
                 if(queries[m].first<cost){
@@ -132,38 +144,50 @@ void solve(){
                     r=m-1;
                 }
             }
-        //    deb(l);
-          //  deb(r);
-            //deb(queries[l].first);
-            //deb(queries[r].first);
+      //      deb(l);
+    //        deb(r);
+  //          deb(queries[l].first);
+//            deb(queries[r].first);
             if(queries[r].first<cost){
                 l=r;
             }
             if(queries[l].first<cost){
-                tree->add1(l+1, rangos[i].second,1 );
-                tree->add2(l+1, rangos[i].second,ini);
+                val1aux.pb(val1[i]);
+                val2aux.pb(val2[i]);
                 rangos2.pb({rangos[i].first, l});
                 if(l+1<=rangos[i].second){
+                    val1aux.pb(val1[i]+1);
+                    val2aux.pb(val2[i]+ini);
                     rangos2.pb({l+1,rangos[i].second});
                 }
            //     deb("xd");
             }
             else{
-               tree->add1(l, rangos[i].second,1 );
-                tree->add2(l, rangos[i].second,ini);
+              
 //                rangos2.pb({rangos[i].first, l});
                 if(l<=rangos[i].second){
+                    val1aux.pb(val1[i]+1);
+                    val2aux.pb(val2[i]+ini);
                     rangos2.pb({l,rangos[i].second});
                 }
             }
         }
+        val1=val1aux;
+        val2=val2aux;
         rangos=rangos2;
+        for(lli i=0; i<rangos.size(); ++i){
+            //deb(val1[i]);
+          //  deb(val2[i]);
+        //    deb(rangos[i].first);
+      //      deb(rangos[i].second);
+    //        deb("-----------");
+        }
     }
-    for(lli i=0; i<k; ++i){
-    //        deb(queries[i].second);
-      //      deb(tree->val1(i));
-                ans[queries[i].second]+=tree->val1(i);
-           //     queries[i].first-=tree->val2(i);
+    for(lli i=0; i<rangos.size(); ++i){
+                for(lli j=rangos[i].first; j<=rangos[i].second; ++j){
+                    ans[queries[j].second]+=val1[i];
+                    queries[i].first-=val2[i];
+                }
             }
     for(lli i=0; i<k; ++i){
         cout<<ans[i]<<" ";
