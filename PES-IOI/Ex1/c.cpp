@@ -3,7 +3,7 @@ using namespace std;
 #define pb push_back
 using lli=long long int;
 #define deb(x) cout<<#x<<": "<<x<<endl;
-//#define endl '\n'
+#define endl '\n'
 
 
 auto comp=[](pair<lli,lli> a, pair<lli,lli> b){
@@ -100,38 +100,39 @@ void solve(){
  //   vector<lli> aux (k,0);
  //   segtree *tree= new segtree(0,k-1);
     vector<pair<lli,lli>> rangos;
-    vector<lli> val1;
-    vector<lli> val2;
+    vector<lli> val1 (n,0);   
+    vector<lli> val2 (n,0);
     rangos.pb({0,k-1});
-    val1.pb(0);
-    val2.pb(0);
+
     for(lli asdas=0; asdas<n; ++asdas){
         cont++;
         if(cont>=15){
             cont=1;
             for(lli i=0; i<rangos.size(); ++i){
                 for(lli j=rangos[i].first; j<=rangos[i].second; ++j){
-                    ans[queries[j].second]+=val1[i];
-                    queries[j].first-=val2[i];
+                    ans[queries[j].second]+=val1[rangos[i].first];
+                    queries[j].first-=val2[rangos[i].first];
                 }
             }
    //         tree=new segtree(0,k-1);
             rangos={{0,k-1}};
-            val1={0};
-            val2={0};
+            for(lli i=0; i<n; ++i){
+                val1[i]=0;
+                val2[i]=0;
+            }
+            
             sort(queries.begin(), queries.end());
         }
         
         lli ini=v[asdas].second;
         vector<pair<lli,lli>> rangos2;
-        vector<lli> val1aux;
-        vector<lli> val2aux;
+
 //        deb(ini);
         for(lli i=0; i<rangos.size(); ++i){
       //      deb(i);
             lli l=rangos[i].first;
             lli r=rangos[i].second;
-            lli cost=ini+val2[i];
+            lli cost=ini+val2[l];
     //        deb(l);
   //          deb(r);
 //            deb(cost);
@@ -152,12 +153,11 @@ void solve(){
                 l=r;
             }
             if(queries[l].first<cost){
-                val1aux.pb(val1[i]);
-                val2aux.pb(val2[i]);
                 rangos2.pb({rangos[i].first, l});
                 if(l+1<=rangos[i].second){
-                    val1aux.pb(val1[i]+1);
-                    val2aux.pb(val2[i]+ini);
+                    val1[l+1]=val1[rangos[i].first]+1;
+                    val2[l+1]=val2[rangos[i].first]+ini;
+
                     rangos2.pb({l+1,rangos[i].second});
                 }
            //     deb("xd");
@@ -166,22 +166,21 @@ void solve(){
               
 //                rangos2.pb({rangos[i].first, l});
                 if(l<=rangos[i].second){
-                    val1aux.pb(val1[i]+1);
-                    val2aux.pb(val2[i]+ini);
+                    val1[l]=val1[rangos[i].first]+1;
+                    val2[l]=val2[rangos[i].first]+ini;
                     rangos2.pb({l,rangos[i].second});
                 }
             }
         }
-        val1=val1aux;
-        val2=val2aux;
+
         rangos=rangos2;
 
 
     }
     for(lli i=0; i<rangos.size(); ++i){
                 for(lli j=rangos[i].first; j<=rangos[i].second; ++j){
-                    ans[queries[j].second]+=val1[i];
-                    queries[i].first-=val2[i];
+                    ans[queries[j].second]+=val1[rangos[i].first];
+                    queries[j].first-=val2[rangos[i].first];
                 }
             }
     for(lli i=0; i<k; ++i){
