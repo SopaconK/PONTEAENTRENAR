@@ -8,7 +8,7 @@
 
     lli solve(string &a, string &b, lli i, lli j, bool s){ //s=0 si no has tocado a, 1 si ya
         
-        if(i>=a.size() || j>=b.size()) return max(0ull, b.size()-j);
+        if(i>=a.size() || j>=b.size()) return max(0ll, (lli) b.size()-j);
         if(s){
             lli ax=-1;
             for(lli x=i; x<a.size(); ++x){
