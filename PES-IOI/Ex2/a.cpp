@@ -4,7 +4,7 @@ using namespace std;
 #define deb(x) cout<<#x<<": "<<x<<endl;
 using lli=long long int;
 
-//#define endl '\n'
+#define endl '\n'
 
 void solve(){
     string s;
@@ -44,25 +44,34 @@ void solve(){
 
     for(lli i=0; i<n; ++i){
         lli val1,val2,val3,val4;
+        
         val1=max(mw, v[i][0]+aw+1);
-        val2=max(ms, v[i][1]+aw-1);
+        val2=max(ms, v[i][1]-aw-1);
         val3=max(ma, v[i][2]+aa);
-        val4=max(md, v[i][3]+aa);
+        val4=max(md, v[i][3]-aa);
+//        deb(val1+val2+1);
+  //      deb(val3+val4+1);
         ans=min(ans, (val1+val2+1)*(val3+val4+1));
         val1=max(mw, v[i][0]+aw-1);
-        val2=max(ms, v[i][1]+aw+1);
+        val2=max(ms, v[i][1]-aw+1);
         val3=max(ma, v[i][2]+aa);
-        val4=max(md, v[i][3]+aa);
+        val4=max(md, v[i][3]-aa);
+    //     deb(val1+val2+1);
+      //  deb(val3+val4+1);
         ans=min(ans, (val1+val2+1)*(val3+val4+1));
         val1=max(mw, v[i][0]+aw);
-        val2=max(ms, v[i][1]+aw);
+        val2=max(ms, v[i][1]-aw);
         val3=max(ma, v[i][2]+aa+1);
-        val4=max(md, v[i][3]+aa-1);
+        val4=max(md, v[i][3]-aa-1);
+        // deb(val1+val2+1);
+        //deb(val3+val4+1);
         ans=min(ans, (val1+val2+1)*(val3+val4+1));
         val1=max(mw, v[i][0]+aw);
-        val2=max(ms, v[i][1]+aw);
+        val2=max(ms, v[i][1]-aw);
         val3=max(ma, v[i][2]+aa-1);
-        val4=max(md, v[i][3]+aa+1);
+        val4=max(md, v[i][3]-aa+1);
+//         deb(val1+val2+1);
+  //      deb(val3+val4+1);
         ans=min(ans, (val1+val2+1)*(val3+val4+1));
         switch(s[i]){
             case 'W':
