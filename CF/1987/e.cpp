@@ -48,7 +48,7 @@
                 }
             }
             sv[n][1]=max(values[n]-sum, 0ll);
-            for(lli i=2; i<=n; ++i){
+            for(lli i=2; i<=N; ++i){
                 sv[n][i]=aux[i-1];
             }
         }
