@@ -72,6 +72,8 @@ void solve(){
             val*=inv[n];
             val%=MOD;
             ans+=val;
+            ans%=MOD;
+            //
         }while(next_permutation(v.begin(), v.end()));
         cout<<ans<<endl;
     }
