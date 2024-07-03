@@ -1,11 +1,11 @@
     #include<bits/stdc++.h>
     using namespace std;
     #define pb push_back
-    using lli=long long int;
+    using lli=int;
     #define deb(x) cout<<#x<<": "<<x<<endl;
     #define endl '\n'
 
-    const lli INF=1e18;
+    const lli INF=1e9;
     
     vector<lli> val;
     vector<vector<lli>> sv;
@@ -47,7 +47,7 @@
                     ind++;
                 }
             }
-            sv[n][1]=max(sum-values[n], 0ll);
+            sv[n][1]=max(sum-values[n], 0);
             for(lli i=2; i<=N; ++i){
                 sv[n][i]=aux[i-1];
             }
