@@ -43,6 +43,7 @@
                         diff-=aux[ind];
                         aux[ind]=0;
                     }
+                    ind++;
                 }
             }
             sv[n][1]=max(values[n]-sum, 0ll);
