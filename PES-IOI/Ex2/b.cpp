@@ -33,6 +33,7 @@ void solve(){
         values[i]--;
         SUM+=2*values[i]+1;
     }
+    //deb(SUM);
     vector<lli> fact (2*l+5,1);
     vector<lli> inv (2*l+5,1);
     for(lli i=2; i<fact.size(); ++i){
@@ -44,22 +45,14 @@ void solve(){
     for(lli i=0; i<n; ++i){
         for(lli j=0; j<n; ++j){
             if(i==j) continue;
-            for(lli x=0; x<=values[i]+values[j]; ++x){
+            for(lli x=0; x<=l; ++x){
                 if(l-(SUM-values[i]-values[j])-x <0) break;
-                lli mult;
-                if(x<=min(values[i], values[j])){
-                    mult=x+1;
-                }
-                else if(x<=max(values[i], values[j])){
-                    mult=min(values[i], values[j]);
-                }
-                else{
-                    mult=values[i]+values[j]-x+1;
-                }
+                
+          
                 lli val=fact[l-(SUM-values[i]-values[j])-x+n-2];
                 val*=inv[l-(SUM-values[i]-values[j])-x];
                 val%=MOD;
-                val*=mult;
+                val*=(x+1);
                 val%=MOD;
                 ans+=val;
                 ans%=MOD;
