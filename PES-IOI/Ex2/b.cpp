@@ -34,8 +34,8 @@ void solve(){
         SUM+=2*values[i]+1;
     }
     //deb(SUM);
-    vector<lli> fact (2*l+5,1);
-    vector<lli> inv (2*l+5,1);
+    vector<lli> fact (3*l+5,1);
+    vector<lli> inv (3*l+5,1);
     for(lli i=2; i<fact.size(); ++i){
         fact[i]=fact[i-1]*i;
         fact[i]%=MOD;
@@ -45,18 +45,17 @@ void solve(){
     for(lli i=0; i<n; ++i){
         for(lli j=0; j<n; ++j){
             if(i==j) continue;
-            for(lli x=0; x<=l; ++x){
-                if(l-(SUM-values[i]-values[j])-x <0) break;
-                
-          
-                lli val=fact[l-(SUM-values[i]-values[j])-x+n-2];
-                val*=inv[l-(SUM-values[i]-values[j])-x];
-                val%=MOD;
-                val*=(x+1);
-                val%=MOD;
-                ans+=val;
-                ans%=MOD;
-            }
+            lli a=l-SUM+values[i]+values[j];
+            if(a<0) continue;
+            lli val=fact[a+n];
+            val*=inv[n];
+            val%=MOD;
+            val*=inv[a];
+            val%=MOD;
+            val*=fact[n-2];
+            val%=MOD;
+            ans+=val;
+            ans%=MOD;
         }
     }
     cout<<ans<<endl;
