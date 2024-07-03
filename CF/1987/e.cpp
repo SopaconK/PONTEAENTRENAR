@@ -47,7 +47,7 @@
                     ind++;
                 }
             }
-            sv[n][1]=max(values[n]-sum, 0ll);
+            sv[n][1]=max(sum-values[n], 0ll);
             for(lli i=2; i<=N; ++i){
                 sv[n][i]=aux[i-1];
             }
@@ -74,10 +74,12 @@
         sv.resize(n+1, vector<lli> (n+1));
         dfs(1,sons,values);
  /*       for(lli i=1; i<=n; ++i){
+            
             for(lli j=1; j<=n; ++j){
                 cout<<sv[i][j]<<" ";
             }
             cout<<endl;
+            cout<<"-------------------"<<endl;
         }
    */     cout<<ans<<endl;
 
