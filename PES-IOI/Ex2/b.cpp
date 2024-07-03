@@ -33,7 +33,8 @@ void solve(){
         values[i]--;
         SUM+=2*values[i]+1;
     }
-    //deb(SUM);
+    lli r=values[0];
+  //  deb(SUM);
     vector<lli> fact (3*l+5,1);
     vector<lli> inv (3*l+5,1);
     for(lli i=2; i<fact.size(); ++i){
@@ -41,23 +42,13 @@ void solve(){
         fact[i]%=MOD;
         inv[i]=binexp(fact[i], MOD-2);
     }
-    lli ans=0;
-    for(lli i=0; i<n; ++i){
-        for(lli j=0; j<n; ++j){
-            if(i==j) continue;
-            lli a=l-SUM+values[i]+values[j];
-            if(a<0) continue;
-            lli val=fact[a+n];
-            val*=inv[n];
-            val%=MOD;
-            val*=inv[a];
-            val%=MOD;
-            val*=fact[n-2];
-            val%=MOD;
-            ans+=val;
-            ans%=MOD;
-        }
+    if(l-(n-1)*r-n < 0) {
+        cout<<0<<endl;
+        return;
     }
+    lli ans=fact[l-(n-1)*r];
+    ans*=inv[l-(n-1)*r-n];
+    ans%=MOD;
     cout<<ans<<endl;
 
 
