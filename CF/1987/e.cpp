@@ -1,11 +1,11 @@
     #include<bits/stdc++.h>
     using namespace std;
     #define pb push_back
-    using lli=int;
+    using lli=long long int;
     #define deb(x) cout<<#x<<": "<<x<<endl;
     #define endl '\n'
 
-    const lli INF=1e9;
+    const lli INF=1e18;
     
     vector<lli> val;
     vector<vector<lli>> sv;
@@ -20,41 +20,39 @@
         }
         else{
             lli sum=0;
-            vector<lli> aux (N+1,0);
+        
             for(lli x: sons[n]){
                 dfs(x, sons, values);
-                for(lli i=1; i<=N; ++i){
-                    aux[i]+=sv[x][i];
-                    if(aux[i]>INF) aux[i]=INF;
+                for(lli i=1; i<N; ++i){
+                    sv[n][i+1]+=sv[x][i];
+                    if(sv[n][i+1]>INF) sv[n][i+1]=INF;
                 }
                 sum+=val[x];
             }
             val[n]=values[n];
             if(sum<values[n]){
                 lli diff=-sum+values[n];
-                lli ind=1;
+                lli ind=2;
                 while(diff>0){
-                    if(aux[ind]>=diff){
-                        ans+=ind*diff;
-                        aux[ind]-=diff;
+                    if(sv[n][ind]>=diff){
+                        ans+=(ind-1)*diff;
+                        sv[n][ind]-=diff;
                         diff=0;
                     }
                     else{
-                        ans+=ind*aux[ind];
-                        diff-=aux[ind];
-                        aux[ind]=0;
+                        ans+=(ind+1)*sv[n][ind];
+                        diff-=sv[n][ind];
+                        sv[n][ind]=0;
                     }
                     ind++;
                 }
             }
-            sv[n][1]=max(sum-values[n], 0);
-            for(lli i=2; i<=N; ++i){
-                sv[n][i]=aux[i-1];
-            }
+            sv[n][1]=max(sum-values[n], 0ll);
         }
     }
 
     void solve(){
+        
         ans=0;
         lli n;
         cin>>n;
