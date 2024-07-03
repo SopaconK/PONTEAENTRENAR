@@ -40,7 +40,7 @@
                         diff=0;
                     }
                     else{
-                        ans+=(ind+1)*sv[n][ind];
+                        ans+=(ind-1)*sv[n][ind];
                         diff-=sv[n][ind];
                         sv[n][ind]=0;
                     }
