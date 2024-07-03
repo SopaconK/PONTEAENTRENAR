@@ -11,18 +11,19 @@
     vector<vector<lli>> sv;
     lli ans;
     void dfs(lli n, vector<vector<lli>> &sons, vector<lli> &values){
+        lli N=sons.size()-1;
         if(sons[n].size()==0){
-            for(lli i=1; i<sons.size(); ++i){
+            for(lli i=1; i<=N; ++i){
                 sv[n][i]=INF;
             }
             val[n]=values[n];
         }
         else{
             lli sum=0;
-            vector<lli> aux (n+1,0);
+            vector<lli> aux (N+1,0);
             for(lli x: sons[n]){
                 dfs(x, sons, values);
-                for(lli i=1; i<=n; ++i){
+                for(lli i=1; i<=N; ++i){
                     aux[i]+=sv[x][i];
                     if(aux[i]>INF) aux[i]=INF;
                 }
