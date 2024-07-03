@@ -33,8 +33,6 @@ void solve(){
         values[i]--;
         SUM+=2*values[i]+1;
     }
-    lli r=values[0];
-  //  deb(SUM);
     vector<lli> fact (3*l+5,1);
     vector<lli> inv (3*l+5,1);
     for(lli i=2; i<fact.size(); ++i){
@@ -42,6 +40,10 @@ void solve(){
         fact[i]%=MOD;
         inv[i]=binexp(fact[i], MOD-2);
     }
+    if(n>10){
+    lli r=values[0];
+  //  deb(SUM);
+   
     if(l-(n-1)*r-n < 0) {
         cout<<0<<endl;
         return;
@@ -49,8 +51,30 @@ void solve(){
     lli ans=fact[l-(n-1)*r];
     ans*=inv[l-(n-1)*r-n];
     ans%=MOD;
+   
     cout<<ans<<endl;
-
+    }
+    else{
+         vector<lli> v (n);
+        for(lli i=0; i<n; ++i){
+            v[i]=i;
+        }
+        lli ans=0;
+        do{
+            lli aux=0;
+            for(lli i=0; i<n-1; ++i){
+                aux+=max(values[v[i]], values[v[i+1]]);
+            }
+            if(l-aux-n < 0) continue;
+            lli val=fact[l-aux];
+            val*=inv[l-aux-n];
+            val%=MOD;
+            val*=inv[n];
+            val%=MOD;
+            ans+=val;
+        }while(next_permutation(v.begin(), v.end()));
+        cout<<ans<<endl;
+    }
 
 }
 
