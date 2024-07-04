@@ -100,7 +100,7 @@ void GenerarListas(){
         while(nofword--){
             string aux;
             cin>>aux;
-            title+=aux;
+            title+=aux+" ";
         }
         vector<Problem> list;
     lli mostrarsrc;

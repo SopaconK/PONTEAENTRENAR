@@ -1,9 +1,7 @@
 <problem>
-<src>USAMO 2024/5</src>
+<src>USA EGMO TST 2023/4</src>
 <done>0</done>
 <txt> 	
-Point $D$ is selected inside acute $\triangle ABC$ so that $\angle DAC = \angle ACB$ and $\angle BDC = 90^{\circ} + \angle BAC$. Point $E$ is chosen on ray $BD$ so that $AE = EC$. Let $M$ be the midpoint of $BC$.
-
-Show that line $AB$ is tangent to the circumcircle of triangle $BEM$.
+Let $ABC$ be a triangle with $AB+AC=3BC$. The $B$-excircle touches side $AC$ and line $BC$ at $E$ and $D$, respectively. The $C$-excircle touches side $AB$ at $F$. Let lines $CF$ and $DE$ meet at $P$. Prove that $\angle PBC = 90^{\circ}$.
 </txt>
 </problem>
