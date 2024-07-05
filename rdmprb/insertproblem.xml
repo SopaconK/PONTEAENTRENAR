@@ -1,7 +1,7 @@
 <problem>
-<src>USA EGMO TST 2023/4</src>
+<src>Ibero 2018/6</src>
 <done>0</done>
 <txt> 	
-Let $ABC$ be a triangle with $AB+AC=3BC$. The $B$-excircle touches side $AC$ and line $BC$ at $E$ and $D$, respectively. The $C$-excircle touches side $AB$ at $F$. Let lines $CF$ and $DE$ meet at $P$. Prove that $\angle PBC = 90^{\circ}$.
+	Let $ABC$ be an acute triangle with $AC > AB > BC$. The perpendicular bisectors of $AC$ and $AB$ cut line $BC$ at $D$ and $E$ respectively. Let $P$ and $Q$ be points on lines $AC$ and $AB$ respectively, both different from $A$, such that $AB = BP$ and $AC = CQ$, and let $K$ be the intersection of lines $EP$ and $DQ$. Let $M$ be the midpoint of $BC$. Show that $\angle DKA = \angle EKM$.
 </txt>
 </problem>

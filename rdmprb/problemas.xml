@@ -3788,4 +3788,539 @@ Let $ABC$ be a triangle with $AB+AC=3BC$. The $B$-excircle touches side $AC$ and
 </txt>
 <id>760426813975831</id>
 </problem>
+<problem>
+<src>Korea Winter Program 2022/1.2</src>
+<done>0</done>
+<txt>
+	Let $n\ge 2$ be a positive integer. There are $n$ real coefficient polynomials $P_1(x),P_2(x),\cdots ,P_n(x)$ which is not all the same, and their leading coefficients are positive. Prove that
+$$\deg(P_1^n+P_2^n+\cdots +P_n^n-nP_1P_2\cdots P_n)\ge (n-2)\max_{1\le i\le n}(\deg P_i)$$and find when the equality holds.
+</txt>
+<id>604188725177670</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2022/2.5</src>
+<done>0</done>
+<txt>
+	Determine all functions $f:\mathbb{R} \rightarrow \mathbb{R}$ such that
+$$f(f(x)-9f(y))=(x+3y)^2f(x-3y)$$for all $x,y\in \mathbb{R}$.
+</txt>
+<id>646424364467534</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2021/1.3</src>
+<done>0</done>
+<txt>
+$n\ge2$ is a given positive integer. $i\leq a_i \leq n$ satisfies for all $1\leq i\leq n$, and $S_i$ is defined as $a_1+a_2+...+a_i(S_0=0)$. Show that there exists such $1\leq k\leq n$ that satisfies $a_k^2+S_{n-k}<2S_n-\frac{n(n+1)}{2}$.
+</txt>
+<id>655207782865052</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2021/1.6</src>
+<done>0</done>
+<txt>
+Is there exist a sequence $a_0,a_1,a_2,\cdots $ consisting of non-zero integers that satisfies the following condition?
+
+Condition: For all integers $n$ ($\ge 2020$), equation
+$$a_n x^n+a_{n-1}x^{n-1}+\cdots +a_0=0$$has a real root with its absolute value larger than $2.001$.
+</txt>
+<id>637496989440645</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2021/2.2</src>
+<done>0</done>
+<txt>
+Find all functions $f:R^+\rightarrow R^+$ such that for all positive reals $x$ and $y$
+$$4f(x+yf(x))=f(x)f(2y)$$
+</txt>
+<id>770681078031656</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2021/2.4</src>
+<done>0</done>
+<txt>
+Find all $f(x)\in \mathbb Z (x)$ that satisfies the following condition, with the lowest degree.
+Condition: There exists $g(x),h(x)\in \mathbb Z (x)$ such that$$f(x)^4+2f(x)+2=(x^4+2x^2+2)g(x)+3h(x)$$
+</txt>
+<id>5790808043328490922</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2021/2.7</src>
+<done>0</done>
+<txt>
+Find all pair of constants $(a,b)$ such that there exists real-coefficient polynomial $p(x)$ and $q(x)$ that satisfies the condition below.
+
+Condition: $\forall x\in \mathbb R,$ $ $ $p(x^2)q(x+1)-p(x+1)q(x^2)=x^2+ax+b$
+</txt>
+<id>3232480961068145020</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2020/2</src>
+<done>0</done>
+<txt>
+	$X$ is a set of $2020$ distinct real numbers. Prove that there exist $a,b\in \mathbb{R}$ and $A\subset X$ such that
+$$\sum_{x\in A}(x-a)^2 +\sum_{x\in X\backslash A}(x-b)^2\le \frac{1009}{1010}\sum_{x\in X}x^2$$
+</txt>
+<id>176031103945886</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2020/7</src>
+<done>0</done>
+<txt>
+	Find all functions $f:\mathbb{R}\rightarrow\mathbb{R}$ such that $2f(x^2+y^2)=(x+f(y))^2+f(x-f(y))^2$ for all $x,y\in\mathbb{R}$.
+</txt>
+<id>951015231425815</id>
+</problem>
+<problem>
+<src>Korea Winter Program 2018/1</src>
+<done>0</done>
+<txt>
+Find all functions $f : \mathbb{R} \rightarrow \mathbb{R}$ satisfying the following conditions :
+1) $f(x+y)-f(x)-f(y) \in \{0,1\} $ for all $x,y \in \mathbb{R}$
+2) $\lfloor f(x) \rfloor = \lfloor x \rfloor $ for all real $x$.
+</txt>
+<id>549237375256018</id>
+</problem>
+<problem>
+<src>Korea Summer Program 2016/1</src>
+<done>0</done>
+<txt>
+Find all real numbers $x_1, \dots, x_{2016}$ that satisfy the following equation for each $1 \le i \le 2016$. (Here $x_{2017} = x_1$.)
+\[ x_i^2 + x_i - 1 = x_{i+1} \]
+</txt>
+<id>397912644922719</id>
+</problem>
+<problem>
+<src>Korea Summer Program 2016/7</src>
+<done>0</done>
+<txt>
+	A infinite sequence $\{ a_n \}_{n \ge 0}$ of real numbers satisfy $a_n \ge n^2$. Suppose that for each $i, j \ge 0$ there exist $k, l$ with $(i,j) \neq (k,l)$, $l - k = j - i$, and $a_l - a_k = a_j - a_i$. Prove that $a_n \ge (n + 2016)^2$ for some $n$.
+</txt>
+<id>748293992911976</id>
+</problem>
+<problem>
+<src>Korea Summer Program 2023/2</src>
+<done>0</done>
+<txt>
+Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that
+$$f(f(x)^2 + |y|) = x^2 + f(y)$$
+</txt>
+<id>514210607042538</id>
+</problem>
+<problem>
+<src>Korea Summer Program 2023/7</src>
+<done>0</done>
+<txt>
+Determine the smallest value of $M$ for which for any choice of positive integer $n$ and positive real numbers $x_1<x_2<\ldots<x_n \le 2023$ the inequality
+$$\sum_{1\le i < j \le n , x_j-x_i \ge 1} 2^{i-j}\le M$$holds.
+</txt>
+<id>678030172296176</id>
+</problem>
+<problem>
+<src>IMSC 2023/1</src>
+<done>0</done>
+<txt>
+Find all functions $f:\mathbb{Z} \rightarrow \mathbb{Z}$ such that $f(1) \neq f(-1)$ and$$f(m+n)^2 \mid f(m)-f(n)$$for all integers $m, n$.
+</txt>
+<id>8705251856251359603</id>
+</problem>
+<problem>
+<src>IMSC 2023/2</src>
+<done>0</done>
+<txt>
+There are $n!$ empty baskets in a row, labelled $1, 2, . . . , n!$. Caesar
+first puts a stone in every basket. Caesar then puts 2 stones in every second basket.
+Caesar continues similarly until he has put $n$ stones into every nth basket. In
+other words, for each $i = 1, 2, . . . , n,$ Caesar puts $i$ stones into the baskets labelled
+$i, 2i, 3i, . . . , n!.$
+Let $x_i$ be the number of stones in basket $i$ after all these steps. Show that
+$n! \cdot n^2 \leq \sum_{i=1}^{n!} x_i^2 \leq n! \cdot n^2 \cdot \sum_{i=1}^{n} \frac{1}{i} $
+</txt>
+<id>3579058550991835669</id>
+</problem>
+<problem>
+<src>IMSC 2023/4</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a triangle with incenter $I$ and let $AI$ meet $BC$ at $D$. Let $E$ be a point on the segment $AC$, such that $CD=CE$ and let $F$ be on the segment $AB$ such that $BF=BD$. Let $(CEI) \cap (DFI)=P \neq I$ and $(BFI) \cap (DEI)=Q \neq I$. Prove that $PQ \perp BC$.
+</txt>
+<id>748238852463934</id>
+</problem>
+<problem>
+<src>IMSC 2023/5</src>
+<done>0</done>
+<txt>
+	In the plane, $2022$ points are chosen such that no three points lie on the same line. Each of the points is coloured red or blue such that each triangle formed by three distinct red points contains at least one blue point.
+What is the largest possible number of red points?
+</txt>
+<id>119253293150446</id>
+</problem>
+<problem>
+<src>IMSC 2024/1</src>
+<done>0</done>
+<txt>
+For a positive integer $n$ denote by $P_0(n)$ the product of all non-zero digits of $n$. Let $N_0$ be the set of all positive integers $n$ such that $P_0(n)|n$. Find the largest possible value of $\ell$ such that $N_0$ contains infinitely many strings of $\ell$ consecutive integers.
+</txt>
+<id>504512181993018</id>
+</problem>
+<problem>
+<src>IMSC 2024/2</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be an acute angled triangle and let $P, Q$ be points on $AB, AC$ respectively, such that $PQ$ is parallel to $BC$. Points $X, Y$ are given on line segments $BQ, CP$ respectively, such that $\angle AXP = \angle XCB$ and $\angle AYQ = \angle YBC$. Prove that $AX = AY$.
+
+</txt>
+<id>143601603071770</id>
+</problem>
+<problem>
+<src>IMSC 2024/4</src>
+<done>0</done>
+<txt>
+	Ana plays a game on a $100\times 100$ chessboard. Initially, there is a white pawn on each square of the bottom row and a black pawn on each square of the top row, and no other pawns anywhere else.
+Each white pawn moves toward the top row and each black pawn moves toward the bottom row in one of the following ways:
+it moves to the square directly in front of it if there is no other pawn on it;
+it captures a pawn on one of the diagonally adjacent squares in the row immediately in front of it if there is a pawn of the opposite color on it.
+(We say a pawn $P$ captures a pawn $Q$ of the opposite color if we remove $Q$ from the board and move $P$ to the square that $Q$ was previously on.)
+
+Ana can move any pawn (not necessarily alternating between black and white) according to those rules. What is the smallest number of pawns that can remain on the board after no more moves can be made?
+</txt>
+<id>7205358409203299180</id>
+</problem>
+<problem>
+<src>IMSC 2024/5</src>
+<done>0</done>
+<txt>
+Let $\mathbb{R}_{>0}$ be the set of all positive real numbers. Find all strictly monotone (increasing or decreasing) functions $f:\mathbb{R}_{>0} \to \mathbb{R}$ such that there exists a two-variable polynomial $P(x, y)$ with real coefficients satisfying
+$$
+f(xy)=P(f(x), f(y))
+$$for all $x, y\in\mathbb{R}_{>0}$.
+</txt>
+<id>361772755079059</id>
+</problem>
+<problem>
+<src>Ibero 2023/1</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. The following $35$ multiplication are performed:
+$$1 \cdot n, 2 \cdot n, \dots, 35 \cdot n.$$Show that in at least one of these results the digit $7$ appears at least once.
+</txt>
+<id>7284124089748055531</id>
+</problem>
+<problem>
+<src>Ibero 2023/2</src>
+<done>0</done>
+<txt>
+Let $\mathbb{Z}$ be the set of integers. Find all functions $f:\mathbb{Z}\rightarrow\mathbb{Z}$ such that:
+$$2023f(f(x))+2022x^2=2022f(x)+2023[f(x)]^2+1$$for each integer $x$.
+</txt>
+<id>834743022162424</id>
+</problem>
+<problem>
+<src>Ibero 2023/3</src>
+<done>0</done>
+<txt>
+Ann and Beto play with a two pan balance scale. They have $2023$ dumbbells labeled with their weights, which are the numbers $1, 2, \dots, 2023$, with none of them repeating themselves. Each player, in turn, chooses a dumbbell that was not yet placed on the balance scale and places it on the pan with the least weight at the moment. If the scale is balanced, the player places it on any pan. Ana starts the game, and they continue in this way alternately until all the dumbbells are placed. Ana wins if at the end the scale is balanced, otherwise Beto win. Determine which of the players has a winning strategy and describe the strategy.
+</txt>
+<id>6819074419096549446</id>
+</problem>
+<problem>
+<src>Ibero 2023/4</src>
+<done>0</done>
+<txt>
+Let $B$ and $C$ be two fixed points in the plane. For each point $A$ of the plane, outside of the line $BC$, let $G$ be the barycenter of the triangle $ABC$. Determine the locus of points $A$ such that $\angle BAC + \angle BGC = 180^{\circ}$.
+
+Note: The locus is the set of all points of the plane that satisfies the property.
+</txt>
+<id>2143833415170817930</id>
+</problem>
+<problem>
+<src>Ibero 2023/5</src>
+<done>0</done>
+<txt>
+	A sequence $P_1, \dots, P_n$ of points in the plane (not necessarily diferent) is carioca if there exists a permutation $a_1, \dots, a_n$ of the numbers $1, \dots, n$ for which the segments
+$$P_{a_1}P_{a_2}, P_{a_2}P_{a_3}, \dots, P_{a_n}P_{a_1}$$are all of the same length.
+
+Determine the greatest number $k$ such that for any sequence of $k$ points in the plane, $2023-k$ points can be added so that the sequence of $2023$ points is carioca.
+</txt>
+<id>3707562559770315754</id>
+</problem>
+<problem>
+<src>Ibero 2023/6</src>
+<done>0</done>
+<txt>
+Let $P$ be a polynomial of degree greater than or equal to $4$ with integer coefficients. An integer $x$ is called $P$-representable if there exists integer numbers $a$ and $b$ such that $x = P(a) - P(b)$. Prove that, if for all $N \geq 0$, more than half of the integers of the set $\{0,1,\dots,N\}$ are $P$-representable, then all the even integers are $P$-representable or all the odd integers are $P$-representable.
+</txt>
+<id>140536805208587401</id>
+</problem>
+<problem>
+<src>Ibero 2022/1</src>
+<done>0</done>
+<txt>
+	Given is an equilateral triangle $ABC$ with circumcenter $O$. Let $D$ be a point on to minor arc $BC$ of its circumcircle such that $DB>DC$. The perpendicular bisector of $OD$ meets the circumcircle at $E, F$, with $E$ lying on the minor arc $BC$. The lines $BE$ and $CF$ meet at $P$. Prove that $PD \perp BC$.
+</txt>
+<id>255403454348745096</id>
+</problem>
+<problem>
+<src>Ibero 2022/2</src>
+<done>0</done>
+<txt>
+Let $S=\{13, 133, \cdots\}$ be the set of the positive integers of the form $133 \cdots 3$. Consider a horizontal row of $2022$ cells. Ana and Borja play a game: they alternatively write a digit on the leftmost empty cell, starting with Ana. When the row is filled, the digits are read from left to right to obtain a $2022$-digit number $N$. Borja wins if $N$ is divisible by a number in $S$, otherwise Ana wins. Find which player has a winning strategy and describe it.
+</txt>
+<id>6728439333021242021</id>
+</problem>
+<problem>
+<src>Ibero 2022/3</src>
+<done>0</done>
+<txt>
+Find all functions $f: \mathbb{R} \rightarrow \mathbb{R}$ such that $f(yf(x))+f(x-1)=f(x)f(y)$ and $|f(x)|<2022$ for all $0<x<1$.
+</txt>
+<id>7016087217872166929</id>
+</problem>
+<problem>
+<src>Ibero 2022/4</src>
+<done>0</done>
+<txt>
+Let $n> 2$ be a positive integer. Given is a horizontal row of $n$ cells where each cell is painted blue or red. We say that a block is a sequence of consecutive boxes of the same color. Arepito the crab is initially standing at the leftmost cell. On each turn, he counts the number $m$ of cells belonging to the largest block containing the square he is on, and does one of the following:
+
+If the square he is on is blue and there are at least $m$ squares to the right of him, Arepito moves $m$ squares to the right;
+
+If the square he is in is red and there are at least $m$ squares to the left of him, Arepito moves $m$ cells to the left;
+
+In any other case, he stays on the same square and does not move any further.
+
+For each $n$, determine the smallest integer $k$ for which there is an initial coloring of the row with $k$ blue cells, for which Arepito will reach the rightmost cell.
+</txt>
+<id>858562234779712</id>
+</problem>
+<problem>
+<src>Ibero 2022/5</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be an acute triangle with circumcircle $\Gamma$. Let $P$ and $Q$ be points in the half plane defined by $BC$ containing $A$, such that $BP$ and $CQ$ are tangents to $\Gamma$ and $PB = BC = CQ$. Let $K$ and $L$ be points on the external bisector of the angle $\angle CAB$ , such that $BK = BA, CL = CA$. Let $M$ be the intersection point of the lines $PK$ and $QL$. Prove that $MK=ML$.
+</txt>
+<id>3104932449951237120</id>
+</problem>
+<problem>
+<src>Ibero 2022/6</src>
+<done>0</done>
+<txt>
+	Find all functions $f:\mathbb{N} \rightarrow \mathbb{N}$, such that $f(a)f(a+b)-ab$ is a perfect square for all $a, b \in \mathbb{N}$.
+</txt>
+<id>2583236079961296677</id>
+</problem>
+<problem>
+<src>Ibero 2021/1</src>
+<done>0</done>
+<txt>
+Let $P = \{p_1,p_2,\ldots, p_{10}\}$ be a set of $10$ different prime numbers and let $A$ be the set of all the integers greater than $1$ so that their prime decomposition only contains primes of $P$. The elements of $A$ are colored in such a way that:
+each element of $P$ has a different color,
+if $m,n \in A$, then $mn$ is the same color of $m$ or $n$,
+for any pair of different colors $\mathcal{R}$ and $\mathcal{S}$, there are no $j,k,m,n\in A$ (not necessarily distinct from one another), with $j,k$ colored $\mathcal{R}$ and $m,n$ colored $\mathcal{S}$, so that $j$ is a divisor of $m$ and $n$ is a divisor of $k$, simultaneously.
+Prove that there exists a prime of $P$ so that all its multiples in $A$ are the same color.
+</txt>
+<id>261061984301321</id>
+</problem>
+<problem>
+<src>Ibero 2021/2</src>
+<done>0</done>
+<txt>
+Consider an acute-angled triangle $ABC$, with $AC>AB$, and let $\Gamma$ be its circumcircle. Let $E$ and $F$ be the midpoints of the sides $AC$ and $AB$, respectively. The circumcircle of the triangle $CEF$ and $\Gamma$ meet at $X$ and $C$, with $X\neq C$. The line $BX$ and the tangent to $\Gamma$ through $A$ meet at $Y$. Let $P$ be the point on segment $AB$ so that $YP = YA$, with $P\neq A$, and let $Q$ be the point where $AB$ and the parallel to $BC$ through $Y$ meet each other. Show that $F$ is the midpoint of $PQ$.
+</txt>
+<id>7351162576557167474</id>
+</problem>
+<problem>
+<src>Ibero 2021/3</src>
+<done>0</done>
+<txt>
+Let $a_1,a_2,a_3, \ldots$ be a sequence of positive integers and let $b_1,b_2,b_3,\ldots$ be the sequence of real numbers given by
+$$b_n = \dfrac{a_1a_2\cdots a_n}{a_1+a_2+\cdots + a_n},\ \mbox{for}\ n\geq 1$$Show that, if there exists at least one term among every million consecutive terms of the sequence $b_1,b_2,b_3,\ldots$ that is an integer, then there exists some $k$ such that $b_k > 2021^{2021}$.
+</txt>
+<id>372825050751557</id>
+</problem>
+<problem>
+<src>Ibero 2021/4</src>
+<done>0</done>
+<txt>
+Let $a,b,c,x,y,z$ be real numbers such that
+
+\[ a^2+x^2=b^2+y^2=c^2+z^2=(a+b)^2+(x+y)^2=(b+c)^2+(y+z)^2=(c+a)^2+(z+x)^2 \]
+Show that $a^2+b^2+c^2=x^2+y^2+z^2$.
+</txt>
+<id>8129091008921005997</id>
+</problem>
+<problem>
+<src>Ibero 2021/5</src>
+<done>0</done>
+<txt>
+For a finite set $C$ of integer numbers, we define $S(C)$ as the sum of the elements of $C$. Find two non-empty sets $A$ and $B$ whose intersection is empty, whose union is the set $\{1,2,\ldots, 2021\}$ and such that the product $S(A)S(B)$ is a perfect square.
+</txt>
+<id>576014113251153</id>
+</problem>
+<problem>
+<src>Ibero 2021/6</src>
+<done>0</done>
+<txt>
+Consider a $n$-sided regular polygon, $n \geq 4$, and let $V$ be a subset of $r$ vertices of the polygon. Show that if $r(r-3) \geq n$, then there exist at least two congruent triangles whose vertices belong to $V$.
+</txt>
+<id>3173124324482060330</id>
+</problem>
+<problem>
+<src>Ibero 2020/1</src>
+<done>0</done>
+<txt>
+Let $ABC$ be an acute scalene triangle such that $AB <AC$. The midpoints of sides $AB$ and $AC$ are $M$ and $N$, respectively. Let $P$ and $Q$ be points on the line $MN$ such that $\angle CBP = \angle ACB$ and $\angle QCB = \angle CBA$. The circumscribed circle of triangle $ABP$ intersects line $AC$ at $D$ ($D\ne A$) and the circumscribed circle of triangle $AQC$ intersects line $AB$ at $E$ ($E \ne A$). Show that lines $BC, DP,$ and $EQ$ are concurrent.
+</txt>
+<id>620564216459483</id>
+</problem>
+<problem>
+<src>Ibero 2020/2</src>
+<done>0</done>
+<txt>
+Let $T_n$ denotes the least natural such that
+$$n\mid 1+2+3+\cdots +T_n=\sum_{i=1}^{T_n} i$$Find all naturals $m$ such that $m\ge T_m$.
+
+</txt>
+<id>1918325703156767787</id>
+</problem>
+<problem>
+<src>Ibero 2020/3</src>
+<done>0</done>
+<txt>
+Let $n\ge 2$ be an integer. A sequence $\alpha = (a_1, a_2,..., a_n)$ of $n$ integers is called Lima if $\gcd \{a_i - a_j \text{ such that } a_i> a_j \text{ and } 1\le i, j\le n\} = 1$, that is, if the greatest common divisor of all the differences $a_i - a_j$ with $a_i> a_j$ is $1$. One operation consists of choosing two elements $a_k$ and $a_{\ell}$ from a sequence, with $k\ne \ell $ , and replacing $a_{\ell}$ by $a'_{\ell}  = 2a_k - a_{\ell}$ .
+Show that, given a collection of $2^n - 1$ Lima sequences, each one formed by $n$ integers, there are two of them, say $\beta$ and $\gamma$, such that it is possible to transform $\beta$ into $\gamma$ through a finite number of operations.
+
+Notes.
+The sequences $(1,2,2,7)$ and $(2,7,2,1)$ have the same elements but are different.
+If all the elements of a sequence are equal, then that sequence is not Lima.
+</txt>
+<id>4514183051583887150</id>
+</problem>
+<problem>
+<src>Ibero 2020/4</src>
+<done>0</done>
+<txt>
+	Show that there exists a set $\mathcal{C}$ of $2020$ distinct, positive integers that satisfies simultaneously the following properties:
+$\bullet$ When one computes the greatest common divisor of each pair of elements of $\mathcal{C}$, one gets a list of numbers that are all distinct.
+$\bullet$ When one computes the least common multiple of each pair of elements of $\mathcal{C}$, one gets a list of numbers that are all distinct.
+</txt>
+<id>5392114638976928066</id>
+</problem>
+<problem>
+<src>Ibero 2020/5</src>
+<done>0</done>
+<txt>
+Determine all functions $f: \mathbb{R} \rightarrow \mathbb{R}$ such that$$f(xf(x-y))+yf(x)=x+y+f(x^2),$$for all real numbers $x$ and $y.$
+</txt>
+<id>716406996122549</id>
+</problem>
+<problem>
+<src>Ibero 2020/6</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be an acute, scalene triangle. Let $H$ be the orthocenter and $O$ be the circumcenter of triangle $ABC$, and let $P$ be a point interior to the segment $HO.$ The circle with center $P$ and radius $PA$ intersects the lines $AB$ and $AC$ again at $R$ and $S$, respectively. Denote by $Q$ the symmetric point of $P$ with respect to the perpendicular bisector of $BC$. Prove that points $P$, $Q$, $R$ and $S$ lie on the same circle.
+</txt>
+<id>156471770451237</id>
+</problem>
+<problem>
+<src>Ibero 2019/1</src>
+<done>0</done>
+<txt>
+For each positive integer $n$, let $s(n)$ be the sum of the squares of the digits of $n$. For example, $s(15)=1^2+5^2=26$. Determine all integers $n\geq 1$ such that $s(n)=n$.
+</txt>
+<id>5707875418806483255</id>
+</problem>
+<problem>
+<src>Ibero 2019/2</src>
+<done>0</done>
+<txt>
+Determine all polynomials $P(x)$ with degree $n\geq 1$ and integer coefficients so that for every real number $x$ the following condition is satisfied
+$$P(x)=(x-P(0))(x-P(1))(x-P(2))\cdots (x-P(n-1))$$
+</txt>
+<id>5871948911817167044</id>
+</problem>
+<problem>
+<src>Ibero 2019/3</src>
+<done>0</done>
+<txt>
+	Let $\Gamma$ be the circumcircle of triangle $ABC$. The line parallel to $AC$ passing through $B$ meets $\Gamma$ at $D$ ($D\neq B$), and the line parallel to $AB$ passing through $C$ intersects $\Gamma$ to $E$ ($E\neq C$). Lines $AB$ and $CD$ meet at $P$, and lines $AC$ and $BE$ meet at $Q$. Let $M$ be the midpoint of $DE$. Line $AM$ meets $\Gamma$ at $Y$ ($Y\neq A$) and line $PQ$ at $J$. Line $PQ$ intersects the circumcircle of triangle $BCJ$ at $Z$ ($Z\neq J$). If lines $BQ$ and $CP$ meet each other at $X$, show that $X$ lies on the line $YZ$.
+</txt>
+<id>541615131309445</id>
+</problem>
+<problem>
+<src>Ibero 2019/4</src>
+<done>0</done>
+<txt>
+Let $ABCD$ be a trapezoid with $AB\parallel CD$ and inscribed in a circumference $\Gamma$. Let $P$ and $Q$ be two points on segment $AB$ ($A$, $P$, $Q$, $B$ appear in that order and are distinct) such that $AP=QB$. Let $E$ and $F$ be the second intersection points of lines $CP$ and $CQ$ with $\Gamma$, respectively. Lines $AB$ and $EF$ intersect at $G$. Prove that line $DG$ is tangent to $\Gamma$.
+</txt>
+<id>634298954927697</id>
+</problem>
+<problem>
+<src>Ibero 2019/5</src>
+<done>0</done>
+<txt>
+	Don Miguel places a token in one of the $(n+1)^2$ vertices determined by an $n \times n$ board. A move consists of moving the token from the vertex on which it is placed to an adjacent vertex which is at most $\sqrt2$ away, as long as it stays on the board. A path is a sequence of moves such that the token was in each one of the $(n+1)^2$ vertices exactly once. What is the maximum number of diagonal moves (those of length $\sqrt2$) that a path can have in total?
+</txt>
+<id>6751071460392744865</id>
+</problem>
+<problem>
+<src>Ibero 2019/6</src>
+<done>0</done>
+<txt>
+	Let $a_1, a_2, \dots, a_{2019}$ be positive integers and $P$ a polynomial with integer coefficients such that, for every positive integer $n$,
+$$P(n) \text{ divides  } a_1^n+a_2^n+\dots+a_{2019}^n.$$Prove that $P$ is a constant polynomial.
+</txt>
+<id>247248446755838</id>
+</problem>
+<problem>
+<src>Ibero 2018/1</src>
+<done>0</done>
+<txt>
+	For each integer $n \ge 2$, find all integer solutions of the following system of equations:
+
+\[x_1 = (x_2 + x_3 + x_4 + ... + x_n)^{2018}\]\[x_2 = (x_1 + x_3 + x_4 + ... + x_n)^{2018}\]\[\vdots\]\[x_n = (x_1 + x_2 + x_3 + ... + x_{n - 1})^{2018}\]
+</txt>
+<id>204202362084074</id>
+</problem>
+<problem>
+<src>Ibero 2018/2</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a triangle such that $\angle BAC = 90^{\circ}$ and $AB = AC$. Let $M$ be the midpoint of $BC$. A point $D \neq A$ is chosen on the semicircle with diameter $BC$ that contains $A$. The circumcircle of triangle $DAM$ cuts lines $DB$ and $DC$ at $E$ and $F$ respectively. Show that $BE = CF$.
+</txt>
+<id>6489054720541585180</id>
+</problem>
+<problem>
+<src>Ibero 2018/3</src>
+<done>0</done>
+<txt>
+	In a plane we have $n$ lines, no two of which are parallel or perpendicular, and no three of which are concurrent. A cartesian system of coordinates is chosen for the plane with one of the lines as the $x$-axis. A point $P$ is located at the origin of the coordinate system and starts moving along the positive $x$-axis with constant velocity. Whenever $P$ reaches the intersection of two lines, it continues along the line it just reached in the direction that increases its $x$-coordinate. Show that it is possible to choose the system of coordinates in such a way that $P$ visits points from all $n$ lines.
+</txt>
+<id>6703839677147050695</id>
+</problem>
+<problem>
+<src>Ibero 2018/4</src>
+<done>0</done>
+<txt>
+	A set $X$ of positive integers is said to be iberic if $X$ is a subset of $\{2, 3, \dots, 2018\}$, and whenever $m, n$ are both in $X$, $\gcd(m, n)$ is also in $X$. An iberic set is said to be olympic if it is not properly contained in any other iberic set. Find all olympic iberic sets that contain the number $33$.
+</txt>
+<id>3214097809181137769</id>
+</problem>
+<problem>
+<src>Ibero 2018/5</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. For a permutation $a_1, a_2, \dots, a_n$ of the numbers $1, 2, \dots, n$ we define
+
+$$b_k = \min_{1 \leq i \leq k} a_i + \max_{1 \leq j \leq k} a_j$$
+We say that the permutation $a_1, a_2, \dots, a_n$ is guadiana if the sequence $b_1, b_2, \dots, b_n$ does not contain two consecutive equal terms. How many guadiana permutations exist?
+</txt>
+<id>351896324490208</id>
+</problem>
+<problem>
+<src>Ibero 2018/6</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be an acute triangle with $AC > AB > BC$. The perpendicular bisectors of $AC$ and $AB$ cut line $BC$ at $D$ and $E$ respectively. Let $P$ and $Q$ be points on lines $AC$ and $AB$ respectively, both different from $A$, such that $AB = BP$ and $AC = CQ$, and let $K$ be the intersection of lines $EP$ and $DQ$. Let $M$ be the midpoint of $BC$. Show that $\angle DKA = \angle EKM$.
+</txt>
+<id>27464517430039</id>
+</problem>
 </problemas>

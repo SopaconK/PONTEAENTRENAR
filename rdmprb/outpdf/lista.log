@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.18)  3 JUL 2024 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.18)  5 JUL 2024 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -971,7 +971,8 @@ File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\sopac\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \arrowsize=\dimen300
-)) (lista.aux)
+))
+No file lista.aux.
 \openout1 = `lista.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -1001,7 +1002,7 @@ Package scrbase Info: activating english \listfigurename on input line 56.
 Package scrbase Info: activating english \listtablename on input line 56.
 Package scrbase Info: activating english \refname on input line 56.
 Package scrbase Info: activating english \indexname on input line 56.
- (C:\Users\sopac\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(C:\Users\sopac\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count368
 \scratchdimen=\dimen301
@@ -1098,50 +1099,27 @@ Package hyperref Info: bookmark level for unknown problem defaults to 0 on input
  [1
 
 
-{C:/Users/sopac/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] [4] [5] [6] [7] [8] [9]
-Overfull \hbox (20.94336pt too wide) in paragraph at lines 374--375
-[][]\OT1/cmr/bx/n/10.95 (-20) Problem 1.78 \OT1/cmr/m/n/10.95 (-20) (9153191064326230951)\OT1/cmr/bx/n/10.95 (-20) . [][]\OT1/cmr/m/n/10.95 (-20) Let sca-lene tri-an-gle $\OML/cmm/m/it/10.95 ABC$ \OT1/cmr/m/n/10.95 (-20) have al-ti-tudes $\OML/cmm/m/it/10.95 AD; BE; CF$
- []
-
-[10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25]
-Overfull \hbox (17.47365pt too wide) in paragraph at lines 886--887
-\OML/cmm/m/it/10.95 AC$ \OT1/cmr/m/n/10.95 (-20) and $\OML/cmm/m/it/10.95 LM \OMS/cmsy/m/n/10.95 k \OML/cmm/m/it/10.95 BD$\OT1/cmr/m/n/10.95 (-20) . Let $\OML/cmm/m/it/10.95 ![]; ![]; ![]; ![]$ \OT1/cmr/m/n/10.95 (-20) be the in-cir-cles of $\OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 ANK; \OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 BKL; \OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 CLM; \OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 DMN$\OT1/cmr/m/n/10.95 (-20) . 
- []
-
-
-Overfull \hbox (17.63606pt too wide) in paragraph at lines 904--905
-[][]\OT1/cmr/bx/n/10.95 (-20) Problem 1.211 \OT1/cmr/m/n/10.95 (-20) (290912955085727393)\OT1/cmr/bx/n/10.95 (-20) . [][]\OT1/cmr/m/n/10.95 (-20) Let $\OML/cmm/m/it/10.95 n \U/msa/m/n/10.95 > \OT1/cmr/m/n/10.95 (-20) 3$ be a pos-i-tive in-te-ger and let $[]$
- []
-
-[26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42]
-Overfull \hbox (143.44379pt too wide) in paragraph at lines 1446--1452
-[]\OT1/cmr/m/n/10.95 (-20) // Orig-i-nal poly-gon add(shift(dir(108))*blk); add(shift(dir(72))*rotate(324)*blk); add(shift(dir(36))*rotate(288)*wht);
- []
-
-
-Overfull \hbox (118.84889pt too wide) in paragraph at lines 1453--1458
-[]\OT1/cmr/m/n/10.95 (-20) add(shift(dir(288))*rotate(180)*blk); add(shift(dir(252))*rotate(144)*blk); add(shift(dir(216))*rotate(108)*wht);
- []
-
-
-Overfull \hbox (3.69742pt too wide) in paragraph at lines 1459--1477
-\OT1/cmr/m/n/10.95 (-20) cycle; draw(Wgon); pair WO = (W1+W3)/2; trans-form Wt = shift(WO)*scale(Wk)*shift(-
- []
-
-[43] [44] [45]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 1582.
+{C:/Users/sopac/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 185.
  (C:\Users\sopac\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (C:\Users\sopac\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-) [46]
-Overfull \hbox (5.38316pt too wide) in paragraph at lines 1627--1628
-[][]\OT1/cmr/bx/n/10.95 (-20) Problem 1.376 \OT1/cmr/m/n/10.95 (-20) (902621191535073)\OT1/cmr/bx/n/10.95 (-20) . [][]\OT1/cmr/m/n/10.95 (-20) Given six points $\OML/cmm/m/it/10.95 A; B; C; D; E; F$ \OT1/cmr/m/n/10.95 (-20) such that $\OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 BCD []
+) [4] [5] [6] [7]
+\openout3 = `lista-1.asy'.
+
+
+
+Package asymptote Warning: file `lista-1.pdf' not found on input line 322.
+
+[8] [9]
+Overfull \hbox (17.47365pt too wide) in paragraph at lines 388--389
+\OML/cmm/m/it/10.95 AC$ \OT1/cmr/m/n/10.95 (-20) and $\OML/cmm/m/it/10.95 LM \OMS/cmsy/m/n/10.95 k \OML/cmm/m/it/10.95 BD$\OT1/cmr/m/n/10.95 (-20) . Let $\OML/cmm/m/it/10.95 ![]; ![]; ![]; ![]$ \OT1/cmr/m/n/10.95 (-20) be the in-cir-cles of $\OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 ANK; \OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 BKL; \OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 CLM; \OMS/cmsy/m/n/10.95 4\OML/cmm/m/it/10.95 DMN$\OT1/cmr/m/n/10.95 (-20) . 
  []
 
-[47] [48] [49]
-c:/Users/sopac/OneDrive/Escritorio/PONTEAENTRENAR/rdmprb/outpdf/lista.tex:1719: Misplaced alignment tab character &.
-l.1719 ...TVkZTQ4NWE1ZDIyMDNhN2I5NzY0NTBlLnBuZw==&
+[10] [11] [12] [13] [14]
+c:/Users/sopac/OneDrive/Escritorio/PONTEAENTRENAR/rdmprb/outpdf/lista.tex:590: Misplaced alignment tab character &.
+l.590 ...MTVkZTQ4NWE1ZDIyMDNhN2I5NzY0NTBlLnBuZw==&
                                                   rn=Z3JhcGguUE5H
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1151,18 +1129,36 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (528.56224pt too wide) in paragraph at lines 1718--1721
+Overfull \hbox (528.56224pt too wide) in paragraph at lines 589--592
 \OT1/cmr/m/n/10.95 (-20) https://services.artofproblemsolving.com/download.php?id=YXR0YWNobWVudHMvZS9mLzc1YmNjN2YxMWZhZTNhMTVkZTQ4NWE1ZDIyMDNhN2I5NzY0NTBlLnBuZw==rn=Z3JhcGguUE5H
  []
 
-[50]
-\openout3 = `lista-1.asy'.
+
+Overfull \hbox (17.63606pt too wide) in paragraph at lines 597--598
+[][]\OT1/cmr/bx/n/10.95 (-20) Problem 1.123 \OT1/cmr/m/n/10.95 (-20) (290912955085727393)\OT1/cmr/bx/n/10.95 (-20) . [][]\OT1/cmr/m/n/10.95 (-20) Let $\OML/cmm/m/it/10.95 n \U/msa/m/n/10.95 > \OT1/cmr/m/n/10.95 (-20) 3$ be a pos-i-tive in-te-ger and let $[]$
+ []
+
+[15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29]
+Overfull \hbox (4.51248pt too wide) in paragraph at lines 1054--1055
+[][]\OT1/cmr/bx/n/10.95 (-20) Problem 1.233 \OT1/cmr/m/n/10.95 (-20) (409146991986056)\OT1/cmr/bx/n/10.95 (-20) . [][]\OT1/cmr/m/n/10.95 (-20) For each prime $\OML/cmm/m/it/10.95 p$\OT1/cmr/m/n/10.95 (-20) , con-struct a graph $\OML/cmm/m/it/10.95 G[]$ \OT1/cmr/m/n/10.95 (-20) on $\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 (-20) 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (-20) 2\OML/cmm/m/it/10.95 ; [] p\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 (-20) ,
+ []
+
+[30]
+Overfull \hbox (143.44379pt too wide) in paragraph at lines 1097--1103
+[]\OT1/cmr/m/n/10.95 (-20) // Orig-i-nal poly-gon add(shift(dir(108))*blk); add(shift(dir(72))*rotate(324)*blk); add(shift(dir(36))*rotate(288)*wht);
+ []
 
 
+Overfull \hbox (118.84889pt too wide) in paragraph at lines 1104--1109
+[]\OT1/cmr/m/n/10.95 (-20) add(shift(dir(288))*rotate(180)*blk); add(shift(dir(252))*rotate(144)*blk); add(shift(dir(216))*rotate(108)*wht);
+ []
 
-Package asymptote Warning: file `lista-1.pdf' not found on input line 1785.
 
-[51] [52] (lista.aux)
+Overfull \hbox (3.69742pt too wide) in paragraph at lines 1110--1128
+\OT1/cmr/m/n/10.95 (-20) cycle; draw(Wgon); pair WO = (W1+W3)/2; trans-form Wt = shift(WO)*scale(Wk)*shift(-
+ []
+
+[31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] (lista.aux)
 
 Package rerunfilecheck Warning: File `lista.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -1173,17 +1169,17 @@ Package rerunfilecheck Info: Checksums for `lista.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 49855 strings out of 477992
- 1182995 string characters out of 2827466
- 1712357 words of memory out of 3000000
- 66724 multiletter control sequences out of 15000+600000
- 495908 words of font info for 224 fonts, out of 8000000 for 9000
+ 50038 strings out of 477992
+ 1186955 string characters out of 2827466
+ 1715357 words of memory out of 3000000
+ 66786 multiletter control sequences out of 15000+600000
+ 496380 words of font info for 226 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 123i,21n,127p,10664b,670s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 123i,21n,127p,10664b,669s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\sopac\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcsx1440.pk><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/sopac/AppData/Local/Programs/MiKTeX/fonts/type1/public/yhmath/yhcmex.pfb>
-Output written on lista.pdf (52 pages, 675906 bytes).
+Output written on lista.pdf (58 pages, 733035 bytes).
 PDF statistics:
- 1367 PDF objects out of 1440 (max. 8388607)
- 872 named destinations out of 1000 (max. 500000)
+ 1531 PDF objects out of 1728 (max. 8388607)
+ 994 named destinations out of 1000 (max. 500000)
  45173 words of extra memory for PDF output out of 51595 (max. 10000000)
 
