@@ -1,7 +1,7 @@
 <problem>
-<src>Ibero 2018/6</src>
+<src>IGO Advanced 2018/5</src>
 <done>0</done>
 <txt> 	
-	Let $ABC$ be an acute triangle with $AC > AB > BC$. The perpendicular bisectors of $AC$ and $AB$ cut line $BC$ at $D$ and $E$ respectively. Let $P$ and $Q$ be points on lines $AC$ and $AB$ respectively, both different from $A$, such that $AB = BP$ and $AC = CQ$, and let $K$ be the intersection of lines $EP$ and $DQ$. Let $M$ be the midpoint of $BC$. Show that $\angle DKA = \angle EKM$.
+	$ABCD$ is a cyclic quadrilateral. A circle passing through $A,B$ is tangent to segment $CD$ at point $E$. Another circle passing through $C,D$ is tangent to $AB$ at point $F$. Point $G$ is the intersection point of $AE,DF$, and point $H$ is the intersection point of $BE$, $CF$. Prove that the incenters of triangles $AGF$, $BHF$, $CHE$, $DGE$ lie on a circle.
 </txt>
 </problem>

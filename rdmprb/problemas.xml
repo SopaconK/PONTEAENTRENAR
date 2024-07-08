@@ -2588,178 +2588,6 @@ Initially, on the lower left and right corner of a $2018\times 2018$ board, ther
 <id>1637184643761804371</id>
 </problem>
 <problem>
-<src>TWCH0721 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  Each point of a three-dimensional space is colored
-  with one of two colors such that
-  whenever an isosceles triangle $ABC$ with $AB = AC$
-  has vertices of the same color $c$ it follows that
-  the midpoint of $BC$ also is colored with $c$.
-  Prove that there exists a perpendicular square prism
-  with all vertices of equal color.
-</txt>
-<id>302701281403387</id>
-</problem>
-<problem>
-<src>Russia 2004/9.1 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  Each lattice point of $\ZZ^2$ is colored with one of three colors,
-  with every color used at least once.
-  Show that one can find a right triangle with pairwise distinct colored vertices.
-</txt>
-<id>9187468721920084868</id>
-</problem>
-<problem>
-<src>ZD0C7797 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  You're given an $n \times n$ matrix of real numbers.
-  In an operation, you may negate the entries of any row or column.
-  Prove that in a finite number of operations,
-  you can ensure every row and every column of the matrix has nonnegative sum.
-</txt>
-<id>329951351081287</id>
-</problem>
-<problem>
-<src>Russia 2014/9.3 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  In a convex $n$-gon $\mathcal P$, we draw several diagonals.
-  A drawn diagonal is \emph{good} if it intersects
-  exactly one other drawn diagonal in the interior of $\mathcal P$.
-  Over all choices of diagonals to draw,
-  find the maximum possible number of good diagonals.
-</txt>
-<id>193788212098506</id>
-</problem>
-<problem>
-<src>BMCQ24 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  Each of the $41$ dashed unit segments below is independently colored
-  either black or white, each randomly with probability $\half$.
-  The black segments thus form the walls of a maze
-  (but the white segments are passable).
-  \begin{center}
-  \begin{asy}
-  unitsize(1cm);
-  dotfactor *= 1.5;
-  draw(box((0,0), (6,5)), black+1.5);
-  label("$A$", (0.5,2.5), fontsize(12pt));
-  label("$B$", (5.5,2.5), fontsize(12pt));
-  for (int i=1; i<=5; ++i) {
-  draw((i,0)--(i,5), dashed+heavygray);
-  }
-  for (int j=1; j<=4; ++j) {
-  draw((1,j)--(5,j), dashed+heavygray);
-  }
-  for (int i=1; i<=5; ++i) {
-  for (int j=1; j<=4; ++j) {
-  dot((i,j));
-  }
-  }
-  \end{asy}
-  \end{center}
-  What is the probability that there will exist a
-  path from side $A$ to side $B$ that does not cross any of the black lines?
-</txt>
-<id>6136318250466883786</id>
-</problem>
-<problem>
-<src>ToT Spring 1999 S-A1 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  A convex polyhedron is floating in the Aegean sea.
-  Can $90 \%$ of its volume be below the water level
-  while more than half of its surface area is above the water level?
-</txt>
-<id>241697479443718</id>
-</problem>
-<problem>
-<src>Russia 1995 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  There are three boxes of stones.
-  Each hour, Sisyphus moves a stone from one box to another.
-  For each transfer of a stone, he receives from Zeus a number of coins
-  equal to the number of stones in the box from which the stone is drawn
-  minus the number of stones in the recipient box,
-  with the stone Sisyphus just carried not counted.
-  If this number is negative, Sisyphus pays the corresponding amount
-  (and can pay later if he is broke).
-
-  After $8760$ hours, all the stones lie in their initial boxes.
-  What is the greatest possible earning of Sisyphus at that moment,
-  in terms of the initial quantities in the three boxes?
-</txt>
-<id>796313598765903</id>
-</problem>
-<problem>
-<src>Russia 2013/9.5 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  On a circle we write $2n$ real numbers with a positive sum.
-  For each number, there are two sets of $n$ numbers such that this number is on the end.
-  Prove that at least one of the numbers has a positive sum for both these sets.
-</txt>
-<id>1011347878697645666</id>
-</problem>
-<problem>
-<src>USEMO 2020/2 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  Calvin and Hobbes play a game.
-  First, Hobbes picks a family $\mathcal F$ of subsets
-  of $\{1, 2, \dots, 2020\}$, known to both players.
-  Then, Calvin and Hobbes take turns choosing a number
-  from $\{1, 2, \dots, 2020\}$
-  which is not already chosen, with Calvin going first,
-  until all numbers are taken (i.e., each player has $1010$ numbers).
-  Calvin wins if he has chosen all the elements
-  of some member of $\mathcal F$, otherwise Hobbes wins.
-  What is the largest possible size of a family $\mathcal F$ that Hobbes
-  could pick while still having a winning strategy?
-</txt>
-<id>8608387455131778331</id>
-</problem>
-<problem>
-<src>Russia 2005/10.2 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  In a $2 \times n$ array of positive real numbers,
-  the sum of the two real numbers in each of the $n$ columns is $1$.
-  Prove that it's possible to select one number from each column
-  such that the sum of the selected numbers in each row is
-  at most $\frac{n+1}{4}$.
-</txt>
-<id>245448917471703</id>
-</problem>
-<problem>
-<src>ToT Fall 2000 S-A5 OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  Let $m$ and $n$ be positive integers.
-  The cells of a $2m \times 2n$ grid are colored black and white.
-  Suppose that for any cell $c$, a rook placed on $c$ attacks
-  more cells of the opposite color (not including $c$ itself).
-  Prove that every row and column contains
-  an equal number of black and white cells.
-</txt>
-<id>855628849330783</id>
-</problem>
-<problem>
-<src>RSNBOX OTIS Russian Combo</src>
-<done>0</done>
-<txt>
-  Suppose a $a' \times b' \times c'$ rectangular prism fits
-  inside an $a \times b \times c$ rectangular prism.
-  Is it possible that $a' + b' + c' > a + b + c$?
-</txt>
-<id>260804315613681</id>
-</problem>
-<problem>
 <src>USAMO 2024/1</src>
 <done>0</done>
 <txt>
@@ -4322,5 +4150,1416 @@ We say that the permutation $a_1, a_2, \dots, a_n$ is guadiana if the sequence $
 	Let $ABC$ be an acute triangle with $AC > AB > BC$. The perpendicular bisectors of $AC$ and $AB$ cut line $BC$ at $D$ and $E$ respectively. Let $P$ and $Q$ be points on lines $AC$ and $AB$ respectively, both different from $A$, such that $AB = BP$ and $AC = CQ$, and let $K$ be the intersection of lines $EP$ and $DQ$. Let $M$ be the midpoint of $BC$. Show that $\angle DKA = \angle EKM$.
 </txt>
 <id>27464517430039</id>
+</problem>
+<problem>
+<src>EGMO 2024/1</src>
+<done>0</done>
+<txt>
+Two different integers $u$ and $v$ are written on a board. We perform a sequence of steps. At each step we do one of the following two operations:
+
+(i) If $a$ and $b$ are different integers on the board, then we can write $a + b$ on the board, if it is not
+already there.
+(ii) If $a$, $b$ and $c$ are three different integers on the board, and if an integer $x$ satisfies $ax^2 +bx+c = 0$,
+then we can write $x$ on the board, if it is not already there.
+
+Determine all pairs of starting numbers $(u, v)$ from which any integer can eventually be written on the board after a finite sequence of steps.
+</txt>
+<id>7710975676761169567</id>
+</problem>
+<problem>
+<src>EGMO 2024/2</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a triangle with $AC>AB$ , and denote its circumcircle by $\Omega$ and incentre by $I$. Let its incircle meet sides $BC,CA,AB$ at $D,E,F$ respectively. Let $X$ and $Y$ be two points on minor arcs $\widehat{DF}$ and $\widehat{DE}$ of the incircle, respectively, such that $\angle BXD = \angle DYC$. Let line $XY$ meet line $BC$ at $K$. Let $T$ be the point on $\Omega$ such that $KT$ is tangent to $\Omega$ and $T$ is on the same side of line $BC$ as $A$. Prove that lines $TD$ and $AI$ meet on $\Omega$.
+</txt>
+<id>487703623613277</id>
+</problem>
+<problem>
+<src>EGMO 2024/3</src>
+<done>0</done>
+<txt>
+	We call a positive integer $n{}$ peculiar if, for any positive divisor $d{}$ of $n{}$ the integer $d(d + 1)$ divides $n(n + 1).$ Prove that for any four different peculiar positive integers $A, B, C$ and $D{}$ the following holds:
+\[\gcd(A, B, C, D) = 1.\]
+</txt>
+<id>776638240838060</id>
+</problem>
+<problem>
+<src>EGMO 2024/4</src>
+<done>0</done>
+<txt>
+	For a sequence $a_1<a_2<\cdots<a_n$ of integers, a pair $(a_i,a_j)$ with $1\leq i<j\leq n$ is called interesting if there exists a pair $(a_k,a_l)$ of integers with $1\leq k<l\leq n$ such that$$\frac{a_l-a_k}{a_j-a_i}=2.$$For each $n\geq 3$, find the largest possible number of interesting pairs in a sequence of length $n$.
+</txt>
+<id>1270053237908053448</id>
+</problem>
+<problem>
+<src>EGMO 2024/5</src>
+<done>0</done>
+<txt>
+Find all functions $f : \mathbb{N} \rightarrow \mathbb{N}$ such that the following conditions are true for every pair of positive integers $(x, y)$:
+$(i)$: $x$ and $f(x)$ have the same number of positive divisors.
+$(ii)$: If $x \nmid y$ and $y \nmid x$, then:
+$$\gcd(f(x), f(y)) > f(\gcd(x, y))$$
+</txt>
+<id>6566978587694479725</id>
+</problem>
+<problem>
+<src>EGMO 2024/6</src>
+<done>0</done>
+<txt>
+	Find all positive integers $d$ for which there exists a degree $d$ polynomial $P$ with real coefficients such that there are at most $d$ different values among $P(0),P(1),P(2),\cdots,P(d^2-d)$ .
+</txt>
+<id>7583686967751031247</id>
+</problem>
+<problem>
+<src>EGMO 2023/1</src>
+<done>0</done>
+<txt>
+There are $n \ge 3$ positive real numbers $a_1, a_2, \dots, a_n$. For each $1 \le i \le n$ we let $b_i = \frac{a_{i-1} + a_{i+1}}{a_i}$ (here we define $a_0$ to be $a_n$ and $a_{n+1}$ to be $a_1$). Assume that for all $i$ and $j$ in the range $1$ to $n$, we have $a_i \le a_j$ if and only if $b_i \le b_j$.
+Prove that $a_1 = a_2 = \dots = a_n$.
+</txt>
+<id>7003931234708262274</id>
+</problem>
+<problem>
+<src>EGMO 2023/2</src>
+<done>0</done>
+<txt>
+	We are given an acute triangle $ABC$. Let $D$ be the point on its circumcircle such that $AD$ is a diameter. Suppose that points $K$ and $L$ lie on segments $AB$ and $AC$, respectively, and that $DK$ and $DL$ are tangent to circle $AKL$.
+Show that line $KL$ passes through the orthocenter of triangle $ABC$.
+</txt>
+<id>6412565047152896593</id>
+</problem>
+<problem>
+<src>EGMO 2023/3</src>
+<done>0</done>
+<txt>
+Let $k$ be a positive integer. Lexi has a dictionary $\mathbb{D}$ consisting of some $k$-letter strings containing only the letters $A$ and $B$. Lexi would like to write either the letter $A$ or the letter $B$ in each cell of a $k \times k$ grid so that each column contains a string from $\mathbb{D}$ when read from top-to-bottom and each row contains a string from $\mathbb{D}$ when read from left-to-right.
+What is the smallest integer $m$ such that if $\mathbb{D}$ contains at least $m$ different strings, then Lexi can fill her grid in this manner, no matter what strings are in $\mathbb{D}$?
+</txt>
+<id>1547794310266184263</id>
+</problem>
+<problem>
+<src>EGMO 2023/4</src>
+<done>0</done>
+<txt>
+Turbo the snail sits on a point on a circle with circumference $1$. Given an infinite sequence of positive real numbers $c_1, c_2, c_3, \dots$, Turbo successively crawls distances $c_1, c_2, c_3, \dots$ around the circle, each time choosing to crawl either clockwise or counterclockwise.
+Determine the largest constant $C > 0$ with the following property: for every sequence of positive real numbers $c_1, c_2, c_3, \dots$ with $c_i < C$ for all $i$, Turbo can (after studying the sequence) ensure that there is some point on the circle that it will never visit or crawl across.
+</txt>
+<id>194924255136905</id>
+</problem>
+<problem>
+<src>EGMO 2023/5</src>
+<done>0</done>
+<txt>
+	We are given a positive integer $s \ge 2$. For each positive integer $k$, we define its twist $k’$ as follows: write $k$ as $as+b$, where $a, b$ are non-negative integers and $b < s$, then $k’ = bs+a$. For the positive integer $n$, consider the infinite sequence $d_1, d_2, \dots$ where $d_1=n$ and $d_{i+1}$ is the twist of $d_i$ for each positive integer $i$.
+Prove that this sequence contains $1$ if and only if the remainder when $n$ is divided by $s^2-1$ is either $1$ or $s$.
+</txt>
+<id>5952830561616844902</id>
+</problem>
+<problem>
+<src>EGMO 2023/6</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a triangle with circumcircle $\Omega$. Let $S_b$ and $S_c$ respectively denote the midpoints of the arcs $AC$ and $AB$ that do not contain the third vertex. Let $N_a$ denote the midpoint of arc $BAC$ (the arc $BC$ including $A$). Let $I$ be the incenter of $ABC$. Let $\omega_b$ be the circle that is tangent to $AB$ and internally tangent to $\Omega$ at $S_b$, and let $\omega_c$ be the circle that is tangent to $AC$ and internally tangent to $\Omega$ at $S_c$. Show that the line $IN_a$, and the lines through the intersections of $\omega_b$ and $\omega_c$, meet on $\Omega$.
+</txt>
+<id>844358232542368378</id>
+</problem>
+<problem>
+<src>EGMO 2022/1</src>
+<done>0</done>
+<txt>
+Let $ABC$ be an acute-angled triangle in which $BC<AB$ and $BC<CA$. Let point $P$ lie on segment $AB$ and point $Q$ lie on segment $AC$ such that $P \neq B$, $Q \neq C$ and $BQ = BC = CP$. Let $T$ be the circumcenter of triangle $APQ$, $H$ the orthocenter of triangle $ABC$, and $S$ the point of intersection of the lines $BQ$ and $CP$. Prove that $T$, $H$, and $S$ are collinear.
+</txt>
+<id>597832355221478</id>
+</problem>
+<problem>
+<src>EGMO 2022/2</src>
+<done>0</done>
+<txt>
+Let $\mathbb{N}=\{1, 2, 3, \dots\}$ be the set of all positive integers. Find all functions $f : \mathbb{N} \rightarrow \mathbb{N}$ such that for any positive integers $a$ and $b$, the following two conditions hold:
+(1) $f(ab) = f(a)f(b)$, and
+(2) at least two of the numbers $f(a)$, $f(b)$, and $f(a+b)$ are equal.
+</txt>
+<id>162858780891462</id>
+</problem>
+<problem>
+<src>EGMO 2022/3</src>
+<done>0</done>
+<txt>
+	An infinite sequence of positive integers $a_1, a_2, \dots$ is called $good$ if
+(1) $a_1$ is a perfect square, and
+(2) for any integer $n \ge 2$, $a_n$ is the smallest positive integer such that$$na_1 + (n-1)a_2 + \dots + 2a_{n-1} + a_n$$is a perfect square.
+Prove that for any good sequence $a_1, a_2, \dots$, there exists a positive integer $k$ such that $a_n=a_k$ for all integers $n \ge k$.
+</txt>
+<id>5458049157791318449</id>
+</problem>
+<problem>
+<src>EGMO 2022/4</src>
+<done>0</done>
+<txt>
+	An infinite sequence of positive integers $a_1, a_2, \dots$ is called $good$ if
+(1) $a_1$ is a perfect square, and
+(2) for any integer $n \ge 2$, $a_n$ is the smallest positive integer such that$$na_1 + (n-1)a_2 + \dots + 2a_{n-1} + a_n$$is a perfect square.
+Prove that for any good sequence $a_1, a_2, \dots$, there exists a positive integer $k$ such that $a_n=a_k$ for all integers $n \ge k$.
+</txt>
+<id>6444187106925350071</id>
+</problem>
+<problem>
+<src>EGMO 2022/5</src>
+<done>0</done>
+<txt>
+For all positive integers $n$, $k$, let $f(n, 2k)$ be the number of ways an $n \times 2k$ board can be fully covered by $nk$ dominoes of size $2 \times 1$. (For example, $f(2, 2)=2$ and $f(3, 2)=3$.) Find all positive integers $n$ such that for every positive integer $k$, the number $f(n, 2k)$ is odd.
+</txt>
+<id>5135909621527561588</id>
+</problem>
+<problem>
+<src>EGMO 2022/6</src>
+<done>0</done>
+<txt>
+Let $ABCD$ be a cyclic quadrilateral with circumcenter $O$. Let the internal angle bisectors at $A$ and $B$ meet at $X$, the internal angle bisectors at $B$ and $C$ meet at $Y$, the internal angle bisectors at $C$ and $D$ meet at $Z$, and the internal angle bisectors at $D$ and $A$ meet at $W$. Further, let $AC$ and $BD$ meet at $P$. Suppose that the points $X$, $Y$, $Z$, $W$, $O$, and $P$ are distinct.
+Prove that $O$, $X$, $Y$, $Z$, $W$ lie on the same circle if and only if $P$, $X$, $Y$, $Z$, and $W$ lie on the same circle.
+</txt>
+<id>653910026918142375</id>
+</problem>
+<problem>
+<src>EGMO 2021/1</src>
+<done>0</done>
+<txt>
+	The number 2021 is fantabulous. For any positive integer $m$, if any element of the set $\{m, 2m+1, 3m\}$ is fantabulous, then all the elements are fantabulous. Does it follow that the number $2021^{2021}$ is fantabulous?
+</txt>
+<id>166169225490521</id>
+</problem>
+<problem>
+<src>EGMO 2021/2</src>
+<done>0</done>
+<txt>
+Find all functions $f:\mathbb{Q}\to\mathbb{Q}$ such that the equation
+\[f(xf(x)+y) = f(y) + x^2\]holds for all rational numbers $x$ and $y$.
+
+Here, $\mathbb{Q}$ denotes the set of rational numbers.
+</txt>
+<id>891406366009347</id>
+</problem>
+<problem>
+<src>EGMO 2021/3</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a triangle with an obtuse angle at $A$. Let $E$ and $F$ be the intersections of the external bisector of angle $A$ with the altitudes of $ABC$ through $B$ and $C$ respectively. Let $M$ and $N$ be the points on the segments $EC$ and $FB$ respectively such that $\angle EMA = \angle BCA$ and $\angle ANF = \angle ABC$. Prove that the points $E, F, N, M$ lie on a circle.
+</txt>
+<id>453277275848272</id>
+</problem>
+<problem>
+<src>EGMO 2021/4</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a triangle with incenter $I$ and let $D$ be an arbitrary point on the side $BC$. Let the line through $D$ perpendicular to $BI$ intersect $CI$ at $E$. Let the line through $D$ perpendicular to $CI$ intersect $BI$ at $F$. Prove that the reflection of $A$ across the line $EF$ lies on the line $BC$.
+</txt>
+<id>704326412238502</id>
+</problem>
+<problem>
+<src>EGMO 2021/5</src>
+<done>0</done>
+<txt>
+A plane has a special point $O$ called the origin. Let $P$ be a set of 2021 points in the plane such that
+no three points in $P$ lie on a line and
+no two points in $P$ lie on a line through the origin.
+A triangle with vertices in $P$ is fat if $O$ is strictly inside the triangle. Find the maximum number of fat triangles.
+</txt>
+<id>3600625270766782129</id>
+</problem>
+<problem>
+<src>EGMO 2021/6</src>
+<done>0</done>
+<txt>
+Does there exist a nonnegative integer $a$ for which the equation
+\[\left\lfloor\frac{m}{1}\right\rfloor + \left\lfloor\frac{m}{2}\right\rfloor + \left\lfloor\frac{m}{3}\right\rfloor + \cdots + \left\lfloor\frac{m}{m}\right\rfloor = n^2 + a\]has more than one million different solutions $(m, n)$ where $m$ and $n$ are positive integers?
+
+The expression $\lfloor x\rfloor$ denotes the integer part (or floor) of the real number $x$. Thus $\lfloor\sqrt{2}\rfloor = 1, \lfloor\pi\rfloor =\lfloor 22/7 \rfloor = 3, \lfloor 42\rfloor = 42,$ and $\lfloor 0 \rfloor = 0$.
+</txt>
+<id>6287115858827066074</id>
+</problem>
+<problem>
+<src>EGMO 2020/1</src>
+<done>0</done>
+<txt>
+	The positive integers $a_0, a_1, a_2, \ldots, a_{3030}$ satisfy$$2a_{n + 2} = a_{n + 1} + 4a_n \text{ for } n = 0, 1, 2, \ldots, 3028.$$
+Prove that at least one of the numbers $a_0, a_1, a_2, \ldots, a_{3030}$ is divisible by $2^{2020}$.
+</txt>
+<id>583277702191991</id>
+</problem>
+<problem>
+<src>EGMO 2020/2</src>
+<done>0</done>
+<txt>
+	Find all lists $(x_1, x_2, \ldots, x_{2020})$ of non-negative real numbers such that the following three conditions are all satisfied:
+$x_1 \le x_2 \le \ldots \le x_{2020}$;
+$x_{2020} \le x_1  + 1$;
+there is a permutation $(y_1, y_2, \ldots, y_{2020})$ of $(x_1, x_2, \ldots, x_{2020})$ such that$$\sum_{i = 1}^{2020} ((x_i + 1)(y_i + 1))^2 = 8 \sum_{i = 1}^{2020} x_i^3.$$
+
+A permutation of a list is a list of the same length, with the same entries, but the entries are allowed to be in any order. For example, $(2, 1, 2)$ is a permutation of $(1, 2, 2)$, and they are both permutations of $(2, 2, 1)$. Note that any list is a permutation of itself.
+</txt>
+<id>914387802726278</id>
+</problem>
+<problem>
+<src>EGMO 2020/3</src>
+<done>0</done>
+<txt>
+	Let $ABCDEF$ be a convex hexagon such that $\angle A = \angle C = \angle E$ and $\angle B = \angle D = \angle F$ and the (interior) angle bisectors of $\angle A, ~\angle C,$ and $\angle E$ are concurrent.
+
+Prove that the (interior) angle bisectors of $\angle B, ~\angle D, $ and $\angle F$ must also be concurrent.
+
+Note that $\angle A = \angle FAB$. The other interior angles of the hexagon are similarly described.
+</txt>
+<id>1073572769363152471</id>
+</problem>
+<problem>
+<src>EGMO 2020/4</src>
+<done>0</done>
+<txt>
+	A permutation of the integers $1, 2, \ldots, m$ is called fresh if there exists no positive integer $k < m$ such that the first $k$ numbers in the permutation are $1, 2, \ldots, k$ in some order. Let $f_m$ be the number of fresh permutations of the integers $1, 2, \ldots, m$.
+
+Prove that $f_n \ge n \cdot f_{n - 1}$ for all $n \ge 3$.
+
+For example, if $m = 4$, then the permutation $(3, 1, 4, 2)$ is fresh, whereas the permutation $(2, 3, 1, 4)$ is not.
+</txt>
+<id>742398043567245501</id>
+</problem>
+<problem>
+<src>EGMO 2020/5</src>
+<done>0</done>
+<txt>
+	Consider the triangle $ABC$ with $\angle BCA > 90^{\circ}$. The circumcircle $\Gamma$ of $ABC$ has radius $R$. There is a point $P$ in the interior of the line segment $AB$ such that $PB = PC$ and the length of $PA$ is $R$. The perpendicular bisector of $PB$ intersects $\Gamma$ at the points $D$ and $E$.
+
+Prove $P$ is the incentre of triangle $CDE$.
+</txt>
+<id>6002187361907355959</id>
+</problem>
+<problem>
+<src>EGMO 2020/6</src>
+<done>0</done>
+<txt>
+Let $m > 1$ be an integer. A sequence $a_1, a_2, a_3, \ldots$ is defined by $a_1 = a_2 = 1$, $a_3 = 4$, and for all $n \ge 4$,$$a_n = m(a_{n - 1} + a_{n - 2}) - a_{n - 3}.$$
+Determine all integers $m$ such that every term of the sequence is a square.
+</txt>
+<id>732021656607287</id>
+</problem>
+<problem>
+<src>EGMO 2019/1</src>
+<done>0</done>
+<txt>
+Find all triples $(a, b, c)$ of real numbers such that $ab + bc + ca = 1$ and
+
+$$a^2b + c = b^2c + a = c^2a + b.$$
+</txt>
+<id>260347681948452</id>
+</problem>
+<problem>
+<src>EGMO 2019/2</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. Dominoes are placed on a $2n \times 2n$ board in such a way that every cell of the board is adjacent to exactly one cell covered by a domino. For each $n$, determine the largest number of dominoes that can be placed in this way.
+(A domino is a tile of size $2 \times 1$ or $1 \times 2$. Dominoes are placed on the board in such a way that each domino covers exactly two cells of the board, and dominoes do not overlap. Two cells are said to be adjacent if they are different and share a common side.)
+</txt>
+<id>406431313842688</id>
+</problem>
+<problem>
+<src>EGMO 2019/3</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a triangle such that $\angle CAB > \angle ABC$, and let $I$ be its incentre. Let $D$ be the point on segment $BC$ such that $\angle CAD = \angle ABC$. Let $\omega$ be the circle tangent to $AC$ at $A$ and passing through $I$. Let $X$ be the second point of intersection of $\omega$ and the circumcircle of $ABC$. Prove that the angle bisectors of $\angle DAB$ and $\angle CXB$ intersect at a point on line $BC$.
+</txt>
+<id>1266870846109464791</id>
+</problem>
+<problem>
+<src>EGMO 2019/4</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a triangle with incentre $I$. The circle through $B$ tangent to $AI$ at $I$ meets side $AB$ again at $P$. The circle through $C$ tangent to $AI$ at $I$ meets side $AC$ again at $Q$. Prove that $PQ$ is tangent to the incircle of $ABC.$
+</txt>
+<id>613302970238472</id>
+</problem>
+<problem>
+<src>EGMO 2019/5</src>
+<done>0</done>
+<txt>
+	Let $n\ge 2$ be an integer, and let $a_1, a_2, \cdots , a_n$ be positive integers. Show that there exist positive integers $b_1, b_2, \cdots, b_n$ satisfying the following three conditions:
+
+$\text{(A)} \ a_i\le b_i$ for $i=1, 2, \cdots , n;$
+
+$\text{(B)} \ $ the remainders of $b_1, b_2, \cdots, b_n$ on division by $n$ are pairwise different; and
+
+$\text{(C)} \ $ $b_1+b_2+\cdots b_n \le n\left(\frac{n-1}{2}+\left\lfloor \frac{a_1+a_2+\cdots a_n}{n}\right \rfloor \right)$
+
+(Here, $\lfloor x \rfloor$ denotes the integer part of real number $x$, that is, the largest integer that does not exceed $x$.)
+</txt>
+<id>4777015574921577837</id>
+</problem>
+<problem>
+<src>EGMO 2019/6</src>
+<done>0</done>
+<txt>
+On a circle, Alina draws $2019$ chords, the endpoints of which are all different. A point is considered marked if it is either
+
+$\text{(i)}$ one of the $4038$ endpoints of a chord; or
+
+$\text{(ii)}$ an intersection point of at least two chords.
+
+Alina labels each marked point. Of the $4038$ points meeting criterion $\text{(i)}$, Alina labels $2019$ points with a $0$ and the other $2019$ points with a $1$. She labels each point meeting criterion $\text{(ii)}$ with an arbitrary integer (not necessarily positive).
+Along each chord, Alina considers the segments connecting two consecutive marked points. (A chord with $k$ marked points has $k-1$ such segments.) She labels each such segment in yellow with the sum of the labels of its two endpoints and in blue with the absolute value of their difference.
+Alina finds that the $N + 1$ yellow labels take each value $0, 1, . . . , N$ exactly once. Show that at least one blue label is a multiple of $3$.
+(A chord is a line segment joining two different points on a circle.)
+</txt>
+<id>2210005554575274405</id>
+</problem>
+<problem>
+<src>EGMO 2018/1</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a triangle with $CA=CB$ and $\angle{ACB}=120^\circ$, and let $M$ be the midpoint of $AB$. Let $P$ be a variable point of the circumcircle of $ABC$, and let $Q$ be the point on the segment $CP$ such that $QP = 2QC$. It is given that the line through $P$ and perpendicular to $AB$ intersects the line $MQ$ at a unique point $N$.
+Prove that there exists a fixed circle such that $N$ lies on this circle for all possible positions of $P$.
+</txt>
+<id>220345421587712</id>
+</problem>
+<problem>
+<src>EGMO 2018/2</src>
+<done>0</done>
+<txt>
+Consider the set
+\[A = \left\{1+\frac{1}{k} : k=1,2,3,4,\cdots \right\}.\]
+Prove that every integer $x \geq 2$ can be written as the product of one or more elements of $A$, which are not necessarily different.
+For every integer $x \geq 2$ let $f(x)$ denote the minimum integer such that $x$ can be written as the
+product of $f(x)$ elements of $A$, which are not necessarily different.
+Prove that there exist infinitely many pairs $(x,y)$ of integers with $x\geq 2$, $y \geq 2$, and\[f(xy)<f(x)+f(y).\](Pairs $(x_1,y_1)$ and $(x_2,y_2)$ are different if $x_1 \neq x_2$ or $y_1 \neq y_2$).
+</txt>
+<id>8823022869500312410</id>
+</problem>
+<problem>
+<src>EGMO 2018/3</src>
+<done>0</done>
+<txt>
+	The $n$ contestant of EGMO are named $C_1, C_2, \cdots C_n$. After the competition, they queue in front of the restaurant according to the following rules.
+The Jury chooses the initial order of the contestants in the queue.
+Every minute, the Jury chooses an integer $i$ with $1 \leq i \leq n$.
+If contestant $C_i$ has at least $i$ other contestants in front of her, she pays one euro to the Jury and moves forward in the queue by exactly $i$ positions.
+If contestant $C_i$ has fewer than $i$ other contestants in front of her, the restaurant opens and process ends.
+Prove that the process cannot continue indefinitely, regardless of the Jury’s choices.
+Determine for every $n$ the maximum number of euros that the Jury can collect by cunningly choosing the initial order and the sequence of moves.
+</txt>
+<id>6253841118919498374</id>
+</problem>
+<problem>
+<src>EGMO 2018/4</src>
+<done>0</done>
+<txt>
+	A domino is a $ 1 \times 2 $ or $ 2 \times 1 $ tile.
+Let $n \ge 3 $ be an integer. Dominoes are placed on an $n \times n$ board in such a way that each domino covers exactly two cells of the board, and dominoes do not overlap. The value of a row or column is the number of dominoes that cover at least one cell of this row or column. The configuration is called balanced if there exists some $k \ge 1 $ such that each row and each column has a value of $k$. Prove that a balanced configuration exists for every $n \ge 3 $, and find the minimum number of dominoes needed in such a configuration.
+</txt>
+<id>232495612059721</id>
+</problem>
+<problem>
+<src>EGMO 2018/5</src>
+<done>0</done>
+<txt>
+Let $\Gamma $ be the circumcircle of triangle $ABC$. A circle $\Omega$ is tangent to the line segment $AB$ and is tangent to $\Gamma$ at a point lying on the same side of the line $AB$ as $C$. The angle bisector of $\angle BCA$ intersects $\Omega$ at two different points $P$ and $Q$.
+Prove that $\angle ABP = \angle QBC$.
+</txt>
+<id>699399831701585</id>
+</problem>
+<problem>
+<src>EGMO 2018/6</src>
+<done>0</done>
+<txt>
+Prove that for every real number $t$ such that $0 < t < \tfrac{1}{2}$ there exists a positive integer $n$ with the following property: for every set $S$ of $n$ positive integers there exist two different elements $x$ and $y$ of $S$, and a non-negative integer $m$ (i.e. $m \ge 0 $), such that\[ |x-my|\leq ty.\]
+Determine whether for every real number $t$ such that $0 < t < \tfrac{1}{2} $ there exists an infinite set $S$ of positive integers such that\[|x-my| > ty\]for every pair of different elements $x$ and $y$ of $S$ and every positive integer $m$ (i.e. $m > 0$).
+</txt>
+<id>412405546768537</id>
+</problem>
+<problem>
+<src>PAGMO 2023/3</src>
+<done>0</done>
+<txt>
+Let $ABC$ an acute triangle and $D,E$ and $F$ be the feet of altitudes from $A,B$ and $C$, respectively. The line $EF$ and the circumcircle of $ABC$ intersect at $P$, such that $F$ it´s between $E$ and $P$. Lines $BP$ and $DF$ intersect at $Q$. Prove that if $ED=EP$, then $CQ$ and $DP$ are parallel.
+</txt>
+<id>7412933249652771804</id>
+</problem>
+<problem>
+<src>PAGMO 2022/2</src>
+<done>0</done>
+<txt>
+	Find all ordered triplets $(p,q,r)$ of positive integers such that $p$ and $q$ are two (not necessarily distinct) primes, $r$ is even, and
+\[p^3+q^2=4r^2+45r+103.\]
+</txt>
+<id>849916170311036</id>
+</problem>
+<problem>
+<src>PAGMO 2022/3</src>
+<done>0</done>
+<txt>
+Let $ABC$ be an acute triangle with $AB< AC$. Denote by $P$ and $Q$ points on the segment $BC$ such that $\angle BAP = \angle CAQ < \frac{\angle BAC}{2}$. $B_1$ is a point on segment $AC$. $BB_1$ intersects $AP$ and $AQ$ at $P_1$ and $Q_1$, respectively. The angle bisectors of $\angle BAC$ and $\angle CBB_1$ intersect at $M$. If $PQ_1\perp AC$ and $QP_1\perp AB$, prove that $AQ_1MPB$ is cyclic.
+</txt>
+<id>806540218855542</id>
+</problem>
+<problem>
+<src>PAGMO 2022/5</src>
+<done>0</done>
+<txt>
+Find all positive integers $k$ for which there exist $a$, $b$, and $c$ positive integers such that\[\lvert (a-b)^3+(b-c)^3+(c-a)^3\rvert=3\cdot2^k.\]
+</txt>
+<id>143039642317874</id>
+</problem>
+<problem>
+<src>PAGMO 2022/6</src>
+<done>0</done>
+<txt>
+	Ana and Bety play a game alternating turns. Initially, Ana chooses an odd possitive integer and composite $n$ such that $2^j<n<2^{j+1}$ with $2<j$. In her first turn Bety chooses an odd composite integer $n_1$ such that
+\[n_1\leq \frac{1^n+2^n+\dots+(n-1)^n}{2(n-1)^{n-1}}.\]Then, on her other turn, Ana chooses a prime number $p_1$ that divides $n_1$. If the prime that Ana chooses is $3$, $5$ or $7$, the Ana wins; otherwise Bety chooses an odd composite positive integer $n_2$ such that\[n_2\leq \frac{1^{p_1}+2^{p_1}+\dots+(p_1-1)^{p_1}}{2(p_1-1)^{p_1-1}}.\]After that, on her turn, Ana chooses a prime $p_2$ that divides $n_2,$, if $p_2$ is $3$, $5$, or $7$, Ana wins, otherwise the process repeats. Also, Ana wins if at any time Bety cannot choose an odd composite positive integer in the corresponding range. Bety wins if she manages to play at least $j-1$ turns. Find which of the two players has a winning strategy.
+</txt>
+<id>299125558562230</id>
+</problem>
+<problem>
+<src>PAGMO 2021/2</src>
+<done>0</done>
+<txt>
+Consider the isosceles right triangle $ABC$ with $\angle BAC = 90^\circ$. Let $\ell$ be the line passing through $B$ and the midpoint of side $AC$. Let $\Gamma$ be the circumference with diameter $AB$. The line $\ell$ and the circumference $\Gamma$ meet at point $P$, different from $B$. Show that the circumference passing through $A,\ C$ and $P$ is tangent to line $BC$ at $C$.
+</txt>
+<id>4576482737766940742</id>
+</problem>
+<problem>
+<src>PAGMO 2021/3</src>
+<done>0</done>
+<txt>
+Let $\mathbb{R}$ be the set of real numbers. Determine all functions $f: \mathbb{R}\longrightarrow \mathbb{R}$ so that the equality$$f(x+yf(x+y)) +xf(x)= f(xf(x+y+1))+y^2$$is true for any real numbers $x,y$.
+</txt>
+<id>827629029640194</id>
+</problem>
+<problem>
+<src>PAGMO 2021/5</src>
+<done>0</done>
+<txt>
+	Celeste has an unlimited amount of each type of $n$ types of candy, numerated type 1, type 2, ... type n. Initially she takes $m>0$ candy pieces and places them in a row on a table. Then, she chooses one of the following operations (if available) and executes it:
+
+$1.$ She eats a candy of type $k$, and in its position in the row she places one candy type $k-1$ followed by one candy type $k+1$ (we consider type $n+1$ to be type 1, and type 0 to be type $n$).
+
+$2.$ She chooses two consecutive candies which are the same type, and eats them.
+
+Find all positive integers $n$ for which Celeste can leave the table empty for any value of $m$ and any configuration of candies on the table.
+</txt>
+<id>6377764165704184464</id>
+</problem>
+<problem>
+<src>PAGMO 2021/6</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a triangle with incenter $I$, and $A$-excenter $\Gamma$. Let $A_1,B_1,C_1$ be the points of tangency of $\Gamma$ with $BC,AC$ and $AB$, respectively. Suppose $IA_1, IB_1$ and $IC_1$ intersect $\Gamma$ for the second time at points $A_2,B_2,C_2$, respectively. $M$ is the midpoint of segment $AA_1$. If the intersection of $A_1B_1$ and $A_2B_2$ is $X$, and the intersection of $A_1C_1$ and $A_2C_2$ is $Y$, prove that $MX=MY$.
+</txt>
+<id>791423398948046269</id>
+</problem>
+<problem>
+<src>RMM 2024/1</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. Initially, a bishop is placed in each square of the top row of a $2^n \times 2^n$
+chessboard; those bishops are numbered from $1$ to $2^n$ from left to right. A jump is a simultaneous move made by all bishops such that each bishop moves diagonally, in a straight line, some number of squares, and at the end of the jump, the bishops all stand in different squares of the same row.
+
+Find the total number of permutations $\sigma$ of the numbers $1, 2, \ldots, 2^n$ with the following property: There exists a sequence of jumps such that all bishops end up on the bottom row arranged in the order $\sigma(1), \sigma(2), \ldots, \sigma(2^n)$, from left to right.
+</txt>
+<id>7427384519403100799</id>
+</problem>
+<problem>
+<src>RMM 2024/2</src>
+<done>0</done>
+<txt>
+Consider an odd prime $p$ and a positive integer $N < 50p$. Let $a_1, a_2, \ldots , a_N$ be a list of positive integers less than $p$ such that any specific value occurs at most $\frac{51}{100}N$ times and $a_1 + a_2 + \cdots· + a_N$ is not divisible by $p$. Prove that there exists a permutation $b_1, b_2, \ldots , b_N$ of the $a_i$ such that, for all $k = 1, 2, \ldots , N$, the sum $b_1 + b_2 + \cdots + b_k$ is not divisible by $p$.
+</txt>
+<id>718838419070287</id>
+</problem>
+<problem>
+<src>RMM 2024/4</src>
+<done>0</done>
+<txt>
+Fix integers $a$ and $b$ greater than $1$. For any positive integer $n$, let $r_n$ be the (non-negative) remainder that $b^n$ leaves upon division by $a^n$. Assume there exists a positive integer $N$ such that $r_n < \frac{2^n}{n}$ for all integers $n\geq N$. Prove that $a$ divides $b$.
+</txt>
+<id>3812208515075577730</id>
+</problem>
+<problem>
+<src>RMM 2024/5</src>
+<done>0</done>
+<txt>
+Let $BC$ be a fixed segment in the plane, and let $A$ be a variable point in the plane not on the line $BC$. Distinct points $X$ and $Y$ are chosen on the rays $CA^\to$ and $BA^\to$, respectively, such that $\angle CBX = \angle YCB = \angle BAC$. Assume that the tangents to the circumcircle of $ABC$ at $B$ and $C$ meet line $XY$ at $P$ and $Q$, respectively, such that the points $X$, $P$, $Y$ and $Q$ are pairwise distinct and lie on the same side of $BC$. Let $\Omega_1$ be the circle through $X$ and $P$ centred on $BC$. Similarly, let $\Omega_2$ be the circle through $Y$ and $Q$ centred on $BC$. Prove that $\Omega_1$ and $\Omega_2$ intersect at two fixed points as $A$ varies.
+</txt>
+<id>423456312616928</id>
+</problem>
+<problem>
+<src>RMM 2023/1</src>
+<done>0</done>
+<txt>
+Determine all prime numbers $p$ and all positive integers $x$ and $y$ satisfying$$x^3+y^3=p(xy+p).$$
+</txt>
+<id>25177681716771</id>
+</problem>
+<problem>
+<src>RMM 2023/2</src>
+<done>0</done>
+<txt>
+Fix an integer $n \geq 3$. Let $\mathcal{S}$ be a set of $n$ points in the plane, no three of which are collinear. Given different points $A,B,C$ in $\mathcal{S}$, the triangle $ABC$ is nice for $AB$ if $[ABC] \leq [ABX]$ for all $X$ in $\mathcal{S}$ different from $A$ and $B$. (Note that for a segment $AB$ there could be several nice triangles). A triangle is beautiful if its vertices are all in $\mathcal{S}$ and is nice for at least two of its sides.
+
+Prove that there are at least $\frac{1}{2}(n-1)$ beautiful triangles.
+</txt>
+<id>9000483733039705317</id>
+</problem>
+<problem>
+<src>RMM 2023/4</src>
+<done>0</done>
+<txt>
+	An acute triangle $ABC$ is given and $H$ and $O$ be its orthocenter and circumcenter respectively. Let $K$ be the midpoint of $AH$ and $\ell$ be a line through $O. $ Let $P$ and $Q$ be the projections of $B$ and $C$ on $\ell. $ Prove that$$KP+KQ\ge BC$$
+</txt>
+<id>1251781469282726042</id>
+</problem>
+<problem>
+<src>RMM 2023/5</src>
+<done>0</done>
+<txt>
+Let $P,Q,R,S$ be non constant polynomials with real coefficients, such that $P(Q(x))=R(S(x)) $ and the degree of $P$ is multiple of the degree of $R. $ Prove that there exists a polynomial $T$ with real coefficients such that
+$$\displaystyle P(x)=R(T(x))$$
+</txt>
+<id>945040565828830</id>
+</problem>
+<problem>
+<src>RMM 2023/A1</src>
+<done>0</done>
+<txt>
+	Determine all polynomials $P$ with real coefficients satisfying the following condition: whenever $x$ and $y$ are real numbers such that $P(x)$ and $P(y)$ are both rational, so is $P(x + y)$.
+</txt>
+<id>57940527352528</id>
+</problem>
+<problem>
+<src>RMM 2023/C1</src>
+<done>0</done>
+<txt>
+Determine all integers $n \geq 3$ for which there exists a conguration of $n$ points in the plane, no three collinear, that can be labelled $1$ through $n$ in two different ways, so that the following
+condition be satisfied: For every triple $(i,j,k), 1 \leq i < j < k \leq n$, the triangle $ijk$ in one labelling has the same orientation as the triangle labelled $ijk$ in the other, except for $(i,j,k) = (1,2,3)$.
+</txt>
+<id>887161908366621</id>
+</problem>
+<problem>
+<src>RMM 2023/N1</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. Let $S$ be a set of ordered pairs $(x, y)$ such that $1\leq x \leq n$ and $0 \leq y \leq n$ in each pair, and there are no pairs $(a, b)$ and $(c, d)$ of different elements in $S$ such that $a^2+b^2$ divides both
+$ac+bd$ and $ad - bc$. In terms of $n$, determine the size of the largest possible set $S$.
+</txt>
+<id>172839066140251</id>
+</problem>
+<problem>
+<src>RMM 2021/1</src>
+<done>0</done>
+<txt>
+Let $T_1, T_2, T_3, T_4$ be pairwise distinct collinear points such that $T_2$ lies between $T_1$ and $T_3$, and $T_3$ lies between $T_2$ and $T_4$. Let $\omega_1$ be a circle through $T_1$ and $T_4$; let $\omega_2$ be the circle through $T_2$ and internally tangent to $\omega_1$ at $T_1$; let $\omega_3$ be the circle through $T_3$ and externally tangent to $\omega_2$ at $T_2$; and let $\omega_4$ be the circle through $T_4$ and externally tangent to $\omega_3$ at $T_3$. A line crosses $\omega_1$ at $P$ and $W$, $\omega_2$ at $Q$ and $R$, $\omega_3$ at $S$ and $T$, and $\omega_4$ at $U$ and $V$, the order of these points along the line being $P,Q,R,S,T,U,V,W$. Prove that $PQ + TU = RS + VW$
+</txt>
+<id>8265057113266691052</id>
+</problem>
+<problem>
+<src>RMM 2021/2</src>
+<done>0</done>
+<txt>
+Xenia and Sergey play the following game. Xenia thinks of a positive integer $N$ not exceeding $5000$. Then she fixes $20$ distinct positive integers $a_1, a_2, \cdots, a_{20}$ such that, for each $k = 1,2,\cdots,20$, the numbers $N$ and $a_k$ are congruent modulo $k$. By a move, Sergey tells Xenia a set $S$ of positive integers not exceeding $20$, and she tells him back the set $\{a_k : k \in S\}$ without spelling out which number corresponds to which index. How many moves does Sergey need to determine for sure the number Xenia thought of?
+</txt>
+<id>894895504790373</id>
+</problem>
+<problem>
+<src>RMM 2021/4</src>
+<done>0</done>
+<txt>
+	Consider an integer \(n \ge 2\) and write the numbers \(1, 2,  \ldots, n\) down on a board. A move consists in erasing any two numbers \(a\) and \(b\), then writing down the numbers \(a+b\) and \(\vert a-b \vert\) on the board, and then removing repetitions (e.g., if the board contained the numbers \(2, 5, 7, 8\), then one could choose the numbers \(a = 5\) and \(b = 7\), obtaining the board with numbers \(2, 8, 12\)). For all integers \(n \ge 2\), determine whether it is possible to be left with exactly two numbers on the board after a finite number of moves.
+</txt>
+<id>2566019241385820279</id>
+</problem>
+<problem>
+<src>RMM 2021/5</src>
+<done>0</done>
+<txt>
+Let \(n\) be a positive integer. The kingdom of Zoomtopia is a convex polygon with integer sides, perimeter \(6n\), and \(60^\circ\) rotational symmetry (that is, there is a point \(O\) such that a \(60^\circ\) rotation about \(O\) maps the polygon to itself). In light of the pandemic, the government of Zoomtopia would like to relocate its \(3n^2+3n+1\) citizens at \(3n^2+3n+1\) points in the kingdom so that every two citizens have a distance of at least \(1\) for proper social distancing. Prove that this is possible. (The kingdom is assumed to contain its boundary.)
+</txt>
+<id>9085006630991620229</id>
+</problem>
+<problem>
+<src>RMM 2021/A1</src>
+<done>0</done>
+<txt>
+Determine all functions $f:\mathbb{R} \to \mathbb{R}$ such that
+\[ f(xy+f(x)) + f(y) = xf(y) + f(x+y) \]for all real numbers $x$ and $y$.
+</txt>
+<id>8540244741312291150</id>
+</problem>
+<problem>
+<src>RMM 2021/A2</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer and let $x_1,\ldots,x_n,y_1,\ldots,y_n$ be integers satisfying the following
+condition: the numbers $x_1,\ldots,x_n$ are pairwise distinct and for every positive integer $m$ there
+exists a polynomial $P_m$ with integer coefficients such that $P_m(x_i) - y_i$, $i=1,\ldots,n$, are all divisible by $m$. Prove that there exists a polynomial $P$ with integer coefficients such that $P(x_i) = y_i$ for all $i=1,\ldots,n$.
+</txt>
+<id>320133496959351613</id>
+</problem>
+<problem>
+<src>RMM 2021/C1</src>
+<done>0</done>
+<txt>
+Determine the largest integer $n\geq 3$ for which the edges of the complete graph on $n$ vertices
+can be assigned pairwise distinct non-negative integers such that the edges of every triangle have numbers which form an arithmetic progression.
+</txt>
+<id>84404352934565744</id>
+</problem>
+<problem>
+<src>RMM 2021/N1</src>
+<done>0</done>
+<txt>
+Given a positive integer $N$, determine all positive integers $n$, satisfying the following condition: for any list $d_1,d_2,\ldots,d_k$ of (not necessarily distinct) divisors of $n$ such that $\frac{1}{d_1} + \frac{1}{d_2} + \ldots + \frac{1}{d_k} > N$, some of the fractions $\frac{1}{d_1}, \frac{1}{d_2}, \ldots, \frac{1}{d_k}$ add up to exactly $N$.
+</txt>
+<id>7431104394604748426</id>
+</problem>
+<problem>
+<src>RMM 2020/1</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a triangle with a right angle at $C$. Let $I$ be the incentre of triangle $ABC$, and let $D$ be the foot of the altitude from $C$ to $AB$. The incircle $\omega$ of triangle $ABC$ is tangent to sides $BC$, $CA$, and $AB$ at $A_1$, $B_1$, and $C_1$, respectively. Let $E$ and $F$ be the reflections of $C$ in lines $C_1A_1$ and $C_1B_1$, respectively. Let $K$ and $L$ be the reflections of $D$ in lines $C_1A_1$ and $C_1B_1$, respectively.
+
+Prove that the circumcircles of triangles $A_1EI$, $B_1FI$, and $C_1KL$ have a common point.
+</txt>
+<id>6206024898840097202</id>
+</problem>
+<problem>
+<src>RMM 2020/2</src>
+<done>0</done>
+<txt>
+Let $N \geq 2$ be an integer, and let $\mathbf a$ $= (a_1, \ldots, a_N)$ and $\mathbf b$ $= (b_1, \ldots b_N)$ be sequences of non-negative integers. For each integer $i \not \in \{1, \ldots, N\}$, let $a_i = a_k$ and $b_i = b_k$, where $k \in \{1, \ldots, N\}$ is the integer such that $i-k$ is divisible by $n$. We say $\mathbf a$ is $\mathbf b$-harmonic if each $a_i$ equals the following arithmetic mean:\[a_i = \frac{1}{2b_i+1} \sum_{s=-b_i}^{b_i} a_{i+s}.\]Suppose that neither $\mathbf a $ nor $\mathbf b$ is a constant sequence, and that both $\mathbf a$ is $\mathbf b$-harmonic and $\mathbf b$ is $\mathbf a$-harmonic.
+
+Prove that at least $N+1$ of the numbers $a_1, \ldots, a_N,b_1, \ldots, b_N$ are zero.
+</txt>
+<id>8059299736482475200</id>
+</problem>
+<problem>
+<src>RMM 2020/4</src>
+<done>0</done>
+<txt>
+	Let $\mathbb N$ be the set of all positive integers. A subset $A$ of $\mathbb N$ is sum-free if, whenever $x$ and $y$ are (not necessarily distinct) members of $A$, their sum $x+y$ does not belong to $A$. Determine all surjective functions $f:\mathbb N\to\mathbb N$ such that, for each sum-free subset $A$ of $\mathbb N$, the image $\{f(a):a\in A\}$ is also sum-free.
+
+Note: a function $f:\mathbb N\to\mathbb N$ is surjective if, for every positive integer $n$, there exists a positive integer $m$ such that $f(m)=n$.
+</txt>
+<id>512148051997527</id>
+</problem>
+<problem>
+<src>RMM 2020/5</src>
+<done>0</done>
+<txt>
+A lattice point in the Cartesian plane is a point whose coordinates are both integers. A lattice polygon is a polygon all of whose vertices are lattice points.
+
+Let $\Gamma$ be a convex lattice polygon. Prove that $\Gamma$ is contained in a convex lattice polygon $\Omega$ such that the vertices of $\Gamma$ all lie on the boundary of $\Omega$, and exactly one vertex of $\Omega$ is not a vertex of $\Gamma$.
+</txt>
+<id>5562895031008938211</id>
+</problem>
+<problem>
+<src>RMM 2020/A1</src>
+<done>0</done>
+<txt>
+Prove that for all sufficiently large positive integers $d{}$, at least $99\%$ of the polynomials of the form\[\sum_{i\leqslant d}\sum_{j\leqslant d}\pm x^iy^j\]are irreducible over the integers.
+</txt>
+<id>1696528644272897376</id>
+</problem>
+<problem>
+<src>RMM 2020/C1</src>
+<done>0</done>
+<txt>
+Bethan is playing a game on an $n\times n$ grid consisting of $n^2$ cells. A move consists of placing a counter in an unoccupied cell $C$ where the $2n-2$ other cells in the same row or column as $C$ contain an even number of counters. After making $M$ moves Bethan realises she cannot make any more moves. Determine the minimum value of $M$.
+</txt>
+<id>6702571883743406545</id>
+</problem>
+<problem>
+<src>RMM 2020/C2</src>
+<done>0</done>
+<txt>
+	Let $n{}$ be a positive integer, and let $\mathcal{C}$ be a collection of subsets of $\{1,2,\ldots,2^n\}$ satisfying both of the following conditions:
+Every $(2^n-1)$-element subset of $\{1,2,\ldots,2^n\}$ is a member of $\mathcal{C}$, and
+Every non-empty member $C$ of $\mathcal{C}$ contains an element $c$ such that $C\setminus\{c\}$ is again a member of $\mathcal{C}$.
+Determine the smallest size $\mathcal{C}$ may have.
+</txt>
+<id>9130156978935948779</id>
+</problem>
+<problem>
+<src>RMM 2020/N1</src>
+<done>0</done>
+<txt>
+Determine all pairs of positive integers $(m, n)$ for which there exists a bijective function\[f : \mathbb{Z}_m \times \mathbb{Z}_n \to \mathbb{Z}_m \times \mathbb{Z}_n\]such that the vectors $f(\mathbf{v}) + \mathbf{v}$, as $\mathbf{v}$ runs through all of $\mathbb{Z}_m \times \mathbb{Z}_n$, are pairwise distinct.
+
+(For any integers $a$ and $b$, the vectors $[a, b], [a + m, b]$ and $[a, b + n]$ are treated as equal.)
+</txt>
+<id>66110871669579</id>
+</problem>
+<problem>
+<src>RMM 2019/1</src>
+<done>0</done>
+<txt>
+Amy and Bob play the game. At the beginning, Amy writes down a positive integer on the board. Then the players take moves in turn, Bob moves first. On any move of his, Bob replaces the number $n$ on the blackboard with a number of the form $n-a^2$, where $a$ is a positive integer. On any move of hers, Amy replaces the number $n$ on the blackboard with a number of the form $n^k$, where $k$ is a positive integer. Bob wins if the number on the board becomes zero.
+Can Amy prevent Bob’s win?
+</txt>
+<id>613633329435671</id>
+</problem>
+<problem>
+<src>RMM 2019/2</src>
+<done>0</done>
+<txt>
+Let $ABCD$ be an isosceles trapezoid with $AB\parallel CD$. Let $E$ be the midpoint of $AC$. Denote by $\omega$ and $\Omega$ the circumcircles of the triangles $ABE$ and $CDE$, respectively. Let $P$ be the crossing point of the tangent to $\omega$ at $A$ with the tangent to $\Omega$ at $D$. Prove that $PE$ is tangent to $\Omega$.
+</txt>
+<id>551619066390682</id>
+</problem>
+<problem>
+<src>RMM 2019/4</src>
+<done>0</done>
+<txt>
+Prove that for every positive integer $n$ there exists a (not necessarily convex) polygon with no three collinear vertices, which admits exactly $n$ diffferent triangulations.
+
+(A triangulation is a dissection of the polygon into triangles by interior diagonals which have no common interior points with each other nor with the sides of the polygon)
+</txt>
+<id>3706706337726127226</id>
+</problem>
+<problem>
+<src>RMM 2019/5</src>
+<done>0</done>
+<txt>
+	Determine all functions $f: \mathbb{R} \to \mathbb{R}$ satisfying
+\[f(x + yf(x)) + f(xy) = f(x) + f(2019y),\]for all real numbers $x$ and $y$.
+</txt>
+<id>988671418474826</id>
+</problem>
+<problem>
+<src>RMM 2019/A1</src>
+<done>0</done>
+<txt>
+Determine all the functions $f:\mathbb R\mapsto\mathbb R$ satisfies the equation
+$f(a^2 +ab+ f(b^2))=af(b)+b^2+ f(a^2)\,\forall a,b\in\mathbb R $
+</txt>
+<id>664494485253935</id>
+</problem>
+<problem>
+<src>RMM 2019/C1</src>
+<done>0</done>
+<txt>
+Let $k$ and $N$ be integers such that $k > 1$ and $N > 2k + 1$. A number of $N$ persons sit around the Round Table, equally spaced. Each person is either a knight (always telling the truth) or a liar (who always lies). Each person sees the nearest k persons clockwise, and the nearest $k$ persons anticlockwise. Each person says: ''I see equally many knights to my left and to my right." Establish, in terms of $k$ and $N$, whether the persons around the Table are necessarily all knights.
+</txt>
+<id>903527073927588393</id>
+</problem>
+<problem>
+<src>RMM 2019/C2</src>
+<done>0</done>
+<txt>
+	Fix an integer $n \ge 2$. A fairy chess piece leopard may move one cell up, or one cell to the right, or one cell diagonally down-left. A leopard is placed onto some cell of a $3n \times 3n$ chequer board. The leopard makes several moves, never visiting a cell twice, and comes back to the starting cell. Determine the largest possible number of moves the leopard could have made.
+</txt>
+<id>5726273084626389998</id>
+</problem>
+<problem>
+<src>RMM 2019/N1</src>
+<done>0</done>
+<txt>
+Let $p$ and $q$ be relatively prime positive odd integers such that $1 < p < q$. Let $A$ be a set of pairs of integers $(a, b)$, where $0 \le a \le p - 1, 0 \le b \le q - 1$, containing exactly one pair from each of the sets$$\{(a, b),(a + 1, b + 1)\},  \{(a, q - 1), (a + 1, 0)\}, \{(p - 1,b),(0, b + 1)\}$$whenever $0 \le a \le p - 2$ and $0 \le b \le q - 2$. Show that $A$ contains at least $(p - 1)(q + 1)/8$ pairs whose entries are both even.
+</txt>
+<id>2599680620339408367</id>
+</problem>
+<problem>
+<src>RMM 2019/org4</src>
+<done>0</done>
+<txt>
+Let there be an equilateral triangle $ABC$ and a point $P$ in its plane such that $AP<BP<CP.$ Suppose that the lengths of segments $AP,BP$ and $CP$ uniquely determine the side of $ABC$. Prove that $P$ lies on the circumcircle of triangle $ABC.$
+</txt>
+<id>8982900673855870942</id>
+</problem>
+<problem>
+<src>RMM 2019/org5</src>
+<done>0</done>
+<txt>
+Two ants are moving along the edges of a convex polyhedron. The route of every ant ends in its starting point, so that one ant does not pass through the same point twice along its way. On every face $F$ of the polyhedron are written the number of edges of $F$ belonging to the route of the first ant and the number of edges of $F$ belonging to the route of the second ant. Is there a polyhedron and a pair of routes described as above, such that only one face contains a pair of distinct numbers?
+</txt>
+<id>602995508900984</id>
+</problem>
+<problem>
+<src>RMM 2018/1</src>
+<done>0</done>
+<txt>
+	Let $ABCD$ be a cyclic quadrilateral an let $P$ be a point on the side $AB.$ The diagonals $AC$ meets the segments $DP$ at $Q.$ The line through $P$ parallel to $CD$ mmets the extension of the side $CB$ beyond $B$ at $K.$ The line through $Q$ parallel to $BD$ meets the extension of the side $CB$ beyond $B$ at $L.$ Prove that the circumcircles of the triangles $BKP$ and $CLQ$ are tangent .
+</txt>
+<id>3032245772349874005</id>
+</problem>
+<problem>
+<src>RMM 2018/2</src>
+<done>0</done>
+<txt>
+Determine whether there exist non-constant polynomials $P(x)$ and $Q(x)$ with real coefficients satisfying
+$$P(x)^{10}+P(x)^9 = Q(x)^{21}+Q(x)^{20}.$$
+</txt>
+<id>254414643421075</id>
+</problem>
+<problem>
+<src>RMM 2018/4</src>
+<done>0</done>
+<txt>
+	Let $a,b,c,d$ be positive integers such that $ad \neq bc$ and $gcd(a,b,c,d)=1$. Let $S$ be the set of values attained by $\gcd(an+b,cn+d)$ as $n$ runs through the positive integers. Show that $S$ is the set of all positive divisors of some positive integer.
+</txt>
+<id>4056351287962212080</id>
+</problem>
+<problem>
+<src>RMM 2018/5</src>
+<done>0</done>
+<txt>
+	Let $n$ be positive integer and fix $2n$ distinct points on a circle. Determine the number of ways to connect the points with $n$ arrows (oriented line segments) such that all of the following conditions hold:
+each of the $2n$ points is a startpoint or endpoint of an arrow;
+no two arrows intersect; and
+there are no two arrows $\overrightarrow{AB}$ and $\overrightarrow{CD}$ such that $A$, $B$, $C$ and $D$ appear in clockwise order around the circle (not necessarily consecutively).
+</txt>
+<id>8156079118189111754</id>
+</problem>
+<problem>
+<src>RMM 2018/A1</src>
+<done>0</done>
+<txt>
+Let $m$ and $n$ be integers greater than $2$, and let $A$ and $B$ be non-constant polynomials with complex coefficients, at least one of which has a degree greater than $1$. Prove that if the degree of the polynomial $A^m-B^n$ is less than $\min(m,n)$, then $A^m=B^n$.
+</txt>
+<id>344307741773187</id>
+</problem>
+<problem>
+<src>RMM 2018/C1</src>
+<done>0</done>
+<txt>
+Call a point in the Cartesian plane with integer coordinates a $lattice$ $point$. Given a finite set $\mathcal{S}$ of lattice points we repeatedly perform the following operation: given two distinct lattice points $A, B$ in $\mathcal{S}$ and two distinct lattice points $C, D$ not in $\mathcal{S}$ such that $ACBD$ is a parallelogram with $AB > CD$, we replace $A, B$ by $C, D$. Show that only finitely many such operations can be performed.
+</txt>
+<id>3744894000085761569</id>
+</problem>
+<problem>
+<src>RMM 2018/C2</src>
+<done>0</done>
+<txt>
+	Fix integers $n\ge k\ge 2$. We call a collection of integral valued coins $n-diverse$ if no value occurs in it more than $n$ times. Given such a collection, a number $S$ is $n-reachable$ if that collection contains $n$ coins whose sum of values equals $S$. Find the least positive integer $D$ such that for any $n$-diverse collection of $D$ coins there are at least $k$ numbers that are $n$-reachable.
+</txt>
+<id>267446035349026955</id>
+</problem>
+<problem>
+<src>RMM 2018/N1</src>
+<done>0</done>
+<txt>
+Determine all polynomials $f$ with integer coefficients such that $f(p)$ is a divisor of $2^p-2$ for every odd prime $p$.
+</txt>
+<id>3753289685429929419</id>
+</problem>
+<problem>
+<src>APMO 2023/1</src>
+<done>0</done>
+<txt>
+Let $n \geq 5$ be an integer. Consider $n$ squares with side lengths $1, 2, \dots , n$, respectively. The squares are arranged in the plane with their sides parallel to the $x$ and $y$ axes. Suppose that no two squares touch, except possibly at their vertices. Show that it is possible to arrange these squares in a way such that every square touches exactly two other squares.
+</txt>
+<id>3951159057888736589</id>
+</problem>
+<problem>
+<src>APMO 2023/2</src>
+<done>0</done>
+<txt>
+Find all integers $n$ satisfying $n \geq 2$ and $\dfrac{\sigma(n)}{p(n)-1} = n$, in which $\sigma(n)$ denotes the sum of all positive divisors of $n$, and $p(n)$ denotes the largest prime divisor of $n$.
+</txt>
+<id>466409818083772</id>
+</problem>
+<problem>
+<src>APMO 2023/3</src>
+<done>0</done>
+<txt>
+Let $ABCD$ be a parallelogram. Let $W, X, Y,$ and $Z$ be points on sides $AB, BC, CD,$ and $DA$, respectively, such that the incenters of triangles $AWZ, BXW, CYX,$ and $DZY$ form a parallelogram. Prove that $WXYZ$ is a parallelogram.
+</txt>
+<id>7689980261025088265</id>
+</problem>
+<problem>
+<src>APMO 2023/4</src>
+<done>0</done>
+<txt>
+Let $c>0$ be a given positive real and $\mathbb{R}_{>0}$ be the set of all positive reals. Find all functions $f \colon \mathbb{R}_{>0} \to \mathbb{R}_{>0}$ such that\[f((c+1)x+f(y))=f(x+2y)+2cx \quad \textrm{for all } x,y \in \mathbb{R}_{>0}.\]
+</txt>
+<id>878429961754697605</id>
+</problem>
+<problem>
+<src>APMO 2023/5</src>
+<done>0</done>
+<txt>
+There are $n$ line segments on the plane, no three intersecting at a point, and each pair intersecting once in their respective interiors. Tony and his $2n - 1$ friends each stand at a distinct endpoint of a line segment. Tony wishes to send Christmas presents to each of his friends as follows:
+First, he chooses an endpoint of each segment as a “sink”. Then he places the present at
+the endpoint of the segment he is at. The present moves as follows :
+$\bullet$ If it is on a line segment, it moves towards the sink.
+$\bullet$ When it reaches an intersection of two segments, it changes the line segment it travels on and starts moving towards the new sink.
+If the present reaches an endpoint, the friend on that endpoint can receive their present.
+Prove that Tony can send presents to exactly $n$ of his $2n - 1$ friends.
+</txt>
+<id>671689594281308077</id>
+</problem>
+<problem>
+<src>APMO 2022/1</src>
+<done>0</done>
+<txt>
+Find all pairs $(a,b)$ of positive integers such that $a^3$ is multiple of $b^2$ and $b-1$ is multiple of $a-1$.
+</txt>
+<id>4330093832251809273</id>
+</problem>
+<problem>
+<src>APMO 2022/2</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a right triangle with $\angle B=90^{\circ}$. Point $D$ lies on the line $CB$ such that $B$ is between $D$ and $C$. Let $E$ be the midpoint of $AD$ and let $F$ be the seconf intersection point of the circumcircle of $\triangle ACD$ and the circumcircle of $\triangle BDE$. Prove that as $D$ varies, the line $EF$ passes through a fixed point.
+</txt>
+<id>7335226310540156292</id>
+</problem>
+<problem>
+<src>APMO 2022/3</src>
+<done>0</done>
+<txt>
+Find all positive integers $k<202$ for which there exist a positive integers $n$ such that
+$$\bigg {\{}\frac{n}{202}\bigg {\}}+\bigg {\{}\frac{2n}{202}\bigg {\}}+\cdots +\bigg {\{}\frac{kn}{202}\bigg {\}}=\frac{k}{2}$$
+</txt>
+<id>680158311639624</id>
+</problem>
+<problem>
+<src>APMO 2022/4</src>
+<done>0</done>
+<txt>
+Let $n$ and $k$ be positive integers. Cathy is playing the following game. There are $n$ marbles and $k$ boxes, with the marbles labelled $1$ to $n$. Initially, all marbles are placed inside one box. Each turn, Cathy chooses a box and then moves the marbles with the smallest label, say $i$, to either any empty box or the box containing marble $i+1$. Cathy wins if at any point there is a box containing only marble $n$.
+Determine all pairs of integers $(n,k)$ such that Cathy can win this game.
+</txt>
+<id>7208752288636072458</id>
+</problem>
+<problem>
+<src>APMO 2022/5</src>
+<done>0</done>
+<txt>
+Let $a,b,c,d$ be real numbers such that $a^2+b^2+c^2+d^2=1$. Determine the minimum value of $(a-b)(b-c)(c-d)(d-a)$ and determine all values of $(a,b,c,d)$ such that the minimum value is achived.
+</txt>
+<id>15317350224055</id>
+</problem>
+<problem>
+<src>APMO 2021/1</src>
+<done>0</done>
+<txt>
+	Prove that for each real number $r>2$, there are exactly two or three positive real numbers $x$ satisfying the equation $x^2=r\lfloor x \rfloor$.
+</txt>
+<id>816618498838890</id>
+</problem>
+<problem>
+<src>APMO 2021/2</src>
+<done>0</done>
+<txt>
+	For a polynomial $P$ and a positive integer $n$, define $P_n$ as the number of positive integer pairs $(a,b)$ such that $a<b \leq n$ and $|P(a)|-|P(b)|$ is divisible by $n$. Determine all polynomial $P$ with integer coefficients such that $P_n \leq 2021$ for all positive integers $n$.
+</txt>
+<id>2988718857225198152</id>
+</problem>
+<problem>
+<src>APMO 2021/3</src>
+<done>0</done>
+<txt>
+	Let $ABCD$ be a cyclic convex quadrilateral and $\Gamma$ be its circumcircle. Let $E$ be the intersection of the diagonals of $AC$ and $BD$. Let $L$ be the center of the circle tangent to sides $AB$, $BC$, and $CD$, and let $M$ be the midpoint of the arc $BC$ of $\Gamma$ not containing $A$ and $D$. Prove that the excenter of triangle $BCE$ opposite $E$ lies on the line $LM$.
+</txt>
+<id>512052756136271</id>
+</problem>
+<problem>
+<src>APMO 2021/4</src>
+<done>0</done>
+<txt>
+	Given a $32 \times 32$ table, we put a mouse (facing up) at the bottom left cell and a piece of cheese at several other cells. The mouse then starts moving. It moves forward except that when it reaches a piece of cheese, it eats a part of it, turns right, and continues moving forward. We say that a subset of cells containing cheese is good if, during this process, the mouse tastes each piece of cheese exactly once and then falls off the table. Show that:
+
+(a) No good subset consists of 888 cells.
+(b) There exists a good subset consisting of at least 666 cells.
+</txt>
+<id>1989615889874190156</id>
+</problem>
+<problem>
+<src>APMO 2021/5</src>
+<done>0</done>
+<txt>
+	Determine all Functions $f:\mathbb{Z} \to \mathbb{Z}$ such that $f(f(a)-b)+bf(2a)$ is a perfect square for all integers $a$ and $b$.
+</txt>
+<id>1053677942605812231</id>
+</problem>
+<problem>
+<src>APMO 2020/1</src>
+<done>0</done>
+<txt>
+	Let $\Gamma$ be the circumcircle of $\triangle ABC$. Let $D$ be a point on the side $BC$. The tangent to $\Gamma$ at $A$ intersects the parallel line to $BA$ through $D$ at point $E$. The segment $CE$ intersects $\Gamma$ again at $F$. Suppose $B$, $D$, $F$, $E$ are concyclic. Prove that $AC$, $BF$, $DE$ are concurrent.
+</txt>
+<id>236318831875052</id>
+</problem>
+<problem>
+<src>APMO 2020/2</src>
+<done>0</done>
+<txt>
+Show that $r = 2$ is the largest real number $r$ which satisfies the following condition:
+
+If a sequence $a_1$, $a_2$, $\ldots$ of positive integers fulfills the inequalities
+\[a_n \leq a_{n+2} \leq\sqrt{a_n^2+ra_{n+1}}\]for every positive integer $n$, then there exists a positive integer $M$ such that $a_{n+2} = a_n$ for every $n \geq M$.
+</txt>
+<id>543318535845123</id>
+</problem>
+<problem>
+<src>APMO 2020/3</src>
+<done>0</done>
+<txt>
+Determine all positive integers $k$ for which there exist a positive integer $m$ and a set $S$ of positive integers such that any integer $n > m$ can be written as a sum of distinct elements of $S$ in exactly $k$ ways.
+</txt>
+<id>3975075785518808190</id>
+</problem>
+<problem>
+<src>APMO 2020/4</src>
+<done>0</done>
+<txt>
+Let $\mathbb{Z}$ denote the set of all integers. Find all polynomials $P(x)$ with integer coefficients that satisfy the following property:
+
+For any infinite sequence $a_1$, $a_2$, $\dotsc$ of integers in which each integer in $\mathbb{Z}$ appears exactly once, there exist indices $i < j$ and an integer $k$ such that $a_i +a_{i+1} +\dotsb +a_j = P(k)$.
+</txt>
+<id>2270109693486247508</id>
+</problem>
+<problem>
+<src>APMO 2020/5</src>
+<done>0</done>
+<txt>
+Let $n \geq 3$ be a fixed integer. The number $1$ is written $n$ times on a blackboard. Below the blackboard, there are two buckets that are initially empty. A move consists of erasing two of the numbers $a$ and $b$, replacing them with the numbers $1$ and $a+b$, then adding one stone to the first bucket and $\gcd(a, b)$ stones to the second bucket. After some finite number of moves, there are $s$ stones in the first bucket and $t$ stones in the second bucket, where $s$ and $t$ are positive integers. Find all possible values of the ratio $\frac{t}{s}$.
+</txt>
+<id>1743818063911276331</id>
+</problem>
+<problem>
+<src>APMO 2019/1</src>
+<done>0</done>
+<txt>
+Let $\mathbb{Z}^+$ be the set of positive integers. Determine all functions $f : \mathbb{Z}^+\to\mathbb{Z}^+$ such that $a^2+f(a)f(b)$ is divisible by $f(a)+b$ for all positive integers $a,b$.
+</txt>
+<id>467342110469005</id>
+</problem>
+<problem>
+<src>APMO 2019/2</src>
+<done>0</done>
+<txt>
+Let $m$ be a fixed positive integer. The infinite sequence $\{a_n\}_{n\geq 1}$ is defined in the following way: $a_1$ is a positive integer, and for every integer $n\geq 1$ we have
+$$a_{n+1} = \begin{cases}a_n^2+2^m & \text{if } a_n< 2^m \\ a_n/2 &\text{if } a_n\geq 2^m\end{cases}$$For each $m$, determine all possible values of $a_1$ such that every term in the sequence is an integer.
+</txt>
+<id>613109155420064</id>
+</problem>
+<problem>
+<src>APMO 2019/3</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a scalene triangle with circumcircle $\Gamma$. Let $M$ be the midpoint of $BC$. A variable point $P$ is selected in the line segment $AM$. The circumcircles of triangles $BPM$ and $CPM$ intersect $\Gamma$ again at points $D$ and $E$, respectively. The lines $DP$ and $EP$ intersect (a second time) the circumcircles to triangles $CPM$ and $BPM$ at $X$ and $Y$, respectively. Prove that as $P$ varies, the circumcircle of $\triangle AXY$ passes through a fixed point $T$ distinct from $A$.
+</txt>
+<id>1700188229005727470</id>
+</problem>
+<problem>
+<src>APMO 2019/4</src>
+<done>0</done>
+<txt>
+	Consider a $2018 \times 2019$ board with integers in each unit square. Two unit squares are said to be neighbours if they share a common edge. In each turn, you choose some unit squares. Then for each chosen unit square the average of all its neighbours is calculated. Finally, after these calculations are done, the number in each chosen unit square is replaced by the corresponding average.
+Is it always possible to make the numbers in all squares become the same after finitely many turns?
+</txt>
+<id>896559847059784</id>
+</problem>
+<problem>
+<src>APMO 2019/5</src>
+<done>0</done>
+<txt>
+	Determine all the functions $f : \mathbb{R} \to \mathbb{R}$ such that
+\[ f(x^2 + f(y)) = f(f(x)) + f(y^2) + 2f(xy) \]for all real numbers $x$ and $y$.
+</txt>
+<id>3104172479883832933</id>
+</problem>
+<problem>
+<src>APMO 2018/1</src>
+<done>0</done>
+<txt>
+Let $H$ be the orthocenter of the triangle $ABC$. Let $M$ and $N$ be the midpoints of the sides $AB$ and $AC$, respectively. Assume that $H$ lies inside the quadrilateral $BMNC$ and that the circumcircles of triangles $BMH$ and $CNH$ are tangent to each other. The line through $H$ parallel to $BC$ intersects the circumcircles of the triangles $BMH$ and $CNH$ in the points $K$ and $L$, respectively. Let $F$ be the intersection point of $MK$ and $NL$ and let $J$ be the incenter of triangle $MHN$. Prove that $F J = F A$.
+</txt>
+<id>531504969275602705</id>
+</problem>
+<problem>
+<src>APMO 2018/2</src>
+<done>0</done>
+<txt>
+Let $f(x)$ and $g(x)$ be given by
+$f(x) = \frac{1}{x} + \frac{1}{x-2} + \frac{1}{x-4} + \cdots + \frac{1}{x-2018}$
+$g(x) = \frac{1}{x-1} + \frac{1}{x-3} + \frac{1}{x-5} + \cdots + \frac{1}{x-2017}$.
+
+Prove that $|f(x)-g(x)| >2$ for any non-integer real number $x$ satisfying $0 < x < 2018$.
+</txt>
+<id>3427992889083230961</id>
+</problem>
+<problem>
+<src>APMO 2018/3</src>
+<done>0</done>
+<txt>
+A collection of $n$ squares on the plane is called tri-connected if the following criteria are satisfied:
+
+(i) All the squares are congruent.
+(ii) If two squares have a point $P$ in common, then $P$ is a vertex of each of the squares.
+(iii) Each square touches exactly three other squares.
+
+How many positive integers $n$ are there with $2018\leq n \leq 3018$, such that there exists a collection of $n$ squares that is tri-connected?
+</txt>
+<id>447976536517137</id>
+</problem>
+<problem>
+<src>APMO 2018/4</src>
+<done>0</done>
+<txt>
+Let $ABC$ be an equilateral triangle. From the vertex $A$ we draw a ray towards the interior of the triangle such that the ray reaches one of the sides of the triangle. When the ray reaches a side, it then bounces off following the law of reflection, that is, if it arrives with a directed angle $\alpha$, it leaves with a directed angle $180^{\circ}-\alpha$. After $n$ bounces, the ray returns to $A$ without ever landing on any of the other two vertices. Find all possible values of $n$.
+</txt>
+<id>4364014706118582858</id>
+</problem>
+<problem>
+<src>APMO 2018/5</src>
+<done>0</done>
+<txt>
+Find all polynomials $P(x)$ with integer coefficients such that for all real numbers $s$ and $t$, if $P(s)$ and $P(t)$ are both integers, then $P(st)$ is also an integer.
+</txt>
+<id>5173505438503336781</id>
+</problem>
+<problem>
+<src>IGO Advanced 2023/1</src>
+<done>0</done>
+<txt>
+We are given an acute triangle $ABC$. The angle bisector of $\angle BAC$ cuts $BC$ at $P$. Points $D$ and $E$ lie on segments $AB$ and $AC$, respectively, so that $BC \parallel  DE$. Points $K$ and $L$ lie on segments $PD$ and $PE$, respectively, so that points $A$, $D$, $E$, $K$, $L$ are concyclic. Prove that points $B$, $C$, $K$, $L$ are also concyclic.
+</txt>
+<id>748681263295975</id>
+</problem>
+<problem>
+<src>IGO Advanced 2023/2</src>
+<done>0</done>
+<txt>
+Let ${I}$ be the incenter of $\triangle {ABC}$ and ${BX}$, ${CY}$ are its two angle bisectors. ${M}$ is the midpoint of arc $\overset{\frown}{BAC}$. It is known that $MXIY$ are concyclic. Prove that the area of quadrilateral $MBIC$ is equal to that of pentagon $BXIYC$.
+</txt>
+<id>120014342762916</id>
+</problem>
+<problem>
+<src>IGO Advanced 2023/3</src>
+<done>0</done>
+<txt>
+There are several discs whose radii are no more that $1$, and whose centers all lie on a segment with length ${l}$. Prove that the union of all the discs has a perimeter not exceeding $4l+8$.
+</txt>
+<id>6851509563331617580</id>
+</problem>
+<problem>
+<src>IGO Advanced 2023/4</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a triangle with bisectors $BE$ and $CF$ meet at $I$. Let $D$ be the projection of $I$ on the $BC$. Let M and $N$ be the orthocenters of triangles $AIF$ and $AIE$, respectively. Lines $EM$ and $FN$ meet at $P.$ Let $X$ be the midpoint of $BC$. Let $Y$ be the point lying on the line $AD$ such that $XY \perp IP$. Prove that line $AI$ bisects the segment $XY$.
+</txt>
+<id>3175174607535531817</id>
+</problem>
+<problem>
+<src>IGO Advanced 2023/5</src>
+<done>0</done>
+<txt>
+	In triangle $ABC$ points $M$ and $N$ are the midpoints of sides $AC$ and $AB$, respectively and $D$ is the projection of $A$ into $BC$. Point $O$ is the circumcenter of $ABC$ and circumcircles of $BOC$, $DMN$ intersect at points $R, T$. Lines $DT$, $DR$ intersect line $MN$ at $E$ and $F$, respectively. Lines $CT$, $BR$ intersect at $K$. A point $P$ lies on $KD$ such that $PK$ is the angle bisector of $\angle BPC$. Prove that the circumcircles of $ART$ and $PEF$ are tangent.
+</txt>
+<id>697545974967766</id>
+</problem>
+<problem>
+<src>IGO Advanced 2022/1</src>
+<done>0</done>
+<txt>
+	Four points $A$, $B$, $C$ and $D$ lie on a circle $\omega$ such that $AB=BC=CD$. The tangent line to $\omega$ at point $C$ intersects the tangent line to $\omega$ at $A$ and the line $AD$ at $K$ and $L$. The circle $\omega$ and the circumcircle of triangle $KLA$ intersect again at $M$. Prove that $MA=ML$.
+</txt>
+<id>2153848747665754338</id>
+</problem>
+<problem>
+<src>IGO Advanced 2022/2</src>
+<done>0</done>
+<txt>
+	We are given an acute triangle $ABC$ with $AB\neq AC$. Let $D$ be a point of $BC$ such that $DA$ is tangent to the circumcircle of $ABC$. Let $E$ and $F$ be the circumcenters of triangles $ABD$ and $ACD$, respectively, and let $M$ be the midpoints $EF$. Prove that the line tangent to the circumcircle of $AMD$ through $D$ is also tangent to the circumcircle of $ABC$.
+</txt>
+<id>453148723429253</id>
+</problem>
+<problem>
+<src>IGO Advanced 2022/3</src>
+<done>0</done>
+<txt>
+In triangle $ABC$ $(\angle A\neq 90^\circ)$, let $O$, $H$ be the circumcenter and the foot of the altitude from $A$ respectively. Suppose $M$, $N$ are the midpoints of $BC$, $AH$ respectively. Let $D$ be the intersection of $AO$ and $BC$ and let $H'$ be the reflection of $H$ about $M$. Suppose that the circumcircle of $OH'D$ intersects the circumcircle of $BOC$ at $E$. Prove that $NO$ and $AE$ are concurrent on the circumcircle of $BOC$.
+</txt>
+<id>2052086795458</id>
+</problem>
+<problem>
+<src>IGO Advanced 2022/4</src>
+<done>0</done>
+<txt>
+	Let $ABCD$ be a trapezoid with $AB\parallel CD$. Its diagonals intersect at a point $P$. The line passing through $P$ parallel to $AB$ intersects $AD$ and $BC$ at $Q$ and $R$, respectively. Exterior angle bisectors of angles $DBA$, $DCA$ intersect at $X$. Let $S$ be the foot of $X$ onto $BC$. Prove that if quadrilaterals $ABPQ$, $CDQP$ are circumcribed, then $PR=PS$.
+</txt>
+<id>8840567523125912282</id>
+</problem>
+<problem>
+<src>IGO Advanced 2022/5</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be an acute triangle inscribed in a circle $\omega$ with center $O$. Points $E$, $F$ lie on its side $AC$, $AB$, respectively, such that $O$ lies on $EF$ and $BCEF$ is cyclic. Let $R$, $S$ be the intersections of $EF$ with the shorter arcs $AB$, $AC$ of $\omega$, respectively. Suppose $K$, $L$ are the reflection of $R$ about $C$ and the reflection of $S$ about $B$, respectively. Suppose that points $P$ and $Q$ lie on the lines $BS$ and $RC$, respectively, such that $PK$ and $QL$ are perpendicular to $BC$. Prove that the circle with center $P$ and radius $PK$ is tangent to the circumcircle of $RCE$ if and only if the circle with center $Q$ and radius $QL$ is tangent to the circumcircle of $BFS$.
+</txt>
+<id>792293045512112</id>
+</problem>
+<problem>
+<src>IGO Advanced 2021/1</src>
+<done>0</done>
+<txt>
+Acute-angled triangle $ABC$ with circumcircle $\omega$ is given. Let $D$ be the midpoint of $AC$, $E$ be the foot of altitude from $A$ to $BC$, and $F$ be the intersection point of $AB$ and $DE$. Point $H$ lies on the arc $BC$ of $\omega$ (the one that does not contain $A$) such that $\angle BHE=\angle ABC$. Prove that $\angle BHF=90^\circ$.
+</txt>
+<id>371185267312965</id>
+</problem>
+<problem>
+<src>IGO Advanced 2021/2</src>
+<done>0</done>
+<txt>
+	Two circles $\Gamma_1$ and $\Gamma_2$ meet at two distinct points $A$ and $B$. A line passing through $A$ meets $\Gamma_1$ and $\Gamma_2$ again at $C$ and $D$ respectively, such that $A$ lies between $C$ and $D$. The tangent at $A$ to $\Gamma_2$ meets $\Gamma_1$ again at $E$. Let $F$ be a point on $\Gamma_2$ such that $F$ and $A$ lie on different sides of $BD$, and $2\angle AFC=\angle ABC$. Prove that the tangent at $F$ to $\Gamma_2$, and lines $BD$ and $CE$ are concurrent.
+</txt>
+<id>7618489197525</id>
+</problem>
+<problem>
+<src>IGO Advanced 2021/3</src>
+<done>0</done>
+<txt>
+	Consider a triangle $ABC$ with altitudes $AD, BE$, and $CF$, and orthocenter $H$. Let the perpendicular line from $H$ to $EF$ intersects $EF, AB$ and $AC$ at $P, T$ and $L$, respectively. Point $K$ lies on the side $BC$ such that $BD=KC$. Let $\omega$ be a circle that passes through $H$ and $P$, that is tangent to $AH$. Prove that circumcircle of triangle $ATL$ and $\omega$ are tangent, and $KH$ passes through the tangency point.
+</txt>
+<id>263704170707884</id>
+</problem>
+<problem>
+<src>IGO Advanced 2021/4</src>
+<done>0</done>
+<txt>
+$2021$ points on the plane in the convex position, no three collinear and no four concyclic, are given. Prove that there exist two of them such that every circle passing through these two points contains at least $673$ of the other points in its interior.
+(A finite set of points on the plane are in convex position if the points are the vertices of a convex polygon.)
+</txt>
+<id>8700346175921432509</id>
+</problem>
+<problem>
+<src>IGO Advanced 2021/5</src>
+<done>0</done>
+<txt>
+	Given a triangle $ABC$ with incenter $I$. The incircle of triangle $ABC$ is tangent to $BC$ at $D$. Let $P$ and $Q$ be points on the side BC such that $\angle PAB = \angle BCA$ and $\angle QAC = \angle ABC$, respectively. Let $K$ and $L$ be the incenter of triangles $ABP$ and $ACQ$, respectively. Prove that $AD$ is the Euler line of triangle $IKL$.
+</txt>
+<id>579345048538257</id>
+</problem>
+<problem>
+<src>IGO Advanced 2020/1</src>
+<done>0</done>
+<txt>
+Let $M,N,P$ be midpoints of $BC,AC$ and $AB$ of triangle $\triangle ABC$ respectively. $E$ and $F$ are two points on the segment $\overline{BC}$ so that $\angle NEC = \frac{1}{2} \angle AMB$ and $\angle PFB = \frac{1}{2} \angle AMC$. Prove that $AE=AF$.
+</txt>
+<id>584014589745861</id>
+</problem>
+<problem>
+<src>IGO Advanced 2020/2</src>
+<done>0</done>
+<txt>
+Let $\triangle ABC$ be an acute-angled triangle with its incenter $I$. Suppose that $N$ is the midpoint of the arc $\overarc{BAC}$ of the circumcircle of triangle $\triangle ABC$, and $P$ is a point such that $ABPC$ is a parallelogram.Let $Q$ be the reflection of $A$ over $N$ and $R$ the projection of $A$ on $\overline{QI}$. Show that the line $\overline{AI}$ is tangent to the circumcircle of triangle $\triangle PQR$
+</txt>
+<id>853206838493072</id>
+</problem>
+<problem>
+<src>IGO Advanced 2020/3</src>
+<done>0</done>
+<txt>
+Assume three circles mutually outside each other with the property that every line separating two of them have intersection with the interior of the third one. Prove that the sum of pairwise distances between their centers is at most $2\sqrt{2}$ times the sum of their radii.
+(A line separates two circles, whenever the circles do not have intersection with the line and are on different sides of it.)
+Note. Weaker results with $2\sqrt{2}$ replaced by some other $c$ may be awarded points depending on the value of $c>2\sqrt{2}$
+</txt>
+<id>725882523060129</id>
+</problem>
+<problem>
+<src>IGO Advanced 2020/4</src>
+<done>0</done>
+<txt>
+	Convex circumscribed quadrilateral $ABCD$ with its incenter $I$ is given such that its incircle is tangent to $\overline{AD},\overline{DC},\overline{CB},$ and $\overline{BA}$ at $K,L,M,$ and $N$. Lines $\overline{AD}$ and $\overline{BC}$ meet at $E$ and lines $\overline{AB}$ and $\overline{CD}$ meet at $F$. Let $\overline{KM}$ intersects $\overline{AB}$ and $\overline{CD}$ at $X,Y$, respectively. Let $\overline{LN}$ intersects $\overline{AD}$ and $\overline{BC}$ at $Z,T$, respectively. Prove that the circumcircle of triangle $\triangle XFY$ and the circle with diameter $EI$ are tangent if and only if the circumcircle of triangle $\triangle TEZ$ and the circle with diameter $FI$ are tangent.
+</txt>
+<id>5182115879210719670</id>
+</problem>
+<problem>
+<src>IGO Advanced 2020/5</src>
+<done>0</done>
+<txt>
+Consider an acute-angled triangle $\triangle ABC$ ($AC>AB$) with its orthocenter $H$ and circumcircle $\Gamma$.Points $M$,$P$ are midpoints of $BC$ and $AH$ respectively.The line $\overline{AM}$ meets $\Gamma$ again at $X$ and point $N$ lies on the line $\overline{BC}$ so that $\overline{NX}$ is tangent to $\Gamma$.
+Points $J$ and $K$ lie on the circle with diameter $MP$ such that $\angle AJP=\angle HNM$ ($B$ and $J$ lie one the same side of $\overline{AH}$) and circle $\omega_1$, passing through $K,H$, and $J$, and circle $\omega_2$ passing through $K,M$, and $N$, are externally tangent to each other. Prove that the common external tangents of $\omega_1$ and $\omega_2$ meet on the line $\overline{NH}$.
+</txt>
+<id>1986632843459004559</id>
+</problem>
+<problem>
+<src>IGO Advanced 2019/1</src>
+<done>0</done>
+<txt>
+	Circles $\omega_1$ and $\omega_2$ intersect each other at points $A$ and $B$. Point $C$ lies on the tangent line from $A$ to $\omega_1$ such that
+$\angle ABC = 90^\circ$. Arbitrary line $\ell$ passes through $C$ and cuts $\omega_2$ at points $P$ and $Q$. Lines $AP$ and $AQ$ cut $\omega_1$ for the second time at points $X$ and $Z$ respectively. Let $Y$ be the foot of altitude from $A$ to $\ell$. Prove that points $X, Y$ and $Z$ are collinear.
+</txt>
+<id>4674406086325821196</id>
+</problem>
+<problem>
+<src>IGO Advanced 2019/2</src>
+<done>0</done>
+<txt>
+	Is it true that in any convex $n$-gon with $n > 3$, there exists a vertex and a diagonal passing through this vertex such that the angles of this diagonal with both sides adjacent to this vertex are acute?
+</txt>
+<id>552933284268039</id>
+</problem>
+<problem>
+<src>IGO Advanced 2019/3</src>
+<done>0</done>
+<txt>
+	Circles $\omega_1$ and $\omega_2$ have centres $O_1$ and $O_2$, respectively. These two circles intersect at points $X$ and $Y$. $AB$ is common tangent line of these two circles such that $A$ lies on $\omega_1$ and $B$ lies on $\omega_2$. Let tangents to $\omega_1$ and $\omega_2$ at $X$ intersect $O_1O_2$ at points $K$ and $L$, respectively. Suppose that line $BL$ intersects $\omega_2$ for the second time at $M$ and line $AK$ intersects $\omega_1$ for the second time at $N$. Prove that lines $AM, BN$ and $O_1O_2$ concur.
+</txt>
+<id>7456007547971566183</id>
+</problem>
+<problem>
+<src>IGO Advanced 2019/4</src>
+<done>0</done>
+<txt>
+Given an acute non-isosceles triangle $ABC$ with circumcircle $\Gamma$. $M$ is the midpoint of segment $BC$ and $N$ is the midpoint of arc $BC$ of $\Gamma$ (the one that doesn't contain $A$). $X$ and $Y$ are points on $\Gamma$ such that $BX\parallel CY\parallel AM$. Assume there exists point $Z$ on segment $BC$ such that circumcircle of triangle $XYZ$ is tangent to $BC$. Let $\omega$ be the circumcircle of triangle $ZMN$. Line $AM$ meets $\omega$ for the second time at $P$. Let $K$ be a point on $\omega$ such that $KN\parallel AM$, $\omega_b$ be a circle that passes through $B$, $X$ and tangents to $BC$ and $\omega_c$ be a circle that passes through $C$, $Y$ and tangents to $BC$. Prove that circle with center $K$ and radius $KP$ is tangent to 3 circles $\omega_b$, $\omega_c$ and $\Gamma$.
+</txt>
+<id>3486221094563725571</id>
+</problem>
+<problem>
+<src>IGO Advanced 2019/5</src>
+<done>0</done>
+<txt>
+	Let points $A, B$ and $C$ lie on the parabola $\Delta$ such that the point $H$, orthocenter of triangle $ABC$, coincides
+with the focus of parabola $\Delta$. Prove that by changing the position of points $A, B$ and $C$ on $\Delta$ so that the orthocenter remain at $H$, inradius of triangle $ABC$ remains unchanged.
+</txt>
+<id>8725820796958956406</id>
+</problem>
+<problem>
+<src>IGO Advanced 2018/1</src>
+<done>0</done>
+<txt>
+Two circles $\omega_1,\omega_2$ intersect each other at points $A,B$. Let $PQ$ be a common tangent line of these two circles with $P \in \omega_1$ and $Q  \in  \omega_2$. An arbitrary point $X$ lies on $\omega_1$. Line $AX$ intersects $ \omega_2$ for the second time at $Y$ . Point $Y'\ne Y$ lies on $\omega_2$ such that $QY = QY'$. Line $Y'B$ intersects $ \omega_1$ for the second time at $X'$. Prove that $PX = PX'$.
+</txt>
+<id>2798224660835368817</id>
+</problem>
+<problem>
+<src>IGO Advanced 2018/2</src>
+<done>0</done>
+<txt>
+	In acute triangle $ABC, \angle A = 45^o$. Points $O,H$ are the circumcenter and the orthocenter of $ABC$, respectively. $D$ is the foot of altitude from $B$. Point $X$ is the midpoint of arc $AH$ of the circumcircle of triangle $ADH$ that contains $D$. Prove that $DX = DO$.
+</txt>
+<id>7384014966956792204</id>
+</problem>
+<problem>
+<src>IGO Advanced 2018/3</src>
+<done>0</done>
+<txt>
+Find all possible values of integer $n > 3$ such that there is a convex $n$-gon in which, each diagonal is the perpendicular bisector of at least one other diagonal.
+</txt>
+<id>9156814072173030162</id>
+</problem>
+<problem>
+<src>IGO Advanced 2018/4</src>
+<done>0</done>
+<txt>
+	Quadrilateral $ABCD$ is circumscribed around a circle. Diagonals $AC,BD$ are not perpendicular to each other. The angle bisectors of angles between these diagonals, intersect the segments $AB,BC,CD$ and $DA$ at points $K,L,M$ and $N$. Given that $KLMN$ is cyclic, prove that so is $ABCD$.
+</txt>
+<id>3982719612496247400</id>
+</problem>
+<problem>
+<src>IGO Advanced 2018/5</src>
+<done>0</done>
+<txt>
+	$ABCD$ is a cyclic quadrilateral. A circle passing through $A,B$ is tangent to segment $CD$ at point $E$. Another circle passing through $C,D$ is tangent to $AB$ at point $F$. Point $G$ is the intersection point of $AE,DF$, and point $H$ is the intersection point of $BE$, $CF$. Prove that the incenters of triangles $AGF$, $BHF$, $CHE$, $DGE$ lie on a circle.
+</txt>
+<id>2040194717643782420</id>
 </problem>
 </problemas>
