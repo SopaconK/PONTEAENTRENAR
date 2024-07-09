@@ -4,9 +4,10 @@ using lli=long long int;
 #define pb push_back
 #define deb(x) cout<<#x<<": "<<x<<endl;
 
-//#define endl '\n'
-
-const lli SQ=2;
+#define endl '\n'
+#pragma GCC optimize("Ofast")
+#pragma GCC target("avx2")
+const lli SQ=783;
 struct segtree{
     lli l,r;
     segtree *left, *right;
