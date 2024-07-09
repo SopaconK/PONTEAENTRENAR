@@ -5562,4 +5562,566 @@ Find all possible values of integer $n > 3$ such that there is a convex $n$-gon 
 </txt>
 <id>2040194717643782420</id>
 </problem>
+<problem>
+<src>IMOSL 2017/A1</src>
+<done>0</done>
+<txt>
+Let $a_1,a_2,\ldots a_n,k$, and $M$ be positive integers such that
+$$\frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}=k\quad\text{and}\quad a_1a_2\cdots a_n=M.$$If $M>1$, prove that the polynomial
+$$P(x)=M(x+1)^k-(x+a_1)(x+a_2)\cdots (x+a_n)$$has no positive roots.
+</txt>
+<id>835565816078264</id>
+</problem>
+<problem>
+<src>IMOSL 2017/A2</src>
+<done>0</done>
+<txt>
+Let $q$ be a real number. Gugu has a napkin with ten distinct real numbers written on it, and he writes the following three lines of real numbers on the blackboard:
+In the first line, Gugu writes down every number of the form $a-b$, where $a$ and $b$ are two (not necessarily distinct) numbers on his napkin.
+In the second line, Gugu writes down every number of the form $qab$, where $a$ and $b$ are
+two (not necessarily distinct) numbers from the first line.
+In the third line, Gugu writes down every number of the form $a^2+b^2-c^2-d^2$, where $a, b, c, d$ are four (not necessarily distinct) numbers from the first line.
+Determine all values of $q$ such that, regardless of the numbers on Gugu's napkin, every number in the second line is also a number in the third line.
+</txt>
+<id>653318686726030</id>
+</problem>
+<problem>
+<src>IMOSL 2017/A3</src>
+<done>0</done>
+<txt>
+Let $S$ be a finite set, and let $\mathcal{A}$ be the set of all functions from $S$ to $S$. Let $f$ be an element of $\mathcal{A}$, and let $T=f(S)$ be the image of $S$ under $f$. Suppose that $f\circ g\circ f\ne g\circ f\circ g$ for every $g$ in $\mathcal{A}$ with $g\ne f$. Show that $f(T)=T$.
+</txt>
+<id>284766145954043</id>
+</problem>
+<problem>
+<src>IMOSL 2017/A4</src>
+<done>0</done>
+<txt>
+A sequence of real numbers $a_1,a_2,\ldots$ satisfies the relation
+$$a_n=-\max_{i+j=n}(a_i+a_j)\qquad\text{for all}\quad n>2017.$$Prove that the sequence is bounded, i.e., there is a constant $M$ such that $|a_n|\leq M$ for all positive integers $n$.
+</txt>
+<id>8383644831210009641</id>
+</problem>
+<problem>
+<src>IMOSL 2017/A5</src>
+<done>0</done>
+<txt>
+An integer $n \geq 3$ is given. We call an $n$-tuple of real numbers $(x_1, x_2, \dots, x_n)$ Shiny if for each permutation $y_1, y_2, \dots, y_n$ of these numbers, we have
+$$\sum \limits_{i=1}^{n-1} y_i y_{i+1} = y_1y_2 + y_2y_3 + y_3y_4 + \cdots + y_{n-1}y_n \geq -1.$$Find the largest constant $K = K(n)$ such that
+$$\sum \limits_{1 \leq i < j \leq n} x_i x_j \geq K$$holds for every Shiny $n$-tuple $(x_1, x_2, \dots, x_n)$.
+</txt>
+<id>3442101705279585713</id>
+</problem>
+<problem>
+<src>IMOSL 2017/C1</src>
+<done>0</done>
+<txt>
+A rectangle $\mathcal{R}$ with odd integer side lengths is divided into small rectangles with integer side lengths. Prove that there is at least one among the small rectangles whose distances from the four sides of $\mathcal{R}$ are either all odd or all even.
+</txt>
+<id>514046395982396</id>
+</problem>
+<problem>
+<src>IMOSL 2017/C2</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. Define a chameleon to be any sequence of $3n$ letters, with exactly $n$ occurrences of each of the letters $a, b,$ and $c$. Define a swap to be the transposition of two adjacent letters in a chameleon. Prove that for any chameleon $X$ , there exists a chameleon $Y$ such that $X$ cannot be changed to $Y$ using fewer than $3n^2/2$ swaps.
+</txt>
+<id>106106949450397</id>
+</problem>
+<problem>
+<src>IMOSL 2017/C3</src>
+<done>0</done>
+<txt>
+	Sir Alex plays the following game on a row of 9 cells. Initially, all cells are empty. In each move, Sir Alex is allowed to perform exactly one of the following two operations:
+Choose any number of the form $2^j$, where $j$ is a non-negative integer, and put it into an empty cell.
+Choose two (not necessarily adjacent) cells with the same number in them; denote that number by $2^j$. Replace the number in one of the cells with $2^{j+1}$ and erase the number in the other cell.
+At the end of the game, one cell contains $2^n$, where $n$ is a given positive integer, while the other cells are empty. Determine the maximum number of moves that Sir Alex could have made, in terms of $n$.
+</txt>
+<id>7146141883280672441</id>
+</problem>
+<problem>
+<src>IMOSL 2017/C4</src>
+<done>0</done>
+<txt>
+	An integer $N \ge 2$ is given. A collection of $N(N + 1)$ soccer players, no two of whom are of the same height, stand in a row. Sir Alex wants to remove $N(N - 1)$ players from this row leaving a new row of $2N$ players in which the following $N$ conditions hold:
+($1$) no one stands between the two tallest players,
+($2$) no one stands between the third and fourth tallest players,
+$\;\;\vdots$
+($N$) no one stands between the two shortest players.
+
+Show that this is always possible.
+</txt>
+<id>874415503743541</id>
+</problem>
+<problem>
+<src>IMOSL 2017/C5</src>
+<done>0</done>
+<txt>
+A hunter and an invisible rabbit play a game in the Euclidean plane. The rabbit's starting point, $A_0,$ and the hunter's starting point, $B_0$ are the same. After $n-1$ rounds of the game, the rabbit is at point $A_{n-1}$ and the hunter is at point $B_{n-1}.$ In the $n^{\text{th}}$ round of the game, three things occur in order:
+The rabbit moves invisibly to a point $A_n$ such that the distance between $A_{n-1}$ and $A_n$ is exactly $1.$
+A tracking device reports a point $P_n$ to the hunter. The only guarantee provided by the tracking device to the hunter is that the distance between $P_n$ and $A_n$ is at most $1.$
+The hunter moves visibly to a point $B_n$ such that the distance between $B_{n-1}$ and $B_n$ is exactly $1.$
+Is it always possible, no matter how the rabbit moves, and no matter what points are reported by the tracking device, for the hunter to choose her moves so that after $10^9$ rounds, she can ensure that the distance between her and the rabbit is at most $100?$
+</txt>
+<id>3333337471825030029</id>
+</problem>
+<problem>
+<src>IMOSL 2017/G1</src>
+<done>0</done>
+<txt>
+Let $ABCDE$ be a convex pentagon such that $AB=BC=CD$, $\angle{EAB}=\angle{BCD}$, and $\angle{EDC}=\angle{CBA}$. Prove that the perpendicular line from $E$ to $BC$ and the line segments $AC$ and $BD$ are concurrent.
+</txt>
+<id>6980917169184912998</id>
+</problem>
+<problem>
+<src>IMOSL 2017/G2</src>
+<done>0</done>
+<txt>
+	Let $R$ and $S$ be different points on a circle $\Omega$ such that $RS$ is not a diameter. Let $\ell$ be the tangent line to $\Omega$ at $R$. Point $T$ is such that $S$ is the midpoint of the line segment $RT$. Point $J$ is chosen on the shorter arc $RS$ of $\Omega$ so that the circumcircle $\Gamma$ of triangle $JST$ intersects $\ell$ at two distinct points. Let $A$ be the common point of $\Gamma$ and $\ell$ that is closer to $R$. Line $AJ$ meets $\Omega$ again at $K$. Prove that the line $KT$ is tangent to $\Gamma$.
+</txt>
+<id>6269154814902278202</id>
+</problem>
+<problem>
+<src>IMOSL 2017/G3</src>
+<done>0</done>
+<txt>
+Let $O$ be the circumcenter of an acute triangle $ABC$. Line $OA$ intersects the altitudes of $ABC$ through $B$ and $C$ at $P$ and $Q$, respectively. The altitudes meet at $H$. Prove that the circumcenter of triangle $PQH$ lies on a median of triangle $ABC$.
+</txt>
+<id>1366302870241512636</id>
+</problem>
+<problem>
+<src>IMOSL 2017/G4</src>
+<done>0</done>
+<txt>
+In triangle $ABC$, let $\omega$ be the excircle opposite to $A$. Let $D, E$ and $F$ be the points where $\omega$ is tangent to $BC, CA$, and $AB$, respectively. The circle $AEF$ intersects line $BC$ at $P$ and $Q$. Let $M$ be the midpoint of $AD$. Prove that the circle $MPQ$ is tangent to $\omega$.
+</txt>
+<id>199006625390154</id>
+</problem>
+<problem>
+<src>IMOSL 2017/G5</src>
+<done>0</done>
+<txt>
+	Let $ABCC_1B_1A_1$ be a convex hexagon such that $AB=BC$, and suppose that the line segments $AA_1, BB_1$, and $CC_1$ have the same perpendicular bisector. Let the diagonals $AC_1$ and $A_1C$ meet at $D$, and denote by $\omega$ the circle $ABC$. Let $\omega$ intersect the circle $A_1BC_1$ again at $E \neq B$. Prove that the lines $BB_1$ and $DE$ intersect on $\omega$.
+</txt>
+<id>5073004669687570949</id>
+</problem>
+<problem>
+<src>IMOSL 2017/N1</src>
+<done>0</done>
+<txt>
+For each integer $a_0 > 1$, define the sequence $a_0, a_1, a_2, \ldots$ for $n \geq 0$ as
+$$a_{n+1} = 
+\begin{cases}
+\sqrt{a_n} & \text{if } \sqrt{a_n} \text{ is an integer,} \\
+a_n + 3 & \text{otherwise.}
+\end{cases}
+$$Determine all values of $a_0$ such that there exists a number $A$ such that $a_n = A$ for infinitely many values of $n$.
+</txt>
+<id>552612087321706</id>
+</problem>
+<problem>
+<src>IMOSL 2017/N2</src>
+<done>0</done>
+<txt>
+Let $ p \geq 2$ be a prime number. Eduardo and Fernando play the following game making moves alternately: in each move, the current player chooses an index $i$ in the set $\{0,1,2,\ldots, p-1 \}$ that was not chosen before by either of the two players and then chooses an element $a_i$ from the set $\{0,1,2,3,4,5,6,7,8,9\}$. Eduardo has the first move. The game ends after all the indices have been chosen .Then the following number is computed:
+$$M=a_0+a_110+a_210^2+\cdots+a_{p-1}10^{p-1}= \sum_{i=0}^{p-1}a_i.10^i$$.
+The goal of Eduardo is to make $M$ divisible by $p$, and the goal of Fernando is to prevent this.
+
+Prove that Eduardo has a winning strategy.
+</txt>
+<id>723726912323207</id>
+</problem>
+<problem>
+<src>IMOSL 2017/N3</src>
+<done>0</done>
+<txt>
+Determine all integers $ n\geq 2$ having the following property: for any integers $a_1,a_2,\ldots, a_n$ whose sum is not divisible by $n$, there exists an index $1 \leq i \leq n$ such that none of the numbers$$a_i,a_i+a_{i+1},\ldots,a_i+a_{i+1}+\ldots+a_{i+n-1}$$is divisible by $n$. Here, we let $a_i=a_{i-n}$ when $i >n$.
+</txt>
+<id>676918769934959</id>
+</problem>
+<problem>
+<src>IMOSL 2017/N4</src>
+<done>0</done>
+<txt>
+Call a rational number short if it has finitely many digits in its decimal expansion. For a positive integer $m$, we say that a positive integer $t$ is $m-$tastic if there exists a number $c\in \{1,2,3,\ldots ,2017\}$ such that $\dfrac{10^t-1}{c\cdot m}$ is short, and such that $\dfrac{10^k-1}{c\cdot m}$ is not short for any $1\le k<t$. Let $S(m)$ be the set of $m-$tastic numbers. Consider $S(m)$ for $m=1,2,\ldots{}.$ What is the maximum number of elements in $S(m)$?
+</txt>
+<id>6848161986234395515</id>
+</problem>
+<problem>
+<src>IMOSL 2017/N5</src>
+<done>0</done>
+<txt>
+	Find all pairs $(p,q)$ of prime numbers which $p>q$ and
+$$\frac{(p+q)^{p+q}(p-q)^{p-q}-1}{(p+q)^{p-q}(p-q)^{p+q}-1}$$is an integer.
+</txt>
+<id>574687232505662</id>
+</problem>
+<problem>
+<src>IMOSL 2016/A1</src>
+<done>0</done>
+<txt>
+Let $a$, $b$, $c$ be positive real numbers such that $\min(ab,bc,ca) \ge 1$. Prove that$$\sqrt[3]{(a^2+1)(b^2+1)(c^2+1)} \le \left(\frac{a+b+c}{3}\right)^2 + 1.$$
+</txt>
+<id>4381532748791402633</id>
+</problem>
+<problem>
+<src>IMOSL 2016/A2</src>
+<done>0</done>
+<txt>
+Find the smallest constant $C > 0$ for which the following statement holds: among any five positive real numbers $a_1,a_2,a_3,a_4,a_5$ (not necessarily distinct), one can always choose distinct subscripts $i,j,k,l$ such that
+\[ \left| \frac{a_i}{a_j} - \frac {a_k}{a_l} \right| \le C. \]
+</txt>
+<id>4190798556185983491</id>
+</problem>
+<problem>
+<src>IMOSL 2016/A3</src>
+<done>0</done>
+<txt>
+Find all positive integers $n$ such that the following statement holds: Suppose real numbers $a_1$, $a_2$, $\dots$, $a_n$, $b_1$, $b_2$, $\dots$, $b_n$ satisfy $|a_k|+|b_k|=1$ for all $k=1,\dots,n$. Then there exists $\varepsilon_1$, $\varepsilon_2$, $\dots$, $\varepsilon_n$, each of which is either $-1$ or $1$, such that
+\[ \left| \sum_{i=1}^n \varepsilon_i a_i \right| + \left| \sum_{i=1}^n \varepsilon_i b_i \right| \le 1. \]
+</txt>
+<id>741862231001118</id>
+</problem>
+<problem>
+<src>IMOSL 2016/A4</src>
+<done>0</done>
+<txt>
+	Find all functions $f:(0,\infty)\rightarrow (0,\infty)$ such that for any $x,y\in (0,\infty)$,$$xf(x^2)f(f(y)) + f(yf(x)) = f(xy) \left(f(f(x^2)) + f(f(y^2))\right).$$
+</txt>
+<id>173010886819234</id>
+</problem>
+<problem>
+<src>IMOSL 2016/A5</src>
+<done>0</done>
+<txt>
+Consider fractions $\frac{a}{b}$ where $a$ and $b$ are positive integers.
+(a) Prove that for every positive integer $n$, there exists such a fraction $\frac{a}{b}$ such that $\sqrt{n} \le \frac{a}{b} \le \sqrt{n+1}$ and $b \le \sqrt{n}+1$.
+(b) Show that there are infinitely many positive integers $n$ such that no such fraction $\frac{a}{b}$ satisfies $\sqrt{n} \le \frac{a}{b} \le \sqrt{n+1}$ and $b \le \sqrt{n}$.
+</txt>
+<id>2662630172971476475</id>
+</problem>
+<problem>
+<src>IMOSL 2016/C1</src>
+<done>0</done>
+<txt>
+	The leader of an IMO team chooses positive integers $n$ and $k$ with $n > k$, and announces them to the deputy leader and a contestant. The leader then secretly tells the deputy leader an $n$-digit binary string, and the deputy leader writes down all $n$-digit binary strings which differ from the leader’s in exactly $k$ positions. (For example, if $n = 3$ and $k = 1$, and if the leader chooses $101$, the deputy leader would write down $001, 111$ and $100$.) The contestant is allowed to look at the strings written by the deputy leader and guess the leader’s string. What is the minimum number of guesses (in terms of $n$ and $k$) needed to guarantee the correct answer?
+</txt>
+<id>175119746688413</id>
+</problem>
+<problem>
+<src>IMOSL 2016/C2</src>
+<done>0</done>
+<txt>
+	Find all positive integers $n$ for which all positive divisors of $n$ can be put into the cells of a rectangular table under the following constraints:
+each cell contains a distinct divisor;
+the sums of all rows are equal; and
+the sums of all columns are equal.
+</txt>
+<id>441177656992348</id>
+</problem>
+<problem>
+<src>IMOSL 2016/C3</src>
+<done>0</done>
+<txt>
+	Let $n$ be a positive integer relatively prime to $6$. We paint the vertices of a regular $n$-gon with three colours so that there is an odd number of vertices of each colour. Show that there exists an isosceles triangle whose three vertices are of different colours.
+</txt>
+<id>816006272568007</id>
+</problem>
+<problem>
+<src>IMOSL 2016/C4</src>
+<done>0</done>
+<txt>
+Find all integers $n$ for which each cell of $n \times n$ table can be filled with one of the letters $I,M$ and $O$ in such a way that:
+in each row and each column, one third of the entries are $I$, one third are $M$ and one third are $O$; and 
+in any diagonal, if the number of entries on the diagonal is a multiple of three, then one third of the entries are $I$, one third are $M$ and one third are $O$.
+Note. The rows and columns of an $n \times n$ table are each labelled $1$ to $n$ in a natural order. Thus each cell corresponds to a pair of positive integer $(i,j)$ with $1 \le i,j \le n$. For $n>1$, the table has $4n-2$ diagonals of two types. A diagonal of first type consists all cells $(i,j)$ for which $i+j$ is a constant, and the diagonal of this second type consists all cells $(i,j)$ for which $i-j$ is constant.
+</txt>
+<id>7902258516875436315</id>
+</problem>
+<problem>
+<src>IMOSL 2016/C5</src>
+<done>0</done>
+<txt>
+	Let $n \geq 3$ be a positive integer. Find the maximum number of diagonals in a regular $n$-gon one can select, so that any two of them do not intersect in the interior or they are perpendicular to each other.
+</txt>
+<id>218743543617334</id>
+</problem>
+<problem>
+<src>IMOSL 2016/G1</src>
+<done>0</done>
+<txt>
+	Triangle $BCF$ has a right angle at $B$. Let $A$ be the point on line $CF$ such that $FA=FB$ and $F$ lies between $A$ and $C$. Point $D$ is chosen so that $DA=DC$ and $AC$ is the bisector of $\angle{DAB}$. Point $E$ is chosen so that $EA=ED$ and $AD$ is the bisector of $\angle{EAC}$. Let $M$ be the midpoint of $CF$. Let $X$ be the point such that $AMXE$ is a parallelogram. Prove that $BD,FX$ and $ME$ are concurrent.
+</txt>
+<id>741259148493039</id>
+</problem>
+<problem>
+<src>IMOSL 2016/G2</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a triangle with circumcircle $\Gamma$ and incenter $I$ and let $M$ be the midpoint of $\overline{BC}$. The points $D$, $E$, $F$ are selected on sides $\overline{BC}$, $\overline{CA}$, $\overline{AB}$ such that $\overline{ID} \perp \overline{BC}$, $\overline{IE}\perp \overline{AI}$, and $\overline{IF}\perp \overline{AI}$. Suppose that the circumcircle of $\triangle AEF$ intersects $\Gamma$ at a point $X$ other than $A$. Prove that lines $XD$ and $AM$ meet on $\Gamma$.
+</txt>
+<id>497699112554737</id>
+</problem>
+<problem>
+<src>IMOSL 2016/G3</src>
+<done>0</done>
+<txt>
+Let $B = (-1, 0)$ and $C = (1, 0)$ be fixed points on the coordinate plane. A nonempty, bounded subset $S$ of the plane is said to be nice if
+
+$\text{(i)}$ there is a point $T$ in $S$ such that for every point $Q$ in $S$, the segment $TQ$ lies entirely in $S$; and
+
+$\text{(ii)}$ for any triangle $P_1P_2P_3$, there exists a unique point $A$ in $S$ and a permutation $\sigma$ of the indices $\{1, 2, 3\}$ for which triangles $ABC$ and $P_{\sigma(1)}P_{\sigma(2)}P_{\sigma(3)}$ are similar.
+
+Prove that there exist two distinct nice subsets $S$ and $S'$ of the set $\{(x, y) : x \geq 0, y \geq 0\}$ such that if $A \in S$ and $A' \in S'$ are the unique choices of points in $\text{(ii)}$, then the product $BA \cdot BA'$ is a constant independent of the triangle $P_1P_2P_3$.
+</txt>
+<id>357249331453104</id>
+</problem>
+<problem>
+<src>IMOSL 2016/G4</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a triangle with $AB = AC \neq BC$ and let $I$ be its incentre. The line $BI$ meets $AC$ at $D$, and the line through $D$ perpendicular to $AC$ meets $AI$ at $E$. Prove that the reflection of $I$ in $AC$ lies on the circumcircle of triangle $BDE$.
+</txt>
+<id>567108152004136</id>
+</problem>
+<problem>
+<src>IMOSL 2016/G5</src>
+<done>0</done>
+<txt>
+Let $D$ be the foot of perpendicular from $A$ to the Euler line (the line passing through the circumcentre and the orthocentre) of an acute scalene triangle $ABC$. A circle $\omega$ with centre $S$ passes through $A$ and $D$, and it intersects sides $AB$ and $AC$ at $X$ and $Y$ respectively. Let $P$ be the foot of altitude from $A$ to $BC$, and let $M$ be the midpoint of $BC$. Prove that the circumcentre of triangle $XSY$ is equidistant from $P$ and $M$.
+</txt>
+<id>762174477377522</id>
+</problem>
+<problem>
+<src>IMOSL 2016/N1</src>
+<done>0</done>
+<txt>
+	For any positive integer $k$, denote the sum of digits of $k$ in its decimal representation by $S(k)$. Find all polynomials $P(x)$ with integer coefficients such that for any positive integer $n \geq 2016$, the integer $P(n)$ is positive and$$S(P(n)) = P(S(n)).$$
+</txt>
+<id>895654249061658</id>
+</problem>
+<problem>
+<src>IMOSL 2016/N2</src>
+<done>0</done>
+<txt>
+	Let $\tau(n)$ be the number of positive divisors of $n$. Let $\tau_1(n)$ be the number of positive divisors of $n$ which have remainders $1$ when divided by $3$. Find all positive integral values of the fraction $\frac{\tau(10n)}{\tau_1(10n)}$.
+</txt>
+<id>712950951787328</id>
+</problem>
+<problem>
+<src>IMOSL 2016/N3</src>
+<done>0</done>
+<txt>
+A set of positive integers is called fragrant if it contains at least two elements and each of its elements has a prime factor in common with at least one of the other elements. Let $P(n)=n^2+n+1$. What is the least possible positive integer value of $b$ such that there exists a non-negative integer $a$ for which the set$$\{P(a+1),P(a+2),\ldots,P(a+b)\}$$is fragrant?
+</txt>
+<id>403529216204023</id>
+</problem>
+<problem>
+<src>IMOSL 2016/N4</src>
+<done>0</done>
+<txt>
+Let $n, m, k$ and $l$ be positive integers with $n \neq 1$ such that $n^k + mn^l + 1$ divides $n^{k+l} - 1$. Prove that
+$m = 1$ and $l = 2k$; or
+$l|k$ and $m = \frac{n^{k-l}-1}{n^l-1}$.
+</txt>
+<id>5341232263014748696</id>
+</problem>
+<problem>
+<src>IMOSL 2016/N5</src>
+<done>0</done>
+<txt>
+	Let $a$ be a positive integer which is not a perfect square, and consider the equation\[k = \frac{x^2-a}{x^2-y^2}.\]Let $A$ be the set of positive integers $k$ for which the equation admits a solution in $\mathbb Z^2$ with $x>\sqrt{a}$, and let $B$ be the set of positive integers for which the equation admits a solution in $\mathbb Z^2$ with $0\leq x<\sqrt{a}$. Show that $A=B$.
+</txt>
+<id>709130660277794345</id>
+</problem>
+<problem>
+<src>IMOSL 2016/N6</src>
+<done>0</done>
+<txt>
+Denote by $\mathbb{N}$ the set of all positive integers. Find all functions $f:\mathbb{N}\rightarrow \mathbb{N}$ such that for all positive integers $m$ and $n$, the integer $f(m)+f(n)-mn$ is nonzero and divides $mf(m)+nf(n)$.
+</txt>
+<id>173979142158596</id>
+</problem>
+<problem>
+<src>IMOSL 2015/A1</src>
+<done>0</done>
+<txt>
+	Suppose that a sequence $a_1,a_2,\ldots$ of positive real numbers satisfies\[a_{k+1}\geq\frac{ka_k}{a_k^2+(k-1)}\]for every positive integer $k$. Prove that $a_1+a_2+\ldots+a_n\geq n$ for every $n\geq2$.
+</txt>
+<id>2650659158441459375</id>
+</problem>
+<problem>
+<src>IMOSL 2015/A2</src>
+<done>0</done>
+<txt>
+Determine all functions $f:\mathbb{Z}\rightarrow\mathbb{Z}$ with the property that\[f(x-f(y))=f(f(x))-f(y)-1\]holds for all $x,y\in\mathbb{Z}$.
+</txt>
+<id>119687225328684</id>
+</problem>
+<problem>
+<src>IMOSL 2015/A3</src>
+<done>0</done>
+<txt>
+Let $n$ be a fixed positive integer. Find the maximum possible value of\[ \sum_{1 \le r < s \le 2n} (s-r-n)x_rx_s, \]where $-1 \le x_i \le 1$ for all $i = 1, \cdots , 2n$.
+</txt>
+<id>2350680529866748619</id>
+</problem>
+<problem>
+<src>IMOSL 2015/A4</src>
+<done>0</done>
+<txt>
+	Let $\mathbb R$ be the set of real numbers. Determine all functions $f:\mathbb R\to\mathbb R$ that satisfy the equation\[f(x+f(x+y))+f(xy)=x+f(x+y)+yf(x)\]for all real numbers $x$ and $y$.
+</txt>
+<id>380257662603408</id>
+</problem>
+<problem>
+<src>IMOSL 2015/A5</src>
+<done>0</done>
+<txt>
+Let $2\mathbb{Z} + 1$ denote the set of odd integers. Find all functions $f:\mathbb{Z} \mapsto 2\mathbb{Z} + 1$ satisfying\[ f(x + f(x) + y) + f(x - f(x) - y) = f(x+y) + f(x-y) \]for every $x, y \in \mathbb{Z}$.
+</txt>
+<id>307861271235140</id>
+</problem>
+<problem>
+<src>IMOSL 2015/C1</src>
+<done>0</done>
+<txt>
+In Lineland there are $n\geq1$ towns, arranged along a road running from left to right. Each town has a left bulldozer (put to the left of the town and facing left) and a right bulldozer (put to the right of the town and facing right). The sizes of the $2n$ bulldozers are distinct. Every time when a left and right bulldozer confront each other, the larger bulldozer pushes the smaller one off the road. On the other hand, bulldozers are quite unprotected at their rears; so, if a bulldozer reaches the rear-end of another one, the first one pushes the second one off the road, regardless of their sizes.
+
+Let $A$ and $B$ be two towns, with $B$ to the right of $A$. We say that town $A$ can sweep town $B$ away if the right bulldozer of $A$ can move over to $B$ pushing off all bulldozers it meets. Similarly town $B$ can sweep town $A$ away if the left bulldozer of $B$ can move over to $A$ pushing off all bulldozers of all towns on its way.
+
+Prove that there is exactly one town that cannot be swept away by any other one.
+</txt>
+<id>923057111976190018</id>
+</problem>
+<problem>
+<src>IMOSL 2015/C2</src>
+<done>0</done>
+<txt>
+We say that a finite set $\mathcal{S}$ of points in the plane is balanced if, for any two different points $A$ and $B$ in $\mathcal{S}$, there is a point $C$ in $\mathcal{S}$ such that $AC=BC$. We say that $\mathcal{S}$ is centre-free if for any three different points $A$, $B$ and $C$ in $\mathcal{S}$, there is no points $P$ in $\mathcal{S}$ such that $PA=PB=PC$.
+
+(a) Show that for all integers $n\ge 3$, there exists a balanced set consisting of $n$ points.
+
+(b) Determine all integers $n\ge 3$ for which there exists a balanced centre-free set consisting of $n$ points.
+</txt>
+<id>8354552322611949357</id>
+</problem>
+<problem>
+<src>IMOSL 2015/C3</src>
+<done>0</done>
+<txt>
+For a finite set $A$ of positive integers, a partition of $A$ into two disjoint nonempty subsets $A_1$ and $A_2$ is $\textit{good}$ if the least common multiple of the elements in $A_1$ is equal to the greatest common divisor of the elements in $A_2$. Determine the minimum value of $n$ such that there exists a set of $n$ positive integers with exactly $2015$ good partitions.
+</txt>
+<id>3004928220875310213</id>
+</problem>
+<problem>
+<src>IMOSL 2015/C4</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. Two players $A$ and $B$ play a game in which they take turns choosing positive integers $k \le n$. The rules of the game are:
+
+(i) A player cannot choose a number that has been chosen by either player on any previous turn.
+(ii) A player cannot choose a number consecutive to any of those the player has already chosen on any previous turn.
+(iii) The game is a draw if all numbers have been chosen; otherwise the player who cannot choose a number anymore loses the game.
+
+The player $A$ takes the first turn. Determine the outcome of the game, assuming that both players use optimal strategies.
+</txt>
+<id>14852916670686</id>
+</problem>
+<problem>
+<src>IMOSL 2015/C5</src>
+<done>0</done>
+<txt>
+The sequence $a_1,a_2,\dots$ of integers satisfies the conditions:
+
+(i) $1\le a_j\le2015$ for all $j\ge1$,
+(ii) $k+a_k\neq \ell+a_\ell$ for all $1\le k<\ell$.
+
+Prove that there exist two positive integers $b$ and $N$ for which\[\left\vert\sum_{j=m+1}^n(a_j-b)\right\vert\le1007^2\]for all integers $m$ and $n$ such that $n>m\ge N$.
+</txt>
+<id>736279317663030</id>
+</problem>
+<problem>
+<src>IMOSL 2015/G1</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be an acute triangle with orthocenter $H$. Let $G$ be the point such that the quadrilateral $ABGH$ is a parallelogram. Let $I$ be the point on the line $GH$ such that $AC$ bisects $HI$. Suppose that the line $AC$ intersects the circumcircle of the triangle $GCI$ at $C$ and $J$. Prove that $IJ = AH$.
+</txt>
+<id>236181624113090</id>
+</problem>
+<problem>
+<src>IMOSL 2015/G2</src>
+<done>0</done>
+<txt>
+Triangle $ABC$ has circumcircle $\Omega$ and circumcenter $O$. A circle $\Gamma$ with center $A$ intersects the segment $BC$ at points $D$ and $E$, such that $B$, $D$, $E$, and $C$ are all different and lie on line $BC$ in this order. Let $F$ and $G$ be the points of intersection of $\Gamma$ and $\Omega$, such that $A$, $F$, $B$, $C$, and $G$ lie on $\Omega$ in this order. Let $K$ be the second point of intersection of the circumcircle of triangle $BDF$ and the segment $AB$. Let $L$ be the second point of intersection of the circumcircle of triangle $CGE$ and the segment $CA$.
+
+Suppose that the lines $FK$ and $GL$ are different and intersect at the point $X$. Prove that $X$ lies on the line $AO$.
+</txt>
+<id>3440185808972009200</id>
+</problem>
+<problem>
+<src>IMOSL 2015/G3</src>
+<done>0</done>
+<txt>
+Let $ABC$ be a triangle with $\angle{C} = 90^{\circ}$, and let $H$ be the foot of the altitude from $C$. A point $D$ is chosen inside the triangle $CBH$ so that $CH$ bisects $AD$. Let $P$ be the intersection point of the lines $BD$ and $CH$. Let $\omega$ be the semicircle with diameter $BD$ that meets the segment $CB$ at an interior point. A line through $P$ is tangent to $\omega$ at $Q$. Prove that the lines $CQ$ and $AD$ meet on $\omega$.
+</txt>
+<id>4582918044793570936</id>
+</problem>
+<problem>
+<src>IMOSL 2015/G4</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be an acute triangle and let $M$ be the midpoint of $AC$. A circle $\omega$ passing through $B$ and $M$ meets the sides $AB$ and $BC$ at points $P$ and $Q$ respectively. Let $T$ be the point such that $BPTQ$ is a parallelogram. Suppose that $T$ lies on the circumcircle of $ABC$. Determine all possible values of $\frac{BT}{BM}$.
+</txt>
+<id>6438524243840428787</id>
+</problem>
+<problem>
+<src>IMOSL 2015/G5</src>
+<done>0</done>
+<txt>
+	Let $ABC$ be a triangle with $CA \neq CB$. Let $D$, $F$, and $G$ be the midpoints of the sides $AB$, $AC$, and $BC$ respectively. A circle $\Gamma$ passing through $C$ and tangent to $AB$ at $D$ meets the segments $AF$ and $BG$ at $H$ and $I$, respectively. The points $H'$ and $I'$ are symmetric to $H$ and $I$ about $F$ and $G$, respectively. The line $H'I'$ meets $CD$ and $FG$ at $Q$ and $M$, respectively. The line $CM$ meets $\Gamma$ again at $P$. Prove that $CQ = QP$.
+</txt>
+<id>572967976964328</id>
+</problem>
+<problem>
+<src>IMOSL 2015/N1</src>
+<done>0</done>
+<txt>
+Determine all positive integers $M$ such that the sequence $a_0, a_1, a_2, \cdots$ defined by\[ a_0 = M + \frac{1}{2}   \qquad  \textrm{and} \qquad    a_{k+1} = a_k\lfloor a_k \rfloor   \quad \textrm{for} \, k = 0, 1, 2, \cdots \]contains at least one integer term.
+</txt>
+<id>905557261061260</id>
+</problem>
+<problem>
+<src>IMOSL 2015/N2</src>
+<done>0</done>
+<txt>
+	Let $a$ and $b$ be positive integers such that $a! + b!$ divides $a!b!$. Prove that $3a \ge 2b + 2$.
+</txt>
+<id>869040684570675</id>
+</problem>
+<problem>
+<src>IMOSL 2015/N3</src>
+<done>0</done>
+<txt>
+	Let $m$ and $n$ be positive integers such that $m>n$. Define $x_k=\frac{m+k}{n+k}$ for $k=1,2,\ldots,n+1$. Prove that if all the numbers $x_1,x_2,\ldots,x_{n+1}$ are integers, then $x_1x_2\ldots x_{n+1}-1$ is divisible by an odd prime.
+</txt>
+<id>596300332016249</id>
+</problem>
+<problem>
+<src>IMOSL 2015/N4</src>
+<done>0</done>
+<txt>
+Suppose that $a_0, a_1, \cdots $ and $b_0, b_1, \cdots$ are two sequences of positive integers such that $a_0, b_0 \ge 2$ and\[ a_{n+1} = \gcd{(a_n, b_n)} + 1, \qquad b_{n+1} = \operatorname{lcm}{(a_n, b_n)} - 1. \]Show that the sequence $a_n$ is eventually periodic; in other words, there exist integers $N \ge 0$ and $t > 0$ such that $a_{n+t} = a_n$ for all $n \ge N$.
+</txt>
+<id>857386332886077</id>
+</problem>
+<problem>
+<src>IMOSL 2015/N5</src>
+<done>0</done>
+<txt>
+Find all positive integers $(a,b,c)$ such that
+$$ab-c,\quad bc-a,\quad ca-b$$are all powers of $2$.
+</txt>
+<id>5113543632741494138</id>
+</problem>
 </problemas>

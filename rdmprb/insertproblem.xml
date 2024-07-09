@@ -1,7 +1,8 @@
 <problem>
-<src>IGO Advanced 2018/5</src>
+<src>IMOSL 2015/N5</src>
 <done>0</done>
 <txt> 	
-	$ABCD$ is a cyclic quadrilateral. A circle passing through $A,B$ is tangent to segment $CD$ at point $E$. Another circle passing through $C,D$ is tangent to $AB$ at point $F$. Point $G$ is the intersection point of $AE,DF$, and point $H$ is the intersection point of $BE$, $CF$. Prove that the incenters of triangles $AGF$, $BHF$, $CHE$, $DGE$ lie on a circle.
+Find all positive integers $(a,b,c)$ such that
+$$ab-c,\quad bc-a,\quad ca-b$$are all powers of $2$.
 </txt>
 </problem>
