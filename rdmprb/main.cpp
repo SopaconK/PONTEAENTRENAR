@@ -219,7 +219,7 @@ void GenerarListas(){
             }
              else if(mostrarsrc==4){
                 for(Problem p: list){
-                    ArchivoS<<auxi1<<endl;
+                    ArchivoS<<auxi1;
                     ArchivoS<<(char) 92<<"label{"<<p.id<<"}"<<endl;
                     for(string s: p.text){
                         ArchivoS<<s<<endl;
