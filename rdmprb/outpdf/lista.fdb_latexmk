@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1720510385 "c:/Users/sopac/OneDrive/Escritorio/PONTEAENTRENAR/rdmprb/outpdf/lista.tex" "lista.pdf" "lista" 1720510404 0
+["pdflatex"] 1720734698 "c:/Users/sopac/OneDrive/Escritorio/PONTEAENTRENAR/rdmprb/outpdf/lista.tex" "lista.pdf" "lista" 1720734720 2
   "C:/Users/sopac/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1720510101 83386 776b4805865c4d125f5e6ba545308f03 ""
   "C:/Users/sopac/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1660875842 12668 e3ee3604abf0e9bf3aaeecf878bf22a3 ""
   "C:/Users/sopac/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcsx1440.pk" 1660875844 17856 880af536e9fff22eea23209bc9044265 ""
@@ -321,11 +321,11 @@
   "C:/Users/sopac/AppData/Local/Programs/MiKTeX/tex/latex/yhmath/yhmath.sty" 1584531306 4974 0d87ecb9c52cb398cf8866a2c0fb9d8d ""
   "C:/Users/sopac/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/sopac/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "c:/Users/sopac/OneDrive/Escritorio/PONTEAENTRENAR/rdmprb/outpdf/lista.tex" 1720510369 368260 c09653b95b484f1b6778a21bd477f969 ""
-  "lista.aux" 1720510403 170898 708257edb8e1c2dc3fa0f8b0a042de58 "pdflatex"
-  "lista.out" 1720510397 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "lista.pre" 1720510390 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "lista.tex" 1720510369 368260 c09653b95b484f1b6778a21bd477f969 ""
+  "c:/Users/sopac/OneDrive/Escritorio/PONTEAENTRENAR/rdmprb/outpdf/lista.tex" 1720734693 408747 f41baaf0b82de4780aab1adea7595fa6 ""
+  "lista.aux" 1720734718 197136 ce3781263c4ffd1150a61cc4c2e6e1f2 "pdflatex"
+  "lista.out" 1720734710 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "lista.pre" 1720734704 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "lista.tex" 1720734693 408747 f41baaf0b82de4780aab1adea7595fa6 ""
   (generated)
   "lista.aux"
   "lista.log"

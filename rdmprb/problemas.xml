@@ -7489,4 +7489,1160 @@ For every positive integer $M \geq  2$, find the smallest real number $C_M$ such
 </txt>
 <id>3386683349955795885</id>
 </problem>
+<problem>
+<src>Taiwan TST 2022/R1.Q1.A</src>
+<done>0</done>
+<txt>
+Find all $f:\mathbb{Z}\to\mathbb{Z}$ such that
+\[f\left(\left\lfloor\frac{f(x)+f(y)}{2}\right\rfloor\right)+f(x)=f(f(y))+\left\lfloor\frac{f(x)+f(y)}{2}\right\rfloor\]holds for all $x,y\in\mathbb{Z}$.
+</txt>
+<id>816861285730288</id>
+</problem>
+<problem>
+<src>Taiwan TST 2022/R1.Q2.A</src>
+<done>0</done>
+<txt>
+Let $a_1, a_2, a_3, \ldots$ be a sequence of reals such that there exists $N\in\mathbb{N}$ so that $a_n=1$ for all $n\geq N$, and for all $n\geq 2$ we have
+\[a_{n}\leq a_{n-1}+2^{-n}a_{2n}.\]Show that $a_k>1-2^{-k}$ for all $k\in\mathbb{N}$.
+</txt>
+<id>893022419722224</id>
+</problem>
+<problem>
+<src>Taiwan TST 2021/R1.4</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. For each $4n$-tuple of nonnegative real numbers $a_1,\ldots,a_{2n}$, $b_1,\ldots,b_{2n}$ that satisfy $\sum_{i=1}^{2n}a_i=\sum_{j=1}^{2n}b_j=n$, define the sets
+\[A:=\left\{\sum_{j=1}^{2n}\frac{a_ib_j}{a_ib_j+1}:i\in\{1,\ldots,2n\} \textup{ s.t. }\sum_{j=1}^{2n}\frac{a_ib_j}{a_ib_j+1}\neq 0\right\},\]\[B:=\left\{\sum_{i=1}^{2n}\frac{a_ib_j}{a_ib_j+1}:j\in\{1,\ldots,2n\} \textup{ s.t. }\sum_{i=1}^{2n}\frac{a_ib_j}{a_ib_j+1}\neq 0\right\}.\]Let $m$ be the minimum element of $A\cup B$. Determine the maximum value of $m$ among those derived from all such $4n$-tuples $a_1,\ldots,a_{2n},b_1,\ldots,b_{2n}$.
+</txt>
+<id>1634175238796686183</id>
+</problem>
+<problem>
+<src>Taiwan TST 2020/R1.Q2.1</src>
+<done>0</done>
+<txt>
+Let $a$, $b$, $c$, $d$ be real numbers satisfying
+\begin{align*}
+(a + c)(b + d) = \sqrt{2}(ac - 2bd - 1). 
+\end{align*}Show that
+\begin{align*}
+(ab - 1)^2 + (bc - 1)^2 + (cd - 1)^2 + (da - 1)^2 + (ac - 1)^2 + (2bd + 1)^2 \ge 4. 
+\end{align*}
+</txt>
+<id>3311837168460713142</id>
+</problem>
+<problem>
+<src>Taiwan TST 2020/R1.2</src>
+<done>0</done>
+<txt>
+	Let $\mathbb{R}$ be the set of all real numbers. Find all functions $f:\mathbb{R}\to\mathbb{R}$ such that for any $x,y\in \mathbb{R}$, there holds
+\[f(x+f(y))+f(xy)=yf(x)+f(y)+f(f(x)).\]
+</txt>
+<id>683000769221383</id>
+</problem>
+<problem>
+<src>Taiwan TST 2019/R1.Q1.1</src>
+<done>0</done>
+<txt>
+Assume $ a_{1} \ge a_{2} \ge \dots \ge a_{107} > 0 $ satisfy $ \sum\limits_{k=1}^{107}{a_{k}} \ge M $ and $ b_{107} \ge b_{106} \ge \dots \ge b_{1} > 0 $ satisfy $ \sum\limits_{k=1}^{107}{b_{k}} \le M $. Prove that for any $ m \in \{1,2, \dots, 107\} $, the arithmetic mean of the following numbers$$ \frac{a_{1}}{b_{1}}, \frac{a_{2}}{b_{2}}, \dots, \frac{a_{m}}{b_{m}} $$is greater than or equal to $ \frac{M}{N} $
+</txt>
+<id>2634774329278517059</id>
+</problem>
+<problem>
+<src>Taiwan TST 2019/R1.Q3.1</src>
+<done>0</done>
+<txt>
+	Find all functions $ f: \mathbb{R} \to \mathbb{R} $ such that$$ f\left(xf\left(y\right)-f\left(x\right)-y\right) = yf\left(x\right)-f\left(y\right)-x $$holds for all $ x,y \in \mathbb{R} $
+</txt>
+<id>8044666255052297783</id>
+</problem>
+<problem>
+<src>Taiwan TST 2018/R1.Q1.1</src>
+<done>0</done>
+<txt>
+Let $ a,b,c,d $ be four non-negative reals such that $ a+b+c+d = 4 $. Prove that$$ a\sqrt{3a+b+c}+b\sqrt{3b+c+d}+c\sqrt{3c+d+a}+d\sqrt{3d+a+b} \ge 4\sqrt{5} $$
+</txt>
+<id>554181002401534</id>
+</problem>
+<problem>
+<src>Taiwan TST 2018/R1.Q3.1</src>
+<done>0</done>
+<txt>
+Find all functions $ f: \mathbb{R} \to \mathbb{R} $ such that$$ f\left(f\left(x\right)+y\right) = f\left(x^2-y\right)+4\left(y-2\right)\left(f\left(x\right)+2\right) $$holds for all $ x, y \in \mathbb{R} $
+</txt>
+<id>211238364293464</id>
+</problem>
+<problem>
+<src>Taiwan TST 2018/R1.2</src>
+<done>0</done>
+<txt>
+Assume $ a,b,c $ are arbitrary reals such that $ a+b+c = 0 $. Show that$$ \frac{33a^2-a}{33a^2+1}+\frac{33b^2-b}{33b^2+1}+\frac{33c^2-c}{33c^2+1} \ge 0 $$
+</txt>
+<id>4791181672152854</id>
+</problem>
+<problem>
+<src>Taiwan TST 2024/R2.Q2.N</src>
+<done>0</done>
+<txt>
+For any positive integer $n$, consider its binary representation. Denote by $f(n)$ the number we get after removing all the $0$'s in its binary representation, and $g(n)$ the number of $1$'s in the binary representation. For example, $f(19) = 7$ and $g(19) = 3.$
+Find all positive integers $n$ that satisfy
+$$n = f(n)^{g(n)}.$$
+</txt>
+<id>956334431352435</id>
+</problem>
+<problem>
+<src>Taiwan TST 2024/R2.2</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. Prove that the inequality
+\[n \sum_{i=1}^n \sum_{j = 1}^n \sum_{k=1}^n \frac{3}{a_ja_k + a_ka_i + a_i a_j} \ge \left(\sum_{j=1}^n \sum_{k=1}^n \frac{2}{a_j + a_k}\right)^2 \]holds for any positive real numbers $a_1$, $a_2$, $\dots$, $a_n$.
+</txt>
+<id>7618399398127608097</id>
+</problem>
+<problem>
+<src>Taiwan TST 2023/R2.Q1.A</src>
+<done>0</done>
+<txt>
+Find all functions $f : \mathbb{R} \to \mathbb{R}$, such that
+$$f\left(xy+f(y)\right)f(x)=x^2f(y)+f(xy)$$for all $x,y \in \mathbb{R}$
+</txt>
+<id>405752965370350</id>
+</problem>
+<problem>
+<src>Taiwan TST 2023/R2.Q2.A</src>
+<done>0</done>
+<txt>
+For each positive integer $k$ greater than $1$, find the largest real number $t$ such that the following hold:
+Given $n$ distinct points $a^{(1)}=(a^{(1)}_1,\ldots, a^{(1)}_k)$, $\ldots$, $a^{(n)}=(a^{(n)}_1,\ldots, a^{(n)}_k)$ in $\mathbb{R}^k$, we define the score of the tuple $a^{(i)}$ as
+\[\prod_{j=1}^{k}\#\{1\leq i'\leq n\textup{ such that }\pi_j(a^{(i')})=\pi_j(a^{(i)})\}\]where $\#S$ is the number of elements in set $S$, and $\pi_j$ is the projection $\mathbb{R}^k\to \mathbb{R}^{k-1}$ omitting the $j$-th coordinate. Then the $t$-th power mean of the scores of all $a^{(i)}$'s is at most $n$.
+
+Note: The $t$-th power mean of positive real numbers $x_1,\ldots,x_n$ is defined as
+\[\left(\frac{x_1^t+\cdots+x_n^t}{n}\right)^{1/t}\]when $t\neq 0$, and it is $\sqrt[n]{x_1\cdots x_n}$ when $t=0$.
+</txt>
+<id>644698320031727</id>
+</problem>
+<problem>
+<src>Taiwan TST 2022/R2.Q2.A</src>
+<done>0</done>
+<txt>
+	Determine all functions $f: \mathbb{R}^+ \to \mathbb{R}^+$ satisfying
+\[f\bigl(x + y^2 f(y)\bigr) = f\bigl(1 + yf(x)\bigr)f(x)\]for any positive reals $x$, $y$, where $\mathbb{R}^+$ is the collection of all positive real numbers.
+</txt>
+<id>187361876994205</id>
+</problem>
+<problem>
+<src>Taiwan TST 2021/R2.Q1.A</src>
+<done>0</done>
+<txt>
+Prove that if non-zero complex numbers $\alpha_1,\alpha_2,\alpha_3$ are distinct and noncollinear on the plane, and satisfy $\alpha_1+\alpha_2+\alpha_3=0$, then there holds
+\[\sum_{i=1}^{3}\left(\frac{|\alpha_{i+1}-\alpha_{i+2}|}{\sqrt{|\alpha_i|}}\left(\frac{1}{\sqrt{|\alpha_{i+1}|}}+\frac{1}{\sqrt{|\alpha_{i+2}|}}-\frac{2}{\sqrt{|\alpha_{i}|}}\right)\right)\leq 0......(*)\]where $\alpha_4=\alpha_1, \alpha_5=\alpha_2$. Verify further the sufficient and necessary condition for the equality holding in $(*)$.
+</txt>
+<id>6856925961374811551</id>
+</problem>
+<problem>
+<src>Taiwan TST 2021/R2.5</src>
+<done>0</done>
+<txt>
+Let $\|x\|_*=(|x|+|x-1|-1)/2$. Find all $f:\mathbb{N}\to\mathbb{N}$ such that
+\[f^{(\|f(x)-x\|_*)}(x)=x, \quad\forall x\in\mathbb{N}.\]Here $f^{(0)}(x)=x$ and $f^{(n)}(x)=f(f^{(n-1)}(x))$ for all $n\in\mathbb{N}$.
+</txt>
+<id>2442107022588075509</id>
+</problem>
+<problem>
+<src>Taiwan TST 2020/R2.4</src>
+<done>0</done>
+<txt>
+Alice and Bob are stuck in quarantine, so they decide to play a game. Bob will write down a polynomial $f(x)$ with the following properties:
+
+(a) for any integer $n$, $f(n)$ is an integer;
+(b) the degree of $f(x)$ is less than $187$.
+
+Alice knows that $f(x)$ satisfies (a) and (b), but she does not know $f(x)$. In every turn, Alice picks a number $k$ from the set $\{1,2,\ldots,187\}$, and Bob will tell Alice the value of $f(k)$. Find the smallest positive integer $N$ so that Alice always knows for sure the parity of $f(0)$ within $N$ turns.
+</txt>
+<id>951994777136316</id>
+</problem>
+<problem>
+<src>Taiwan TST 2019/R2.Q1.1</src>
+<done>0</done>
+<txt>
+	Prove that for any positive reals $ a,b,c,d $ with $ a+b+c+d = 4 $, we have$$ \sum\limits_{cyc}{\frac{3a^3}{a^2+ab+b^2}}+\sum\limits_{cyc}{\frac{2ab}{a+b}} \ge 8 $$
+</txt>
+<id>3960942508493751074</id>
+</problem>
+<problem>
+<src>Taiwan TST 2019/R2.Q2.1</src>
+<done>0</done>
+<txt>
+	Let $\mathbb{Q}_{>0}$ denote the set of all positive rational numbers. Determine all functions $f:\mathbb{Q}_{>0}\to \mathbb{Q}_{>0}$ satisfying$$f(x^2f(y)^2)=f(x)^2f(y)$$for all $x,y\in\mathbb{Q}_{>0}$
+</txt>
+<id>179717448968317497</id>
+</problem>
+<problem>
+<src>Taiwan TST 2018/R2.Q1.1</src>
+<done>0</done>
+<txt>
+Given positive integers $a_1,a_2,\ldots, a_n$ with $a_1<a_2<\cdots<a_n)$, and a positive real $k$ with $k\geq 1$. Prove that
+\[\sum_{i=1}^{n}a_i^{2k+1}\geq \left(\sum_{i=1}^{n}a_i^k\right)^2.\]
+</txt>
+<id>636169073536678</id>
+</problem>
+<problem>
+<src>Taiwan TST 2018/R2.Q2.2</src>
+<done>0</done>
+<txt>
+Find all functions $ f: \mathbb{Z} \to \mathbb{Z} $ such that$$ f\left(x+f\left(y\right)\right)f\left(y+f\left(x\right)\right)=\left(2x+f\left(y-x\right)\right)\left(2y+f\left(x-y\right)\right) $$holds for all integers $ x,y $
+</txt>
+<id>2828356184930533677</id>
+</problem>
+<problem>
+<src>Taiwan TST 2024/R3.6</src>
+<done>0</done>
+<txt>
+Find all positive integers $n$ and sequence of integers $a_0,a_1,\ldots, a_n$ such that the following hold:
+1. $a_n\neq 0$;
+2. $f(a_{i-1})=a_i$ for all $i=1,\ldots, n$, where $f(x) = a_nx^n+a_{n-1}x^{n-1}+\cdots +a_0$.
+</txt>
+<id>52438029112433</id>
+</problem>
+<problem>
+<src>Taiwan TST 2023/R3.Q1.A</src>
+<done>0</done>
+<txt>
+	Show that there exists a positive constant $C$ such that, for all positive reals $a$ and $b$ with $a + b$ being an integer, we have
+$$\left\{a^3\right\} + \left\{b^3\right\} + \frac{C}{(a+b)^6} \le 2. $$Here $\{x\} = x - \lfloor x\rfloor$ is the fractional part of $x$.
+</txt>
+<id>764206163868751091</id>
+</problem>
+<problem>
+<src>Taiwan TST 2023/R3.4</src>
+<done>0</done>
+<txt>
+	Find all positive integers $a$, $b$ and $c$ such that $ab$ is a square, and
+\[a+b+c-3\sqrt[3]{abc}=1.\]
+</txt>
+<id>5961161574215019498</id>
+</problem>
+<problem>
+<src>Taiwan TST 2022/R3.2</src>
+<done>0</done>
+<txt>
+Let $n,s,t$ be three positive integers, and let $A_1,\ldots, A_s, B_1,\ldots, B_t$ be non-necessarily distinct subsets of $\{1,2,\ldots,n\}$. For any subset $S$ of $\{1,\ldots,n\}$, define $f(S)$ to be the number of $i\in\{1,\ldots,s\}$ with $S\subseteq A_i$ and $g(S)$ to be the number of $j\in\{1,\ldots,t\}$ with $S\subseteq B_j$. Assume that for any $1\leq x<y\leq n$, we have $f(\{x,y\})=g(\{x,y\})$. Show that if $t<n$, then there exists some $1\leq x\leq n$ so that $f(\{x\})\geq g(\{x\})$.
+</txt>
+<id>183608717611474</id>
+</problem>
+<problem>
+<src>Taiwan TST 2022/R3.4</src>
+<done>0</done>
+<txt>
+	Let $\mathcal{X}$ be the collection of all non-empty subsets (not necessarily finite) of the positive integer set $\mathbb{N}$. Determine all functions $f: \mathcal{X} \to \mathbb{R}^+$ satisfying the following properties:
+
+(i) For all $S$, $T \in \mathcal{X}$ with $S\subseteq T$, there holds $f(T) \le f(S)$.
+(ii) For all $S$, $T \in \mathcal{X}$, there hold
+\[f(S) + f(T) \le f(S + T),\quad f(S)f(T) = f(S\cdot T), \]where $S + T = \{s + t\mid s\in S, t\in T\}$ and $S \cdot T = \{s\cdot t\mid s\in S, t\in T\}$.
+</txt>
+<id>771297140756048</id>
+</problem>
+<problem>
+<src>Taiwan TST 2018/R3.Q3.1</src>
+<done>0</done>
+<txt>
+	Suppose that $x,y$ are distinct positive reals, and $n>1$ is a positive integer. If
+\[x^n-y^n=x^{n+1}-y^{n+1},\]then show that
+\[1<x+y<\frac{2n}{n+1}.\]
+</txt>
+<id>6721454094634463277</id>
+</problem>
+<problem>
+<src>Taiwan TST 2018/R3.5</src>
+<done>0</done>
+<txt>
+Find all functions $ f: \mathbb{N} \to \mathbb{N} $ such that$$ f\left(x+yf\left(x\right)\right) = x+f\left(y\right)f\left(x\right) $$holds for all $ x,y \in \mathbb{N} $
+</txt>
+<id>962645019673192</id>
+</problem>
+<problem>
+<src>Iran TST 2024/3</src>
+<done>0</done>
+<txt>
+For any real numbers $x , y ,z$ prove that :
+$$(x+y+z)^2 + \sum_{cyc}{\frac{(x+y)(y+z)}{1+|x-z|}} \ge xy+yz+zx$$
+</txt>
+<id>4019368976099617559</id>
+</problem>
+<problem>
+<src>Iran TST 2024/4</src>
+<done>0</done>
+<txt>
+Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that for any real numbers $x , y$ this equality holds :
+$$f(yf(x)+f(x)f(y))=xf(y)+f(xy)$$
+</txt>
+<id>492001282661372</id>
+</problem>
+<problem>
+<src>Iran TST 2024/8</src>
+<done>0</done>
+<txt>
+Find all functions $f : \mathbb{Q}[x] \to \mathbb{Q}[x]$ such that two following conditions holds :
+$$\forall P , Q \in \mathbb{Q}[x] : f(P+Q)=f(P)+f(Q)$$$$\forall P \in \mathbb{Q}[x] : gcd(P , f(P))=1 \iff$$$P$ is square-free.
+
+
+Which a square-free polynomial with rational coefficients is a polynomial such that there doesn't exist square of a non-constant polynomial with rational coefficients that divides it.
+</txt>
+<id>5945620820312366964</id>
+</problem>
+<problem>
+<src>Iran TST 2023/1</src>
+<done>0</done>
+<txt>
+	Suppose that $n\ge3$ is a natural number. Find the maximum value $k$ such that there are real numbers $a_1,a_2,...,a_n \in [0,1)$ (not necessarily distinct) that for every natural number like $j \le k$ , sum of some $a_i$-s is $j$.
+</txt>
+<id>147296738719179</id>
+</problem>
+<problem>
+<src>Iran TST 2023/5</src>
+<done>0</done>
+<txt>
+Suppose that $n\ge2$ and $a_1,a_2,...,a_n$ are natural numbers that $ (a_1,a_2,...,a_n)=1$. Find all strictly increasing function $f: \mathbb{Z}  \to \mathbb{R} $ that:
+
+$$ \forall  x_1,x_2,...,x_n \in  \mathbb{Z} :       f(\sum_{i=1}^{n} {x_ia_i}) = \sum_{i=1}^{n} {f(x_ia_i})$$
+</txt>
+<id>310023852328572</id>
+</problem>
+<problem>
+<src>Iran TST 2023/9</src>
+<done>0</done>
+<txt>
+Find all function $ f: \mathbb{R}^{+} \to \mathbb{R}^{+}$ such that for every three real positive number $x,y,z$ :
+
+$$ x+f(y) , f(f(y)) + z , f(f(z))+f(x) $$
+are length of three sides of a triangle and for every postive number $p$ , there is a triangle with these sides and perimeter $p$.
+</txt>
+<id>1617857952543104985</id>
+</problem>
+<problem>
+<src>Iran TST 2022/5</src>
+<done>0</done>
+<txt>
+	Find all $C\in \mathbb{R}$ such that every sequence of integers $\{a_n\}_{n=1}^{\infty}$ which is bounded from below and for all $n\geq 2$ satisfy$$0\leq a_{n-1}+Ca_n+a_{n+1}<1$$is periodic.
+</txt>
+<id>746609563427040</id>
+</problem>
+<problem>
+<src>Iran TST 2022/7</src>
+<done>0</done>
+<txt>
+	Suppose that $n$ is a positive integer number. Consider a regular polygon with $2n$ sides such that one of its largest diagonals is parallel to the $x$-axis. Find the smallest integer $d$ such that there is a polynomial $P$ of degree $d$ whose graph intersects all sides of the polygon on points other than vertices.
+</txt>
+<id>9052319155099110464</id>
+</problem>
+<problem>
+<src>Iran TST 2022/12</src>
+<done>0</done>
+<txt>
+suppose that $A$ is the set of all Closed intervals $[a,b] \subset \mathbb{R}$. Find all functions $f:\mathbb{R} \rightarrow A$ such that
+$\bullet$ $x \in f(y) \Leftrightarrow y \in f(x)$
+$\bullet$ $|x-y|>2 \Leftrightarrow f(x) \cap f(y)=\varnothing$
+$\bullet$ For all real numbers $0\leq r\leq 1$, $f(r)=[r^2-1,r^2+1]$
+</txt>
+<id>453739862234362</id>
+</problem>
+<problem>
+<src>Iran TST 2021/4</src>
+<done>0</done>
+<txt>
+	Assume $\Omega(n),\omega(n)$ be the biggest and smallest prime factors of $n$ respectively . Alireza and Amin decided to play a game. First Alireza chooses $1400$ polynomials with integer coefficients. Now Amin chooses $700$ of them, the set of polynomials of Alireza and Amin are $B,A$ respectively . Amin wins if for all $n$ we have :
+$$\max_{P \in A}(\Omega(P(n))) \ge \min_{P \in B}(\omega(P(n)))$$Who has the winning strategy.
+</txt>
+<id>264341061776385</id>
+</problem>
+<problem>
+<src>Iran TST 2021/9</src>
+<done>0</done>
+<txt>
+Prove there exist two relatively prime polynomials $P(x),Q(x)$ having integer coefficients and a real number $u>0$ such that if for positive integers $a,b,c,d$ we have:
+$$|\frac{a}{c}-1|^{2021} \le \frac{u}{|d||c|^{1010}}$$$$| (\frac{a}{c})^{2020}-\frac{b}{d}| \le \frac{u}{|d||c|^{1010}}$$Then we have :
+$$bP(\frac{a}{c})=dQ(\frac{a}{c})$$
+(Two polynomials are relatively prime if they don't have a common root)
+</txt>
+<id>2315044936293855308</id>
+</problem>
+<problem>
+<src>Iran TST 2021/10</src>
+<done>0</done>
+<txt>
+Find all functions $f : \mathbb{N} \rightarrow \mathbb{R}$ such that for all triples $a,b,c$ of positive integers the following holds :
+
+$$f(ac)+f(bc)-f(c)f(ab) \ge 1$$
+</txt>
+<id>727980795827392</id>
+</problem>
+<problem>
+<src>Iran TST 2020/3</src>
+<done>0</done>
+<txt>
+	We call a number $n$ interesting if for each permutation $\sigma$ of $1,2,\ldots,n$ there exist polynomials $P_1,P_2,\ldots ,P_n$ and $\epsilon > 0$ such that:
+$i)$ $P_1(0)=P_2(0)=\ldots =P_n(0)$
+$ii)$ $P_1(x)>P_2(x)>\ldots >P_n(x)$ for $-\epsilon<x<0$
+$iii)$ $P_{\sigma (1)} (x)>P_{\sigma (2)}(x)> \ldots >P_{\sigma (n)} (x) $ for $0<x<\epsilon$
+Find all interesting $n$.
+</txt>
+<id>4885001410726383269</id>
+</problem>
+<problem>
+<src>Iran TST 2020/4</src>
+<done>0</done>
+<txt>
+Given a function $g:[0,1] \to \mathbb{R}$ satisfying the property that for every non empty dissection of the trivial $[0,1]$ to subsets $A,B$ we have either $\exists x \in A; g(x) \in B$ or $\exists x \in B; g(x) \in A$ and we have furthermore $g(x)>x$ for $x \in [0,1]$. Prove that there exist infinite $x \in [0,1]$ with $g(x)=1$.
+</txt>
+<id>1708954658940966109</id>
+</problem>
+<problem>
+<src>Iran TST 2020/11</src>
+<done>0</done>
+<txt>
+For every positive integer $k>1$ prove that there exist a real number $x$ so that for every positive integer $n<1398$:
+$$\left\{x^n\right\}<\left\{x^{n-1}\right\} \Longleftrightarrow k\mid n.$$
+</txt>
+<id>3252198251786492989</id>
+</problem>
+<problem>
+<src>Iran TST 2019/5</src>
+<done>0</done>
+<txt>
+Find all functions $f:\mathbb{R}\rightarrow \mathbb{R}$ such that for all $x,y\in \mathbb{R}$:
+$$f\left(f(x)^2-y^2\right)^2+f(2xy)^2=f\left(x^2+y^2\right)^2$$
+</txt>
+<id>773474046332356</id>
+</problem>
+<problem>
+<src>Iran TST 2019/10</src>
+<done>0</done>
+<txt>
+Let $1<t<2$ be a real number. Prove that for all sufficiently large positive integers like $d$, there is a monic polynomial $P(x)$ of degree $d$, such that all of its coefficients are either $+1$ or $-1$ and
+$$\left|P(t)-2019\right| <1.$$
+</txt>
+<id>4953306346525230082</id>
+</problem>
+<problem>
+<src>Iran TST 2019/13</src>
+<done>0</done>
+<txt>
+Find all polynomials $P(x,y)$ with real coefficients such that for all real numbers $x,y$ and $z$:
+$$P(x,2yz)+P(y,2zx)+P(z,2xy)=P(x+y+z,xy+yz+zx).$$
+</txt>
+<id>772440252059515</id>
+</problem>
+<problem>
+<src>Iran TST 2019/18</src>
+<done>0</done>
+<txt>
+	$x,y$ and $z$ are real numbers such that $x+y+z=xy+yz+zx$. Prove that
+$$\frac{x}{\sqrt{x^4+x^2+1}}+\frac{y}{\sqrt{y^4+y^2+1}}+\frac{z}{\sqrt{z^4+z^2+1}}\geq \frac{-1}{\sqrt{3}}.$$
+</txt>
+<id>530972846000695</id>
+</problem>
+<problem>
+<src>Iran TST 2018/2</src>
+<done>0</done>
+<txt>
+	Determine the least real number $k$ such that the inequality
+$$\left(\frac{2a}{a-b}\right)^2+\left(\frac{2b}{b-c}\right)^2+\left(\frac{2c}{c-a}\right)^2+k \geq 4\left(\frac{2a}{a-b}+\frac{2b}{b-c}+\frac{2c}{c-a}\right)$$holds for all real numbers $a,b,c$.
+</txt>
+<id>996551176989879</id>
+</problem>
+<problem>
+<src>Iran TST 2018/7</src>
+<done>0</done>
+<txt>
+	Find all functions $f:\mathbb{R}\rightarrow \mathbb{R}$ that satisfy the following conditions:
+a. $x+f(y+f(x))=y+f(x+f(y)) \quad \forall x,y \in \mathbb{R}$
+b. The set $I=\left\{\frac{f(x)-f(y)}{x-y}\mid x,y\in \mathbb{R},x\neq y \right\}$ is an interval.
+</txt>
+<id>755843062311672</id>
+</problem>
+<problem>
+<src>Iran TST 2018/14</src>
+<done>0</done>
+<txt>
+Find the maximum possible value of $k$ for which there exist distinct reals $x_1,x_2,\ldots ,x_k $ greater than $1$ such that for all $1 \leq i, j \leq k$,
+$$x_i^{\lfloor x_j \rfloor }= x_j^{\lfloor x_i\rfloor}.$$
+</txt>
+<id>540081122403409</id>
+</problem>
+<problem>
+<src>China TST 2024/4</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive square free integer, $S$ is a subset of $[n]:=\{1,2,\ldots ,n\}$ such that $|S|\ge n/2.$ Prove that there exists three elements $a,b,c\in S$ (can be same), satisfy $ab\equiv c\pmod n.$
+</txt>
+<id>146560315064259124</id>
+</problem>
+<problem>
+<src>China TST 2024/5</src>
+<done>0</done>
+<txt>
+	Find all functions $f:\mathbb N_+\to \mathbb N_+,$ such that for all positive integer $a,b,$
+$$\sum_{k=0}^{2b}f(a+k)=(2b+1)f(f(a)+b).$$
+</txt>
+<id>2785451911180838510</id>
+</problem>
+<problem>
+<src>China TST 2024/7</src>
+<done>0</done>
+<txt>
+For coprime positive integers $a,b$,denote $(a^{-1}\bmod{b})$ by the only integer $0\leq m<b$ such that $am\equiv 1\pmod{b}$
+(1)Prove that for pairwise coprime integers $a,b,c$, $1<a<b<c$,we have\[(a^{-1}\bmod{b})+(b^{-1}\bmod{c})+(c^{-1}\bmod{a})>\sqrt a.\](2)Prove that for any positive integer $M$,there exists pairwise coprime integers $a,b,c$, $M<a<b<c$ such that
+\[(a^{-1}\bmod{b})+(b^{-1}\bmod{c})+(c^{-1}\bmod{a})< 100\sqrt a.\]
+</txt>
+<id>8092459585001113885</id>
+</problem>
+<problem>
+<src>China TST 2024/10</src>
+<done>0</done>
+<txt>
+Let $M$ be a positive integer. $f(x):=x^3+ax^2+bx+c\in\mathbb Z[x]$ satisfy $|a|,|b|,|c|\le M.$ $x_1,x_2$ are different roots of $f.$ Prove that$$|x_1-x_2|>\frac 1{M^2+3M+1}.$$
+</txt>
+<id>327692898213057</id>
+</problem>
+<problem>
+<src>China TST 2024/16</src>
+<done>0</done>
+<txt>
+$m>1$ is an integer such that $[2m-\sqrt{m}+1, 2m]$ contains a prime. Prove that for any pairwise distinct positive integers $a_1$, $a_2$, $\dots$, $a_m$, there is always $1\leq i,j\leq m$ such that $\frac{a_i}{(a_i, a_j)}\geq m$.
+</txt>
+<id>9130680105894775026</id>
+</problem>
+<problem>
+<src>China TST 2024/20</src>
+<done>0</done>
+<txt>
+A positive integer is a good number, if its base $10$ representation can be split into at least $5$ sections, each section with a non-zero digit, and after interpreting each section as a positive integer (omitting leading zero digits), they can be split into two groups, such that each group can be reordered to form a geometric sequence (if a group has $1$ or $2$ numbers, it is also a geometric sequence), for example $20240327$ is a good number, since after splitting it as $2|02|403|2|7$, $2|02|2$ and $403|7$ form two groups of geometric sequences.
+
+If $a>1$, $m>2$, $p=1+a+a^2+\dots+a^m$ is a prime, prove that $\frac{10^{p-1}-1}{p}$ is a good number.
+</txt>
+<id>821703118093628</id>
+</problem>
+<problem>
+<src>China TST 2024/23</src>
+<done>0</done>
+<txt>
+$P(z)=a_nz^n+\dots+a_1z+z_0$, with $a_n\neq 0$ is a polynomial with complex coefficients, such that when $|z|=1$, $|P(z)|\leq 1$. Prove that for any $0\leq k\leq n-1$, $|a_k|\leq 1-|a_n|^2$.
+</txt>
+<id>791789753842496</id>
+</problem>
+<problem>
+<src>China TST 2023/4</src>
+<done>0</done>
+<txt>
+	Given $m,n\in\mathbb N_+,$ define
+$$S(m,n)=\left\{(a,b)\in\mathbb N_+^2\mid 1\leq a\leq m,1\leq b\leq n,\gcd (a,b)=1\right\}.$$Prove that: for $\forall d,r\in\mathbb N_+,$ there exists $m,n\in\mathbb N_+,m,n\geq d$ and $\left|S(m,n)\right|\equiv r\pmod d.$
+</txt>
+<id>23355749604234</id>
+</problem>
+<problem>
+<src>China TST 2023/11</src>
+<done>0</done>
+<txt>
+Let $n\in\mathbb N_+.$ For $1\leq i,j,k\leq n,a_{ijk}\in\{ -1,1\} .$ Prove that: $\exists x_1,x_2,\cdots ,x_n,y_1,y_2,\cdots ,y_n,z_1,z_2,\cdots ,z_n\in \{-1,1\} ,$ satisfy
+$$\left| \sum\limits_{i=1}^n\sum\limits_{j=1}^n\sum\limits_{k=1}^na_{ijk}x_iy_jz_k\right| >\frac {n^2}3.$$
+</txt>
+<id>65055870407598</id>
+</problem>
+<problem>
+<src>China TST 2023/13</src>
+<done>0</done>
+<txt>
+Does there exists a positive irrational number ${x},$ such that there are at most finite positive integers ${n},$ satisfy that for any integer $1\leq k\leq n,$ $\{kx\}\geq\frac 1{n+1}?$
+</txt>
+<id>3400944067868512059</id>
+</problem>
+<problem>
+<src>China TST 2023/14</src>
+<done>0</done>
+<txt>
+For any nonempty, finite set $B$ and real $x$, define
+
+$$d_B(x) = \min_{b\in B} |x-b|$$
+(1) Given positive integer $m$. Find the smallest real number $\lambda$ (possibly depending on $m$) such that for any positive integer $n$ and any reals $x_1,\cdots,x_n \in [0,1]$, there exists an $m$-element set $B$ of real numbers satisfying$$d_B(x_1)+\cdots+d_B(x_n) \le \lambda n$$
+(2) Given positive integer $m$ and positive real $\epsilon$. Prove that there exists a positive integer $n$ and nonnegative reals $x_1,\cdots,x_n$, satisfying for any $m$-element set $B$ of real numbers, we have
+
+$$d_B(x_1)+\cdots+d_B(x_n) > (1-\epsilon)(x_1+\cdots+x_n)$$
+</txt>
+<id>346260797892858</id>
+</problem>
+<problem>
+<src>China TST 2023/17</src>
+<done>0</done>
+<txt>
+	Whether there are integers $a_1$, $a_2$, $\cdots$, that are different from each other, satisfying:
+(1) For $\forall k\in\mathbb N_+$, $a_{k^2}>0$ and $a_{k^2+k}<0$;
+(2) For $\forall n\in\mathbb N_+$, $\left| a_{n+1}-a_n\right|\leqslant 2023\sqrt n$?
+</txt>
+<id>7741197987988527254</id>
+</problem>
+<problem>
+<src>China TST 2023/20</src>
+<done>0</done>
+<txt>
+	Let $a,b,d$ be integers such that $\left|a\right| \geqslant 2$, $d \geqslant 0$ and $b \geqslant \left( \left|a\right| + 1\right)^{d + 1}$. For a real coefficient polynomial $f$ of degree $d$ and integer $n$, let $r_n$ denote the residue of $\left[ f(n) \cdot a^n \right]$ mod $b$. If $\left \{ r_n \right \}$ is eventually periodic, prove that all the coefficients of $f$ are rational.
+</txt>
+<id>4275949150000368692</id>
+</problem>
+<problem>
+<src>China TST 2023/22</src>
+<done>0</done>
+<txt>
+Find all functions $f:\mathbb {Z}\to\mathbb Z$, satisfy that for any integer ${a}$, ${b}$, ${c}$,
+$$2f(a^2+b^2+c^2)-2f(ab+bc+ca)=f(a-b)^2+f(b-c)^2+f(c-a)^2$$
+</txt>
+<id>777475822939974</id>
+</problem>
+<problem>
+<src>China TST 2023/23</src>
+<done>0</done>
+<txt>
+Given a prime $p$ and a real number $\lambda \in (0,1)$. Let $s$ and $t$ be positive integers such that $s \leqslant t < \frac{\lambda p}{12}$. $S$ and $T$ are sets of $s$ and $t$ consecutive positive integers respectively, which satisfy$$\left| \left\{ (x,y) \in S \times T : kx \equiv y \pmod p \right\}\right| \geqslant 1 + \lambda s.$$Prove that there exists integers $a$ and $b$ that $1 \leqslant a \leqslant \frac{1}{ \lambda}$, $\left| b \right| \leqslant \frac{t}{\lambda s}$ and $ka \equiv b \pmod p$.
+</txt>
+<id>464655624752463</id>
+</problem>
+<problem>
+<src>China TST 2022/2</src>
+<done>0</done>
+<txt>
+Let $p$ be a prime, $A$ is an infinite set of integers. Prove that there is a subset $B$ of $A$ with $2p-2$ elements, such that the arithmetic mean of any pairwise distinct $p$ elements in $B$ does not belong to $A$.
+</txt>
+<id>799244327993888</id>
+</problem>
+<problem>
+<src>China TST 2022/5</src>
+<done>0</done>
+<txt>
+Let $C=\{ z \in \mathbb{C} : |z|=1 \}$ be the unit circle on the complex plane. Let $z_1, z_2, \ldots, z_{240} \in C$ (not necessarily different) be $240$ complex numbers, satisfying the following two conditions:
+(1) For any open arc $\Gamma$ of length $\pi$ on $C$, there are at most $200$ of $j ~(1 \le j \le 240)$ such that $z_j \in \Gamma$.
+(2) For any open arc $\gamma$ of length $\pi/3$ on $C$, there are at most $120$ of $j ~(1 \le j \le 240)$ such that $z_j \in \gamma$.
+
+Find the maximum of $|z_1+z_2+\ldots+z_{240}|$.
+</txt>
+<id>8981474656956</id>
+</problem>
+<problem>
+<src>China TST 2022/10</src>
+<done>0</done>
+<txt>
+Given a positive integer $n$, find all $n$-tuples of real number $(x_1,x_2,\ldots,x_n)$ such that
+\[ f(x_1,x_2,\cdots,x_n)=\sum_{k_1=0}^{2} \sum_{k_2=0}^{2} \cdots \sum_{k_n=0}^{2} \big| k_1x_1+k_2x_2+\cdots+k_nx_n-1 \big| \]attains its minimum.
+</txt>
+<id>7019189714774437758</id>
+</problem>
+<problem>
+<src>China TST 2022/11</src>
+<done>0</done>
+<txt>
+	Given a positive integer $n$, let $D$ is the set of positive divisors of $n$, and let $f: D \to \mathbb{Z}$ be a function. Prove that the following are equivalent:
+
+(a) For any positive divisor $m$ of $n$,
+\[ n ~\Big|~ \sum_{d|m} f(d) \binom{n/d}{m/d}. \](b) For any positive divisor $k$ of $n$,
+\[ k ~\Big|~ \sum_{d|k} f(d). \]
+</txt>
+<id>5270684768551762250</id>
+</problem>
+<problem>
+<src>China TST 2022/14</src>
+<done>0</done>
+<txt>
+Two positive real numbers $\alpha, \beta$ satisfies that for any positive integers $k_1,k_2$, it holds that $\lfloor k_1 \alpha \rfloor \neq \lfloor k_2 \beta \rfloor$, where $\lfloor x \rfloor$ denotes the largest integer less than or equal to $x$. Prove that there exist positive integers $m_1,m_2$ such that $\frac{m_1}{\alpha}+\frac{m_2}{\beta}=1$.
+</txt>
+<id>3713773607632901861</id>
+</problem>
+<problem>
+<src>China TST 2022/16</src>
+<done>0</done>
+<txt>
+Find all positive integer $k$ such that one can find a number of triangles in the Cartesian plane, the centroid of each triangle is a lattice point, the union of these triangles is a square of side length $k$ (the sides of the square are not necessarily parallel to the axis, the vertices of the square are not necessarily lattice points), and the intersection of any two triangles is an empty-set, a common point or a common edge.
+</txt>
+<id>579769332156800</id>
+</problem>
+<problem>
+<src>China TST 2022/17</src>
+<done>0</done>
+<txt>
+Show that there exist constants $c$ and $\alpha > \frac{1}{2}$, such that for any positive integer $n$, there is a subset $A$ of $\{1,2,\ldots,n\}$ with cardinality $|A| \ge c \cdot n^\alpha$, and for any $x,y \in A$ with $x \neq y$, the difference $x-y$ is not a perfect square.
+</txt>
+<id>5887099797146292006</id>
+</problem>
+<problem>
+<src>China TST 2022/22</src>
+<done>0</done>
+<txt>
+Find all positive integers $a,b,c$ and prime $p$ satisfying that
+\[ 2^a p^b=(p+2)^c+1.\]
+</txt>
+<id>291206752155758693</id>
+</problem>
+<problem>
+<src>China TST 2022/23</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer, $x_1,x_2,\ldots,x_{2n}$ be non-negative real numbers with sum $4$. Prove that there exist integer $p$ and $q$, with $0 \le q \le n-1$, such that
+\[ \sum_{i=1}^q x_{p+2i-1} \le 1 \mbox{ and } \sum_{i=q+1}^{n-1} x_{p+2i} \le 1,  \]where the indices are take modulo $2n$.
+
+Note: If $q=0$, then $\sum_{i=1}^q x_{p+2i-1}=0$; if $q=n-1$, then $\sum_{i=q+1}^{n-1} x_{p+2i}=0$.
+</txt>
+<id>6286695814802393070</id>
+</problem>
+<problem>
+<src>China TST 2021/1</src>
+<done>0</done>
+<txt>
+	Given positive integers $m$ and $n$. Let $a_{i,j} ( 1 \le i \le m, 1 \le j \le n)$ be non-negative real numbers, such that
+$$ a_{i,1} \ge a_{i,2} \ge \cdots \ge a_{i,n} \text{ and } a_{1,j} \ge a_{2,j} \ge \cdots \ge a_{m,j} $$holds for all $1 \le i \le m$ and $1 \le j \le n$. Denote
+$$ X_{i,j}=a_{1,j}+\cdots+a_{i-1,j}+a_{i,j}+a_{i,j-1}+\cdots+a_{i,1},$$$$ Y_{i,j}=a_{m,j}+\cdots+a_{i+1,j}+a_{i,j}+a_{i,j+1}+\cdots+a_{i,n}.$$Prove that
+$$ \prod_{i=1}^{m} \prod_{j=1}^{n} X_{i,j} \ge \prod_{i=1}^{m} \prod_{j=1}^{n} Y_{i,j}.$$
+</txt>
+<id>429524065551462</id>
+</problem>
+<problem>
+<src>China TST 2021/4</src>
+<done>0</done>
+<txt>
+	Let $f(x),g(x)$ be two polynomials with integer coefficients. It is known that for infinitely many prime $p$, there exist integer $m_p$ such that
+$$f(a) \equiv g(a+m_p) \pmod p$$holds for all $a \in \mathbb{Z}.$ Prove that there exists a rational number $r$ such that
+$$f(x)=g(x+r).$$
+</txt>
+<id>875593886862181</id>
+</problem>
+<problem>
+<src>China TST 2021/10</src>
+<done>0</done>
+<txt>
+	Find all functions $f: \mathbb{Z}^+\rightarrow \mathbb{Z}^+$ such that for all positive integers $m,n$ with $m\ge n$,$$f(m\varphi(n^3)) = f(m)\cdot \varphi(n^3).$$Here $\varphi(n)$ denotes the number of positive integers coprime to $n$ and not exceeding $n$.
+</txt>
+<id>254876905002494</id>
+</problem>
+<problem>
+<src>China TST 2021/11</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer and $a_1,a_2,\ldots a_{2n+1}$ be positive reals. For $k=1,2,\ldots ,2n+1$, denote $b_k = \max_{0\le m\le n}\left(\frac{1}{2m+1} \sum_{i=k-m}^{k+m} a_i \right)$, where indices are taken modulo $2n+1$. Prove that the number of indices $k$ satisfying $b_k\ge 1$ does not exceed $2\sum_{i=1}^{2n+1} a_i$.
+</txt>
+<id>7225949564896140758</id>
+</problem>
+<problem>
+<src>China TST 2021/13</src>
+<done>0</done>
+<txt>
+Given positive integer $ n \ge 5 $ and a convex polygon $P$, namely $ A_1A_2...A_n $. No diagonals of $P$ are concurrent. Proof that it is possible to choose a point inside every quadrilateral $ A_iA_jA_kA_l (1\le i<j<k<l\le n) $ not on diagonals of $P$, such that the $ \tbinom{n}{4} $ points chosen are distinct, and any segment connecting these points intersect with some diagonal of P.
+</txt>
+<id>529235772639233852</id>
+</problem>
+<problem>
+<src>China TST 2021/14</src>
+<done>0</done>
+<txt>
+Given distinct positive integer $ a_1,a_2,…,a_{2020} $. For $ n \ge 2021 $, $a_n$ is the smallest number different from $a_1,a_2,…,a_{n-1}$ which doesn't divide $a_{n-2020}...a_{n-2}a_{n-1}$. Proof that every number large enough appears in the sequence.
+</txt>
+<id>49176210180812</id>
+</problem>
+<problem>
+<src>China TST 2021/16</src>
+<done>0</done>
+<txt>
+Proof that
+$$ \sum_{m=1}^n5^{\omega (m)} \le \sum_{k=1}^n\lfloor \frac{n}{k} \rfloor \tau (k)^2  \le \sum_{m=1}^n5^{\Omega (m)} .$$
+</txt>
+<id>154968452395640</id>
+</problem>
+<problem>
+<src>China TST 2021/17</src>
+<done>0</done>
+<txt>
+	Determine all $ f:R\rightarrow R $ such that
+$$ f(xf(y)+y^3)=yf(x)+f(y)^3 $$
+</txt>
+<id>93917830892352</id>
+</problem>
+<problem>
+<src>China TST 2021/22</src>
+<done>0</done>
+<txt>
+Suppose $x_1,x_2,...,x_{60}\in [-1,1]$ , find the maximum of
+$$ \sum_{i=1}^{60}x_i^2(x_{i+1}-x_{i-1}),$$where $x_{i+60}=x_i$.
+</txt>
+<id>559872560886502</id>
+</problem>
+<problem>
+<src>China TST 2021/23</src>
+<done>0</done>
+<txt>
+Find the smallest real $\alpha$, such that for any convex polygon $P$ with area $1$, there exist a point $M$ in the plane, such that the area of convex hull of $P\cup Q$ is at most $\alpha$, where $Q$ denotes the image of $P$ under central symmetry with respect to $M$.
+</txt>
+<id>775468023201224</id>
+</problem>
+<problem>
+<src>China TST 2020/1</src>
+<done>0</done>
+<txt>
+Let $\omega$ be a $n$ -th primitive root of unity. Given complex numbers $a_1,a_2,\cdots,a_n$, and $p$ of them are non-zero. Let
+$$b_k=\sum_{i=1}^n a_i \omega^{ki}$$for $k=1,2,\cdots, n$. Prove that if $p>0$, then at least $\tfrac{n}{p}$ numbers in $b_1,b_2,\cdots,b_n$ are non-zero.
+</txt>
+<id>2819796018144402111</id>
+</problem>
+<problem>
+<src>China TST 2020/4</src>
+<done>0</done>
+<txt>
+Show that the following equation has finitely many solutions $(t,A,x,y,z)$ in positive integers
+$$\sqrt{t(1-A^{-2})(1-x^{-2})(1-y^{-2})(1-z^{-2})}=(1+x^{-1})(1+y^{-1})(1+z^{-1})$$
+</txt>
+<id>816180108381670</id>
+</problem>
+<problem>
+<src>China TST 2020/5</src>
+<done>0</done>
+<txt>
+Let $a_1,a_2,\cdots,a_n$ be a permutation of $1,2,\cdots,n$. Among all possible permutations, find the minimum of$$\sum_{i=1}^n \min \{ a_i,2i-1 \}.$$
+</txt>
+<id>7071673173476608586</id>
+</problem>
+<problem>
+<src>China TST 2019/2</src>
+<done>0</done>
+<txt>
+Fix a positive integer $n\geq 3$. Does there exist infinitely many sets $S$ of positive integers $\lbrace a_1,a_2,\ldots, a_n$, $b_1,b_2,\ldots,b_n\rbrace$, such that $\gcd (a_1,a_2,\ldots, a_n$, $b_1,b_2,\ldots,b_n)=1$, $\lbrace a_i\rbrace _{i=1}^n$, $\lbrace b_i\rbrace _{i=1}^n$ are arithmetic progressions, and $\prod_{i=1}^n a_i = \prod_{i=1}^n b_i$?
+</txt>
+<id>892078665065056</id>
+</problem>
+<problem>
+<src>China TST 2019/4</src>
+<done>0</done>
+<txt>
+Call a sequence of positive integers $\{a_n\}$ good if for any distinct positive integers $m,n$, one has
+$$\gcd(m,n) \mid a_m^2 + a_n^2 \text{ and } \gcd(a_m,a_n) \mid m^2 + n^2.$$Call a positive integer $a$ to be $k$-good if there exists a good sequence such that $a_k = a$. Does there exists a $k$ such that there are exactly $2019$ $k$-good positive integers?
+</txt>
+<id>300577925092089</id>
+</problem>
+<problem>
+<src>China TST 2019/5</src>
+<done>0</done>
+<txt>
+Determine all functions $f: \mathbb{Q} \to \mathbb{Q}$ such that
+$$f(2xy + \frac{1}{2}) + f(x-y) = 4f(x)f(y) + \frac{1}{2}$$for all $x,y \in \mathbb{Q}$.
+</txt>
+<id>85738108708521</id>
+</problem>
+<problem>
+<src>China TST 2019/10</src>
+<done>0</done>
+<txt>
+	Does there exist a finite set $A$ of positive integers of at least two elements and an infinite set $B$ of positive integers, such that any two distinct elements in $A+B$ are coprime, and for any coprime positive integers $m,n$, there exists an element $x$ in $A+B$ satisfying $x\equiv n \pmod m$ ?
+
+Here $A+B=\{a+b|a\in A, b\in B\}$.
+</txt>
+<id>6233935434638299155</id>
+</problem>
+<problem>
+<src>China TST 2019/13</src>
+<done>0</done>
+<txt>
+Given complex numbers $x,y,z$, with $|x|^2+|y|^2+|z|^2=1$. Prove that:$$|x^3+y^3+z^3-3xyz| \le 1$$
+</txt>
+<id>3569315369731177689</id>
+</problem>
+<problem>
+<src>China TST 2019/14</src>
+<done>0</done>
+<txt>
+Let $S$ be a set of positive integers, such that $n \in S$ if and only if$$\sum_{d|n,d<n,d \in S} d \le n$$Find all positive integers $n=2^k \cdot p$ where $k$ is a non-negative integer and $p$ is an odd prime, such that$$\sum_{d|n,d<n,d \in S} d = n$$
+</txt>
+<id>5393780000902</id>
+</problem>
+<problem>
+<src>China TST 2019/16</src>
+<done>0</done>
+<txt>
+	Find all functions $f: \mathbb{R}^2 \rightarrow \mathbb{R}$, such that
+1) $f(0,x)$ is non-decreasing ;
+2) for any $x,y \in \mathbb{R}$, $f(x,y)=f(y,x)$ ;
+3) for any $x,y,z \in \mathbb{R}$, $(f(x,y)-f(y,z))(f(y,z)-f(z,x))(f(z,x)-f(x,y))=0$ ;
+4) for any $x,y,a \in \mathbb{R}$, $f(x+a,y+a)=f(x,y)+a$ .
+</txt>
+<id>1202563402771127724</id>
+</problem>
+<problem>
+<src>China TST 2019/22</src>
+<done>0</done>
+<txt>
+	Prove that there exist a subset $A$ of $\{1,2,\cdots,2^n\}$ with $n$ elements, such that for any two different non-empty subset of $A$, the sum of elements of one subset doesn't divide another's.
+</txt>
+<id>4356163030131244205</id>
+</problem>
+<problem>
+<src>China TST 2019/23</src>
+<done>0</done>
+<txt>
+Find all integer $n$ such that the following property holds: for any positive real numbers $a,b,c,x,y,z$, with $max(a,b,c,x,y,z)=a$ , $a+b+c=x+y+z$ and $abc=xyz$, the inequality$$a^n+b^n+c^n \ge x^n+y^n+z^n$$holds.
+</txt>
+<id>998599217742496</id>
+</problem>
+<problem>
+<src>China TST 2018/1</src>
+<done>0</done>
+<txt>
+	Let $p,q$ be positive reals with sum 1. Show that for any $n$-tuple of reals $(y_1,y_2,...,y_n)$, there exists an $n$-tuple of reals $(x_1,x_2,...,x_n)$ satisfying$$p\cdot \max\{x_i,x_{i+1}\} + q\cdot \min\{x_i,x_{i+1}\} = y_i$$for all $i=1,2,...,2017$, where $x_{2018}=x_1$.
+</txt>
+<id>4561021900663360180</id>
+</problem>
+<problem>
+<src>China TST 2018/2</src>
+<done>0</done>
+<txt>
+	A number $n$ is interesting if 2018 divides $d(n)$ (the number of positive divisors of $n$). Determine all positive integers $k$ such that there exists an infinite arithmetic progression with common difference $k$ whose terms are all interesting.
+</txt>
+<id>760097294162073</id>
+</problem>
+<problem>
+<src>China TST 2018/4</src>
+<done>0</done>
+<txt>
+Functions $f,g:\mathbb{Z}\to\mathbb{Z}$ satisfy$$f(g(x)+y)=g(f(y)+x)$$for any integers $x,y$. If $f$ is bounded, prove that $g$ is periodic.
+</txt>
+<id>1146649639092133254</id>
+</problem>
+<problem>
+<src>China TST 2018/5</src>
+<done>0</done>
+<txt>
+Given a positive integer $k$, call $n$ good if among$$\binom{n}{0},\binom{n}{1},\binom{n}{2},...,\binom{n}{n}$$at least $0.99n$ of them are divisible by $k$. Show that exists some positive integer $N$ such that among $1,2,...,N$, there are at least $0.99N$ good numbers.
+</txt>
+<id>420149375714841446</id>
+</problem>
+<problem>
+<src>China TST 2018/8</src>
+<done>0</done>
+<txt>
+An integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition.
+Quote:
+For example, 4 can be partitioned in five distinct ways:
+4
+3 + 1
+2 + 2
+2 + 1 + 1
+1 + 1 + 1 + 1
+The number of partitions of n is given by the partition function $p\left ( n \right )$. So $p\left ( 4 \right ) = 5$ .
+Determine all the positive integers so that $p\left ( n \right )+p\left ( n+4 \right )=p\left ( n+2 \right )+p\left ( n+3 \right )$.
+</txt>
+<id>308477537052879</id>
+</problem>
+<problem>
+<src>China TST 2018/10</src>
+<done>0</done>
+<txt>
+	Let $k, M$ be positive integers such that $k-1$ is not squarefree. Prove that there exist a positive real $\alpha$, such that $\lfloor \alpha\cdot k^n \rfloor$ and $M$ are coprime for any positive integer $n$.
+</txt>
+<id>256994274302985</id>
+</problem>
+<problem>
+<src>China TST 2018/11</src>
+<done>0</done>
+<txt>
+Given positive integers $n, k$ such that $n\ge 4k$, find the minimal value $\lambda=\lambda(n,k)$ such that for any positive reals $a_1,a_2,\ldots,a_n$, we have
+\[ \sum\limits_{i=1}^{n} {\frac{{a}_{i}}{\sqrt{{a}_{i}^{2}+{a}_{{i}+{1}}^{2}+{\cdots}{{+}}{a}_{{i}{+}{k}}^{2}}}}
+\le \lambda\]Where $a_{n+i}=a_i,i=1,2,\ldots,k$
+</txt>
+<id>5607486140374329647</id>
+</problem>
+<problem>
+<src>China TST 2018/19</src>
+<done>0</done>
+<txt>
+Define the polymonial sequence $\left \{ f_n\left ( x \right ) \right \}_{n\ge 1}$ with $f_1\left ( x \right )=1$,$$f_{2n}\left ( x \right )=xf_n\left ( x \right ), \; f_{2n+1}\left ( x \right ) = f_n\left ( x \right )+ f_{n+1} \left ( x \right ), \; n\ge 1.$$Look for all the rational number $a$ which is a root of certain $f_n\left ( x \right ).$
+</txt>
+<id>5041525965152542097</id>
+</problem>
+<problem>
+<src>China TST 2018/22</src>
+<done>0</done>
+<txt>
+Let $p$ be a prime and $k$ be a positive integer. Set $S$ contains all positive integers $a$ satisfying $1\le a \le p-1$, and there exists positive integer $x$ such that $x^k\equiv a \pmod p$.
+Suppose that $3\le |S| \le p-2$. Prove that the elements of $S$, when arranged in increasing order, does not form an arithmetic progression.
+</txt>
+<id>3869080664691172092</id>
+</problem>
+<problem>
+<src>China TST 2018/23</src>
+<done>0</done>
+<txt>
+Suppose the real number $\lambda \in \left( 0,1\right),$ and let $n$ be a positive integer. Prove that the modulus of all the roots of the polynomial$$f\left ( x \right )=\sum_{k=0}^{n}\binom{n}{k}\lambda^{k\left ( n-k \right )}x^{k}$$are $1.$
+</txt>
+<id>173308636944231809</id>
+</problem>
+<problem>
+<src>Kasakhstan 2024/9.1</src>
+<done>0</done>
+<txt>
+	Positive integers $a,b,c$ satisfy the equations $a^2=b^3+ab$ and $c^3=a+b+c$. Prove that $a=bc$.
+</txt>
+<id>3668523407320812071</id>
+</problem>
+<problem>
+<src>Kasakhstan 2024/9.6</src>
+<done>0</done>
+<txt>
+An integer $m\ge 3$ and an infinite sequence of positive integers $(a_n)_{n\ge 1}$ satisfies the equation
+\[a_{n+2} = 2\sqrt[m]{a_{n+1}^{m-1} + a_n^{m-1}} - a_{n+1}. \]for all $n\ge 1$. Prove that $a_1 < 2^m$.
+</txt>
+<id>70860160786125918</id>
+</problem>
+<problem>
+<src>Kasakhstan 2024/11.3</src>
+<done>0</done>
+<txt>
+Find all functions $f: \mathbb R^+ \to \mathbb R^+$ such that\[ f \left( x+\frac{f(xy)}{x} \right) = f(xy) f \left( y + \frac 1y \right) \]holds for all $x,y\in\mathbb R^+.$
+</txt>
+<id>138633237620452</id>
+</problem>
+<problem>
+<src>Kasakhstan 2023/9.2</src>
+<done>0</done>
+<txt>
+	$a,b,c$ are positive real numbers such that $a+b+c\ge 3$ and $a^2+b^2+c^2=2abc+1$. Prove that$$a+b+c\le 2\sqrt{abc}+1$$
+</txt>
+<id>171473649474951</id>
+</problem>
+<problem>
+<src>Kasakhstan 2023/9.4</src>
+<done>0</done>
+<txt>
+Given $x,y>0$ such that $x^2y^2+2x^3y=1$. Find the minimum value of sum $x+y$
+</txt>
+<id>977220304994418</id>
+</problem>
+<problem>
+<src>Kasakhstan 2023/11.2</src>
+<done>0</done>
+<txt>
+Let $n>100$ be an integer. The numbers $1,2 \ldots, 4n$ are split into $n$ groups of $4$. Prove that there are at least $\frac{(n-6)^2}{2}$ quadruples $(a, b, c, d)$ such that they are all in different groups, $a<b<c<d$ and $c-b \leq |ad-bc|\leq d-a$.
+</txt>
+<id>1082489055248212696</id>
+</problem>
+<problem>
+<src>Kasakhstan 2023/11.3</src>
+<done>0</done>
+<txt>
+$a,b,c$ are positive real numbers such that $\max\{\frac{a(b+c)}{a^2+bc},\frac{b(c+a)}{b^2+ca},\frac{c(a+b)}{c^2+ab}\}\le \frac{5}{2}$. Prove inequality$$\frac{a(b+c)}{a^2+bc}+\frac{b(c+a)}{b^2+ca}+\frac{c(a+b)}{c^2+ab}\le 3$$
+</txt>
+<id>5513377420554471733</id>
+</problem>
+<problem>
+<src>Kasakhstan 2022/9.5</src>
+<done>0</done>
+<txt>
+For positive reals $a,b,c$ with $\sqrt{a}+\sqrt{b}+\sqrt{c}\ge 3$ prove that
+$$\frac{a^3}{a^2+b}+\frac{b^3}{b^2+c}+\frac{c^3}{c^2+a}\ge \frac{3}{2}$$
+</txt>
+<id>697661822421145</id>
+</problem>
+<problem>
+<src>Kasakhstan 2022/10.3</src>
+<done>0</done>
+<txt>
+Given $m\in\mathbb{N}$. Find all functions $f:\mathbb{R^{+}}\rightarrow\mathbb{R^{+}}$ such that$$f(f(x)+y)-f(x)=\left( \frac{f(y)}{y}-1\right)x+f^m(y)$$holds for all $x,y\in\mathbb{R^{+}}.$
+
+($f^m(x) =$ $f$ applies $m$ times.)
+</txt>
+<id>907873953259310</id>
+</problem>
+<problem>
+<src>Kasakhstan 2022/10.4</src>
+<done>0</done>
+<txt>
+	Let $P(x)$ be a polynomial with positive integer coefficients such that $deg(P)=699$. Prove that if $P(1) \le 2022$, then there exist some consecutive coefficients such that their sum is $22$, $55$, or $77$.
+</txt>
+<id>8447379793908140507</id>
+</problem>
+<problem>
+<src>Kasakhstan 2021/9.1</src>
+<done>0</done>
+<txt>
+Given $a,b,c>0$ such that
+$$a+b+c+\frac{1}{abc}=\frac{19}{2}$$
+What is the greatest value for $a$?
+</txt>
+<id>2496921517591669744</id>
+</problem>
+<problem>
+<src>Kasakhstan 2021/10.3</src>
+<done>0</done>
+<txt>
+	Let $(a_n)$ and $(b_n)$ be sequences of real numbers, such that $a_1 = b_1 = 1$, $a_{n+1} = a_n + \sqrt{a_n}$, $b_{n+1} = b_n + \sqrt[3]{b_n}$ for all positive integers $n$. Prove that there is a positive integer $n$ for which the inequality $a_n \leq b_k < a_{n+1}$ holds for exactly 2021 values of $k$.
+</txt>
+<id>4092499142055802609</id>
+</problem>
+<problem>
+<src>Kasakhstan 2021/10.5</src>
+<done>0</done>
+<txt>
+	Find all functions $f : \mathbb{R^{+}}\to \mathbb{R^{+}}$ such that$$f(x)^2=f(xy)+f(x+f(y))-1$$for all $x, y\in \mathbb{R^{+}}$
+</txt>
+<id>226941582419522</id>
+</problem>
+<problem>
+<src>Kasakhstan 2021/11.5</src>
+<done>0</done>
+<txt>
+	Let $a$ be a positive integer. Prove that for any pair $(x,y)$ of integer solutions of equation$$x(y^2-2x^2)+x+y+a=0$$we have:$$|x| \leqslant a+\sqrt{2a^2+2}$$
+</txt>
+<id>8188286074852188554</id>
+</problem>
+<problem>
+<src>Kasakhstan 2020/9.2</src>
+<done>0</done>
+<txt>
+Let $x_1, x_2, ... , x_n$ be a real numbers such that
+1) $1 \le x_1, x_2, ... , x_n \le 160$
+2) $x^{2}_{i} + x^{2}_{j} + x^{2}_{k} \ge 2(x_ix_j + x_jx_k + x_kx_i)$ for all $1\le i < j < k \le n$
+Find the largest possible $n$.
+</txt>
+<id>6215930236982523925</id>
+</problem>
+<problem>
+<src>Kasakhstan 2020/11.2</src>
+<done>0</done>
+<txt>
+Find all functions $ f: \mathbb {R} ^ + \to \mathbb {R} ^ + $ such that for any $ x, y \in \mathbb {R} ^ + $ the following equality holds:\[f (x) f (y) = f \left (\frac {xy} {x f (x) + y} \right). \]$ \mathbb {R} ^ + $ denotes the set of positive real numbers.
+</txt>
+<id>150193222906212</id>
+</problem>
+<problem>
+<src>Kasakhstan 2019/1</src>
+<done>0</done>
+<txt>
+	Prove for any positives $a,b,c$ the inequality$$
+\sqrt[3]{\dfrac{a}{b}}+\sqrt[5]{\dfrac{b}{c}}+\sqrt[7]{\dfrac{c}{a}}>\dfrac{5}{2}$$
+</txt>
+<id>6773668131533653584</id>
+</problem>
+<problem>
+<src>Kasakhstan 2018/2</src>
+<done>0</done>
+<txt>
+The natural number $m\geq 2$ is given.Sequence of natural numbers $(b_0,b_1,\ldots,b_m)$ is called concave if $b_k+b_{k-2}\le2b_{k-1}$ for all $2\le k\le m.$ Prove that there exist not greater than $2^m$ concave sequences starting with $b_0 =1$ or $b_0 =2$
+</txt>
+<id>6823963435265230376</id>
+</problem>
+<problem>
+<src>Kasakhstan 2018/3</src>
+<done>0</done>
+<txt>
+Is there exist a function $f:\mathbb {N}\to \mathbb {N}$ with for $\forall m,n \in \mathbb {N}$$$f\left(mf\left(n\right)\right)=f\left(m\right)f\left(m+n\right)+n ?$$
+</txt>
+<id>396278288072902</id>
+</problem>
+<problem>
+<src>Kasakhstan 2018/4</src>
+<done>0</done>
+<txt>
+	Prove that for all reas $a,b,c,d\in(0,1)$ we have$$\left(ab-cd\right)\left(ac+bd\right)\left(ad-bc\right)+\min{\left(a,b,c,d\right)} < 1.$$
+</txt>
+<id>37251973283520</id>
+</problem>
 </problemas>

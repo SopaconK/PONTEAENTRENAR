@@ -16,7 +16,9 @@ mt19937_64 rnd(chrono::steady_clock::now().time_since_epoch().count());
 vector<Problem> lista;
 map<lli,bool> mp; 
 
-
+bool comp(Problem a, Problem b){
+    return a.id<b.id;
+}
 void Insertar(){
      ifstream ArchivoE("insertproblem.xml");
     string line;
@@ -136,8 +138,22 @@ void GenerarListas(){
         }
         } while(id!=0);
     }
+
     if(type!=4){
-        shuffle(list.begin(), list.end(), rnd);
+        cout<<"Orden? (0 es random 1 es decreciente)"<<endl;
+        lli ord;
+        cin>>ord;
+        if(ord==0){
+            shuffle(list.begin(), list.end(), rnd);
+        }
+        else{
+            sort(list.begin(), list.end(), comp);
+        }
+        ofstream ArchivoS ("list.txt");
+        for(Problem p: list){
+            ArchivoS<<p.id<<endl;
+        }
+        ArchivoS.close();
     }
     lli cant;
     if(type!=4){

@@ -1,8 +1,7 @@
 <problem>
-<src>IMOSL 2015/N5</src>
+<src>Kasakhstan 2018/4</src>
 <done>0</done>
 <txt> 	
-Find all positive integers $(a,b,c)$ such that
-$$ab-c,\quad bc-a,\quad ca-b$$are all powers of $2$.
+	Prove that for all reas $a,b,c,d\in(0,1)$ we have$$\left(ab-cd\right)\left(ac+bd\right)\left(ad-bc\right)+\min{\left(a,b,c,d\right)} < 1.$$
 </txt>
 </problem>
