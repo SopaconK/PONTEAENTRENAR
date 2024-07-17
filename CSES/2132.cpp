@@ -16,7 +16,7 @@ void solve(){
     
     for(lli i=1; i<n; ++i){
         cin>>x;
-        x-=i;
+        
         lli val=pq.top();
         pq.push(x);
         pq.push(x);
