@@ -3,66 +3,79 @@
     #define pb push_back
     using lli=long long int;
     #define deb(x) cout<<#x<<": "<<x<<endl;
-    #define endl '\n'
-    const lli INF=1e18;
-    vector<vector<lli>> dp;
-    void dfs(lli x, vector<vector<pair<lli,lli>>> &sons){
+   // #define endl '\n'
+  
+
+    void dfs(lli x, lli d, vector<vector<pair<lli,lli>>> &sons, priority_queue<lli> &pq){
+       // deb(x);
         for(auto y: sons[x]){
-            dfs(y.first, sons);    
-        }
-        if(sons[x].size()==0){
-            dp[x][0]=0;
-            return;
-        }
-        for(lli i=0; i<=300; ++i){
-            dp[x][i]=0;
-            for(auto y: sons[x]){
-                lli aux=INF;
-                for(lli j=0; j<=i; ++j){
-                    aux=min(aux, abs(y.second-j)+dp[y.first][i-j]);
-                }
-                dp[x][i]+=aux;
+      //      deb(y.first);
+            priority_queue<lli> aux;
+            dfs(y.first,y.second,sons, aux);
+            if(aux.size() >pq.size()){
+                swap(aux, pq);
             }
-       //     deb(x);
-         //   deb(i);
+            
+            while(!aux.empty()){
+                pq.push(aux.top());
+                aux.pop();
+            }
+          
         }
+        if(pq.empty()){
+            pq.push(0);
+            pq.push(0);
+//            deb(pq.size());
+        }
+    
+            for(lli i=0; i<((lli) sons[x].size())-1; ++i){
+            //    deb(i);
+                pq.pop();
+            }
+            lli a=pq.top();
+            pq.pop();
+            lli b=pq.top();
+            pq.pop();
+  //          deb(a);
+    //        deb(b);
+            a+=d;
+            b+=d;
+            pq.push(a);
+            pq.push(b);
+
+        
     }
     void solve(){
-        lli n,m;
-        cin>>n>>m;
-        if(n==1){
-            vector<lli> v(m);
-            for(lli i=0; i<m; ++i){
-                lli p, c;
-                cin>>p>>c;
-                v[i]=c;
-            }
-            lli ans=INF;
-            for(lli i=0; i<m; ++i){
-                lli aux=0;
-                for(lli j=0; j<m; ++j){
-                    aux+=abs(v[i]-v[j]);
-                }
-                ans=min(ans, aux);
-            }
-            cout<<ans<<endl;
+       lli n,m;
+       cin>>n>>m;
+       vector<vector<pair<lli,lli>>> sons (n+m+1);
+       lli sum=0;
+       for(lli i=2; i<=n+m; ++i){
+        lli p, c;
+        cin>>p>>c;
+        sum+=c;
+        sons[p].pb({i,c});
+       }
+       priority_queue<lli> ans;
+       dfs(1,0,sons,ans);
+       lli val=sum;
+        lli pend=1-ans.size();
+        lli ant=0;
+        stack<lli> v;
+        while(!ans.empty()){
+            v.push(ans.top());
+            ans.pop();
         }
-        else{
-            dp.clear();
-            dp.resize(n+m+1,vector<lli> (301,INF));
-            vector<vector<pair<lli,lli>>> sons (n+m+1);
-            for(lli i=2; i<=n+m; ++i){
-                lli p, c;
-                cin>>p>>c;
-                sons[p].pb({i, c});
-            }
-            dfs(1, sons);
-            lli ans=INF;
-            for(lli x: dp[1]){
-                ans=min(ans, x);
-            }
-            cout<<ans<<endl;
+        while(!v.empty()){
+            sum+=pend*(v.top()-ant);
+            val=min(val, sum);
+            pend++;
+            ant=v.top();
+            v.pop();
         }
+        cout<<val<<endl;
+
+
     }
 
 
