@@ -151,7 +151,7 @@ void GenerarListas(){
         }
         ofstream ArchivoS ("list.txt");
         for(Problem p: list){
-            ArchivoS<<p.id<<endl;
+            ArchivoS<<"'"<<p.id<<endl;
         }
         ArchivoS.close();
     }
