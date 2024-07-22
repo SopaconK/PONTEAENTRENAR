@@ -5,111 +5,92 @@ using namespace std;
 using lli=long long int;
 using ld=long double;
 
-vector<vector<lli>> dp;
-vector<vector<lli>> dp1;
-vector<vector<lli>> dp2;
-vector<lli> pajaro;
+vector<lli> paj;
 vector<vector<lli>> adj;
 vector<vector<lli>> sons;
 vector<lli> par;
-lli v; 
-lli ans=0;
 
 void dfs(lli x, lli p){
-    deb(x);
-    deb(p);
     for(lli y: adj[x]){
         if(y==p) continue;
-        dfs(y,x);
-        par[y]=x;
         sons[x].pb(y);
-
+        par[y]=x;
+        dfs(y,x);
     }
 }
 
+vector<vector<lli>> dp1; // abajo usando migaja
+vector<vector<lli>> dp2; //abajo no usando
+vector<vector<lli>> dp3; // abajo usando migaja
+vector<vector<lli>> dp4; //abajo no usando
+lli v;
+lli ans;
 void echaleganas(lli x){
-    
-    for(lli y: sons[x]){
-        echaleganas(y);
-    
-    }
     lli sum=0;
-
-    //Le echo pan
-
     for(lli y: sons[x]){
-        sum+=pajaro[y];
-        for(lli i=v; i>=0; --i){
-            for(lli j=i; j>=0; --j){
-                dp1[x][i]=max(dp1[x][i], dp1[x][j]+dp[y][i-j]-pajaro[y]);
-            }
+        sum+=paj[y];
+        echaleganas(y);
+    }
+    if(x!=0) sum+=paj[par[x]];
+    dp1[x][1]=sum;
+    dp3[x][1]=sum;
+   // ans=max(ans, sum);
+    for(lli y: sons[x]){
+         
+        for(lli i=1; i<=v; ++i){
+            ans=max(ans, dp1[x][i]+dp3[y][v-i]-paj[y]);
+            ans=max(ans, dp1[x][i]+dp4[y][v-i]-paj[y]);
+            ans=max(ans, dp2[x][i]+dp3[y][v-i]);
+            ans=max(ans, dp2[x][i]+dp4[y][v-i]);
+            ans=max(ans, dp3[x][i]+dp1[y][v-i]-paj[x]);
+            ans=max(ans, dp3[x][i]+dp2[y][v-i]);
+            ans=max(ans, dp4[x][i]+dp1[y][v-i]-paj[x]);
+            ans=max(ans, dp4[x][i]+dp2[y][v-i]);
         }
-        
+     //   deb(x);
+       // deb(y);
+        //deb(ans);
+        for(lli i=1; i<=v; ++i){
+            dp1[x][i]=max(dp1[x][i], dp1[y][i-1]+sum-paj[x]);
+            dp1[x][i]=max(dp1[x][i], dp2[y][i-1]+sum);
 
-    }
-    if(par[x]>=0) sum+=pajaro[par[x]];
-    for(lli i=1; i<=v; ++i){
-        dp1[x][i]=dp1[x][i-1];
-    }
-    for(lli i=1; i<=v; ++i){
-        dp1[x][i]+=sum;
-    }
-    ans=max(ans, dp1[x][v]);
+            dp2[x][i]=max(dp2[x][i], dp1[y][i]-paj[x]);
+            dp2[x][i]=max(dp2[x][i], dp2[y][i]);
 
-    //No le hecho pan
+            dp3[x][i]=max(dp3[x][i], dp3[y][i-1]+sum-paj[y]);
+            dp3[x][i]=max(dp3[x][i], dp4[y][i-1]+sum-paj[y]);
 
-     for(lli y: sons[x]){
-       // sum+=pajaro[y];
-        for(lli i=v; i>=0; --i){
-            for(lli j=v-1; j>=0; --j){
-                dp2[x][i]=max(dp2[x][i], dp2[x][j]+dp[y][i-j]);
-            }
+            dp4[x][i]=max(dp4[x][i], dp3[y][i]);
+            dp4[x][i]=max(dp4[x][i], dp4[y][i]);
         }
-    }
-    ans=max(ans, dp2[x][v]); 
-    for(lli i=0; i<=v; ++i){
-        dp1[x][i]=0;
-        dp2[x][i]=0;
-    }    
-     for(lli y: sons[x]){
-      //  sum+=pajaro[y];
-        for(lli i=v; i>0; --i){
-            dp1[x][i]=max(dp1[x][i],dp[y][i-1]-pajaro[y]);
+     /*   for(lli i=0; i<=v; ++i){
+            cout<<dp1[x][i]<<" ";
         }
-    }
-
-    for(lli i=1; i<=v; ++i){
-        dp1[x][i]+=sum;
-    }
-      for(lli y: sons[x]){
-       // sum+=pajaro[y];
-        for(lli i=v; i>=0; --i){
-                dp2[x][i]=max(dp2[x][i], dp[y][i]);
+        cout<<endl;
+        for(lli i=0; i<=v; ++i){
+            cout<<dp2[x][i]<<" ";
         }
-    }
-    deb("_____________________-");
-    deb(x);
-    for(lli i=0; i<=v; ++i){
-    
-        dp[x][i]=max(dp1[x][i], dp2[x][i]);
-        
-        deb(dp1[x][i]);
-        deb(dp2[x][i]);
-        deb(dp[x][i]);
+        cout<<endl;
+        for(lli i=0; i<=v; ++i){
+            cout<<dp3[x][i]<<" ";
+        }
+        cout<<endl;
+        for(lli i=0; i<=v; ++i){
+            cout<<dp4[x][i]<<" ";
+        }
+        cout<<endl;*/
     }
 
 }
+
 
 void solve(){
     lli n;
     cin>>n>>v;
-
-    dp1.resize(n, vector<lli> (v+1));
-    dp2.resize(n, vector<lli> (v+1));
-    dp.resize(n, vector<lli> (v+1));
-    pajaro.resize(n);
+    ans=0;
+    paj.resize(n);
     for(lli i=0; i<n; ++i){
-        cin>>pajaro[i];
+        cin>>paj[i];
     }
     adj.resize(n);
     sons.resize(n);
@@ -118,16 +99,17 @@ void solve(){
         lli a,b;
         cin>>a>>b;
         a--;b--;
-      
         adj[a].pb(b);
         adj[b].pb(a);
     }
+
     dfs(0,-1);
+    dp1.resize(n, vector<lli> (v+1,0));
+    dp2.resize(n, vector<lli> (v+1,0));
+    dp3.resize(n, vector<lli> (v+1,0));
+    dp4.resize(n, vector<lli> (v+1,0));
     echaleganas(0);
-    ans=max(ans, dp[0][v]);
     cout<<ans<<endl;
-
-
 }
 
 int main(){
