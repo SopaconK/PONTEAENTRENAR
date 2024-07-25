@@ -44,7 +44,7 @@
         for(lli i=init+1; i<n; ++i){
             if(v2[i]<ant){
                 while(v2[i]+1000<ant){
-                    v2[i]+=1000;
+                       v2[i]+=1000;
                     ans+=1000;
                 }
               
