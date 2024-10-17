@@ -1,0 +1,120 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{ amssymb }
+\usepackage[dvipsnames]{xcolor}
+\definecolor{red1}{RGB}{255, 153, 153}
+\definecolor{green1}{RGB}{204, 255, 204}
+\definecolor{blue1}{RGB}{204, 255, 255}
+\definecolor{yellow1}{RGB}{255, 247, 160}
+
+\definecolor{red2}{RGB}{255, 102, 102}
+\definecolor{green2}{RGB}{108, 255, 108}
+\definecolor{blue2}{RGB}{94, 204, 255}
+\definecolor{yellow2}{RGB}{255, 250, 104}
+
+\definecolor{red2.5}{RGB}{255,76,76}
+\definecolor{green2.5}{RGB}{54, 247, 54}
+\definecolor{blue2.5}{RGB}{51, 189, 255}
+\definecolor{yellow2.5}{RGB}{255, 242, 52}
+
+
+\definecolor{red3}{RGB}{255, 51, 51}
+\definecolor{green3}{RGB}{0, 240, 0}
+\definecolor{blue3}{RGB}{9, 175, 255}
+\definecolor{yellow3}{RGB}{255, 234, 0}
+
+\definecolor{red3.5}{RGB}{229, 25, 25}
+\definecolor{green3.5}{RGB}{0, 194, 0}
+\definecolor{blue3.5}{RGB}{4, 143, 209}
+\definecolor{yellow3.5}{RGB}{255,220,0}
+
+\definecolor{red4}{RGB}{204, 0, 0}
+\definecolor{green4}{RGB}{0, 149, 0}
+\definecolor{blue4}{RGB}{0, 111, 164}
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+
+\title {Bitacora}
+\subtitle{Oro IMO 2025}
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Problems}
+
+\subsection{October}
+    \begin{problem} [No primitive roots mod $2^n$ ]
+            Show that there are no primitive roots modulo $2^n$ for $n \ge 3$.
+            That is, show there is no integer $g$ such that
+            $g$, $g^2$, $g^3$, \dots covers every odd residue modulo $2^n$.
+    \end{problem}
+    \begin{problem} [Japan 1996/2]
+	  Let $m$ and $n$ be odd positive integers with $\gcd(m,n)=1$.
+  Evaluate \[ \gcd(5^m+7^m, 5^n+7^n). \]
+    \end{problem}
+\begin{problem} [OMM 2020/6] 
+Sea $n\geq 2$ un número entero. Sean $x_1,x_2,\ldots, x_n$ números reales distintos de 0 que satisfacen la ecuación 
+$$\left(x_1+\frac{1}{x_2}\right)\left(x_2+\frac{1}{x_3}\right)\cdots \left(x_n+\frac{1}{x_1}\right)=\left(x_1^2+\frac{1}{x_2^2}\right)\left(x_2^2+\frac{1}{x_3^2}\right)\cdots \left(x_n^2+\frac{1}{x_1^2}\right)$$
+\end{problem}
+	\begin{problem} [OMM 2007/6]
+
+    Sea $ABC$ un triángulo tal que $AB > AC > BC$. Sea $D$ un punto sobre el lado $AB$ de tal
+manera que $CD = BC$, y sea $M$ el punto medio del lado $AC$. Muestra que $BD = AC$ si
+y sólo si $\angle BAC = 2\angle ABM$ .
+    \end{problem}
+	\begin{problem} [IMO 1968/1]
+	Find all triangles whose side lengths are consecutive integers, and one of whose angles is twice another.
+	\end{problem}
+\section{Solutions}
+    \subsection{October}
+        \subsubsection{No primitive roots mod $2^n$}
+  
+        \begin{mdframed}[style=mdpurplebox, frametitle={No primitive roots mod $2^n$}]
+          Show that there are no primitive roots modulo $2^n$ for $n \ge 3$.
+          That is, show there is no integer $g$ such that
+          $g$, $g^2$, $g^3$, \dots covers every odd residue modulo $2^n$.
+        \end{mdframed}
+        
+        \begin{soln}
+        We have that $g^{2^{n-1}} \equiv 1 \pmod{2^n}$ because $\varphi \left( 2^{n} \right)=2^{n-1}$ then 
+        $$g^{2^{n-2}} \equiv -1 \pmod{2^n}$$
+        because we have $2^{n-1}$ different odd residues, and if $g^{2^{n-2}}$ were 1, we would have a cicle of size $2^{n-2}$ and that's a contradiction. \\
+        Then for $n\ge 3$ we have $2^{n-2}$ is even and $g^{2^{n-2}}$ is a square so $-1$ is a quadratic residue mod $2^n$, so it's a quadratic residue mod $8$, but that's false. \\
+        Then $g$ doesn't exist.  
+        \end{soln}
+	
+\newpage
+\subsubsection{Japan 1996/2}
+\begin{mdframed}[style=mdpurplebox, frametitle={Japan 1996/2}]
+  Let $m$ and $n$ be odd positive integers with $\gcd(m,n)=1$.
+  Evaluate \[ \gcd(5^m+7^m, 5^n+7^n). \]
+\end{mdframed}
+
+\begin{soln}
+WLOG $m>n$  (If $m=n=1$ then the value is 12) \\
+Let $d=\gcd(5^m+7^m, 5^n+7^n).$ then $\left( \frac 5 7 \right)^{m} \equiv \left( \frac 5 7 \right )^{n}  \equiv -1 \pmod{d}$. \\
+By Bezout we have $x,y$ integers such that $mx+ny = 1$ and we have 
+\[  \left( \frac 5 7 \right) \equiv\left( \frac 5 7 \right)^{mx} \cdot \left( \frac 5 7 \right)^{ny} \equiv \left( -1 \right)^{x+y} \pmod{d} \]
+
+If $x+y$ is even we have that $x,y$ have the same parity and $mx, ny$ also have the same parity then $mx+ny$ is even but $mx+ny$ is 1 so this is impossible. \\
+Then  
+\[ \left( \frac 5 7 \right)\equiv -1  \pmod d \]
+And $ 5 \equiv -7 \pmod d$ then $d \mid 12$.  And we're going to prove that $d=12$. \\
+First, $4 \mid d$ because 
+$$5^m+7^m \equiv 1^m + (-1)^m \equiv 1-1 \equiv 0 \pmod 4$$
+and 
+$$5^m+7^m \equiv (-1)^m+1^m \equiv -1+1 \equiv 0 \pmod 3$$
+then $12 \mid 5^m+7^m$ and it's analogously for $n$, then $12 \mid d \mid 12$ and $d=12$. 
+\end{soln}
+\end{document}
