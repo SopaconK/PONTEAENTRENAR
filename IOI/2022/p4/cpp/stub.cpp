@@ -2,7 +2,8 @@
 
 #include <cassert>
 #include <cstdio>
-
+#include<iostream>
+using namespace std;
 #include <vector>
 
 int main() {
@@ -16,6 +17,7 @@ int main() {
     assert(1 == scanf("%d", &A[j]));
   }
   init(N, M, P, A);
+ // cout<<"xd"<<endl;
 
   for (int i = 0; i < Q; ++i) {
     int L, R;

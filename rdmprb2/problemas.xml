@@ -1,0 +1,426 @@
+<problemas>
+
+<problem>
+<src>OTIS EXCERPTS 3.3 USAJMO 2015/4</src>
+<done>0</done>
+<txt>
+Find all functions $f:\mathbb{Q}\rightarrow\mathbb{Q}$ such that\[f(x)+f(t)=f(y)+f(z)\]for all rational numbers $x<y<z<t$ that form an arithmetic progression. ($\mathbb{Q}$ is the set of all rational numbers.)
+</txt>
+<id>581060937990695</id>
+</problem>
+<problem>
+<src>Leer/Aprender Cauchy</src>
+<done>0</done>
+<txt>
+Leer/Aprender Cauchy
+</txt>
+<id>910827634913604</id>
+</problem>
+<problem>
+<src>OTIS Funcionales Indian Postal Set 2016</src>
+<done>0</done>
+<txt>
+  Determine all functions $f \colon \RR \to \RR$ satisfying
+  \[ f\left( xf(y)-yf(x) \right) = f(xy)-xy \]
+  for all real numbers $x$ and $y$.
+
+</txt>
+<id>8188839550633479933</id>
+</problem>
+<problem>
+<src>OTIS Russian Combo P8</src>
+<done>0</done>
+<txt>
+   Each point of a three-dimensional space is colored
+  with one of two colors such that
+  whenever an isosceles triangle $ABC$ with $AB = AC$
+  has vertices of the same color $c$ it follows that
+  the midpoint of $BC$ also is colored with $c$.
+  Prove that there exists a perpendicular square prism
+  with all vertices of equal color.
+</txt>
+<id>385905009076936</id>
+</problem>
+<problem>
+<src>OTIS Russian Combo Russia 2014/9.1</src>
+<done>0</done>
+<txt>
+  Each lattice point of $\ZZ^2$ is colored with one of three colors,
+  with every color used at least once.
+  Show that one can find a right triangle with pairwise distinct colored vertices.
+</txt>
+<id>748203053384284</id>
+</problem>
+<problem>
+<src>OTIS Russian Combo P10</src>
+<done>0</done>
+<txt>
+  You're given an $n \times n$ matrix of real numbers.
+  In an operation, you may negate the entries of any row or column.
+  Prove that in a finite number of operations,
+  you can ensure every row and every column of the matrix has nonnegative sum.
+</txt>
+<id>243959688676281</id>
+</problem>
+<problem>
+<src>USAMO 2016/3</src>
+<done>0</done>
+<txt>
+  (Walkthrough OTIS)
+  Let $ABC$ be an acute triangle
+  and let $I_B$, $I_C$, and $O$ denote its
+  $B$-excenter, $C$-excenter, and circumcenter, respectively.
+  Points $E$ and $Y$ are selected on $\ol{AC}$ such that
+  $\angle ABY = \angle CBY$ and $\ol{BE} \perp \ol{AC}$.
+  Similarly, points $F$ and $Z$ are selected on $\ol{AB}$ such that
+  $\angle ACZ = \angle BCZ$ and $\ol{CF} \perp \ol{AB}$.
+
+  Lines $I_B F$ and $I_C E$ meet at $P$.
+  Prove that $\ol{PO}$ and $\ol{YZ}$ are perpendicular.
+</txt>
+<id>587686856204677</id>
+</problem>
+<problem>
+<src>USA TST 2015/1</src>
+<done>0</done>
+<txt>
+  (Walkthrough OTIS)
+  Let $ABC$ be a scalene triangle with incenter $I$ whose incircle is
+  tangent to $\ol{BC}$, $\ol{CA}$, $\ol{AB}$ at $D$, $E$, $F$,
+  respectively.  Denote by $M$ the midpoint of $\ol{BC}$ and
+  let $P$ be a point in the interior of $\triangle ABC$
+  so that $MD = MP$ and $\angle PAB = \angle PAC$.
+  Let $Q$ be a point on the incircle such that $\angle AQD = 90^{\circ}$.
+  Prove that either $\angle PQE = 90^{\circ}$ or $\angle PQF = 90^{\circ}$.
+</txt>
+<id>6802179944303550656</id>
+</problem>
+<problem>
+<src>Cap4 EGMO</src>
+<done>1</done>
+<txt>
+Cap 4 EGMO   
+</txt>
+<id>294964486479434</id>
+</problem>
+<problem>
+<src>OTIS Orders Romania TST 1996</src>
+<done>0</done>
+<txt>
+Find all primes $ p,q $ such that $ \alpha^{3pq} -\alpha \equiv 0 \pmod {3pq} $ for all integers $ \alpha $.
+</txt>
+<id>821858818496533</id>
+</problem>
+<problem>
+<src>OTIS Orders HMMT November 2014</src>
+<done>0</done>
+<txt>
+Determine all positive integers $1 \le m \le 50$ for which there exists an integer $n$ for which $m$ divides $n^{n+1}+1$.
+</txt>
+<id>6181777692394596946</id>
+</problem>
+<problem>
+<src>OTIS Orders Don Zagier</src>
+<done>0</done>
+<txt>
+Let $S$ denote the integers $n\ge 2$ with the property that for any positive integer $a$ we have$$a^{n+1} \equiv a \pmod n.$$Show that $S$ is finite and determine its elements.
+</txt>
+<id>4724411683524073787</id>
+</problem>
+<problem>
+<src>EGMO 2024/1</src>
+<done>0</done>
+<txt>
+Two different integers $u$ and $v$ are written on a board. We perform a sequence of steps. At each step we do one of the following two operations:
+
+(i) If $a$ and $b$ are different integers on the board, then we can write $a + b$ on the board, if it is not
+already there.
+(ii) If $a$, $b$ and $c$ are three different integers on the board, and if an integer $x$ satisfies $ax^2 +bx+c = 0$,
+then we can write $x$ on the board, if it is not already there.
+
+Determine all pairs of starting numbers $(u, v)$ from which any integer can eventually be written on the board after a finite sequence of steps.
+</txt>
+<id>3943997328999301524</id>
+</problem>
+<problem>
+<src>EGMO 2024/4</src>
+<done>0</done>
+<txt>
+	For a sequence $a_1<a_2<\cdots<a_n$ of integers, a pair $(a_i,a_j)$ with $1\leq i<j\leq n$ is called interesting if there exists a pair $(a_k,a_l)$ of integers with $1\leq k<l\leq n$ such that$$\frac{a_l-a_k}{a_j-a_i}=2.$$For each $n\geq 3$, find the largest possible number of interesting pairs in a sequence of length $n$.
+</txt>
+<id>5023719089292422617</id>
+</problem>
+<problem>
+<src>EGMO 2023/1</src>
+<done>0</done>
+<txt>
+	There are $n \ge 3$ positive real numbers $a_1, a_2, \dots, a_n$. For each $1 \le i \le n$ we let $b_i = \frac{a_{i-1} + a_{i+1}}{a_i}$ (here we define $a_0$ to be $a_n$ and $a_{n+1}$ to be $a_1$). Assume that for all $i$ and $j$ in the range $1$ to $n$, we have $a_i \le a_j$ if and only if $b_i \le b_j$.
+Prove that $a_1 = a_2 = \dots = a_n$.
+</txt>
+<id>574302158166465</id>
+</problem>
+<problem>
+<src>Rioplatense 2024/3.5</src>
+<done>0</done>
+<txt>
+    Let $S = \{2, 3, 4, \dots\}$ be the set of positive integers greater than 1. Find all functions $f : S \to S$ that satisfy
+\[
+\text{gcd}(a, f(b)) \cdot \text{lcm}(f(a), b) = f(ab)
+\]for all pairs of integers $a, b \in S$.
+
+Clarification: $\text{gcd}(a,b)$ is the greatest common divisor of $a$ and $b$, and $\text{lcm}(a,b)$ is the least common multiple of $a$ and $b$.
+</txt>
+<id>641748966575252</id>
+</problem>
+<problem>
+<src>Turquia TST 2022/5</src>
+<done>1</done>
+<txt>
+    On a circle, 2022 points are chosen such that distance between two adjacent points is always the same. There are $k$ arcs, each having endpoints on chosen points, with different lengths. Arcs do not contain each other. What is the maximum possible number of $k$?
+</txt>
+<id>134791930259072</id>
+</problem>
+<problem>
+<src>JBMO 2024/4</src>
+<done>0</done>
+<txt>
+  Three friends Archie, Billie, and Charlie play a game. At the beginning of the game, each of them has a pile of $2024$ pebbles. Archie makes the first move, Billie makes the second, Charlie makes the third and they continue to make moves in the same order. In each move, the player making the move must choose a positive integer $n$ greater than any previously chosen number by any player, take $2n$ pebbles from his pile and distribute them equally to the other two players. If a player cannot make a move, the game ends and that player loses the game.
+$\hspace{5px}$ Determine all the players who have a strategy such that, regardless of how the other two players play, they will not lose the game.
+</txt>
+<id>2973101263473894931</id>
+</problem>
+<problem>
+<src>CF 2052J</src>
+<done>0</done>
+<txt>
+\url{https://codeforces.com/problemset/problem/2052/J}
+</txt>
+<id>6243146950724312395</id>
+</problem>
+<problem>
+<src>AC ABC385E</src>
+<done>0</done>
+<txt>
+\url{https://atcoder.jp/contests/abc385/tasks/abc385_e}
+</txt>
+<id>8369323090910309580</id>
+</problem>
+<problem>
+<src>IOI 2023 LONGEST TRIP</src>
+<done>0</done>
+<txt>
+\url{https://oj.uz/problem/view/IOI23_longesttrip}
+</txt>
+<id>7172340109358249830</id>
+</problem>
+<problem>
+<src>IOI 2022 CIRCUIT</src>
+<done>1</done>
+<txt>
+\url{https://oj.uz/problem/view/IOI22_circuit}
+</txt>
+<id>52833641641090</id>
+</problem>
+<problem>
+<src>AC ARC80A</src>
+<done>0</done>
+<txt>
+\url{https://atcoder.jp/contests/abc069/tasks/arc080_a?lang=en}
+</txt>
+<id>6697731048044815121</id>
+</problem>
+<problem>
+<src>USACO 2016 JAN BRZ 2</src>
+<done>0</done>
+<txt>
+\url{https://usaco.org/index.php?page=viewproblem2&cpid=592}
+</txt>
+<id>5453239803851591450</id>
+</problem>
+<problem>
+<src>Sudafrica 2012/6</src>
+<done>0</done>
+<txt>
+   Find all functions $f:\mathbb{N}\to\mathbb{R}$ such that
+$f(km)+f(kn)-f(k)f(mn)\ge 1$
+for all $k,m,n\in\mathbb{N}$.
+</txt>
+<id>2723991264123227468</id>
+</problem>
+<problem>
+<src>India 2024/5</src>
+<done>0</done>
+<txt>
+Let points $A_1$, $A_2$ and $A_3$ lie on the circle $\Gamma$ in a counter-clockwise order, and let $P$ be a point in the same plane. For $i \in \{1,2,3\}$, let $\tau_i$ denote the counter-clockwise rotation of the plane centred at $A_i$, where the angle of rotation is equial to the angle at vertex $A_i$ in $\triangle A_1A_2A_3$. Further, define $P_i$ to be the point $\tau_{i+2}(\tau_{i}(\tau_{i+1}(P)))$, where the indices are taken modulo $3$ (i.e., $\tau_4 = \tau_1$ and $\tau_5 = \tau_2$).
+
+Prove that the radius of the circumcircle of $\triangle P_1P_2P_3$ is at most the radius of $\Gamma$.
+</txt>
+<id>668618545838769</id>
+</problem>
+<problem>
+<src>Bulgaria JBMO TST 2023/2</src>
+<done>0</done>
+<txt>
+Let $x, y,$ and $z$ be positive real numbers such that $xy + yz + zx = 3$. Prove that
+$$\frac{x + 3}{y + z} + \frac{y + 3}{z + x} + \frac{z + 3}{x + y} + 3 \ge 27 \cdot \frac{(\sqrt{x} + \sqrt{y} + \sqrt{z})^2}{(x + y + z)^3}.$$
+</txt>
+<id>931108225347204</id>
+</problem>
+<problem>
+<src>PAGMO 2021/6</src>
+<done>0</done>
+<txt>
+   Let $ABC$ be a triangle with incenter $I$, and $A$-excenter $\Gamma$. Let $A_1,B_1,C_1$ be the points of tangency of $\Gamma$ with $BC,AC$ and $AB$, respectively. Suppose $IA_1, IB_1$ and $IC_1$ intersect $\Gamma$ for the second time at points $A_2,B_2,C_2$, respectively. $M$ is the midpoint of segment $AA_1$. If the intersection of $A_1B_1$ and $A_2B_2$ is $X$, and the intersection of $A_1C_1$ and $A_2C_2$ is $Y$, prove that $MX=MY$.
+</txt>
+<id>4916260803302199887</id>
+</problem>
+<problem>
+<src>Argentina TST 2018/3</src>
+<done>1</done>
+<txt>
+In a $100 \times 100$ board, each square is colored either white or black, with all the squares on the border of the board being black. Additionally, no $2 \times 2$ square within the board has all four squares of the same color. Prove that the board contains a $2 \times 2$ square colored like a chessboard.
+</txt>
+<id>93364562746295</id>
+</problem>
+<problem>
+<src>Canada 2023/3</src>
+<done>0</done>
+<txt>
+    An acute triangle is a triangle that has all angles less than $90^{\circ}$ ($90^{\circ}$ is a Right Angle). Let $ABC$ be an acute triangle with altitudes $AD$, $BE$, and $CF$ meeting at $H$. The circle passing through points $D$, $E$, and $F$ meets $AD$, $BE$, and $CF$ again at $X$, $Y$, and $Z$ respectively. Prove the following inequality:$$\frac{AH}{DX}+\frac{BH}{EY}+\frac{CH}{FZ} \geq 3.$$
+</txt>
+<id>866549592605527</id>
+</problem>
+<problem>
+<src>JBMOSL 2021/C4</src>
+<done>0</done>
+<txt>
+Alice and Bob play a game together as a team on a $100 \times 100$ board with all unit squares initially white. Alice sets up the game by coloring exactly $k$ of the unit squares red at the beginning. After that, a legal move for Bob is to choose a row or column with at least $10$ red squares and color all of the remaining squares in it red. What is the
+smallest $k$ such that Alice can set up a game in such a way that Bob can color the entire board red after finitely many moves?
+</txt>
+<id>5517823155546165504</id>
+</problem>
+<problem>
+<src>USAMO 2022/2</src>
+<done>0</done>
+<txt>
+    	Let $b\geq2$ and $w\geq2$ be fixed integers, and $n=b+w$. Given are $2b$ identical black rods and $2w$ identical white rods, each of side length 1.
+
+We assemble a regular $2n-$gon using these rods so that parallel sides are the same color. Then, a convex $2b$-gon $B$ is formed by translating the black rods, and a convex $2w$-gon $W$ is formed by translating the white rods. An example of one way of doing the assembly when $b=3$ and $w=2$ is shown below, as well as the resulting polygons $B$ and $W$.
+
+\begin{center}
+\includegraphics[scale=0.5]{USAMO2022_2.png}
+\end{center}
+Prove that the difference of the areas of $B$ and $W$ depends only on the numbers $b$ and $w$, and not on how the $2n$-gon was assembled.
+</txt>
+<id>608442959744293</id>
+</problem>
+<problem>
+<src>Argentina Ibero TST 2018/3</src>
+<done>1</done>
+<txt>
+Two circles $\omega_1$ and $\omega_2$, with centers $O_1$ and $O_2$ respectively, intersect at points $A$ and $B$. A line through $B$ again intersects $\omega_1$ and $\omega_2$ at $C$ and $D$ respectively. The tangent lines to $\omega_1$ and $\omega_2$ at $C$ and $D$ respectively intersect at $E$. Let $F$ be the second intersection point of the line $AE$ with the circle $\omega$ that passes through $A$, $O_1$ and $O_2$. Show that the length of the segment $EF$ is equal to the diameter of $\omega$.
+</txt>
+<id>123095878162282</id>
+</problem>
+<problem>
+<src>Argentina Ibero TST 2016/2</src>
+<done>0</done>
+<txt>
+Let $ABCD$ be a trapezoid with bases $BC \parallel AD$ and non-parallel sides $AB$ and $CD$. On the diagonals $AC$ and $BD$, let $P$ and $Q$ be the points such that $AC$ bisects $\angle BPD$ and $BD$ bisects $\angle AQC$. Prove that $\angle BPD = \angle AQC$.
+</txt>
+<id>40971956749915480</id>
+</problem>
+<problem>
+<src>ELMO 2020/4</src>
+<done>1</done>
+<txt>
+	Let acute scalene triangle $ABC$ have orthocenter $H$ and altitude $AD$ with $D$ on side $BC$. Let $M$ be the midpoint of side $BC$, and let $D'$ be the reflection of $D$ over $M$. Let $P$ be a point on line $D'H$ such that lines $AP$ and $BC$ are parallel, and let the circumcircles of $\triangle AHP$ and $\triangle BHC$ meet again at $G \neq H$. Prove that $\angle MHG = 90^\circ$.
+</txt>
+<id>87685124797738</id>
+</problem>
+<problem>
+<src>USAMO 2017/3</src>
+<done>0</done>
+<txt>
+  (Walkthrough OTIS)
+  Let $ABC$ be a scalene triangle with circumcircle $\Omega$ and incenter $I$.
+  Ray $AI$ meets $\ol{BC}$ at $D$ and $\Omega$ again at $M$;
+  the circle with diameter $\ol{DM}$ cuts $\Omega$ again at $K$.
+  Lines $MK$ and $BC$ meet at $S$, and $N$ is the midpoint of $\ol{IS}$.
+  The circumcircles of $\triangle KID$ and $\triangle MAN$
+  intersect at points $L_1$ and $L_2$.
+  Prove that $\Omega$ passes through the midpoint of either $\ol{IL_1}$ or $\ol{IL_2}$.
+</txt>
+<id>555462026166689</id>
+</problem>
+<problem>
+<src>The A-Schwaat Line</src>
+<done>0</done>
+<txt>
+  Let $ABC$ be a triangle with altitude $\ol{AD}$.
+  Let $M$ and $N$ denote the midpoints of $\ol{AD}$ and $\ol{BC}$.
+  Show that line $MN$ passes through
+  the symmedian point of $\triangle ABC$
+  (this line is called the $A$-Schwatt line).
+</txt>
+<id>932758563867747</id>
+</problem>
+<problem>
+<src>AC ABC387E</src>
+<done>0</done>
+<txt>
+\url{https://atcoder.jp/contests/abc387/tasks/abc387_e}
+</txt>
+<id>8417457901288109502</id>
+</problem>
+<problem>
+<src>AC ABC387F</src>
+<done>0</done>
+<txt>
+\url{https://atcoder.jp/contests/abc387/tasks/abc387_f}
+</txt>
+<id>628312709071242</id>
+</problem>
+<problem>
+<src>CF 2057E1</src>
+<done>0</done>
+<txt>
+\url{https://codeforces.com/problemset/problem/2057/E1}
+</txt>
+<id>533203734683805</id>
+</problem>
+<problem>
+<src>Iran TST 2023/1.5</src>
+<done>0</done>
+<txt>
+Suppose that $n\ge2$ and $a_1,a_2,...,a_n$ are natural numbers that $ (a_1,a_2,...,a_n)=1$. Find all strictly increasing function $f: \mathbb{Z}  \to \mathbb{R} $ that:
+
+$$ \forall  x_1,x_2,...,x_n \in  \mathbb{Z} :       f(\sum_{i=1}^{n} {x_ia_i}) = \sum_{i=1}^{n} {f(x_ia_i})$$
+</txt>
+<id>3516310274395298177</id>
+</problem>
+<problem>
+<src>Turkey EGMO TST 2024/6</src>
+<done>0</done>
+<txt>
+Let $\omega_1$ and $\omega_2$ be two different circles that intersect at two different points, $X$ and $Y$. Let lines $l_1$ and $l_2$ be common tangent lines of these circles such that $l_1$ is tangent $\omega_1$ at $A$ and $\omega_2$ at $C$ and $l_2$ is tangent $\omega_1$ at $B$ and $\omega_2$ at $D$. Let $Z$ be the reflection of $Y$ respect to $l_1$ and let $BC$ and $\omega_1$ meet at $K$ for the second time. Let $AD$ and $\omega_2$ meet at $L$ for the second time. Prove that the line tangent to $\omega_1$ and passes through $K$ and the line tangent to $\omega_2$ and passes through $L$ meet on the line $XZ$.
+</txt>
+<id>2419245636929787379</id>
+</problem>
+<problem>
+<src>DIME 2022/11</src>
+<done>0</done>
+<txt>
+A positive integer $n$ is called $\textit{un-two}$ if there does not exist an ordered triple of integers $(a,b,c)$ such that exactly two of$$\dfrac{7a+b}{n},\;\dfrac{7b+c}{n},\;\dfrac{7c+a}{n}$$are integers. Find the sum of all un-two positive integers.
+</txt>
+<id>1358418570834444504</id>
+</problem>
+<problem>
+<src>CF 1854A2</src>
+<done>0</done>
+<txt>
+\url{https://codeforces.com/problemset/problem/1854/A2}
+</txt>
+<id>220727315131292</id>
+</problem>
+</problemas>
