@@ -1,0 +1,177 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{ amssymb }
+\usepackage[dvipsnames]{xcolor}
+\definecolor{red1}{RGB}{255, 153, 153}
+\definecolor{green1}{RGB}{204, 255, 204}
+\definecolor{blue1}{RGB}{204, 255, 255}
+\definecolor{yellow1}{RGB}{255, 247, 160}
+
+\definecolor{red2}{RGB}{255, 102, 102}
+\definecolor{green2}{RGB}{108, 255, 108}
+\definecolor{blue2}{RGB}{94, 204, 255}
+\definecolor{yellow2}{RGB}{255, 250, 104}
+
+\definecolor{red2.5}{RGB}{255,76,76}
+\definecolor{green2.5}{RGB}{54, 247, 54}
+\definecolor{blue2.5}{RGB}{51, 189, 255}
+\definecolor{yellow2.5}{RGB}{255, 242, 52}
+
+
+\definecolor{red3}{RGB}{255, 51, 51}
+\definecolor{green3}{RGB}{0, 240, 0}
+\definecolor{blue3}{RGB}{9, 175, 255}
+\definecolor{yellow3}{RGB}{255, 234, 0}
+
+\definecolor{red3.5}{RGB}{229, 25, 25}
+\definecolor{green3.5}{RGB}{0, 194, 0}
+\definecolor{blue3.5}{RGB}{4, 143, 209}
+\definecolor{yellow3.5}{RGB}{255,220,0}
+
+\definecolor{red4}{RGB}{204, 0, 0}
+\definecolor{green4}{RGB}{0, 149, 0}
+\definecolor{blue4}{RGB}{0, 111, 164}
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\newcommand{\camod}[1]{\frac{\ZZ}{#1 \ZZ}}
+\newcommand{\modm}[1]{\text{ mod } #1}
+\newcommand{\campm}[1]{\frac{\ZZ}{m\ZZ}}
+\newcommand{\paren}[1]{\left( #1 \right) }
+
+\newcommand{\gt}{>}
+
+\newcommand{\squarecell}[1]{%
+  \tikz[baseline=(char.base)]{
+    \node[draw, shape=rectangle, minimum size=8mm, inner sep=0pt] (char) {#1};
+  }%
+}
+
+
+\title {Problems}
+\subtitle{I hate procrastining :[}
+\author{Emmanuel Buenrostro}
+
+
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+Estos son problemas que podria sacar para los distintos mocks, la \'area es a simple ojo, y la dificultad por su posici\'on en cierto examen. Entonces es bastante probable que haya cosas que no concuerden.
+
+\section{Nivel 2}
+1/4 de centro
+\subsection{Algebra}
+
+\begin{problem}[Centro 2015/1]
+We wish to write $n$ distinct real numbers $(n\geq3)$ on the circumference of a circle in such a way that each number is equal to the product of its immediate neighbors to the left and right. Determine all of the values of $n$ such that this is possible.
+\end{problem}
+
+\subsection{Combi}
+
+\begin{problem} [Centro 2023/1]
+	A coloring of the set of integers greater than or equal to $1$, must be done according to the following rule: Each number is colored blue or red, so that the sum of any two numbers (not necessarily different) of the same color is blue. Determine all the possible colorings of the set of integers greater than or equal to $1$ that follow this rule.
+\end{problem}
+
+\begin{problem} [Centro 2022/1]
+There is a pile with 2022 rocks. Ana y Beto play by turns to the following game, starting with Ana: in each turn, if there are $n$ rocks in the pile, the player can remove $S(n)$ rocks or $n-S(n)$ rocks, where $S(n)$ is the sum of the the digits of $n$. The person who removes the last rock wins. Determine which of the two players has a winning strategy and describe it.
+\end{problem}
+
+
+\begin{problem} [Centro 2021/4]
+There are $2021$ people at a meeting. It is known that one person at the meeting doesn't have any friends there and another person has only one friend there. In addition, it is true that, given any $4$ people, at least $2$ of them are friends. Show that there are $2018$ people at the meeting that are all friends with each other.
+Note. If $A$ is friend of $B$ then $B$ is a friend of $A$.
+\end{problem}
+
+\begin{problem}[Centro 2018/1]
+	There are 2018 cards numbered from 1 to 2018. The numbers of the cards are visible at all times. Tito and Pepe play a game. Starting with Tito, they take turns picking cards until they're finished. Then each player sums the numbers on his cards and whoever has an even sum wins. Determine which player has a winning strategy and describe it.
+\end{problem}
+
+\begin{problem}[Centro 2017/1]
+The figure below shows a hexagonal net formed by many congruent equilateral triangles. Taking turns, Gabriel and Arnaldo play a game as follows. On his turn, the player colors in a segment, including the endpoints, following these three rules:
+
+i) The endpoints must coincide with vertices of the marked equilateral triangles.
+
+ii) The segment must be made up of one or more of the sides of the triangles.
+
+iii) The segment cannot contain any point (endpoints included) of a previously colored segment.
+
+Gabriel plays first, and the player that cannot make a legal move loses. Find a winning strategy and describe it.
+\end{problem} 
+
+\begin{problem}[Centro 2016/4]
+The number "3" is written on a board. Ana and Bernardo take turns, starting with Ana, to play the following game. If the number written on the board is $n$, the player in his/her turn must replace it by an integer $m$ coprime with $n$ and such that $n<m<n^2$. The first player that reaches a number greater or equal than 2016 loses. Determine which of the players has a winning strategy and describe it.
+\end{problem}
+
+
+\subsection{Geo}
+
+\begin{problem} [Centro 2024/4]
+Let $ABC$ be a triangle, $I$ its incenter, and $\Gamma$ its circumcircle. Let $D$ be the second point of intersection of $AI$ with $\Gamma$. The line parallel to $BC$ through $I$ intersects $AB$ and $AC$ at $P$ and $Q$, respectively. The lines $PD$ and $QD$ intersect $BC$ at $E$ and $F$, respectively. Prove that triangles $IEF$ and $ABC$ are similar.
+\end{problem}
+
+\begin{problem} [Centro 2022/4]
+Let $A_1A_2A_3A_4$ be a rectangle and let $S_1,S_2,S_3,S_4$ four circumferences inside of the rectangle such that $S_k$ and $S_{k+1}$ are tangent to each other and tangent to the side $A_kA_{k+1}$ for $k=1,2,3,4$, where $A_5=A_1$ and $S_5=S_1$. Prove that $A_1A_2A_3A_4$ is a square.
+\end{problem}
+
+\begin{problem} [Centro 2020/4]
+Consider a triangle $ABC$ with $BC>AC$. The circle with center $C$ and radius $AC$ intersects the segment $BC$ in $D$. Let $I$ be the incenter of triangle $ABC$ and $\Gamma$ be the circle that passes through $I$ and is tangent to the line $CA$ at $A$. The line $AB$ and $\Gamma$ intersect at a point $F$ with $F \neq A$. Prove that $BF=BD$.
+\end{problem}
+
+\begin{problem} [Centro 2019/4]
+Let $ABC$ be a triangle, $\Gamma$ its circumcircle and $l$ the tangent to $\Gamma$ through $A$. The altitudes from $B$ and $C$ are extended and meet $l$ at $D$ and $E$, respectively. The lines $DC$ and $EB$ meet $\Gamma$ again at $P$ and $Q$, respectively. Show that the triangle $APQ$ is isosceles.
+\end{problem}
+
+\begin{problem}[Centro 2017/4]
+$ABC$ is a right-angled triangle, with $\angle ABC = 90^{\circ}$. $B'$ is the reflection of $B$ over $AC$. $M$ is the midpoint of $AC$. We choose $D$ on $\overrightarrow{BM}$, such that $BD = AC$. Prove that $B'C$ is the angle bisector of $\angle MB'D$.
+
+NOTE: An important condition not mentioned in the original problem is $AB<BC$. Otherwise, $\angle MB'D$ is not defined or $B'C$ is the external bisector.
+\end{problem}
+
+\subsection{Numeros}
+
+\begin{problem} [Centro 2024/1]
+	Let $n$ be a positive integer with $k$ digits. A number $m$ is called an $alero$ of $n$ if there exist distinct digits $a_1$, $a_2$, $\dotsb$, $a_k$, all different from each other and from zero, such that $m$ is obtained by adding the digit $a_i$ to the $i$-th digit of $n$, and no sum exceeds 9.
+For example, if $n$ $=$ $2024$ and we choose $a_1$ $=$ $2$, $a_2$ $=$ $1$, $a_3$ $=$ $5$, $a_4$ $=$ $3$, then $m$ $=$ $4177$ is an alero of $n$, but if we choose the digits $a_1$ $=$ $2$, $a_2$ $=$ $1$, $a_3$ $=$ $5$, $a_4$ $=$ $6$, then we don't obtain an alero of $n$, because $4$ $+$ $6$ exceeds $9$.
+Find the smallest $n$ which is a multiple of $2024$ that has an alero which is also a multiple of $2024$
+\end{problem}
+
+\begin{problem} [Centro 2023/4]
+A four-digit number $n=\overline{a b c d}$, where $a, b, c$ and $d$ are digits, with $a \neq 0$, is said to be guanaco if the product $\overline{a b} \times \overline{c d}$ is a positive divisor of $n$. Find all guanaco numbers.
+\end{problem}
+
+\begin{problem} [Centro 2021/1]
+An ordered triple $(p, q, r)$ of prime numbers is called parcera if $p$ divides $q^2-4$, $q$ divides $r^2-4$ and $r$ divides $p^2-4$. Find all parcera triples.
+\end{problem}
+
+\begin{problem} [Centro 2020/1]
+A four-digit positive integer is called virtual if it has the form $\overline{abab}$, where $a$ and $b$ are digits and $a \neq 0$. For example 2020, 2121 and 2222 are virtual numbers, while 2002 and 0202 are not. Find all virtual numbers of the form $n^2+1$, for some positive integer $n$.
+\end{problem}
+
+\begin{problem}[Centro 2019/1]
+Let $N=\overline{abcd}$ be a positive integer with four digits. We name plátano power to the smallest positive integer $p(N)=\overline{\alpha_1\alpha_2\ldots\alpha_k}$ that can be inserted between the numbers $\overline{ab}$ and $\overline{cd}$ in such a way the new number $\overline{ab\alpha_1\alpha_2\ldots\alpha_kcd}$ is divisible by $N$. Determine the value of $p(2025)$.
+\end{problem}
+
+\begin{problem}[Centro 2018/4]
+Determine all triples $(p, q, r)$ of positive integers, where $p, q$ are also primes, such that $\frac{r^2-5q^2}{p^2-1}=2$.
+\end{problem}
+
+\begin{problem}[Centro 2016/1]
+	Find all positive integers $n$ that have 4 digits, all of them perfect squares, and such that $n$ is divisible by 2, 3, 5 and 7.
+\end{problem}
+
+\begin{problem}[Centro 2015/4]
+	Anselmo and Bonifacio start a game where they alternatively substitute a number written on a board. In each turn, a player can substitute the written number by either the number of divisors of the written number or by the difference between the written number and the number of divisors it has. Anselmo is the first player to play, and whichever player is the first player to write the number $0$ is the winner. Given that the initial number is $1036$, determine which player has a winning strategy and describe that strategy.
+
+Note: For example, the number of divisors of $14$ is $4$, since its divisors are $1$, $2$, $7$, and $14$.
+\end{problem}
+\end{document}

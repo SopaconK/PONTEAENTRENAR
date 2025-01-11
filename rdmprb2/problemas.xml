@@ -2,7 +2,7 @@
 
 <problem>
 <src>OTIS EXCERPTS 3.3 USAJMO 2015/4</src>
-<done>0</done>
+<done>1</done>
 <txt>
 Find all functions $f:\mathbb{Q}\rightarrow\mathbb{Q}$ such that\[f(x)+f(t)=f(y)+f(z)\]for all rational numbers $x<y<z<t$ that form an arithmetic progression. ($\mathbb{Q}$ is the set of all rational numbers.)
 </txt>
@@ -29,7 +29,7 @@ Leer/Aprender Cauchy
 </problem>
 <problem>
 <src>OTIS Russian Combo P8</src>
-<done>0</done>
+<done>1</done>
 <txt>
    Each point of a three-dimensional space is colored
   with one of two colors such that
@@ -53,7 +53,7 @@ Leer/Aprender Cauchy
 </problem>
 <problem>
 <src>OTIS Russian Combo P10</src>
-<done>0</done>
+<done>1</done>
 <txt>
   You're given an $n \times n$ matrix of real numbers.
   In an operation, you may negate the entries of any row or column.
@@ -64,7 +64,7 @@ Leer/Aprender Cauchy
 </problem>
 <problem>
 <src>USAMO 2016/3</src>
-<done>0</done>
+<done>1</done>
 <txt>
   (Walkthrough OTIS)
   Let $ABC$ be an acute triangle
@@ -152,7 +152,7 @@ Determine all pairs of starting numbers $(u, v)$ from which any integer can even
 </problem>
 <problem>
 <src>EGMO 2023/1</src>
-<done>0</done>
+<done>1</done>
 <txt>
 	There are $n \ge 3$ positive real numbers $a_1, a_2, \dots, a_n$. For each $1 \le i \le n$ we let $b_i = \frac{a_{i-1} + a_{i+1}}{a_i}$ (here we define $a_0$ to be $a_n$ and $a_{n+1}$ to be $a_1$). Assume that for all $i$ and $j$ in the range $1$ to $n$, we have $a_i \le a_j$ if and only if $b_i \le b_j$.
 Prove that $a_1 = a_2 = \dots = a_n$.
@@ -340,7 +340,7 @@ Let $ABCD$ be a trapezoid with bases $BC \parallel AD$ and non-parallel sides $A
 </problem>
 <problem>
 <src>USAMO 2017/3</src>
-<done>0</done>
+<done>1</done>
 <txt>
   (Walkthrough OTIS)
   Let $ABC$ be a scalene triangle with circumcircle $\Omega$ and incenter $I$.
@@ -383,7 +383,7 @@ Let $ABCD$ be a trapezoid with bases $BC \parallel AD$ and non-parallel sides $A
 </problem>
 <problem>
 <src>CF 2057E1</src>
-<done>0</done>
+<done>1</done>
 <txt>
 \url{https://codeforces.com/problemset/problem/2057/E1}
 </txt>
@@ -417,10 +417,92 @@ A positive integer $n$ is called $\textit{un-two}$ if there does not exist an or
 </problem>
 <problem>
 <src>CF 1854A2</src>
-<done>0</done>
+<done>1</done>
 <txt>
 \url{https://codeforces.com/problemset/problem/1854/A2}
 </txt>
 <id>220727315131292</id>
+</problem>
+<problem>
+<src>OMM 2018/6</src>
+<done>0</done>
+<txt>
+    Encuentra todos los enteros $n\geq 3$ tales que existe un polígono convexto de $n$ lados $A_1A_2\dots A_n$ que tenga las siguientes características:
+ \begin{itemize} 
+ \item  Todos los ángulos internos de $A_1A_2\dots A_n$ son iguales. 
+ \item  No todos los lados de $A_1A_2\dots A_n$ son iguales.
+ \item  Existe un triángulo $T$ y un punto $O$ en el interior de $A_1A_2\dots A_n$ tal que los $n$ triángulos $OA_1A_2, OA_2A_3,\dots OA_nA_1$ son todos semejantes a $T$.
+</txt>
+<id>715681181841798</id>
+</problem>
+<problem>
+<src>IMO SL 2022/C4</src>
+<done>0</done>
+<txt>
+Let $n > 3$ be a positive integer. Suppose that $n$ children are arranged in a circle, and $n$ coins are distributed between them (some children may have no coins). At every step, a child with at least 2 coins may give 1 coin to each of their immediate neighbors on the right and left. Determine all initial distributions of the coins from which it is possible that, after a finite number of steps, each child has exactly one coin.  
+</txt>
+<id>982342849599190</id>
+</problem>
+<problem>
+<src>Final Mathematical Cup 2020/S.2</src>
+<done>1</done>
+<txt>
+	Let $ABC$ be a triangle such that $\measuredangle BAC = 60^{\circ}$. Let $D$ and $E$ be the feet of the perpendicular from $A$ to the bisectors of the external angles of $B$ and $C$ in triangle $ABC$, respectively. Let $O$ be the circumcenter of the triangle $ABC$. Prove that circumcircle of the triangle $BOC$ has exactly one point in common with the circumcircle of $ADE$.
+</txt>
+<id>145629130994686</id>
+</problem>
+<problem>
+<src>Iran TST 2015/3.2</src>
+<done>0</done>
+<txt>
+Assume that $a_1, a_2, a_3$ are three given positive integers consider the following sequence:
+$a_{n+1}=\text{lcm}[a_n, a_{n-1}]-\text{lcm}[a_{n-1}, a_{n-2}]$ for $n\ge 3$
+Prove that there exist a positive integer $k$ such that $k\le a_3+4$ and $a_k\le 0$.
+($[a, b]$ means the least positive integer such that$ a\mid[a,b], b\mid[a, b]$ also because $\text{lcm}[a, b]$ takes only nonzero integers this sequence is defined until we find a zero number in the sequence)
+</txt>
+<id>649170813929772424</id>
+</problem>
+<problem>
+<src>USA TST 2025/2</src>
+<done>0</done>
+<txt>
+Let $a_1, a_2, \dots$ and $b_1, b_2, \dots$ be sequences of real numbers for which $a_1 > b_1$ and
+\begin{align*}
+    a_{n+1} &= a_n^2 - 2b_n\\
+    b_{n+1} &= b_n^2 - 2a_n
+\end{align*}for all positive integers $n$. Prove that $a_1, a_2, \dots$ is eventually increasing (that is, there exists a positive integer $N$ for which $a_k < a_{k+1}$ for all $k > N$).
+</txt>
+<id>4724247127302771768</id>
+</problem>
+<problem>
+<src>Vietnam National Olympiad for High School Student 2022/12</src>
+<done>0</done>
+<txt>
+Given Fibonacci sequence $(F_n),$ and a positive integer $m$, denote $k(m)$ by the smallest positive integer satisfying $F_{n+k(m)}\equiv F_n(\bmod m),$ for all natural numbers $n$.
+a) Prove that: For all $m_1,m_2\in \mathbb{Z^+}$, we have:$$k([m_1,m_2])=[k(m_1),k(m_2)].$$(Here $[a,b]$ is the least common multiple of $a,b.$)
+
+b) Determine $k(2),k(4),k(5),k(10).$
+</txt>
+<id>764653067837813</id>
+</problem>
+<problem>
+<src>Cono Sur 2016/6</src>
+<done>0</done>
+<txt>
+We say that three different integers are friendly if one of them divides the product of the other two. Let $n$ be a positive integer.
+
+a) Show that, between $n^2$ and $n^2+n$, exclusive, does not exist any triplet of friendly numbers.
+
+b) Determine if for each $n$ exists a triplet of friendly numbers between $n^2$ and $n^2+n+3\sqrt{n}$ , exclusive.
+</txt>
+<id>407756104468906</id>
+</problem>
+<problem>
+<src>AC ABC388E</src>
+<done>0</done>
+<txt>
+\url{https://atcoder.jp/contests/abc388/tasks/abc388_e}
+</txt>
+<id>7968056100990897363</id>
 </problem>
 </problemas>
