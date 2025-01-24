@@ -1,0 +1,45 @@
+\documentclass[11pt]{scrbook}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{ref.bib}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$} }
+
+\title {Problemas que he hecho}
+
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\part{\'Algebra}
+\import{Tex/Area}{Alg.tex}
+
+\part{Combinatoria}
+\import{Tex/Area}{Combi.tex}
+
+\part{Geometr\'ia}
+\import{Tex/Area}{Geo.tex}
+
+\part{Teor\'ia de N\'umeros}
+\import{Tex/Area}{NT.tex}
+
+\nocite{*}
+
+\printbibliography[
+heading=bibintoc,
+title={Bibliograf\'ia}
+]
+
+\end{document}

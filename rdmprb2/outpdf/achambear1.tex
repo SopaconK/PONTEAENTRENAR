@@ -60,6 +60,30 @@
 \maketitle
 
 \section{Problemas}
+\begin{problem}[Suiza TST 2020/2]
+Find all positive integers $n$ such that there exists an infinite set $A$ of positive integers with the following property: For all pairwise distinct numbers $a_1, a_2, \ldots , a_n \in A$, the numbers
+$$a_1 + a_2 + \ldots + a_n \text{ and } a_1\cdot a_2\cdot \ldots\cdot a_n$$are coprime.
+\end{problem}
+\begin{problem}[Taiwan TST 2024/R2.1]
+Given triangle $ABC$. Let $BPCQ$ be a parallelogram ($P$ is not on $BC$). Let $U$ be the intersection of $CA$ and $BP$, $V$ be the intersection of $AB$ and $CP$, $X$ be the intersection of $CA$ and the circumcircle of triangle $ABQ$ distinct from $A$, and $Y$ be the intersection of $AB$ and the circumcircle of triangle $ACQ$ distinct from $A$.
+Prove that $\overline{BU} = \overline{CV}$ if and only if the lines $AQ$, $BX$, and $CY$ are concurrent.
+\end{problem}
+\begin{problem}[Argentina Ibero TST 2018/2]
+On a board, there are $n > 3$ distinct positive integers, each smaller than $(n-1)!$. For each pair $a > b$ of these numbers, Julián writes the integer quotient of $a$ divided by $b$ (for example, if $a = 100$ and $b = 7$, Julián writes $14$, since $100 = 14 \times 7 + 2$). Prove that there will be at least two equal numbers written in Julián's notebook.
+\end{problem}
+\begin{problem}[Girls Math at Yale 2022/Mix/6]
+ Suppose that $x$ and $y$ are positive real numbers such that $\log_2 x = \log_x y = \log_y 256$. Find $xy$.
+\end{problem}
+\begin{problem}[Entrenas Nacionales 2025 Grupo 1/ 17.Raices Primitivas / 8 Iran 2013 ]
+Sea $p>2$ un primo y sea $d$ un divisor positivo de $p-1$. Sea $S$ el conjunto de enteros $1 \leq x \leq p$ para los que $\ord_p(x)=d$. Encuentra el residuo de $\prod_{x \in S} x$ al ser dividido por $p$.
+\end{problem}
+\begin{problem}[MEX TST 2025/6.4]
+Sea $\mathbb{R}^{+}$ el conjunto de reales positivos. Encuentra todas las parejas de funciones $f,g: \mathbb{R}^{+} \rightarrow \mathbb{R}^{+}$
+que satisfacen lo siguiente: 
+\[f(g(x))=f(x)g(x)\]
+\[f(x)=x(1+g(x))\]
+y la lista $g(x), g(g(x)), g(g(g(x))), \ldots$, contiene una cantidad finita de valores diferentes para cada $x\in \mathbb{R}^{+}$.
+\end{problem}
 \begin{problem}[Cono Sur 2016/6]
 We say that three different integers are friendly if one of them divides the product of the other two. Let $n$ be a positive integer.
 
@@ -81,6 +105,11 @@ We assemble a regular $2n-$gon using these rods so that parallel sides are the s
 \end{center}
 Prove that the difference of the areas of $B$ and $W$ depends only on the numbers $b$ and $w$, and not on how the $2n$-gon was assembled.
 \end{problem}
+\begin{problem}[MEX TST 2025/5.4]
+Un punto en el plano cartesiano es entero si sus coordenadas en $x$ y en $y$ son enteras. Demuestra que
+cualquier tri\'angulo con v\'ertices enteros y \'area entera se puede subdividir en tri\'angulos con v\'ertices enteros y \'area 1.
+
+\end{problem}
 \begin{problem}[AC ABC387F]
 \url{https://atcoder.jp/contests/abc387/tasks/abc387_f}
 \end{problem}
@@ -97,6 +126,15 @@ Let points $A_1$, $A_2$ and $A_3$ lie on the circle $\Gamma$ in a counter-clockw
 
 Prove that the radius of the circumcircle of $\triangle P_1P_2P_3$ is at most the radius of $\Gamma$.
 \end{problem}
+\begin{problem}[Belarus TST 2024/3.3]
+Olya and Tolya are playing a game on $[0,1]$ segment. In the beginning it is white. In the first round Tolya chooses a number $0 \leq l \leq 1$, and then Olya chooses a subsegment of $[0,1]$ of length $l$ and recolors every its point to the opposite color(white to black, black to white). In the next round players change roles, etc. The game lasts $2024$ rounds. Let $L$ be the sum of length of white segments after the end of the game. If $L > \frac{1}{2}$ Olya wins, otherwise Tolya wins. Which player has a strategy to guarantee his win?
+\end{problem}
+\begin{problem}[USA TST 2025/1]
+Let $n$ be a positive integer. Ana and Banana play a game. Banana thinks of a function $f\colon\mathbb{Z}\to\mathbb{Z}$ and a prime number $p$. He tells Ana that $f$ is nonconstant, $p<100$, and $f(x+p)=f(x)$ for all integers $x$. Anas goal is to determine the value of $p$. She writes down $n$ integers $x_1,\dots,x_n$. After seeing this list, Banana writes down $f(x_1),\dots,f(x_n)$ in order. Ana wins if she can determine the value of $p$ from this information. Find the smallest value of $n$ for which Ana has a winning strategy.
+\end{problem}
+\begin{problem}[CF 2063C]
+\url{https://codeforces.com/problemset/problem/2063/C}
+\end{problem}
 \begin{problem}[Entrenas Nacionales 2025 Grupo 1/ 15. Principio Extremo / 12]
 Se tiene un número finito de polígonos en el plano (no necesariamente convexo) de forma que cualesquiera dos polígonos del conjunto se intersectan. Prueba que existe una línea que intersecta a todos los polígonos.
 \end{problem}
@@ -107,19 +145,23 @@ Se tiene un número finito de polígonos en el plano (no necesariamente convexo)
  \item  No todos los lados de $A_1A_2\dots A_n$ son iguales.
  \item  Existe un triángulo $T$ y un punto $O$ en el interior de $A_1A_2\dots A_n$ tal que los $n$ triángulos $OA_1A_2, OA_2A_3,\dots OA_nA_1$ son todos semejantes a $T$.
 \end{problem}
-\begin{problem}[OTIS Russian Combo Russia 2014/9.1]
-  Each lattice point of $\ZZ^2$ is colored with one of three colors,
-  with every color used at least once.
-  Show that one can find a right triangle with pairwise distinct colored vertices.
-\end{problem}
 \begin{problem}[Vietnam National Olympiad for High School Student 2022/12]
 Given Fibonacci sequence $(F_n),$ and a positive integer $m$, denote $k(m)$ by the smallest positive integer satisfying $F_{n+k(m)}\equiv F_n(\bmod m),$ for all natural numbers $n$.
 a) Prove that: For all $m_1,m_2\in \mathbb{Z^+}$, we have:$$k([m_1,m_2])=[k(m_1),k(m_2)].$$(Here $[a,b]$ is the least common multiple of $a,b.$)
 
 b) Determine $k(2),k(4),k(5),k(10).$
 \end{problem}
+\begin{problem}[GMO 2024/3]
+	Let $ABC$ be a scalene triangle. $D$ is the foot of the altitude from $A$ to $BC$. $H$ is the orthocenter, $M$ is the midpoint of $BC$, and $N$ is the midpoint of $AH$. Tangents from $B$ and $C$ to the circumcircle of $ABC$ intersect at $T$. Prove that line $TH$ passes through one of the intersections of circles $ADT$ with $MHN$.
+\end{problem}
+\begin{problem}[CF 2063D]
+\url{https://codeforces.com/problemset/problem/2063/D}
+\end{problem}
 \begin{problem}[OTIS Orders Romania TST 1996]
 Find all primes $ p,q $ such that $ \alpha^{3pq} -\alpha \equiv 0 \pmod {3pq} $ for all integers $ \alpha $.
+\end{problem}
+\begin{problem}[IGO 2018/Adv2]
+	In acute triangle $ABC, \angle A = 45^o$. Points $O,H$ are the circumcenter and the orthocenter of $ABC$, respectively. $D$ is the foot of altitude from $B$. Point $X$ is the midpoint of arc $AH$ of the circumcircle of triangle $ADH$ that contains $D$. Prove that $DX = DO$.
 \end{problem}
 \begin{problem}[Entrenas Nacionales 2025 Grupo 1/ 13.Puntos Variables Mapeos Proyectivos / 11]
 En el triangulo $ABC$, el $\angle B$ es obtuso y $AB \neq BC$. Sea $\omega$ el circuncirculo de $ABC$ y $O$ su circuncentro. $N$ es el punto medio del arco $ABC$. El circuncirculo de $BON$ interseca a $AC$ en puntos $X$ y $Y$. Sean $P$ y $Q$ puntos distintos de $B$ las intersecciones de $BX$ y $BY$ con $\omega$ respectivamente. Demuestra que $P,Q$ y la reflexion de $N$ respecto a la recta $AC$ son colineares.  
@@ -141,6 +183,9 @@ $$\frac{x + 3}{y + z} + \frac{y + 3}{z + x} + \frac{z + 3}{x + y} + 3 \ge 27 \cd
   the symmedian point of $\triangle ABC$
   (this line is called the $A$-Schwatt line).
 \end{problem}
+\begin{problem}[Entrenas Nacionales 2025 Grupo 1/ 18.Reciprocidad / 10 Ibero 2022/6 ]
+	Find all functions $f:\mathbb{N} \rightarrow \mathbb{N}$, such that $f(a)f(a+b)-ab$ is a perfect square for all $a, b \in \mathbb{N}$.
+\end{problem}
 \begin{problem}[IMO SL 2022/C4]
 Let $n > 3$ be a positive integer. Suppose that $n$ children are arranged in a circle, and $n$ coins are distributed between them (some children may have no coins). At every step, a child with at least 2 coins may give 1 coin to each of their immediate neighbors on the right and left. Determine all initial distributions of the coins from which it is possible that, after a finite number of steps, each child has exactly one coin.  
 \end{problem}
@@ -153,8 +198,15 @@ $a_{n+1}=\text{lcm}[a_n, a_{n-1}]-\text{lcm}[a_{n-1}, a_{n-2}]$ for $n\ge 3$
 Prove that there exist a positive integer $k$ such that $k\le a_3+4$ and $a_k\le 0$.
 ($[a, b]$ means the least positive integer such that$ a\mid[a,b], b\mid[a, b]$ also because $\text{lcm}[a, b]$ takes only nonzero integers this sequence is defined until we find a zero number in the sequence)
 \end{problem}
+\begin{problem}[Entrenas Nacionales 2025 Grupo 1/ 20.Desigualdades / F ]
+Sean $x,y,z >-1$. Prueba que 
+\[\frac{1+x^2}{1+y+z^2}+\frac{1+y^2}{1+z+x^2}+\frac{1+z^2}{1+x+y^2} \geq 2\]
+\end{problem}
 \begin{problem}[DIME 2022/11]
 A positive integer $n$ is called $\textit{un-two}$ if there does not exist an ordered triple of integers $(a,b,c)$ such that exactly two of$$\dfrac{7a+b}{n},\;\dfrac{7b+c}{n},\;\dfrac{7c+a}{n}$$are integers. Find the sum of all un-two positive integers.
+\end{problem}
+\begin{problem}[Entrenas Nacionales 2025 Grupo 1/ 21.Desigualdades / 9 BMO SL 2013 ]
+Positive real numbers $a, b,c$ satisfy $ab + bc+ ca = 3$. Prove the inequality$$\frac{1}{4+(a+b)^2}+\frac{1}{4+(b+c)^2}+\frac{1}{4+(c+a)^2}\le \frac{3}{8}$$
 \end{problem}
 \begin{problem}[Malaysian APMO Camp Selection Test 2023/1]
 For which $n\ge 3$ does there exist positive integers $a_1<a_2<\cdots <a_n$, such that:$$a_n=a_1+...+a_{n-1}, \hspace{0.5cm} \frac{1}{a_1}=\frac{1}{a_2}+...+\frac{1}{a_n}$$are both true?
@@ -258,11 +310,20 @@ Determina el valor maximo posible de $m$ en terminos de $n$.
   for all real numbers $x$ and $y$.
 
 \end{problem}
+\begin{problem}[Entrenas Nacionales 2025 Grupo 1/ 16. Juegos y Coloraciones / 2.3 IMO SL 2021/C6]
+	A hunter and an invisible rabbit play a game on an infinite square grid. First the hunter fixes a colouring of the cells with finitely many colours. The rabbit then secretly chooses a cell to start in. Every minute, the rabbit reports the colour of its current cell to the hunter, and then secretly moves to an adjacent cell that it has not visited before (two cells are adjacent if they share an edge). The hunter wins if after some finite time either:
+the rabbit cannot move; or
+the hunter can determine the cell in which the rabbit started.
+Decide whether there exists a winning strategy for the hunter.
+\end{problem}
 \begin{problem}[AC ABC385E]
 \url{https://atcoder.jp/contests/abc385/tasks/abc385_e}
 \end{problem}
 \begin{problem}[AC ABC387E]
 \url{https://atcoder.jp/contests/abc387/tasks/abc387_e}
+\end{problem}
+\begin{problem}[Swedish 2015/1]
+Given the acute triangle $ABC$. A diameter of the circumscribed circle of the triangle intersects the sides $AC$ and $BC$, dividing the side $BC$ in half. Show that the same diameter divides the side $AC$ in a ratio of $1: 3$, calculated from $A$, if and only if $\tan B = 2 \tan C$.
 \end{problem}
 
 \end{document}

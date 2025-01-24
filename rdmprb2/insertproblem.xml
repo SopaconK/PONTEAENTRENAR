@@ -1,8 +1,7 @@
 <problem>
-<src>Israel 2023/6</src>
+<src>GMO 2024/3</src>
 <done>0</done>
 <txt> 	
-Determine if there exists a set $S$ of $5783$ different real numbers with the following property:
-For every $a,b\in S$ (not necessarily distinct) there are $c\neq d$ in $S$ so that $a\cdot b=c+d$.
+	Let $ABC$ be a scalene triangle. $D$ is the foot of the altitude from $A$ to $BC$. $H$ is the orthocenter, $M$ is the midpoint of $BC$, and $N$ is the midpoint of $AH$. Tangents from $B$ and $C$ to the circumcircle of $ABC$ intersect at $T$. Prove that line $TH$ passes through one of the intersections of circles $ADT$ with $MHN$.
 </txt>
 </problem>
