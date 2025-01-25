@@ -1,7 +1,7 @@
 <problem>
-<src>GMO 2024/3</src>
+<src>Benelux 2024/2</src>
 <done>0</done>
 <txt> 	
-	Let $ABC$ be a scalene triangle. $D$ is the foot of the altitude from $A$ to $BC$. $H$ is the orthocenter, $M$ is the midpoint of $BC$, and $N$ is the midpoint of $AH$. Tangents from $B$ and $C$ to the circumcircle of $ABC$ intersect at $T$. Prove that line $TH$ passes through one of the intersections of circles $ADT$ with $MHN$.
+Let $n$ be a positive integer. In a coordinate grid, a path from $(0,0)$ to $(2n,2n)$ consists of $4n$ consecutive unit steps $(1,0)$ or $(0,1)$. Prove that the number of paths that divide the square with vertices $(0,0),(2n,0),(2n,2n),(0,2n)$ into 2 regions with even areas is$$\frac{{4n \choose 2n} + {2n \choose n}}{2}$$
 </txt>
 </problem>

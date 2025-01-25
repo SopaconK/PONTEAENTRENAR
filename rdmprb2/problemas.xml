@@ -584,7 +584,7 @@ For every $a,b\in S$ (not necessarily distinct) there are $c\neq d$ in $S$ so th
 </problem>
 <problem>
 <src>Taiwan TST 2024/R2.1</src>
-<done>0</done>
+<done>1</done>
 <txt>
 Given triangle $ABC$. Let $BPCQ$ be a parallelogram ($P$ is not on $BC$). Let $U$ be the intersection of $CA$ and $BP$, $V$ be the intersection of $AB$ and $CP$, $X$ be the intersection of $CA$ and the circumcircle of triangle $ABQ$ distinct from $A$, and $Y$ be the intersection of $AB$ and the circumcircle of triangle $ACQ$ distinct from $A$.
 Prove that $\overline{BU} = \overline{CV}$ if and only if the lines $AQ$, $BX$, and $CY$ are concurrent.
@@ -614,7 +614,7 @@ cualquier tri\'angulo con v\'ertices enteros y \'area entera se puede subdividir
 </problem>
 <problem>
 <src>Argentina Ibero TST 2018/2</src>
-<done>0</done>
+<done>1</done>
 <txt>
 On a board, there are $n > 3$ distinct positive integers, each smaller than $(n-1)!$. For each pair $a > b$ of these numbers, Julián writes the integer quotient of $a$ divided by $b$ (for example, if $a = 100$ and $b = 7$, Julián writes $14$, since $100 = 14 \times 7 + 2$). Prove that there will be at least two equal numbers written in Julián's notebook.
 </txt>
@@ -679,7 +679,7 @@ Positive real numbers $a, b,c$ satisfy $ab + bc+ ca = 3$. Prove the inequality$$
 </problem>
 <problem>
 <src>Girls Math at Yale 2022/Mix/6</src>
-<done>0</done>
+<done>1</done>
 <txt>
  Suppose that $x$ and $y$ are positive real numbers such that $\log_2 x = \log_x y = \log_y 256$. Find $xy$.
 </txt>
@@ -707,7 +707,7 @@ y la lista $g(x), g(g(x)), g(g(g(x))), \ldots$, contiene una cantidad finita de 
 </problem>
 <problem>
 <src>Suiza TST 2020/2</src>
-<done>0</done>
+<done>1</done>
 <txt>
 Find all positive integers $n$ such that there exists an infinite set $A$ of positive integers with the following property: For all pairwise distinct numbers $a_1, a_2, \ldots , a_n \in A$, the numbers
 $$a_1 + a_2 + \ldots + a_n \text{ and } a_1\cdot a_2\cdot \ldots\cdot a_n$$are coprime.
@@ -737,5 +737,13 @@ $$a_1 + a_2 + \ldots + a_n \text{ and } a_1\cdot a_2\cdot \ldots\cdot a_n$$are c
 	Let $ABC$ be a scalene triangle. $D$ is the foot of the altitude from $A$ to $BC$. $H$ is the orthocenter, $M$ is the midpoint of $BC$, and $N$ is the midpoint of $AH$. Tangents from $B$ and $C$ to the circumcircle of $ABC$ intersect at $T$. Prove that line $TH$ passes through one of the intersections of circles $ADT$ with $MHN$.
 </txt>
 <id>791019430760392</id>
+</problem>
+<problem>
+<src>Benelux 2024/2</src>
+<done>0</done>
+<txt>
+Let $n$ be a positive integer. In a coordinate grid, a path from $(0,0)$ to $(2n,2n)$ consists of $4n$ consecutive unit steps $(1,0)$ or $(0,1)$. Prove that the number of paths that divide the square with vertices $(0,0),(2n,0),(2n,2n),(0,2n)$ into 2 regions with even areas is$$\frac{{4n \choose 2n} + {2n \choose n}}{2}$$
+</txt>
+<id>7928799920446673313</id>
 </problem>
 </problemas>
