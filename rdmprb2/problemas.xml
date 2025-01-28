@@ -746,4 +746,96 @@ Let $n$ be a positive integer. In a coordinate grid, a path from $(0,0)$ to $(2n
 </txt>
 <id>7928799920446673313</id>
 </problem>
+<problem>
+<src>AtCoder ABC390D</src>
+<done>0</done>
+<txt>
+\url{https://atcoder.jp/contests/abc390/tasks/abc390_d} 
+</txt>
+<id>73625306391637</id>
+</problem>
+<problem>
+<src>COCI 2024/R4.C</src>
+<done>0</done>
+<txt>
+\url{https://evaluator.hsin.hr/events/coci25_4/tasks/HONI242545xor/}
+</txt>
+<id>8904968918780587630</id>
+</problem>
+<problem>
+<src>Mongolia 2023/4</src>
+<done>0</done>
+<txt>
+Find all functions $f : \mathbb{R} \to \mathbb{R}$ and $h : \mathbb{R}^2 \to \mathbb{R}$ such that\[f(x+y-z)^2=f(xy)+h(x+y+z, xy+yz+zx)\]for all real numbers $x,y,z$.
+</txt>
+<id>517755273241081</id>
+</problem>
+<problem>
+<src>Hong Kong TST 2021/2.1</src>
+<done>0</done>
+<txt>
+Let $S$ be a set of $2020$ distinct points in the plane. Let
+\[M=\{P:P\text{ is the midpoint of }XY\text{ for some distinct points }X,Y\text{ in }S\}.\]
+Find the least possible value of the number of points in $M$.
+</txt>
+<id>18491675323343</id>
+</problem>
+<problem>
+<src>Dutch TST 2016/2.1</src>
+<done>0</done>
+<txt>
+Prove that for all positive reals $a, b,c$ we have: $a +\sqrt{ab}+ \sqrt[3]{abc}\le \frac43 (a + b + c)$
+</txt>
+<id>753169766061772</id>
+</problem>
+<problem>
+<src>IOI 2015/3 - Teams</src>
+<done>0</done>
+<txt>
+\url{https://oj.uz/problem/view/IOI15_teams?locale=en}
+</txt>
+<id>96834854297055</id>
+</problem>
+<problem>
+<src>XIX Open Cup, Grand Prix of Korea A</src>
+<done>0</done>
+<txt>
+\url{https://codeforces.com/gym/102059/problem/A}
+</txt>
+<id>337743437154656</id>
+</problem>
+<problem>
+<src>2018-2019 ACM-ICPC Brazil Subregional Programming Contest L</src>
+<done>0</done>
+<txt>
+\url{https://codeforces.com/gym/101908/problem/L}
+</txt>
+<id>450132453364056</id>
+</problem>
+<problem>
+<src>CF 442D</src>
+<done>0</done>
+<txt>
+\url{https://codeforces.com/problemset/problem/442/D}
+</txt>  
+<id>769626381876547</id>
+</problem>
+<problem>
+<src>IOI 2015/6- Towns</src>
+<done>0</done>
+<txt>
+\url{https://oj.uz/problem/view/IOI15_towns?locale=en}
+</txt>
+<id>221518359876708</id>
+</problem>
+<problem>
+<src>India STEMS 2025/A6</src>
+<done>0</done>
+<txt>
+Let $P \in \mathbb{R}[x]$. Suppose that the multiset of real roots (where roots are counted with multiplicity) of $P(x)-x$ and $P^3(x)-x$ are distinct. Prove that for all $n\in \mathbb{N}$, $P^n(x)-x$ has at least $\sigma(n)-2$ distinct real roots.
+
+(Here $P^n(x):=P(P^{n-1}(x))$ with $P^1(x) = P(x)$, and $\sigma(n)$ is the sum of all positive divisors of $n$).
+</txt>
+<id>850146115756945</id>
+</problem>
 </problemas>

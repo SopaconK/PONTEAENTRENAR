@@ -1,7 +1,9 @@
 <problem>
-<src>Benelux 2024/2</src>
+<src>India STEMS 2025/A6</src>
 <done>0</done>
 <txt> 	
-Let $n$ be a positive integer. In a coordinate grid, a path from $(0,0)$ to $(2n,2n)$ consists of $4n$ consecutive unit steps $(1,0)$ or $(0,1)$. Prove that the number of paths that divide the square with vertices $(0,0),(2n,0),(2n,2n),(0,2n)$ into 2 regions with even areas is$$\frac{{4n \choose 2n} + {2n \choose n}}{2}$$
+Let $P \in \mathbb{R}[x]$. Suppose that the multiset of real roots (where roots are counted with multiplicity) of $P(x)-x$ and $P^3(x)-x$ are distinct. Prove that for all $n\in \mathbb{N}$, $P^n(x)-x$ has at least $\sigma(n)-2$ distinct real roots.
+
+(Here $P^n(x):=P(P^{n-1}(x))$ with $P^1(x) = P(x)$, and $\sigma(n)$ is the sum of all positive divisors of $n$).
 </txt>
 </problem>
