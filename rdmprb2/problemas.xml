@@ -424,7 +424,7 @@ A positive integer $n$ is called $\textit{un-two}$ if there does not exist an or
 <id>220727315131292</id>
 </problem>
 <problem>
-<src>OMM 2018/6</src>
+<src>OMM 2022/6</src>
 <done>0</done>
 <txt>
     Encuentra todos los enteros $n\geq 3$ tales que existe un polígono convexto de $n$ lados $A_1A_2\dots A_n$ que tenga las siguientes características:
@@ -861,5 +861,49 @@ Let $F$ is the set of all sequences $\{(a_1, a_2, . . . , a_{2020})\}$ with $a_i
 \url{https://codeforces.com/gym/584589} 
 </txt>
 <id>6690790828522075328</id>
+</problem>
+<problem>
+<src>EGOI 2022/4 Tourists</src>
+<done>0</done>
+<txt>
+\url{https://codeforces.com/gym/104229/problem/D} 
+</txt>
+<id>6551047973184119414</id>
+</problem>
+<problem>
+<src>Argentina 2022/2.2</src>
+<done>0</done>
+<txt>
+Uri must paint some integers from $1$ to $2022$ (inclusive) in red, such that none of the differences between two red numbers is a prime number. Determine the maximum number of numbers Uri can paint red.
+
+Note 1: The difference between two distinct numbers is the subtraction of the larger minus the smaller.
+Note 2: $1$ is not a prime number.
+</txt>
+<id>8782766174709877188</id>
+</problem>
+<problem>
+<src>CF 277136E</src>
+<done>0</done>
+<txt>
+\url{https://vjudge.net/problem/Gym-277136E} o \url{https://codeforces.com/gym/105408/problem/B}
+Hint: Persistencia, eppstein 
+</txt>
+<id>881716678758</id>
+</problem>
+<problem>
+<src>ICPC GPMX 2023/1C</src>
+<done>0</done>
+<txt>
+\url{https://codeforces.com/gym/104375/problem/C}
+</txt>
+<id>49276879958288</id>
+</problem>
+<problem>
+<src>USAMO 2022/4</src>
+<done>0</done>
+<txt>
+Find all pairs of primes $(p, q)$ for which $p-q$ and $pq-q$ are both perfect squares.
+</txt>
+<id>26810428007384</id>
 </problem>
 </problemas>

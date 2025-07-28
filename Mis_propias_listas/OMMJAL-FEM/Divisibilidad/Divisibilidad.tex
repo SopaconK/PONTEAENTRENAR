@@ -1,0 +1,423 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{ amssymb }
+\usepackage[dvipsnames]{xcolor}
+\definecolor{red1}{RGB}{255, 153, 153}
+\definecolor{green1}{RGB}{204, 255, 204}
+\definecolor{blue1}{RGB}{204, 255, 255}
+\definecolor{yellow1}{RGB}{255, 247, 160}
+
+\definecolor{red2}{RGB}{255, 102, 102}
+\definecolor{green2}{RGB}{108, 255, 108}
+\definecolor{blue2}{RGB}{94, 204, 255}
+\definecolor{yellow2}{RGB}{255, 250, 104}
+
+\definecolor{red2.5}{RGB}{255,76,76}
+\definecolor{green2.5}{RGB}{54, 247, 54}
+\definecolor{blue2.5}{RGB}{51, 189, 255}
+\definecolor{yellow2.5}{RGB}{255, 242, 52}
+
+
+\definecolor{red3}{RGB}{255, 51, 51}
+\definecolor{green3}{RGB}{0, 240, 0}
+\definecolor{blue3}{RGB}{9, 175, 255}
+\definecolor{yellow3}{RGB}{255, 234, 0}
+
+\definecolor{red3.5}{RGB}{229, 25, 25}
+\definecolor{green3.5}{RGB}{0, 194, 0}
+\definecolor{blue3.5}{RGB}{4, 143, 209}
+\definecolor{yellow3.5}{RGB}{255,220,0}
+
+\definecolor{red4}{RGB}{204, 0, 0}
+\definecolor{green4}{RGB}{0, 149, 0}
+\definecolor{blue4}{RGB}{0, 111, 164}
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\newcommand{\mcd}{\operatorname{mcd}}
+\newcommand{\mcm}{\operatorname{mcm}}
+
+
+\title {Divisibilidad}
+\subtitle{OMMJAL- Femenil}
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Definiciones}
+\begin{definition} [Divisibilidad]
+    Sean $a,b$ enteros, decimos que $a \mid b $ si existe un entero $x$ tal que $b=ax$.
+\end{definition}
+
+
+\begin{definition}[Valor absoluto]
+El valor absoluto de un número $a$ es
+\[
+\abs{a} =
+\begin{cases}
+  a & \text{si } a \geq 0, \\
+  -a & \text{si } a < 0.
+\end{cases}
+\]
+
+Que se suele ver como la distancia al origen de ese punto $a$ en la recta real, o bastante menos formalmente visto como "el número pero sin signo". 	
+\end{definition}
+
+
+\textbf{Propiedades:} Para $a,b,c, r, s$ enteros
+\begin{enumerate}
+    \item $a\mid b$ si y solo si $\abs{a} \mid \abs{b}$
+    \item Si $a \mid b$ entonces $\abs{a} \leq \abs{b} $ (Para $b\neq 0$)
+    \item $a \mid a$
+    \item $1 \mid a$ 
+    \item $a \mid 0$ ( Porque $0=a\cdot 0$ )
+    \item Si $a \mid b$ y $b \mid a$ entonces $\abs{a}=\abs{b}$
+    \item Si $a \mid b$ y $a \mid c$ entonces $a \mid rb+sc$ para cualesquiera $r,s$ enteros.
+    \item Si $\mcd(a, b)=1$ y $a \mid bc$ entonces $a \mid c$ 
+    \begin{remark} [No es si y solo si]
+    No es un si y solo si, es decir si $a \mid c$ y $a \mid bc$, no necesariamente $mcd(a,b)=1$. Ejemplo de esto es $2 | 4 $ y $2 | 6\cdot 4$ pero $mcd(2,6)\neq 1$
+    \end{remark}
+    \item Si $a\mid b$ entonces $a\mid bc$ para todo entero $c$. (Caso particular del 7)
+\end{enumerate}
+
+De aqui surgen estos dos conceptos
+\begin{definition}
+El maximo comun divisor de dos enteros $a,b$ (usualmente escrito solo como $\mcd(a,b)$ o $\gcd(a,b)$ por su nombre en ingles) es el maximo entero positivo $d$ tal que 
+\[  d | a \text{ y } d | b   \].
+Notemos que este siempre existe porque 1 divide a ambos números. 
+\end{definition}
+\begin{definition}
+El minimo comun multiplo de dos enteros $a,b$ (usualmente escrito solo como $\mcm(a,b)$ o $\lcm(a,b)$ por su nombre en ingles) es el minimo entero positivo$d$ tal que 
+\[  a| d  \text{ y } b | d   \].
+Notemos que este siempre existe porque  $d=ab$ cumple para ambos números. 
+\end{definition}
+Por ejemplo para $a=12, b=18$ se tiene que $mcd (12,18)=6$ y $mcm(12,18)=36$. \\
+
+
+\subsection{Ejercicios}
+\begin{exercise} ¿Para cuales enteros positivos $n$ se tiene que $n | n+14$ ? \end{exercise}
+\begin{exercise} ¿Para cuales enteros positivos $n$ se tiene que $n | n+1$ ? \end{exercise}
+\begin{exercise} ¿Para cuales enteros positivos $n$ se tiene que $2025n | n +2025 $ ? \end{exercise} 
+\begin{exercise} ¿Para cuales enteros positivos $n$ se tiene que $n+2025 | 2025n$ ? \end{exercise}
+\begin{exercise} ¿Para cuales enteros positivos $n$ se tiene que $n-1 | n^2-2 $ ? \end{exercise}
+
+
+\section{Lema de la Division de Euclides}
+Vamos a considerarnos el conjunto de multiplos de $5$ no negativos.
+\[\{ 0,5,10,15,20,25,30,35,40,45,50,55, \ldots \}\]
+Entonces, ¿Qu\'e pasa con los n\'umeros como $32, 33$ que no estan en ese conjunto?, pues estan en medio entre $30$ y $35$, entonces podemos escribirlos como
+\[32 = 5 \times 6 + 2\]
+\[33 = 5 \times 6 + 3\]
+\[34 = 5 \times 6 + 4\]
+\[35 = 5 \times 6 + 5\]
+\[36 = 5 \times 6 + 6\]
+
+Pero $35$ y $36$ ya no estan en medio de $30$ y $35$ entonces mejores formas de escribirlos seria
+\[35= 5\times 7+0\]
+\[36= 5 \times 7 +1\]
+
+Siguiendo esto obtenemos el lema:
+\begin{lemma} [Lema de la Division de Euclides]
+Para cualesquiera enteros $a,b$ podemos encontrar \textbf{\'unicos} enteros $q,r$ tales que 
+\[b = aq+r\]
+con $0 \leq r <a$, donde $q$ es el cociente y $r$ el residuo.
+\end{lemma}
+
+\section{Algoritmo de la División de Euclides}
+
+\begin{lemma}
+Sean $a,b$ enteros. Si escribimos $a=bq+r$ para enteros $q,r$ con $0 \leq r < b$ entonces
+\[ \mcd(a,b)=\mcd (r,b) \]
+\end{lemma}
+\begin{proof}
+Notemos que $\mcd(a,b) \mid b$ y como $\mcd(a,b) \mid a = bq+r \Rightarrow \mcd(a,b) \mid r$ Entonces  $\mcd(a,b) \mid \mcd( r,b)$  \\
+Y adem\'as 
+\[ \mcd(r,b) \mid b \text{ y } \mcd(r,b) \mid r = a-bq \Rightarrow \mcd(r,b) \mid a \Rightarrow \mcd(r,b) \mid \mcd(a,b) \]
+Entonces como ambos son positivos $\mcd(a,b)=\mcd(r,b)$
+\end{proof}
+
+Entonces, el algoritmo de la divisi\'on es aplicar esto hasta que en alg\'un punto llegas a que un n\'umero divide a otro, siendo el menor tu resultado.  \\
+Veamos un ejemplo, para calcular $\mcd(370,100)$ queda:
+\[\mcd(370,100)=\mcd(70,100)=\mcd(70,30)=\mcd(10,30)=10\]
+porque $10\mid 30$. \\
+
+\textbf{¿Pero por qu\'e termina?} \\
+
+Esto sucede porque en cada paso el residuo es menor, entonces eventualmente llega a 0 (y cuando llega a 0 en el paso anterior un n\'umero dividia a otro).
+
+
+
+\subsection{Ejercicios}
+\begin{exercise} Calcula $\mcd(124,440)$ usando el algoritmo. \end{exercise}
+\begin{exercise} Demuestra que $\mcd(4n+3,2n) \in \{1,3\}$. \end{exercise}
+
+
+\section{Bezout}
+
+Ahora vamos a centrarnos en expresiones de la forma
+\[ax+by=n\]
+Para $a,b$ enteros fijos, $x,y,n$ enteros. \\
+\subsection{¿Cu\'ales $n$ son posibles?}
+Notemos que $\mcd(a,b) \mid ax+by =n $, entonces $n$ es multiplo de $\mcd(a,b)$. 
+
+\subsection{Construcci\'on}
+Entonces veremos cuales multiplos de $\mcd(a,b)$ son posibles, y la respuesta es que todos. \\
+Para eso vamos a ver que existen $x,y$ con $ax+by=\mcd(a,b)$. \\
+Entonces notemos que el proceso de el algoritmo de Euclides es totalmente reversible, pero para eso vamos a escribirlo de una forma m\'as extensa usando el mismo ejemplo de $\mcd(370,100)$. 
+
+\[370 = 100 \times 3 + 70\]
+\[100 = 70 \times 1 + 30\]
+\[70 = 30 \times 2 +10 \]
+
+Y entonces veamos que 
+
+\[10 = 70\cdot 1 - 30 \cdot 2\]
+Entonces usando el paso anterior $30=100 \cdot 1- 70 \cdot 1$ y 
+\[10 = 70\cdot 1 - (100 \cdot 1-70\cdot 1)\cdot 2 = 70 \cdot 3 -100 \cdot 2\]
+Y en el paso anterior $70=370\cdot 1 -100 \cdot 3$ y 
+\[10 = (370 \cdot 1 - 100 \cdot 3) \cdot 3 - 100 \cdot 2 = 370 \cdot\ 3 - 100 \cdot 11 \]
+
+Entonces ya escribirmos $10$ como una combinacion lineal de $370$ y $100$.
+
+Y en general podemos regresar los pasos del algoritmo de la divisi\'on para encontrar los $x,y$ tales que 
+\[ax+by = \mcd (a,b) \]
+
+\begin{exercise} Ahora demuestra que si existen para todos los multiplos de $\mcd(a,b)$ \end{exercise}
+
+
+\section{Factorización Canonica}
+
+\begin{definition} [Primo]
+Un número entero $p$ es primo si sus unicos divisores son $1,p$, en particular 1 no es primo.  (Si consideras divisores negativos entonces los unicos son $-a,-1,1,a$ y $1,0,-1$ no son primos. 
+\end{definition}
+Los primeros primos son: 2,3,5,7,11,13,17,19,23,29. \\
+En particular el unico primo par es 2.\\
+
+Los números primos solo los divide si mismo y 1, osea solo un primo.\\
+Los números compuestos los dividen dos o más primos (contando multiplicidad, es decir puede ser dos veces el mismo primo). 
+\begin{theorem} [Teorema Fundamental de la Aritmetica]
+El TFA nos dice que todo numero natural tiene una representacion unica como producto de potencias de primos (Esta es la factorización canonica). Es decir 
+$$n= p_1^{\alpha_1}p_2^{\alpha_2}p_3^{\alpha_3}\cdots p_k^{\alpha_k}$$
+Donde cada $p_i$ es primo elevado a una potencia entera $\alpha_i$. 
+\end{theorem}
+
+Esto sirve para muchisimas cosas, voy a mostrar solo unas cuantas.  \\
+
+Por ejemplo para saber si un numero $x$ es una $n$-sima potencia. Para esto ocupamos que cada uno de los exponentes de la factorización canonica de $x$ sea multiplo de $n$. Porque justo al elevar un número a la $n$ lo que estas haciendo es multiplicar todas sus potencias por $n$.  \\
+Por ejemplo $36=2^2\cdot 3^2$ y como todos los exponentes son multiplos de 2, entonces 36 es un cuadrado perfecto. \\
+Esto tambien lo puedes hacer para saber por que valor tienes que multiplicar para llegar a cierta potencia. Por ejemplo el menor entero positivo $x$ tal que $72x$ es un cubo perfecto se puede obtener viendo que $72=2^3\cdot 3^2$ y quieres que todos sean multiplos de 3, entonces solo te falta multiplicar por un $3$ para que se vuelva $72\cdot 3 = 2^3\cdot 3^3$ y eso ya es un cubo. 
+
+
+
+Para saber si un número $a$ divide a $b$, la factorización canonica de $a$ debe de estar "contenida" en la de $b$, donde estar contenida es que todos los primos que aparecen en la de $a$, aperecen en la de $b$ y tienen un exponente menor o igual al que esta en $b$, mas formalmente. 
+Si $a=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$ y $b=p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta_k}$, entonces $a|b \Longleftrightarrow $
+$$\alpha_i \leq \beta_i \text{  } \forall \text{  } 1\leq i\leq k$$
+
+\begin{exercise} ¿$2^9\cdot 3^3 $ es divisible  por $2\cdot 3$ ?\end{exercise}
+\begin{exercise} ¿$2^9\cdot 3^3 $ es divisible  por $2^8\cdot 3^8$ ?\end{exercise}
+\begin{exercise} ¿$2^9\cdot 3^3 $ es divisible  por $2\cdot 3\cdot 5$ ?\end{exercise}
+\begin{exercise} ¿$2^9\cdot 3^3 $ es divisible  por $2\cdot 3^8$ ?\end{exercise}
+\begin{exercise} ¿$2^9\cdot 3^3 $ es divisible  por $3^3$ ?\end{exercise}
+
+Tambien podemos relacionar el $\mcd, \mcm$ con esta factorización canonica.
+
+Si $a=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$ y $b=p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta_k}$, entonces 
+$$\mcd(a,b)=p_1^{\min(\alpha_1,\beta_1)}p_2^{\min(\alpha_2,\beta_2)}\cdots p_k^{\min(\alpha_k,\beta_k)}$$
+y 
+$$\mcm(a,b)=p_1^{\max(\alpha_1,\beta_1)}p_2^{\max(\alpha_2,\beta_2)}\cdots p_k^{\max(\alpha_k,\beta_k)}$$
+
+\begin{exercise}
+Prueba que para cualesquiera dos enteros $a,b$ se tiene que 
+$$mcd(a,b)\cdot mcm(a,b)=ab$$
+\end{exercise}
+
+Y sobretodo, todo esto te sirve para poder caracterizar y trabajar con los n\'umeros de forma algebraica. 
+
+
+\newpage
+
+\epigraph{No tengo razones para exigirte ni apresurarte, pero aun as\'i no cambia el hecho de que lo queria}{Iker esperando el correo de Lalo}
+
+
+\section{Problemas Parte 1}
+Los problemas no estan necesariamente en orden de dificultad.
+\begin{problem}
+	Si un entero $A$ no es mutliplo de 3 puede $2A$ serlo?
+\end{problem}
+
+\begin{problem}
+	Halla el menor entero positivo $x$ tal que $8x$ es un cuadrado perfecto y $12x$ es un cubo perfecto.
+\end{problem}
+\begin{problem}
+Encuentra el menor entero positivo por el que hay que multiplicar 18 para que sea un cubo perfecto. 
+\end{problem}
+\begin{problem}
+
+	Al contar unos ladrillos se dieron cuenta que de 2 en 2 sobraba 1, de 3 en 3 tambien , de 5 en 5 tambien, de 7 en 7 tambien.  ¿Cuál es la minima cantidad de ladrillos que puede haber?
+\end{problem}
+\begin{problem} %[OMM Jalisco Estatal 2023/3]
+	El número de alumnos en un colegio esta entre 500 y 1000. Si se cuentan de 3 en 3 no sobra ninguno, y si se cuentan de 5 en 5 tampoco. Si el número de alumnos de cada salon es igual al numero de salones, halla el número de alumnos en el colegio. 
+\end{problem}
+
+\begin{problem}
+
+    ¿Cuántos divisores positivos tiene el número $20!$?
+   
+\end{problem}
+\begin{problem}
+	¿Cuántos divisores positivos tiene un número $n$? (puedes decirlo en base a su factorizacion canonica)
+\end{problem}
+
+\begin{problem} %[IMO 1959/1]
+Demuestra que la fracci\'on 
+\[\frac{21n+4}{14n+3}\]
+es irreducible para todo entero $n$.
+\end{problem}
+\begin{problem}
+¿En cu\'antos ceros termina $2025!$?
+\end{problem}
+
+
+
+\begin{problem} % [OMM 1987/7]
+
+    Demuestre que la fracción $ \frac{n^2+n-1}{n^2+2n}$ es irreducible para todo entero positivo $n$.
+
+\end{problem}
+
+
+\newpage
+\section{Problemas Parte 2}
+Los problemas no estan necesariamente en orden de dificultad. \\
+Si resuelves al menos 6 problemas de esta parte dime y te mando la parte 3. 
+
+\begin{problem}
+Probar que $5 \mid 2n+3m$ si y solo si $5 \mid n+4m$.
+\end{problem}
+\begin{problem}
+Demuestra que para $n$ natural y $a,b$ enteros cualesquiera \[ a-b \mid a^n-b^n \]
+Y si $n$ impar entonces \[a+b \mid a^n+b^n\]
+\end{problem}
+
+\begin{problem}
+	Encuentra 100 numeros consecutivos tales que ninguno sea primo.
+\end{problem}
+\begin{problem} % [OMM 1988/2]
+
+    Si $a$ y $b$ son enteros positivos, demostrar que $11a+2b$ es múltiplo de $19$ si y sólo si lo es $18a+5b$.
+\end{problem}
+
+\begin{problem}
+Prueba que si $p$ es primo y $0<k<p$, entonces $\binom{p}{k}$ es divisible por $p$.
+\end{problem}
+
+\begin{problem}
+Demuestra que $n$ no es primo si y solo si existe algun primo $p \leq  \sqrt{n}$ con $p \mid n$.
+\end{problem}
+
+\begin{problem} % [Nacional Femenil 2022/6]
+
+    Sean $a$ y $b$ enteros positivos tales que 
+\[\frac{5a^4+a^2}{b^4+3b^2+4}\]
+es un número entero. Demuestra que $a$ no es un número primo.
+    	
+\end{problem}
+
+\begin{problem}
+Sea $n$ un entero positivo y sean $d_1, d_2, \ldots, d_k$ los divisores de $n$ escritos de menor a mayor. Sean 
+\[C = d_1d_k^2+d_2d_{k-1}^2+\ldots+d_{k-1}d_2^2+d_kd_1^2\]
+\[S= d_1+d_2+\ldots+d_{k-1}+d_k\]
+Determina $\frac{C}{S}$ en terminos de $n$.
+\end{problem}
+
+
+\begin{problem} %[PUTNAM 2000]
+
+Prueba que la expresi\'on 
+\[\frac{\mcd (m,n)}{n} \binom{n}{m}\]
+es entero para cualquier pareja de enteros $n \geq m \geq 1$.
+\end{problem}
+
+
+\begin{problem} % IMO 2023/1
+Determina todos los enteros compuestos $n > 1$ que cumplen lo siguiente: si $d_1, d_2, \ldots, d_k$ son todos los divisores positivos de $n$ con $1=d_1 < d_2 <\ldots <d_k=n$, entonces $d_i$ divide a $d_{i+1}+d_{i+2}$ para todo $1 \leq i \leq k-2$.
+\end{problem}
+
+
+\newpage
+\section{Parte 3}
+Puedes intentar los problemas de esta parte, aunque tal vez es mejor que termines la mayoria de los problemas de las partes anteriores. \\
+Los problemas no estan en orden de dificultad. \\
+Si te acabas estos problemas dime y te mando m\'as.
+
+\begin{problem}
+Encuentra todos los enteros positivos $n$ tales que $3n-4, 4n-5$ y $5n-3$ son todos primos.
+\end{problem}
+
+
+
+
+\begin{problem} % [All Russian 1995]
+Sean $m,n$ enteros positivos tales que 
+\[\mcd(m,n)+ \mcm(m,n) = m+n\]
+Entonces uno de los dos n\'umeros es divisible por el otro.
+\end{problem}
+
+
+
+\begin{problem} % St.Petersburg 1996
+Encuentra todos los enteros positivos $n$ tales que 
+\[3^{n-1}+5^{n-1} \mid 3^n+5^n\]
+\end{problem}
+
+
+\begin{problem} % OMM 2022/1
+
+    Un número $x$ es Tlahiuca si existen primos positivos distintos $p_1,p_2,\dots,p_k$ tales que 
+\[x=\frac{1}{p_1}+\frac{1}{p_2}+\cdots+\frac{1}{p_k}.\]
+Deterimina el mayor número Tlahuica $x$ que satisface las dos siguientes propiedades:
+ \begin{itemize} 
+ \item  $0< x < 1$. 
+ \item  Existe un número entero $0< m\leq 2022$ tal que $mx$ es un número entero. 
+ \end{itemize} 
+    
+\end{problem}
+
+\begin{problem} % OMM 2024/2
+Determina todos los pares $(a,b)$ de enteros que satisfacen ambas condiciones: 
+\begin{itemize}
+\item $5 \leq b <a$
+\item Existe un n\'umero natural $n$ tal que los n\'umeros $\frac ab$ y $a-b$ son divisores consecutivos de $n$ en ese orden.
+\end{itemize}
+\end{problem}
+
+\begin{problem} %OMM 2022/5
+
+    Sea $n>1$ un entero positivo y sean $d_1< d_2< \dots < d_m$ sus $m$ divisores positivos de manera que $d_1=1$ y $d_m=n$. Lalo escribe los siguientes $2m$ números en un pizarrón:
+\[d_1,d_2,\dots,d_m,d_1+d_2,d_2+d_3,\dots,d_{m-1}+d_m,N\]
+donde $N$ es un entero positivo. Después Lalo borra los números repetidos (por ejemplo, si un número aparece dos veces, él borrará uno de los dos). Después de esto, Lalo nota que los números en el pizarrón son precisamente la lista completa de divisores positivos de $N$. Encuentra todos los posibles valores del entero positivo $n$.
+    
+\end{problem}
+
+
+\begin{problem}
+Sean $n, p> 1$ enteros positivos con $p$ primo. Dado que $n \mid p-1$ y $p \mid n^3-1$, prueba que $4p-3$ es un cuadrado perfecto.
+\end{problem}
+
+\begin{problem} %[Ibero 2024/1]
+Para cada entero positivo $n$, sea $d(n)$ la cantidad de divisores positivos de $n$. \\
+Prueba que para todas las parejas de enteros positivos $(a,b)$ se cumple que 
+\[d(a)+d(b) \leq d(\mcd(a,b))+d(\mcm(a,b))\]
+Y determina cuales parejas $(a,b)$ cumplen el caso de igualdad.
+\end{problem}
+\end{document}

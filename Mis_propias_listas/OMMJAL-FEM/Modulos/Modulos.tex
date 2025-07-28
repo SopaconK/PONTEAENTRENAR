@@ -1,0 +1,219 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{ amssymb }
+\usepackage[dvipsnames]{xcolor}
+\definecolor{red1}{RGB}{255, 153, 153}
+\definecolor{green1}{RGB}{204, 255, 204}
+\definecolor{blue1}{RGB}{204, 255, 255}
+\definecolor{yellow1}{RGB}{255, 247, 160}
+
+\definecolor{red2}{RGB}{255, 102, 102}
+\definecolor{green2}{RGB}{108, 255, 108}
+\definecolor{blue2}{RGB}{94, 204, 255}
+\definecolor{yellow2}{RGB}{255, 250, 104}
+
+\definecolor{red2.5}{RGB}{255,76,76}
+\definecolor{green2.5}{RGB}{54, 247, 54}
+\definecolor{blue2.5}{RGB}{51, 189, 255}
+\definecolor{yellow2.5}{RGB}{255, 242, 52}
+
+
+\definecolor{red3}{RGB}{255, 51, 51}
+\definecolor{green3}{RGB}{0, 240, 0}
+\definecolor{blue3}{RGB}{9, 175, 255}
+\definecolor{yellow3}{RGB}{255, 234, 0}
+
+\definecolor{red3.5}{RGB}{229, 25, 25}
+\definecolor{green3.5}{RGB}{0, 194, 0}
+\definecolor{blue3.5}{RGB}{4, 143, 209}
+\definecolor{yellow3.5}{RGB}{255,220,0}
+
+\definecolor{red4}{RGB}{204, 0, 0}
+\definecolor{green4}{RGB}{0, 149, 0}
+\definecolor{blue4}{RGB}{0, 111, 164}
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+
+\title{Modulos}
+\subtitle{OMMJAL-Femenil}
+\author{Emmanuel Buenrostro}
+
+\begin{document}
+
+\maketitle.
+
+
+\section{Principios}
+\begin{definition}
+$a \equiv b \pmod n$ si $n\mid a-b$ 
+\end{definition}
+\textbf{ Propiedades:}
+Si $a\equiv b \pmod n$ y $c \equiv d \pmod n$:
+\begin{enumerate}
+\item $a+c\equiv b+d  \pmod n$
+\item $a-c \equiv b-d \pmod n$
+\item $ac \equiv bd \pmod n$
+\item $a^x\equiv b^x \pmod n$
+\end{enumerate}
+Y en general cualquier operaci\'on con suma, resta, multiplicaci\'on se puede hacer.
+
+\section{¿C\'omo se usa?}
+Los modulos tienen distintos usos, creo que los dos m\'as usuales es cosas directamente relacionadas con la divisibilidad (o por ejemplo calcular algun modulo), o el poder resolver distintas ecuaciones diofantinas (con enteros) al acotar bastante en que casos se puede y no se puede. \\
+Veamos unos problemas de ejemplo. 
+
+\begin{example} 
+Encuentra que valores de $n$ se tiene que $3 \mid n^2+1$.
+\end{example}
+
+\begin{soln}
+Como queremos que $3 \mid n^2+1$ entonces queremos que $3 \mid n^2-(-1)$ y entonces quieres $n^2 \equiv -1 \pmod 3$.  \\
+Otra forma de ver esto, es que si $3 \mid n^2+1$ entonces
+\begin{align*}
+n^2+1 &\equiv 0 \pmod 3 \\
+n^2 &\equiv -1 \pmod 3
+\end{align*}
+Puedes moverlo como si fuera una ecuaci\'on normal. \\
+
+Entonces ahora vamos a ver todos los posibles casos de $n^2 \pmod 3$. 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$n \pmod 3$ &  $n^2\pmod 3$\\
+\hline
+0 &  0 \\
+\hline
+1 &  1\\
+\hline
+2 &  $ 4 \equiv 1 $\\
+\hline
+\end{tabular}
+\end{center}
+
+Entonces podemos notar que no hay ningun caso donde $n^2 \equiv -1 \pmod 3$ entonces no hay soluciones. \\
+\end{soln}
+\begin{example}
+¿Cu\'al es el residuo de $2^{2025}$ al dividirlo entre 7?
+\end{example}
+
+\begin{soln}
+Vamos a ver los primeros casos de potencias de 2 modulo 7. \\
+\[2^1 \equiv 2, 2^2 \equiv 4, 2^3 \equiv 1, 2^4 \equiv 2\]
+Entonces podemos ver que volvemos al 2, pero el residuo de una potencia de 2 depende totalmente del residuo anterior, entonces si se repite una se va a hacer un ciclo, en este caso el ciclo es
+\[2 \rightarrow 4 \rightarrow 1 \]
+Entonces ahora lo que nos importa es ver cuanto es 2025 modulo 3 (porque el ciclo es de tamaño 3), y como $2025 \equiv 0 \pmod 3$ entonces $2^{2025} \equiv 1 \pmod 7$.
+\end{soln}
+
+
+
+
+
+
+\newpage
+\epigraph{Seguro Emma ya lo tiene completo
+}{Lalo refiriendose al Excel}
+
+\section{Problemas Parte 1	}
+
+\begin{problem}
+Demuestra que $a-b \mid a^n-b^n$ para $n$ entero no negativo. 
+\end{problem}
+
+\begin{problem}
+¿Para cu\'ales enteros $n$ se tiene que $4 \mid 3n^3+1$ ?
+\end{problem}
+
+\begin{problem}
+Demuestra el criterio de divisibilidad del 3, el cual dice que un n\'umero es divisible entre 3 si la suma de sus digitos es divisible entre 3.
+\end{problem}
+
+\begin{problem}
+Demuestra el criterio de divisibilidad del $4$, el cual dice que un n\'umero es multiplo de 4 si el n\'umero formado por sus dos ultimos digitos es multiplo de 4.
+\end{problem}
+
+
+\begin{problem}
+Sea $S$ la suma 
+\[S=1+2+3+\ldots+2025\]
+Encuentra el residuo cuando $S$ es dividido entre 7.
+\end{problem}
+
+
+
+\begin{problem}
+¿Puede $222222$ ser un cuadrado perfecto?
+\end{problem}
+
+\begin{problem}
+Demuestra que los n\'umeros primos mayores a 3 son 1 o $5 \pmod 6$. 
+\end{problem}
+
+
+\begin{problem}
+Encuentra los enteros $n$ tales que $n^2 \equiv 1 \pmod 8$.
+\end{problem}
+
+\begin{problem}
+Encuentra los enteros $x$ tales que $12x \equiv 1 \pmod{23}$.
+\end{problem}
+
+\begin{problem}
+Demuestra que si para $x,y$ enteros entonces si $3\mid x^2+y^2$ se tiene que $3\mid x$ y $3\mid y$. 
+\end{problem}
+
+\section{Problemas Parte 2}
+
+
+
+\begin{problem} 
+Prueba que si $p$ y $8p-1$ son ambos primos entonces $8p+1$ es compuesto.
+\end{problem}
+
+\begin{problem} %2010 AIME 1
+Encuentra el residuo cuando $9 \times 99 \time 999\times \ldots \times 99\cdots9$ con 999 9's al final es dividido entre 1000. 
+\end{problem}
+
+\begin{problem}
+Encuentra todos los n\'umeros tales que son su propio inverso multiplicativo (El inverso multiplicativo es el que multiplicas para llegar a 1) mod $p$ donde $p$ es primo.
+\end{problem}
+
+\begin{problem}
+Demuestra que si $a^2 \equiv b^2 \pmod p$ donde $p$ es primo entonces $a\equiv b \pmod p$ o $a\equiv -b \pmod p$.
+\end{problem}
+
+\begin{problem}
+Demuestra que 
+\[2025 \mid 1^{2025}+2^{2025}+3^{2025}+\ldots + 2025^{2025}\]
+\end{problem}
+
+\begin{problem}
+Demuestra el criterio de divisibilidad de $2^n$, el cual dice que que un numero es divisible por $2^n$ si el número formado por los ultimos $n$ digitos es multiplo de $2^n$.
+\end{problem}
+
+\begin{problem}
+Demuestra que un numero es divisible por $5^n$ si el número formado por los ultimos $n$ digitos es multiplo de $5^n$.
+\end{problem}
+
+
+\begin{problem}
+Demuestra que si $7 \mid x^3+y^3+z^3$ entonces $7 $ divide a alguno de $x,y,z$.
+\end{problem}
+
+\begin{problem}
+Demuestra que un número es multiplo de 7 si el número formado por los numeros excepto el ultimo digito - el doble de el ultimo digito es multiplo de 7.
+\end{problem}
+
+\begin{problem}
+Determina todas las soluciones enteras no negativas $(n_1,n_2, \ldots, n_14)$ a
+\[n_1^4+n_2^4+\ldots+n_{14}^4 =1599\]
+\end{problem}
+
+
+
+\end{document}

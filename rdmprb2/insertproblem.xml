@@ -1,7 +1,7 @@
 <problem>
-<src>Virtual Brasil PES 29-1-25 </src>
+<src>USAMO 2022/4</src>
 <done>0</done>
 <txt> 	
-\url{https://codeforces.com/gym/584589} 
+Find all pairs of primes $(p, q)$ for which $p-q$ and $pq-q$ are both perfect squares.
 </txt>
 </problem>
