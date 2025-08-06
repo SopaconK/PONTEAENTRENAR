@@ -1,0 +1,479 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\title{Modulos}
+\subtitle{OMMJAL}
+\author{Emmanuel Buenrostro}
+
+\begin{document}
+
+\maketitle.
+
+
+\section{Principios}
+\subsection{Definici\'on}
+
+\begin{definition}
+$a \equiv b \pmod n$ si $n\mid a-b$ 
+\end{definition}
+\textbf{ Propiedades:}
+Si $a\equiv b \pmod n$ y $c \equiv d \pmod n$:
+\begin{enumerate}
+\item $a+c\equiv b+d  \pmod n$
+\item $a-c \equiv b-d \pmod n$
+\item $ac \equiv bd \pmod n$
+\item $a^x\equiv b^x \pmod n$
+\end{enumerate}
+Y en general cualquier operaci\'on con suma, resta, multiplicaci\'on se puede hacer.
+
+\begin{remark*}
+Podemos notar que no se menciona la divisi\'on, m\'as adelante tratamos con esta.
+\end{remark*}
+
+\subsection{Lema de la Division de Euclides}
+Tomar $a$ mod $n$ en realidad lo que estamos haciendo es asignarle al entero $a$ algun valor de $\{0,1, \ldots, n-1\}$, este valor es el residuo que deja $a$ al dividirlo entre $n$, entonces vamos a demostrar que con la definici\'on que tenemos si asignamos \textbf{exactamente} un valor de  $\{0,1, \ldots, n-1\}$ \\
+
+Vamos a considerarnos el conjunto de multiplos de $5$ no negativos.
+\[\{ 0,5,10,15,20,25,30,35,40,45,50,55, \ldots \}\]
+Entonces, ¿Qu\'e pasa con los n\'umeros como $32, 33$ que no estan en ese conjunto?, pues estan en medio entre $30$ y $35$, entonces podemos escribirlos como
+\[32 = 5 \times 6 + 2\]
+\[33 = 5 \times 6 + 3\]
+\[34 = 5 \times 6 + 4\]
+\[35 = 5 \times 6 + 5\]
+\[36 = 5 \times 6 + 6\]
+
+Pero $35$ y $36$ ya no estan en medio de $30$ y $35$ entonces mejores formas de escribirlos seria
+\[35= 5\times 7+0\]
+\[36= 5 \times 7 +1\]
+
+Siguiendo esto obtenemos el lema:
+\begin{lemma} [Lema de la Division de Euclides]
+Para cualesquiera enteros $a,b$ podemos encontrar \textbf{\'unicos} enteros $q,r$ tales que 
+\[b = aq+r\]
+con $0 \leq r <a$, donde $q$ es el cociente y $r$ el residuo.
+\end{lemma}
+
+\begin{proof}
+Para ver que existen, unicamente haz este proceso: Inicia con $r=b$ y $q=0$, entonces mientras $r\geq a$ restale $a$ a $r$ y sumale $1$ a $q$, esto sigue siendo igual a $b$:
+\[b=aq+r = aq+a+r-a = a(q+1)+(r-a)\]
+Entonces cuando finalmente $r<a$ tienes unos enteros $q,r$ que cumplan. \\
+
+Ahora para ver que son \'unicos, haremos contradicci\'on, si asumes que tienes dos parejas $(q_1,r_1)$ y $(q_2, r_2)$ que cumplen, entonces 
+\begin{align*}
+aq_1+r_1&=b=aq_2+r_2 \\
+aq_1-aq_2&=r_2-r_1 \\
+a(q_1-q_2)&=r_2-r_1 
+\end{align*}
+Entonces $r_2-r_1$ es m\'ultiplo de $a$, pero como $0\leq r_1,r_2 < a$ entonces $-a < r_2-r_1  < a$, y la unica posibilidad de que sea multiplo de $a$ es que $r_2-r_1=0$ y $r_1=r_2$, entonces $aq_1=aq_2 \Rightarrow q_1=q_2$ y son la misma pareja, contradicci\'on.
+
+\end{proof}
+
+Entonces $b \equiv r \pmod a$ porque $a \mid aq = b-r$ , y como $r$ es \'unico, entonces si asignamos exactamente un valor a cada entero positivo $b$ modulo $a$. \\
+
+En particular si $x=aq_1+r_1, y=aq_2+r_2$ entonces $x \equiv y \pmod a \iff r_1=r_2$.
+
+
+\begin{exercise}
+Prueba que para los negativos tambien sucede.
+\end{exercise}
+\begin{remark*}
+Usar modulos negativos suele servir para operaci\'ones, por ejemplo $n-1 \equiv -1 \pmod n$, entonces $(n-1)^2 \equiv (-1)^2 \equiv 1 \pmod n$, algo que sin usar el modulo negativo ser\'ia bastante mas complejo.
+\end{remark*}
+
+\subsection{¿C\'omo se usa?}
+Los modulos tienen distintos usos, creo que los dos m\'as usuales es cosas directamente relacionadas con la divisibilidad (o por ejemplo calcular algun modulo), o el poder resolver distintas ecuaciones diofantinas (con enteros) al acotar bastante en que casos se puede y no se puede. \\
+Veamos unos problemas de ejemplo. 
+
+\begin{example} 
+Encuentra que valores de $n$ se tiene que $3 \mid n^2+1$.
+\end{example}
+
+\begin{soln}
+Como queremos que $3 \mid n^2+1$ entonces queremos que $3 \mid n^2-(-1)$ y entonces quieres $n^2 \equiv -1 \pmod 3$.  \\
+Otra forma de ver esto, es que si $3 \mid n^2+1$ entonces
+\begin{align*}
+n^2+1 &\equiv 0 \pmod 3 \\
+n^2 &\equiv -1 \pmod 3
+\end{align*}
+Puedes moverlo como si fuera una ecuaci\'on normal. \\
+
+Entonces ahora vamos a ver todos los posibles casos de $n^2 \pmod 3$. 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$n \pmod 3$ &  $n^2\pmod 3$\\
+\hline
+0 &  0 \\
+\hline
+1 &  1\\
+\hline
+2 &  $ 4 \equiv 1 $\\
+\hline
+\end{tabular}
+\end{center}
+
+Entonces podemos notar que no hay ningun caso donde $n^2 \equiv -1 \pmod 3$ entonces no hay soluciones. \\
+\end{soln}
+\begin{example}
+¿Cu\'al es el residuo de $2^{2025}$ al dividirlo entre 7?
+\end{example}
+
+\begin{soln}
+Vamos a ver los primeros casos de potencias de 2 modulo 7. \\
+\[2^1 \equiv 2, 2^2 \equiv 4, 2^3 \equiv 1, 2^4 \equiv 2\]
+Entonces podemos ver que volvemos al 2, pero el residuo de una potencia de 2 depende totalmente del residuo anterior, entonces si se repite una se va a hacer un ciclo, en este caso el ciclo es
+\[2 \rightarrow 4 \rightarrow 1 \]
+Entonces ahora lo que nos importa es ver cuanto es 2025 modulo 3 (porque el ciclo es de tamaño 3), y como $2025 \equiv 0 \pmod 3$ entonces $2^{2025} \equiv 1 \pmod 7$.
+\end{soln}
+
+
+
+
+
+
+\newpage
+\epigraph{"Aqui mataron mucha gente"
+}{El lider de Per\'u en Tiananmen Square}
+\section{Problemas}
+\subsection{Calcular mods}
+\problemdiff{0}
+\begin{problema}
+Obten tres n\'umeros que sean congruentes a $a \pmod m$ para:
+\begin{itemize}
+\item $a=2, m=3$
+\item $a=-1, m=11$
+\item $a=52, m=17$
+\item $a=-16, m=6$
+\end{itemize}
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Calcula $a$ donde $a \in \{0,1,\ldots, 6\}$ y: 
+\[11 \cdot 18 \cdot 2322 \cdot 13 \cdot 19 \equiv a \pmod 7\]
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Demuestra que si $x \equiv 11 \pmod{24}$ entonces $3x \equiv 1 \pmod 8$
+\end{problema}
+
+ \problemdiff{0}
+\begin{problema}
+Si en este momento son las $10$ de la mañana, ¿Qu\'e hora sera en $2500$ horas?
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Encuentra el \'ultimo digito de $2\times 325 + 3\times 8^7 \times 5104+ 123^5$.
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Resuelve para $x$:
+\begin{enumerate}
+    \item $12x\equiv 1 \text{ mod } 23$
+    \item $x^2\equiv 1 \text{ mod } 23$
+    \item $x^2 \equiv 1 \text{ mod } 8$
+    \item $x(x+5) \equiv 6 \text{ mod } 10$
+\end{enumerate}
+\end{problema}
+
+\newpage
+\subsection{Usar mods pt 1}
+\problemdiff{0}
+\begin{problema}
+¿Para cu\'ales enteros $n$ se tiene que $4 \mid 3n^3+1$ ?
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Demuestra el criterio de divisibilidad del $3$, el cual dice que un n\'umero es divisible entre 3 si la suma de sus digitos es divisible entre 3.
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Demuestra el criterio de divisibilidad del $4$, el cual dice que un n\'umero es multiplo de 4 si el n\'umero formado por sus dos ultimos digitos es multiplo de 4.
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Demuestra el criterio de divisibilidad de $2^n$, el cual dice que que un numero es divisible por $2^n$ si el número formado por los ultimos $n$ digitos es multiplo de $2^n$.
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Demuestra que un numero es divisible por $5^n$ si el número formado por los ultimos $n$ digitos es multiplo de $5^n$.
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Encuentra los enteros $n$ tales que $n^2 \equiv 1 \pmod 8$.
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Encuentra los enteros $x$ tales que $12x \equiv 1 \pmod{23}$.
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Para un entero positivo $n$, sea $A(n)$ la suma de los digitos de $n$, por ejemplo $A(24135)= 5 +3 +1 +4 +2$. Prueba que $n \equiv A(n) \pmod{9}$.
+\end{problema}
+
+\problemdiff{0}
+\begin{problema}
+Se tienen $2003$ tarjetas n\'umeradas del $1$ al $2003$ y colocadas hacia abajo en orden en un m\'onton (la tarjeta con el $1$ aparece arriba). Sin mirar se quitan tres tarjetas consecutivas hasta que solo quedan dos tarjetas. ¿Es posible que haya quedado la tarjeta con el $1002$?
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+¿Puede $222222$ ser un cuadrado perfecto?
+\end{problema}
+
+\newpage
+\subsection{Usar mods pt2}
+
+\problemdiff{1}
+\begin{problema}
+Demuestra que $a-b \mid a^n-b^n$ para $n$ entero no negativo. 
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+Demuestra que los n\'umeros primos mayores a 3 son 1 o $5 \pmod 6$. 
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+Demuestra que si para $x,y$ enteros entonces si $3\mid x^2+y^2$ se tiene que $3\mid x$ y $3\mid y$. 
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+Demuestra que si $7 \mid x^3+y^3+z^3$ entonces $7 $ divide a alguno de $x,y,z$.
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+Demuestra que si $a^2 \equiv b^2 \pmod p$ donde $p$ es primo entonces $a\equiv b \pmod p$ o $a\equiv -b \pmod p$.
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+Demuestra que un número es multiplo de 7 si el número formado por los numeros excepto el ultimo digito - el doble de el ultimo digito es multiplo de 7.
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+Encuentra todas las tripletas de enteros positivos $(k,m,n)$ tal que $7^k=9^m+2^n$.
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+Para un entero positivo $n$, sea $A(n)$ la suma alternada de los digitos de $n$, por ejemplo $A(24135)= 5 -3 +1 -4 +2$. Prueba que $n \equiv A(n) \pmod{11}$.
+\end{problema}
+
+\problemdiff{1}
+\begin{problema} 
+Prueba que si $p$ y $8p-1$ son ambos primos entonces $8p+1$ es compuesto.
+\end{problema}
+
+\problemdiff{1}
+ \begin{problema}
+    Prueba que  
+    $$(x-1^2)(x-2^2)(x-3^2)(x-4^2)(x-5^2)(x-6^2) \equiv x^6-1 \text{ mod } 13$$
+\end{problema}
+
+\problemdiff{1}
+\begin{problema}
+Sea $S$ la suma siguiente:
+\[S=1+2+3+\ldots+2025\]
+Encuentra el residuo cuando $S$ es dividido entre 7.
+\end{problema}
+
+
+
+\problemdiff{1}
+\begin{problema}[AIME 2010/1]
+Encuentra el residuo cuando $9 \times 99 \time 999\times \ldots \times 99\cdots9$ con $999$ $9$'s al final es dividido entre $1000$. 
+\end{problema}
+
+
+\problemdiff{2}
+\begin{problema}
+Demuestra que 
+\[2025 \mid 1^{2025}+2^{2025}+3^{2025}+\ldots + 2025^{2025}\]
+\end{problema}
+
+\problemdiff{2}
+\begin{problema}
+Determina todas las soluciones enteras no negativas $(n_1,n_2, \ldots, n_{14})$ a
+\[n_1^4+n_2^4+\ldots+n_{14}^4 =1599\]
+\end{problema}
+
+\problemdiff{2}
+\begin{problema} 
+[ORO 2021/3]
+La secuencia de enteros positivos $a_1,a_2, \ldots$ esta definida de la siguiente forma: $a_1=2019, a_2=2020, a_3=2021$ y para todo $n\geq 1$
+\[a_{n+3}=5a_{n+2}^6+3a_{n+1}^3+a_n^2\]
+Prueba que la secuencia no contiene n\'umeros de la forma $m^6$ donde $m$ es un entero positivo.
+
+\end{problema}
+
+\newpage
+\subsection{Mas problemas}
+Puede que ocupes mas cosas (Como Fermat o Euler) aqui.
+
+\problemdiff{1}
+\begin{problema}
+Encuentra todos los primos $p$ tales que $13^{2p-1}+17$ es divisible por $p$.
+\end{problema}
+
+
+\problemdiff{3.5}
+\begin{problema}[PUMaC 2012 N A3]
+Definimos la secuencia $\{x_n\}$ de la siguiente forma: $x_1 \in \{5,7\}$ y para todo $k\geq 1, x_{k+1} \in \{5^{x_k}, 7^{x_k}\}$. Por ejemplo los posibles valores de $x_3$ son: $5^{5^5}, 5^{5^7}, 5^{7^5}, 5^{7^7}, 7^{5^5}, 7^{5^7}, 7^{7^5}$. ¿Cu\'al es la suma de todos los posibles valores para los ultimos dos digitos de $x_{2012}$.
+\end{problema}
+
+\problemdiff{4}
+\begin{problema}[IMOSL 2000 N1]
+Encuentra todos los enteros positivos $n \geq 2$ que cumplen que para todos los enteros positivos coprimos con $n$ $a,b$ se cumple que 
+\[a\equiv b \pmod n \text{ si y solo si } ab \equiv 1 \pmod n\]
+\end{problema}
+
+
+\newpage
+\section{¿Y la divisi\'on?}
+\subsection{Definici\'on de inverso}
+Al momento de hacer la divisi\'on ocupamos la existencia de \textit{inversos}.  Al hacer divisi\'on en los reales, si queremos dividir $x$ entre $y$, lo que en realidad estamos haciendo es multiplicar $x$ por el \textit{inverso} de $y$ el cual es representado como $\frac 1y$.  \\
+
+¿Y qu\'e cumplen los inversos? En los reales lo que cumplen es que el inverso de un real $a$, es aquel que cumple 
+\[a \cdot a^{-1} = 1\]
+Entonces eso justo coincide con lo que conocemos de $\frac 1a$. \\
+
+Entonces si estamos trabajando mod $n$, un entero $a$ tiene inverso si existe un $a^{-1}$ con 
+\[a \cdot a^{-1} \equiv  1 \pmod n \]
+Y este existe si y solo si $\gcd(a,n)=1$.\\
+
+Podemos ver un ejemplo cuando $n=7$.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Número} & \textbf{Inverso mod 7} \\
+\hline
+1 & 1 \\
+2 & 4 \\
+3 & 5 \\
+4 & 2 \\
+5 & 3 \\
+6 & 6 \\
+\hline
+\end{tabular}
+\end{center}
+Mostrandonos que efectivamente en este caso si existen, entonces vamos a demostrar esto.
+
+\subsection{Maquinaria a usar}
+
+
+
+
+
+
+\newpage
+\section{Teoremitas \'utiles}
+
+
+
+\begin{theorem}[Pequeño Teorema de Fermat]
+ Si $p$ es primo y $a\in \mathbb{Z}$ entonces 
+
+$$a^p \equiv a \text{ mod } p$$
+\end{theorem}
+Tambien generalmente conocido como 
+
+\begin{theorem*}[Pequeño Teorema de Fermat]
+ Si $p$ es primo y $a\in \mathbb{Z}$ y $(a,p)=1$ entonces 
+$$a^{p-1} \equiv 1 \text{ mod } p$$
+\end{theorem*}
+
+\begin{proof}
+Notemos que para $a$ tal que $p|a$ si cumple porque $a^p\equiv 0 \equiv a$ mod $p$.
+
+Para los $a$ con $(p,a)=1$. se tiene que 
+$$\{a,2a,3a, \ldots, (p-1)a\}$$
+es una permutación de 
+$$\{1,2,3,\ldots p-1\}$$
+en mod $p$. 
+
+\underline{\textbf{Prueba.}} Todos los números $a,2a,3a,\ldots, (p-1)a$ tiene distintos modulos $p$, ya que si hay dos iguales $ia$ y $ja$ con $i\neq j$ entonces 
+$$ia-ja= a(i-j) \equiv 0 \text{ mod } p$$
+y como $(a,p)=1$ entonces $i-j \equiv 0$ mod $p \Rightarrow i\equiv j$ mod $p$, pero $1\leq i,j \leq p-1$ entonces $i=j$, una contradicción.
+Entonces si es una permutación.  \\
+
+Asi que si multiplicamos todos se tiene que 
+
+$$a\cdot 2a\cdot 3a \cdots (p-1)a \equiv 1\cdot 2 \cdots (p-1) \text{ mod } p$$
+entonces
+$$ \Rightarrow(p-1)!a^{p-1}\equiv (p-1)! \text{ mod } p $$
+$$ \Rightarrow a^{p-1}\equiv 1 \text{ mod }p$$
+\end{proof}
+
+
+
+\end{document}
