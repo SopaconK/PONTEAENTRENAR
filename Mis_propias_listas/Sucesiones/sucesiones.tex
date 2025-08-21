@@ -1,0 +1,117 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\title{Sucesiones}
+\subtitle{OMMJAL}
+\author{Emmanuel Buenrostro}
+
+\begin{document}
+
+\maketitle.
+
+\section{Introducci\'on y Definiciones}
+
+Las sucesiones son listas de objetos (en este caso de n\'umeros), donde hay un "orden", es decir tenemos un primer termino (o elemento), un segundo termino, un siguiente termino, un anterior termino, etc. Estas pueden ser infinitas.\\
+
+Ejemplos de sucesiones:
+\begin{align*}
+1, 2, 3,  \ldots , n, n+1, \ldots  \\
+2, 3, 5,  \ldots, 2017, 2027, \ldots \\
+1, \half, \frac 13 , \ldots \\
+1, e, \pi, e^{\pi}, 2, 12 
+\end{align*}
+
+Las sucesiones con las que nos interesa trabajar son las que pueden ser descritas de cierta forma. \\
+La notaci\'on para trabajar con sucesiones es $\{a_n\}$, eso significa una sucesi\'on $a$ donde sus terminos son
+$a_1, a_2, \ldots$, por ejemplo:
+\begin{align*}
+a_n=n \\
+a_n= n\text{-nsimo primo} \\
+a_n= \frac 1n 
+\end{align*}
+Tambien puede tomarse como que una sucesi\'on $\{a_n\}$ como $a_0, a_1, a_2, \ldots$.
+
+
+\subsection{Posibles atributos}
+\begin{itemize}
+\item Una sucesi\'on $\{a_n\}$ es \textit{aritmetica} si $a_n-a_{n-1}$ es constante para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{geometrica} si $\frac{a_n}{a_{n-1}}$ es constante para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{periodica} si $a_{n+m}=a_n$ para toda $n>C$ para algunos $m,C$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{acotada superiormente} si existe una constante $M$ tal que $a_n < M$ para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{acotada inferiormente} si existe una constante $M$ tal que $a_n > M$ para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{acotada} si esta acotada superiormente e inferiormente.
+\item Una sucesi\'on $\{a_n\}$ es \textit{creciente} si $a_n>a_{n-1}$ para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{decreciente} si $a_n < a_{n-1}$ para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{no creciente} si $a_n \leq a_{n-1}$ para toda $n$. (Las sucesiones decrecientes son sucesiones no crecientes)
+\item Una sucesi\'on $\{a_n\}$ es \textit{no decreciente} si $a_n \geq a_{n-1}$ para toda $n$. (Las sucesiones crecientes son sucesiones no decrecientes)
+\item Una sucesi\'on $\{a_n\}$ es \textit{monotona} si es no creciente o no decreciente.
+\end{itemize}
+
+
+\subsection{¿C\'omo tienes problemas con esto?}
+
+Bueno, usualmente los problemas te dan alguna condici\'on que cumple la sucesi\'on, puede ser
+que te definan $a_n$ en terminos de los terminos anteriores, una secuencia cualquiera que cumple una condici\'on,
+encontrar las sucesiones que cumplen esta condici\'on, etc. \\
+
+Estos problemas siento que son de dos tipos, hacer cuentitas o algunas idea tipo "combinatorias", refiriendome a que tienes que 
+jugar con las sucesiones, hayar alguna propiedad (por ejemplo alguna de las mencionadas anteriormente), mientras que la de hacer cuentitas 
+refiriendome a cosas como encontrar una formula, calcular un valor, una recursi\'on, etc. 
+
+
+
+\end{document}
