@@ -1,0 +1,665 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{ amssymb }
+\usepackage[dvipsnames]{xcolor}
+\definecolor{red1}{RGB}{255, 153, 153}
+\definecolor{green1}{RGB}{204, 255, 204}
+\definecolor{blue1}{RGB}{204, 255, 255}
+\definecolor{yellow1}{RGB}{255, 247, 160}
+
+\definecolor{red2}{RGB}{255, 102, 102}
+\definecolor{green2}{RGB}{108, 255, 108}
+\definecolor{blue2}{RGB}{94, 204, 255}
+\definecolor{yellow2}{RGB}{255, 250, 104}
+
+\definecolor{red2.5}{RGB}{255,76,76}
+\definecolor{green2.5}{RGB}{54, 247, 54}
+\definecolor{blue2.5}{RGB}{51, 189, 255}
+\definecolor{yellow2.5}{RGB}{255, 242, 52}
+
+
+\definecolor{red3}{RGB}{255, 51, 51}
+\definecolor{green3}{RGB}{0, 240, 0}
+\definecolor{blue3}{RGB}{9, 175, 255}
+\definecolor{yellow3}{RGB}{255, 234, 0}
+
+\definecolor{red3.5}{RGB}{229, 25, 25}
+\definecolor{green3.5}{RGB}{0, 194, 0}
+\definecolor{blue3.5}{RGB}{4, 143, 209}
+\definecolor{yellow3.5}{RGB}{255,220,0}
+
+\definecolor{red4}{RGB}{204, 0, 0}
+\definecolor{green4}{RGB}{0, 149, 0}
+\definecolor{blue4}{RGB}{0, 111, 164}
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\newcommand{\cyc}{\text{cyc}}
+\newcommand{\sym}{\text{sym}}
+
+
+\title {Desigualdades}
+\subtitle{Entrenamientos Nacionales Platas y EGMOs}
+\author{Emmanuel Buenrostro}
+\date{11 de Enero de 2026}
+
+\begin{document}
+\maketitle
+\section{Teor\'ia}
+\subsection{Sumas}
+
+Si tienes $n$ números $a_1, a_2, \ldots a_n$ y tienes una función $f(x_1, x_2, \ldots , x_n)$ entonces 
+\[\sum_{\cyc} f(a_1,a_2,\ldots, a_n)=f(a_1,a_2,\ldots, a_n)+f(a_2,a_3,\ldots, a_n,a_1)+f(a_3,a_4,\ldots, a_2)+\ldots +f(a_n,a_1,\ldots, a_{n-1}) \]
+Que significa la suma de \textit{mover} uno a las variables.  Y 
+\[\sum_{sym} f(a_1, a_2, \ldots, a_n)\]   
+Es la suma de $f$ sobre todas las permutaciones de $(a_1, a_2, \ldots, a_n)$, por ejemplo si $f(a,b,c)=a^2b$
+\[\sum_{\cyc} f(a,b,c)= a^2b+b^2c+c^2a\]
+Y 
+\[\sum_{\sym} f(a,b,c)= a^2b+a^2c+b^2a+b^2c+c^2a+c^2b\]
+\subsection{El inicio}
+Comenzaremos con una desigualdad b\'asica: Sea $x$ cualquier n\'umero real, entonces se cumple que
+$$x^2 \geq 0.$$
+A partir de este resultado es posible construir varios teoremas. 
+
+\subsection{AM-GM}
+
+\begin{theorem} [AM-GM para dos variables]
+Para $a,b$ reales no negativos se tiene que 
+$$\frac{a+b}{2} \geq \sqrt{ab}$$
+donde la igualdad ocurre si y solo si $a=b$.
+\end{theorem}
+\begin{proof}
+Para demostrarlo tenemos que 
+\begin{eqnarray*}
+a+b &\geq& 2\sqrt{ab} \\
+\Leftrightarrow a-2\sqrt{ab}+b &\geq& 0 \\
+\Leftrightarrow (\sqrt{a}-\sqrt{b})^2 &\geq& 0.
+\end{eqnarray*}
+Lo cual es cierto, (Note que la condici\'on $a,b$ no negativos es necesaria para evitar n\'umeros imaginarios en $\sqrt{a}$ y $\sqrt{b}$).
+\end{proof}
+\begin{example}
+Sean \(a\), \(b\), \(c\), reales positivos tales que: \(a+b+c=6\) y \(abc=3\), demuestra que:
+$${1 \over a(b+c)}  + {1 \over b(a+c)} + {1 \over c(a+b)} \leq 1$$
+y encuentra cuándo se da la igualdad.
+\label{BCTST2015-5}
+\end{example}
+Este ejemplo ilustra claramente d\'onde es posible utilizar AM-GM, además de presentar ideas muy \'utiles para resolver desigualdades. Para este caso, vemos que es posible multiplicar por $abc$ (este movimiento es frecuente cuando se restringe $abc=1$, aunque en este caso tambi\'en resulta \'util), y llegamos a una expresi\'on m\'as manejable.
+\begin{soln}
+Multiplicamos por $abc$ y se convierte en 
+$$\frac{bc}{b+c}+\frac{ca}{c+a}+\frac{ab}{a+b} \leq 3.$$
+Ahora es momento de aplicar AM-GM. La intuici\'on detr\'as de esto proviene de que "arriba" (numerador) tenemos la parte menor de AM-GM (la multiplicicaci\'on), y "abajo" (denominador) tenemos la parte mayor (la suma), por lo que ser\'a posible simplificar t\'erminos.\\
+
+\noindent
+Entonces, por AM-GM:
+\begin{eqnarray*}
+\sqrt{ab} &\leq& \frac{a+b}{2} \\
+\Leftrightarrow ab &\leq& \frac{(a+b)^2}{4}.
+\end{eqnarray*}
+An\'alogamente para $bc$ y $ac$. Entonces, tenemos que 
+\begin{eqnarray*}
+\frac{bc}{b+c}+\frac{ca}{c+a}+\frac{ab}{a+b} &\leq& \frac{\frac{(b+c)^2}{4}}{b+c}+\frac{\frac{(a+c)^2}{4}}{a+c}+\frac{\frac{(a+b)^2}{4}}{a+b} \\
+&=& \frac{b+c}{4}+\frac{a+c}{4}+\frac{a+b}{4} \\
+&=& \frac{2(a+b+c)}{4} \\
+&=& \frac{12}{4} \\
+&=& 3.
+\end{eqnarray*}
+Concluyendo el ejemplo.
+\end{soln}
+\noindent
+Ahora bien, es posible generalizar AM-GM para $n$ variables. 
+\begin{theorem} [AM-GM]
+Para $a_1,a_2, \ldots, a_n$ reales no negativos se tiene que 
+$$\frac{a_1+a_2+\ldots+a_n}{n} \geq \sqrt[n]{a_1a_2\cdots a_n}$$
+Con la igualdad si y solo si $a_1=a_2=\ldots=a_n$.
+\end{theorem}
+
+\noindent
+Esta desigualdad nos da la oportunidad de jugar con que valores insertar en la multiplicaci\'on para que te quede lo que necesites.
+
+\begin{example}
+    \label{JBMOSL22-A3}
+    Sean $a,b,c$ reales positivos con $a+b+c=1$. Demuestra lo siguiente
+    \[a \sqrt[3]{\frac{b}{a}} + b \sqrt[3]{\frac{c}{b}} + c \sqrt[3]{\frac{a}{c}} \le ab + bc + ca + \frac{2}{3}.\]
+\end{example}
+
+\begin{soln}
+
+\noindent
+Reescribiendo el lado izquierdo nos queda que queremos demostrar esto:
+\[ \sqrt[3]{a^2b}+\sqrt[3]{b^2c}+\sqrt[3]{c^2a} \le ab+bc+ca+\frac 23\]
+Y eso nos da el indicio de que queremos jugar con como repartir un AM-GM con $\sqrt[3]{a^2b}$ para obtener algo que te convenga del lado derecho. \\
+Una manera muy com\'un de repartir ese producto es la siguiente:
+\[ \sqrt[3]{a^2b}=\sqrt[3]{ab \cdot a\cdot 1 } \leq \frac{ab+a+1}{3}\]
+Pero al juntar las 3 raices podemos notar que no te queda lo que necesitas, ya que el $(ab+bc+ca)$ termina dividido entre 3. Entonces suena \'optimo poner $3ab$ en lugar de $ab$ en el AM-GM, pero ese 3 lo tenemos que quitar de algun lado, en este caso vamos a cambiar el 1 por $\frac 13$, quedando:
+\[
+\sqrt[3]{a^2b}=\sqrt[3]{3ab\cdot a \cdot \frac 13}\leq \frac{3ab+a+\frac13}{3}
+\]
+Entonces cuando sumas las 3 raices cubicas te queda 
+\begin{eqnarray*}
+     \sqrt[3]{a^2b}+\sqrt[3]{b^2c}+\sqrt[3]{c^2a} &\le& \frac{3ab+3bc+3ca+a+b+c+1}{3} \\
+     &=& ab+bc+ca+\frac{a+b+c+1}{3} \\
+     &=& ab+bc+ca+\frac 23
+\end{eqnarray*}
+
+
+\end{soln}
+
+\vspace{0.5cm}
+
+\subsection{QM-AM-GM-HM}
+
+\noindent
+Existen al menos 4 medias que son fundamentales para la resoluci\'on de diversos problemas. Se resumen en el siguiente teorema:
+
+\begin{theorem} [QM-AM-GM-HM]
+Sean $a_1,a_2, \ldots, a_n$ reales positivos, entonces:
+$$\sqrt{\frac{a_1^2+a_2^2+\ldots+a_n^2}{n}} \geq \frac{a_1+a_2+\ldots+a_n}{n} \geq \sqrt[n]{a_1a_2\cdots a_n} \geq \frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+\ldots+\frac{1}{a_n}}$$
+Con la igualdad si y solo si $a_1=a_2=\ldots=a_n$.
+\end{theorem}
+
+\noindent
+Estas medias se conocen como cu\'adratica, aritm\'etica, geom\'etrica y arm\'onica, respectivamente. Note que al tenerlas todas ordenas podemos utilizarlas por parejas gracias a la transitividad de las desigualdades. Veamos un ejemplo de c\'omo utilizar QM-AM para atacar un problema.\\
+
+
+
+
+\subsection{Muirhead}
+
+Si no hay condiciones extras en una desigualdad, y la desigualdad es para reales positivos donde los lados tienen diferente grado no se puede resolver, ya que al acercarnos a valores muy chicos o grandes que sea de distinto grado altera el signo de la desigualdad.  \\
+Una tecnica bastante utilizada es usar las condiciones extras para \textit{homogenizar} y hacer que todos los terminos de la desigualdad tengan el mismo grado.
+
+Podemos notar que todas las medias mencionadas anteriormente tienen todas grado 1. \\
+
+\begin{definition}
+Sea $n$ un entero positivo, y  sean $x_1\geq x_2 \geq \ldots\geq x_n$ y $y_1\geq y_2\geq \ldots\geq  y_n$ dos sucesiones de reales. Decimos que $(x) \succ (y)$ (que $(x)$ majoriza $(y)$) si se cumple que: 
+\begin{align*}
+    x_1 &\geq y_1 \\ 
+    x_1+x_2 &\geq y_1+y_2 \\
+    &\ldots \\ 
+    x_1+x_2+\ldots +x_{n-1} &\geq y_1+y_2+\ldots +y_{n-1} \\ 
+    x_1+x_2+\ldots+x_n &= y_1+y_2+\ldots+y_n
+\end{align*}
+\end{definition}
+
+Entonces una aplicación de AM-GM es: 
+\begin{theorem} [Muirhead]
+    Sean $a_1,a_2, \ldots a_n$ números reales no negativos. Sean $x_1\geq x_2 \geq \ldots\geq x_n$ y $y_1\geq y_2\geq \ldots\geq  y_n$ tales que $(x) \succ (y)$, entonces 
+\[\sum_{ \sym } a_1^{x_1}a_2^{x_2}\cdots a_n^{x_n} \geq \sum_{\sym} a_1^{y_1}a_2^{y_2}\cdots a_n^{y_n}\]
+\end{theorem} 
+
+Por ejemplo como $(5,0,0) \succ (3,1,1) \succ (2,2,1)$ entonces por Muirhead
+\begin{align*} 
+    a^5+a^5+b^5+b^5+c^5+c^5 &\geq a^3bc+a^3cb+b^3ac+b^3ca+c^3ab+c^3ba \\ 
+    &\geq a^2b^2c+a^2c^2b+b^2a^2c+b^2c^2a+c^2a^2b+c^2b^2a
+\end{align*}
+
+\begin{remark}
+    Hay que tener mucho cuidado con que Muirhead usa suma simetrica y no ciclica, entonces a veces cuando queremos tratar con sumas ciclicas Muirhead no nos sirve de nada y tenemos que hacerlo directo con AM-GM
+\end{remark}
+
+\subsection{Reacomodo}
+\noindent
+En esta secci\'on estudiaremos otro tipo de desigualdad que resulta muy pr\'actica en la Olimpiada. Consideremos que tenemos dos conjuntos ordenados $A$, $B$ con tres n\'umeros de la siguiente forma:
+\begin{eqnarray*}
+    a_3 \geq a_2 \geq a_1 \in A\\
+    b_3 \geq b_2 \geq b_1 \in B.
+\end{eqnarray*}
+Supongamos que debemos emparejar cada elemento del conjunto $A$ con uno del conjunto $B$. Luego, para cada pareja podemos calcular el producto de sus elementos; y para cada arreglo de parejas podemos obtener la suma $S$ los productos por parejas. 
+\begin{eqnarray*}
+    P_6 = \left\{\left(a_1, b_1\right), \left(a_2, b_2\right), \left(a_3, b_3\right)\right\} \implies S_6 = a_1b_1 + a_2b_2 + a_3b_3\\
+    P_5 = \left\{\left(a_1, b_1\right), \left(a_2, b_3\right), \left(a_3, b_2\right)\right\} \implies S_5 = a_1b_1 + a_2b_3 + a_3b_2\\
+    P_4 = \left\{\left(a_1, b_2\right), \left(a_2, b_1\right), \left(a_3, b_3\right)\right\} \implies S_4 = a_1b_2 + a_2b_1 + a_3b_3\\
+    P_3 = \left\{\left(a_1, b_2\right), \left(a_2, b_3\right), \left(a_3, b_1\right)\right\} \implies S_3 = a_1b_2 + a_2b_3 + a_3b_1\\
+    P_2 = \left\{\left(a_1, b_3\right), \left(a_2, b_1\right), \left(a_3, b_2\right)\right\} \implies S_2 = a_1b_3 + a_2b_1 + a_3b_2\\
+    P_1 = \left\{\left(a_1, b_3\right), \left(a_2, b_2\right), \left(a_3, b_1\right)\right\} \implies S_1 = a_1b_3 + a_2b_2 + a_3b_1\\
+\end{eqnarray*}
+Una pregunta interesante ser\'ia que podemos decir de estas sumas sabiendo que los elementos en los conjuntos est\'an ordenados. Resulta que es posible mostrar que:
+\begin{equation*}
+    S_6 \geq S_k \geq S_1 \text{ con } 6 \geq k \geq 1.
+\end{equation*}
+Es posible demostrar el lado izquierdo considerando alguno de los $S_k$ con $k \neq 6$ y aplicando de forma an\'aloga para los otros casos. Veamos el caso $k = 5$
+\begin{eqnarray*}
+    S_6 \geq S_5 \iff a_1b_1 + a_2b_2 + a_3b_3 &\geq& a_1b_3 + a_2b_2 + a_3b_1\\
+    \iff a_1b_1 + a_3b_3 &\geq& a_1b_3 + a_3b_1\\
+    \iff a_1\left(b_1 - b_3\right) + a_3\left(b_3 - b_1\right) &\geq& 0\\
+    \iff a_3\left(b_3 - b_1\right) - a_1\left(b_3 - b_1\right) &\geq& 0\\
+    \iff \left(a_3 - a_1\right)\left(b_3 - b_1\right) &\geq& 0 \text{, como } a_3 \geq a_1, b_3 \geq b_1 \text{, se cumple.}
+\end{eqnarray*}
+Aplicando para el resto algo similar, es posible convencerse de que la desigualdad se sostiente. Lo aprendido puede generalizarse para cualquier par de conjuntos ordenados con $n$ elementos.
+
+\begin{theorem} [Reacomodo]
+Sean $a_1 \leq a_2 \leq \dots \leq a_n$ y $b_1 \leq b_2 \leq \dots \leq b_n$ dos sucesiones de n\'umeros reales. Si $a'_1, a'_2, \dots, a'_n$ es cualquier permutuaci\'on de $a_1, a_2, \dots, a_n$, entonces
+$$\sum_{j=1}^{n} a_jb_{n+1-j} \leq \sum_{j=1}^{n} a'_jb_{j} \leq \sum_{j=1}^{n} a_jb_{j}.$$
+\end{theorem}
+
+\noindent
+La desdigualdad del reacomodo puede utilizarse para resolver una infinidad de problemas y demostrar muchas otras desigualdades incluyendo la ya explorada QM-AM-GM-HM y la desigualdad de Cauchy que se revisar\'a m\'as adelante. A manera de ejercicio, la utilizaremos para mostrar la desigualdad de Tchebyshev:
+
+
+
+\begin{example}
+\label{IMO1995-P2}
+Sean $a, b, c$ n\'umeros reales positivos tales que $abc = 1$. Demuestra que
+\begin{equation*}
+    \frac{1}{a^3\left(b+c\right)} + \frac{1}{b^3\left(a+c\right)} + \frac{1}{c^3\left(a+b\right)} \geq \frac{3}{2}
+\end{equation*}
+\end{example}
+\begin{soln}
+Como el lado izquierdo de la desigualdad es sim\'etrico, podemos asumir, sin p\'erdida de la generalidad, $a \geq b \geq c$. Sean $x = 1/a, y = 1/b, z = 1/c$ (esto solo para reducir trabajo de escritura). Note adem\'as que como $abc = 1 \implies xyz = 1$. Reescribiendo la ecuaci\'on:
+\begin{eqnarray*}
+    \frac{1}{a^3\left(b+c\right)} + \frac{1}{b^3\left(a+c\right)} + \frac{1}{c^3\left(a+b\right)} &=& \frac{x^3}{\frac{1}{y} + \frac{1}{z}} + \frac{y^3}{\frac{1}{x} + \frac{1}{z}} + \frac{z^3}{\frac{1}{x} + \frac{1}{y}} \\
+    &=& \frac{x^2}{y+z} + \frac{y^2}{x+z} + \frac{z^2}{x+y}
+\end{eqnarray*}
+Ahora, c\'omo $c \leq b \leq a$, se sigue que $x \leq y \leq z$, y esto implica que $\frac{x}{y+z} \leq \frac{y}{x+z} \leq \frac{z}{x+y}$ (esto se puede demostrar estableciendo las desigualdades por parejas y reduciendo al producto de n\'umeros positivos es mayor que cero). Aplicando la desiguldad del reacomodo con las \'ultimas dos desigualdades dos veces:
+\begin{eqnarray*}
+    \frac{x^2}{y+z} + \frac{y^2}{x+z} + \frac{z^2}{x+y} &\geq& \frac{xy}{y+z} + \frac{yz}{x+z} + \frac{xz}{y+z}\\
+    \frac{x^2}{y+z} + \frac{y^2}{x+z} + \frac{z^2}{x+y} &\geq& \frac{xz}{y+z} + \frac{xy}{x+z} + \frac{yz}{y+z}
+\end{eqnarray*}
+Sumando ambas desigualdades:
+\begin{eqnarray*}
+    2\left(\frac{1}{a^3\left(b+c\right)} + \frac{1}{b^3\left(a+c\right)} + \frac{1}{c^3\left(a+b\right)}\right) = 2\left(\frac{x^2}{y+z} + \frac{y^2}{x+z} + \frac{z^2}{x+y}\right) \\
+    \geq \frac{xy}{y+z} + \frac{yz}{x+z} + \frac{xz}{y+z} + \frac{xz}{y+z} + \frac{xy}{x+z} + \frac{yz}{y+z}\\
+    \geq \frac{x\left(y+z\right)}{y+z} + \frac{y\left(x+z\right)}{x+z} + \frac{z\left(x+y\right)}{x+y} = x + y + z\\
+    \geq 3\sqrt[3]{xyz} = 3 \text{ (Note el uso de AM-GM)}
+\end{eqnarray*}
+Dividiendo entre dos ambos lados conclu\'imos la demostraci\'on.
+\end{soln}
+
+\subsection{Cauchy}
+\begin{theorem} [Desigualdad de Cauchy]
+    Para cualquiera n\'umeros reales $x_1,x_2,\ldots, x_n, y_1,\ldots,y_n$ la siguiente desigualdad se cumple
+    \[ \left( \sum_{i=1}^n x_iy_i \right)^2 \leq \left(\sum_{i=1}^n x_i^2 \right)\left(\sum_{i=1}^n y_i^2\right)\]
+    Y la igualdad se da si y solo si existe una $\lambda \in \RR$ con $x_i=\lambda y_i$ para todo $i$.  
+\end{theorem}
+\begin{proof}
+Si $x_1=x_2=\ldots=x_n=0$ o $y_1=y_2=\ldots=y_n=0$ ambos lados son 0 y se cumple.\\
+Ahora, sean $S=\sqrt{\sum_{i=1}^n x_i^2}, T=\sqrt{\sum_{i=1}^n y_i^2}$ y sean $a_i=\frac{x_i}{S}$ para $i$ entre 1 y $n$, $a_i=\frac{y_{n-i}}{T}$ para $i$ entre $n+1$ y $2n$. \\
+Por reacomodo tenemos que 
+\begin{eqnarray*}
+\sum_{i=1}^n a_ia_{n+i} + \sum_{i=1}^n a_{n+i}a_i &\leq& \sum_{i=1}^n a_i^2 \\
+&=& \sum_{i=1}^n \left(\frac{x_i^2}{S^2}+\frac{y_i^2}{T^2}\right) \\
+&=& 2
+\end{eqnarray*}
+Por lo tanto
+\begin{eqnarray*}
+    2 &\geq& \sum_{i=1}^n a_ia_{n+i} + \sum_{i=1}^n a_{n+i}a_i\\
+    &=& 2\frac{\sum_{i=1}^n x_iy_i}{ST}
+\end{eqnarray*}
+Entonces 
+\[ ST \geq \sum_{i=1}^n x_iy_i\]
+y elevar al cuadrado obtenemos el resultado buscado.
+\end{proof}
+
+\noindent
+Tambi\'en existe otra versi\'on de esta desigualdad, la cu\'al es conocida popularmente como "\'Util", o como Cauchy en forma de Engel o Lema de Titu. 
+\begin{theorem} [\'Util]
+    Para cualquiera n\'umeros reales $a_1,a_2,\ldots, a_n, b_1,\ldots,b_n$ con $b_i \geq 0$ para todo $i$. Se tiene que 
+    \[\sum_{i=1}^n \frac{a_i^2}{b_i} \geq \frac{(a_1+a_2+\ldots+a_n)^2}{b_1+b_2+\ldots+b_n}\]
+    Con igualdad si y solo si
+    \[\frac{a_1}{b_1}=\frac{a_2}{b_2}=\ldots=\frac{a_n}{b_n}\]
+\end{theorem}
+\begin{proof}
+Por Cauchy con $x_i=\frac{a_i}{\sqrt{b_i}}$ (note que ah\'i viene la necesidad de $b_i>0$), $y_i=\sqrt{b_i}$. Obtenemos:
+\[\left(\sum_{i=1}^n \frac{a_i^2}{b_i}\right)\left(\sum_{i=1}^n b_i\right) \geq \left(\sum_{i=1}^n a_i\right)^2\]
+Y al dividir entre la suma de los $b_i$ obtenemos lo que est\'abamos buscando.
+\end{proof}
+\begin{example}
+    Sean $a,b,c,d$ reales positivos con $(a+c)(b+d)=1$, demuestra que
+    \[\frac{a^3}{b+c+d}+\frac{b^3}{c+d+a}+\frac{c^3}{d+a+b}+\frac{d^3}{a+b+c}\geq \frac 13\]
+    \label{IMOSL90-24}
+\end{example}
+\begin{soln}
+    Primero el primer factor lo multiplicamos por $a$, el segundo por $b$, y as\'i para tener cuadrados en los n\'umeradores. Y usando Titu
+    \[\frac{a^4}{ab+ac+ad}+\frac{b^4}{bc+bd+ba}+\frac{c^4}{cd+ca+cb}+\frac{d^4}{da+db+dc}\]\[\geq \frac{(a^2+b^2+c^2+d^2)^2}{ab+ac+ad+ba+bc+bd+ca+cb+cd+da+db+dc}\]
+    Por reacomodo 
+    \[ab+ac+ad+ba+bc+bd+ca+cb+cd+da+db+dc\leq 3(a^2+b^2+c^2+d^2)\]
+    Entonces 
+    \[\frac{(a^2+b^2+c^2+d^2)^2}{ab+ac+ad+ba+bc+bd+ca+cb+cd+da+db+dc} \geq \frac{a^2+b^2+c^2+d^2}{3}\]
+    Y por QM-AM-GM
+    \begin{eqnarray*}
+        a^2+c^2+b^2+d^2 &\geq& \frac{(a+c)^2+(b+d)^2}{2} \\
+        &\geq& (a+c)(b+d)\\
+        &=& 1
+    \end{eqnarray*}
+    entonces 
+    \[\frac{a^2+b^2+c^2+d^2}{3}\geq \frac 13\]
+    Terminando el problema.
+\end{soln}
+
+\subsection{Derivar}
+
+
+\newpage
+\section{Problemas}
+\epigraph{Si repites quote nadie va a hacer los problemas de la tristeza}{ Artie }
+\subsection{Medias}
+\begin{problem}
+    Muestra que para cualquier real positivo $x$ se cumple que $x+\frac 1x \geq 2$.
+
+\end{problem}
+\begin{problem}
+    Demuestra que para cualesquiera reales positivos $x,y$ se tiene que $\frac xy + \frac yx \geq 2$
+   
+\end{problem}
+\begin{problem}
+    Para $a,b,c$ reales positivos demuestra que 
+    \[\frac{1}{a+2b}+\frac{1}{b+2c}+\frac{1}{c+2a} \geq \frac{3}{a+b+c}\]
+\end{problem}
+\begin{problem}
+    Para reales positivos $a_1,a_2,\ldots,a_n$ demuestra que 
+    \[(a_1+a_2+\ldots+a_n)\left(\frac{1}{a_1}+\frac{1}{a_2}+\ldots+\frac{1}{a_n}\right)\geq n^2\]
+ 
+\end{problem}
+\begin{problem} [IMO Longlist 1967/2]
+Prueba que 
+$$\frac 1 3 n^2 +\half n +\frac 1 6 \geq (n!)^{\frac 2 n} $$
+para $n$ un entero positivo, y encuentra el caso donde se da la igualdad.
+\end{problem}
+\begin{problem} [IMO 2012/2]
+    Let $n\ge 3$ be an integer, and let $a_2,a_3,\ldots ,a_n$ be positive real numbers such that $a_{2}a_{3}\cdots a_{n}=1$. Prove that
+\[(1 + a_2)^2 (1 + a_3)^3o \dotsm (1 + a_n)^n > n^n.\]
+\end{problem}
+\begin{problem} [APMO 1998/3]
+    Sean $a, b, c$ n\'umeros reales positivos. Muestre que
+    \begin{equation*}
+        \left(1 + \frac{a}{b}\right)\left(1 + \frac{b}{c}\right)\left(1 + \frac{c}{a}\right) \geq 2\left(1+\frac{a+b+c}{\sqrt[3]{abc}}\right).
+    \end{equation*}
+
+\end{problem}
+
+
+\subsection{Muirhead}
+\begin{problem}
+    Demuestra que para reales positivos $a,b,c$ se tiene que $a^2+b^2+c^2 \geq ab+bc+ca$ 
+\end{problem}
+\begin{problem}
+    Demuestra que para $a,b$ reales positivos se tiene que 
+    $a^5+b^5 \geq a^3b^2+b^3a^2$
+    
+\end{problem}
+
+\begin{problem}
+Sean reales $a,b,c>0$. Probar que 
+\[ \left(a^2+b^2+c^2\right)\left(\frac1a+\frac1b+\frac1c\right) \geq 3(a+b+c)\]
+\end{problem}
+
+\begin{problem}
+      For $a,b,c > 0$ prove that
+  \[
+  \frac{c^2+ab}{a+b}
+  + \frac{a^2+bc}{b+c}
+  + \frac{b^2+ca}{c+a}
+  \ge a+b+c.
+  \]
+\end{problem}
+
+
+
+\subsection{Reacomodo}
+
+\begin{problem}
+Muestra que para cualquier permutaci\'on $\left(a'_1, a'_2, \dots, a'_n\right)$ de $\left(a_1, a_2, \dots, a_n\right)$, se tiene que:
+\begin{equation*}
+    a^2_1 + a^2_2 + \dots + a^2_n \geq a_1a'_1 + a_2a'_2 + \dots + a_na'_n.
+\end{equation*}
+\end{problem}
+
+
+\begin{problem}
+    Prueba que para reales positivos $a,b,c,d$
+    \[a^4+b^4+c^4+d^4\geq 4abcd\]
+\end{problem}
+
+\begin{problem} [IMO 1978/5]
+Sean $x_1, x_2, \dots, x_n$ enteros postivos distintos. Muestre que:
+\begin{equation*}
+    \frac{x_1}{1^2} + \frac{x_2}{2^2} + \dots \frac{x_n}{n^2} \geq \frac{1}{1} + \frac{1}{2} + \dots + \frac{1}{n}
+\end{equation*}
+\end{problem}
+
+\begin{problem}  [Tchebyshev]
+Sean $a_1 \leq a_2 \leq \dots \leq a_n$ y $b_1 \leq b_2 \leq \dots \leq b_n$ dos sucesiones de n\'umeros reales. Prueba que 
+$$\frac{a_1b_1+a_2b_2 + \dots + a_nb_n}{n} \geq \left(\frac{a_1+a_2+\dots+a_n}{n}\right)\left(\frac{b_1+b_2+\dots+b_n}{n}\right)$$
+\end{problem}
+
+\subsection{Cauchy / Util}
+
+\begin{problem} [MEX TST 2024/8/3]
+Probar que si para reales positivos $a,b,c$ con $a^2+b^2+c^2=3$ entonces
+\[ \frac{1}{1+ab}+\frac{1}{1+bc}+\frac{1}{1+ca} \geq \frac32\]
+
+\end{problem}
+
+\begin{problem} [OMCC 2023/3]
+    
+    Sean $a, b$ y $c$ números reales positivos tales que $a b+b c+c a=1$. Demostrar que
+\[
+\frac{a^{3}}{a^{2}+3 b^{2}+3 a b+2 b c}+\frac{b^{3}}{b^{2}+3 c^{2}+3 b c+2 c a}+\frac{c^{3}}{c^{2}+3 a^{2}+3 c a+2 a b}>\frac{1}{6\left(a^{2}+b^{2}+c^{2}\right)^{2}} .\]
+   
+\end{problem}
+
+\begin{problem} [Iran 1998]
+    Let $x$, $y$, $z$ be real numbers greater than $1$.
+  Prove that if $\frac 1x + \frac 1y + \frac 1z = 2$ then
+  \[ \sqrt{x-1} + \sqrt{y-1} + \sqrt{z-1} \le \sqrt{x+y+z}. \]
+\end{problem}
+
+\subsection{Derivalo}
+\begin{problem}
+    Demuestra que para $x\geq 0$ se cumple que $x > \sin x$. ($\sin$ esta en radianes, y su derivada es $\cos$).
+\end{problem}
+
+\subsection{Jensen}
+\begin{problem}
+    Sea $\lambda > 1$ un real positivo. Demuestra que para reales positivos $a,b,c$ con $a+b+c=3$ entonces 
+    \[\sum_{cyc} \lambda ^{a^2} \geq 3\lambda\]
+\end{problem}
+
+\begin{problem} [Vietnam 1998]
+    For positive real numbers$a_1,a_2,...,a_n$ such that$\Sigma \frac{1}{a_{i}+1998}=\frac{1}{1998}$prove:$$\sqrt[n]{a_1a_2...a_n}\ge 1998(n-1)$$
+\end{problem}
+
+\subsection{Smoothing}
+\begin{problem}
+    Sea $y_1,y_2, \ldots, y_n$ una permutación de $1,2,\ldots, n$. ¿Cuál es el minimo valor posible de $\sum_{i=1}^n (y_i+i)^2$?
+\end{problem}
+
+\begin{problem} [USAMO 1977/5]
+    	If $ a,b,c,d,e$ are positive numbers bounded by $ p$ and $ q$, i.e, if they lie in $ [p,q], 0 < p$, prove that
+\[ (a + b + c + d + e)\left(\frac {1}{a} + \frac {1}{b} + \frac {1}{c} + \frac {1}{d} + \frac {1}{e}\right) \le 25 + 6\left(\sqrt {\frac {p}{q}} - \sqrt {\frac {q}{p}}\right)^2\]
+and determine when there is equality.
+\end{problem}
+
+\subsection{Nociones Asintoticas}
+\begin{problem}
+    Sean $a,b,c$ longitudes de lados del triangulo tales que $a^n, b^n, c^n$ también son lados del triangulo para todos los enteros positivos $n$. Demuestra que el triangulo es isosceles.
+\end{problem}
+
+\begin{problem} [IMO 1974/5]
+    The variables $a,b,c,d,$ traverse, independently from each other, the set of positive real values. What are the values which the expression\[ S= \frac{a}{a+b+d} + \frac{b}{a+b+c} + \frac{c}{b+c+d} + \frac{d}{a+c+d} \]takes?
+\end{problem}
+
+\begin{problem} [EGMO 2021/6]
+    Does there exist a nonnegative integer $a$ for which the equation
+\[\left\lfloor\frac{m}{1}\right\rfloor + \left\lfloor\frac{m}{2}\right\rfloor + \left\lfloor\frac{m}{3}\right\rfloor + \cdots + \left\lfloor\frac{m}{m}\right\rfloor = n^2 + a\]has more than one million different solutions $(m, n)$ where $m$ and $n$ are positive integers?
+\end{problem}
+
+\begin{problem} [EGMO 2018/6]
+    
+    \begin{enumerate}[a]
+
+        \item  Prove that for every real number $t$ such that $0 < t < \tfrac{1}{2}$ there exists a positive integer $n$ with the following property: for every set $S$ of $n$ positive integers there exist two different elements $x$ and $y$ of $S$, and a non-negative integer $m$ (i.e. $m \ge 0 $), such that\[ |x-my|\leq ty.\]
+    \item Determine whether for every real number $t$ such that $0 < t < \tfrac{1}{2} $ there exists an infinite set $S$ of positive integers such that\[|x-my| > ty\]for every pair of different elements $x$ and $y$ of $S$ and every positive integer $m$ (i.e. $m > 0$).
+\end{enumerate}
+\end{problem}
+\subsection{Mix}
+
+\begin{problem}
+    Si $x,y$ son reales, demuestra que $x^2+y^2+xy \geq 0$
+\end{problem}
+\begin{problem}  [OMCC 2020/5]
+Sea $P(x)$ un polinomio con coeficientes reales no negativos. Sea $k$ un entero positivo y sean $x_1,x_2,\ldots,x_k$ números reales tales que $x_1x_2\cdots x_k=1$. Demuestre que
+$$P(x_1)+P(x_2)+\ldots+P(x_k)\geq kP(1)$$
+
+\end{problem}
+
+
+\begin{problem}
+    Para reales positivos $a,b,c$ con suma 1. Demuestra que 
+    \[\frac{b^2+c^2}{1+a}+\frac{c^2+a^2}{1+b}+\frac{a^2+b^2}{1+c}\geq \half\]
+\end{problem}
+
+\begin{problem} [OMM 2014/5]
+    
+    Sean $a$, $b$ y $c$ números reales positivos tales que $a + b + c = 3$. Muestra que 
+\[ \frac{a^2}{a + \sqrt[3]{bc}} + \frac{b^2}{b + \sqrt[3]{ca}} + \frac{c^2}{c + \sqrt[3]{ab}} \geq \frac{3}{2} \]
+y determina para qué números $a$, $b$ y $c$ se alcanza la igualdad.
+\end{problem}
+
+\begin{problem} [USAMO 1978/1]
+    Given that $a,b,c,d,e$ are real numbers such that
+
+$a+b+c+d+e=8$,
+$a^2+b^2+c^2+d^2+e^2=16$.
+
+Determine the maximum value of $e$.
+\end{problem}
+
+\begin{problem} [Nesbit]
+Sean $a, b, c$ n\'umeros reales positivos. Demostrar que
+\begin{equation*}
+    \frac{a}{b+c} + \frac{b}{a+c} + \frac{c}{a+b} \geq \frac{3}{2}
+\end{equation*}
+\label{NESBITT}
+\end{problem}
+
+\begin{problem} [Nesbitt generalizado]
+    Sean $a_1,a_2,\ldots, a_n$ reales positivos, y sea $s=a_1+a_2+\ldots+a_n$. Prueba que 
+    \[\frac{a_1}{s-a_1}+\ldots+\frac{a_n}{s-a_n} \geq \frac{n}{n-1}\]
+\end{problem}
+
+\begin{problem} [OMCC 2021/5]
+    
+    Sea $n \geq 3$ un número entero y $a_1,a_2,...,a_n$ números reales positivos tales que $m$ es el menor y $M$ el mayor de estos números. Se sabe que para cualesquiera enteros distintos $1 \leq i,j,k \leq n$, si $a_i \leq a_j \leq a_k$ entonces $a_ia_k \leq a_j^2$. Demostrar que
+\[ a_1a_2 \cdots a_n \geq m^2M^{n-2} \]
+y determinar cuando la igualdad se mantiene.
+
+\end{problem}
+
+\begin{problem} [EGMO 2014/1]
+    Determine all real constants $t$ such that whenever $a$, $b$ and $c$ are the lengths of sides of a triangle, then so are $a^2+bct$, $b^2+cat$, $c^2+abt$.
+\end{problem}
+
+\begin{problem}
+    [EGMO 2016/1]
+    Sean $n$ un entero positivo impar, y $x_1, \dots, x_n$ números reales no negativos. Muestra
+que
+\[ \min_{i=1,\ldots,n} (x_i^2+x_{i+1}^2) \leq \max_{j=1,\ldots,n} (2x_jx_{j+1}) \]
+donde $x_{n+1}= x_1$.
+    
+\end{problem}
+
+\begin{problem}  [Jalisco TST 2025/Acumulativo 2/2, Original mio]
+    Demuestra la siguiente desigualdad para $x, y \in \mathbb{R}$. 
+    \[ \sqrt{x}+ \sqrt{y} \leq x+y+\sqrt{x-y^2}+\sqrt{y-x^2} \leq \sqrt{2} \left(  \sqrt{x}+\sqrt{y} \right)\]
+    sujeta a las condiciones
+    \[x \geq y^2 , y\geq x^2 , \text{ y } x,y \geq 0 \]
+\end{problem}
+
+
+
+\begin{problem} [USAMO 1997/5]
+    Prove that, for all positive real numbers $ a$, $ b$, $ c$, the inequality
+\[ \frac {1}{a^3 + b^3 + abc} + \frac {1}{b^3 + c^3 + abc} + \frac {1}{c^3 + a^3 + abc} \leq \frac {1}{abc}
+\]
+holds.
+\end{problem}
+
+\begin{problem} [ELMO 2003/4]
+    Let $x,y,z \ge 1$ be real numbers such that\[ \frac{1}{x^2-1} + \frac{1}{y^2-1} + \frac{1}{z^2-1} = 1. \]Prove that\[ \frac{1}{x+1} + \frac{1}{y+1} + \frac{1}{z+1} \le 1. \]
+\end{problem}
+
+\begin{problem} [MEX TST 2025/4/3]
+    Sean $x,y,z>0$ números reales tales que $xy+yz+zx=1$. Demuestra que 
+    \[\frac{1}{\sqrt{1+x^2}-x}+\frac{1}{\sqrt{1+y^2}-y}+\frac{1}{\sqrt{1+z^2}-z} \leq \frac{1}{xyz}\]
+    ¿Cuándo se satisface la igualdad?
+\end{problem}
+
+\begin{problem} [IMO 2004/4]
+    Let $n \geq 3$ be an integer. Let $t_1$, $t_2$, ..., $t_n$ be positive real numbers such that\[n^2 + 1 > \left( t_1 + t_2 + \cdots + t_n \right) \left( \frac{1}{t_1} + \frac{1}{t_2} + \cdots + \frac{1}{t_n} \right).\]Show that $t_i$, $t_j$, $t_k$ are side lengths of a triangle for all $i$, $j$, $k$ with $1 \leq i < j < k \leq n$.
+\end{problem}
+
+\begin{problem} [CGMO 2012/1]
+      Let $n$ be a positive integer,
+  and let $a_1$, $a_2$, \dots, $a_n$ be nonnegative real numbers.
+  Show that
+  \[ \frac{1}{1+a_1} + \frac{a_1}{(1+a_1)(1+a_2)} + \dotsb
+  + \frac{a_1a_2\dotsm a_{n-1}}{(1+a_1)(1+a_2)\dotsm(1+a_n)}
+  \le 1. \]
+  Moreover, determine all the cases of equality.
+\end{problem}
+
+\begin{problem}
+    [OMM 2020/6]
+    
+    Sea $n\ge 2$ un número entero positivo. Sean $x_1, x_2, \dots, x_n$ números reales no nulos que satisfacen la ecuación
+\[\left(x_1+\frac{1}{x_2}\right)\left(x_2+\frac{1}{x_3}\right)\dots\left(x_n+\frac{1}{x_1}\right)=\left(x_1^2+\frac{1}{x_2^2}\right)\left(x_2^2+\frac{1}{x_3^2}\right)\dots\left(x_n^2+\frac{1}{x_1^2}\right). \]
+Encuentra todos los valores posibles de $x_1, x_2, \dots, x_n$.
+\end{problem}
+
+\begin{problem} [USAJMO 2012/3]
+     For $a,b,c > 0$ prove that
+  \[ \frac{a^3+3b^3}{5a+b}
+  + \frac{b^3+3c^3}{5b+c}
+  + \frac{c^3+3a^3}{5c+a}
+  \ge \frac23(a^2+b^2+c^2).  \]
+\end{problem}
+
+\begin{problem} [Taiwan Quiz 2014]
+     For $a,b,c > 0$ prove that
+  \[ 3(a+b+c) \ge 8\sqrt[3]{abc} + \sqrt[3]{\frac{a^3+b^3+c^3}{3}}. \]
+\end{problem}
+
+\begin{problem} [Latvia Baltic Way TST 2019]
+      Prove that for all positive real numbers $a, b, c$
+  with $\frac{1}{a}+\frac{1}{b}+\frac{1}{c} =1$ the following inequality holds:
+  \[ 3(ab+bc+ca)+\frac{9}{a+b+c} \le \frac{9abc}{a+b+c} +
+  2(a^2+b^2+c^2)+1. \]
+\end{problem}
+
+\begin{problem}
+    [EGMO 2020/2]
+    
+    Encontrar todas las listas $(x_1, x_2, \ldots, x_{2020})$ de números reales no negativos tales que se satisfagan las tres condiciones siguientes:
+
+    $x_1 \le x_2 \le \ldots \le x_{2020}$; $\qquad$  
+    $x_{2020} \le x_1 + 1$;  $\qquad$ 
+    Existe una permutación $(y_1, y_2, \ldots, y_{2020})$ de $(x_1, x_2, \ldots, x_{2020})$ tal que
+
+\[\sum_{I = 1}^{2020} ((x_i + 1)(y_i + 1))^2 = 8 \sum_{i = 1}^{2020} x_i^3\]
+
+
+Una permutación de una lista es una lista de la misma longitud, con los mismos elementos pero en un
+orden cualquiera. Por ejemplo, $(2, 1, 2)$ es una permutación de $(1, 2, 2)$, y ambas son permutaciones
+de $(2, 2, 1)$. En particular cualquier lista es una permutación de ella misma.
+    
+\end{problem}
+
+\begin{problem} [MOP 2011]
+      For positive real numbers $a$, $b$, $c$ with $a+b+c=3$ prove that
+  \[
+  \sqrt{\frac{a^3+b^3}{a+b}}
+  + \sqrt{\frac{b^3+c^3}{b+c}}
+  + \sqrt{\frac{c^3+a^3}{c+a}}
+  + 9\sqrt[3]{abc} \le 12.
+  \]
+\end{problem}
+
+
+\end{document}

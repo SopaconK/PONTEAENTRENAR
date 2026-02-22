@@ -1,0 +1,159 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\title {Mas Geo}
+\subtitle{Entrenas Nacionales Centros, PAGMOs}
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+\maketitle
+
+\section{Problemas}
+\epigraph{¿Por qué tanta prisa? Si la belleza está en el recorrido}{}
+
+
+\problemdiff{2}
+\begin{problem}
+    Sea $ABC$ un triangulo tal que $\angle BAC=60\dg$. Sea $I$ el incentro,$O$ su circuncentro, $H$ su ortocentro. Demuestra que  $BHOIC$ es ciclico.
+\end{problem}
+
+\problemdiff{2}
+\begin{problem}
+    Sea $ABC$ un triangulo tal que $AB=AC$ y que tiene gravicentro $G$. $M$ y $N$ son los puntos medios de $AB$ y $AC$ respectivamente y $O$ es el circuncentro del triangulo $BCN$. Muestra que 
+    $MBOG$ es un cuadrilatero ciclico.  
+\end{problem}
+
+\problemdiff{2}
+\begin{problem}
+    %[ORO 2025/4]
+    Sea $ABC$ un triangulo equilatero, sea $D$ un punto en el segmento $AB$. Sean $\mathcal{C}_1$, $\mathcal{C}_2$ los circuncirculos de $ACD$ y $BCD$, respectivamente. $\mathcal{C}_1$ corta $BC$ en $E$ y $\mathcal{C}_2$ corta $AC$ en $F$. Prueba que la tangente a $\mathcal{C}_1$ desde $E$ es paralela a la tangente a $\mathcal{C}_2$ desde $F$.
+\end{problem}
+
+\problemdiff{2}
+\begin{problem}
+   % [ORO 2024/4]
+   Sea $ABC$ un triangulo y $\omega$ su circuncirculo. La tangente a $\omega$ desde $B$ corta a la recta paralela a $BC$ que pasa por $A$ en $P$. La recta $CP$ corta el circuncirculo 
+   de $\triangle ABP$ de nuevo en $Q$ y la recta $AQ$ corta de nuevo a $\omega$ en $R$. Demuestra que $BQCR$ es un paralelogramo si y solo si $AC=BC$.
+\end{problem}
+
+\problemdiff{3}
+\begin{problem} 
+    %[Jalisco TST 2025/Final/4]
+    Sea $ABC$ un triángulo con $AB>AC$ y $\angle BAC=60\dg$. Sean $H$ el ortocentro y $O$ el circuncentro de $ABC$, $M$ el punto medio del arco $BC$ que no contiene a $A$, y $E\neq B$ la intersección de la altura desde $B$ con el circuncirculo de $ABC$. Demuestra que \[\angle MOH=\angle BAE\]
+\end{problem}
+
+
+\problemdiff{3.5}
+\begin{problem}
+    %[OMCC 2024/4]
+Sea $ABC$ un triangulo, $I$ su incentro y $\Gamma$ su circuncirculo. La recta $AI$ intersecta de nuevo a $\Gamma$ en $D$. La linea paralela a $BC$ que pasa por $I$ intersecta a $AB,AC$ en $P$ y $Q$ respectivamente. Las rectas $PD$ y $QD$ intersectan $BC$ en $E$ y $F$ respectivamente. Prueba que los triangulos $IEF$ y $ABC$ son semejantes.
+\end{problem}
+
+\problemdiff{3.5}
+\begin{problem}
+    %[OMCC 2020/4]
+    Sea $ABC$ un triangulo con $BC>AC$. El circulo con centro $C$ y radio $AC$ intersecta al segmento $BC$ en $D$. Sea $I$ el incentro de $ABC$ y $\Gamma$ el circulo que pasa por $I$ y es tangente a $AC$ en $A$. La recta $AB$ y $\Gamma$ se intersectan de nuevo en un punto $F$. Prueba que $BF=BD$.
+\end{problem}
+
+
+\problemdiff{3.5}
+\begin{problem}
+    %[OMCC 2023/5]
+    Sea $ABC$ un triangulo acutangulo con $AB<AC$ y $\Gamma$ la circunferencia que pasa por $A,B,C$. Sea $D$ el punto diametralmente opuesto a $A$ en $\Gamma$ y $\ell$ la tangente hacia $\Gamma$ desde $D$. 
+    Sean $P,Q,R$ los puntos de intersección de $BC$ con $\ell$, de $AP$ con $\Gamma$ con $Q\neq A$ y de $QD$ con la altura de $A$ en el triangulo $ABC$, respectivamente. Sea $S$ la intersección de $AB$ con $\ell$ y $T$ la intersección de $AC$ con $\ell$. Prueba que $S,T,A,Q,R$ son conciclicos. 
+\end{problem}
+\problemdiff{3.5}
+\begin{problem}
+            Sea $ABC$ un triangulo con circuncentro $O$ y ortocentro $H$. Prueba que $AO=AH$ si y solo si $\angle BAC=60$
+\end{problem}
+\problemdiff{4}
+\begin{problem} [\gad]
+   % [OMCC 2021/2 \gad]
+   Sea $ABC$ un triangulo y $\Gamma$ su circuncirculo. Sea $D$ un punto en $AB$ tal que $CD$ es paralelo a la linea tangente a $\Gamma$ desde $A$. Sea $E$ la intersección de $CD$ con $\Gamma$ distinta de $C$, y $F$ la intersección de $BC$ con el circuncirculo de $\triangle ADC$ distinto de $C$. 
+   Sea $G$ la intersección de la recta $AB$ con la bisectriz interna de $\angle DCF$. Prueba que $E,F,G,C$ son conciclicos. 
+\end{problem}
+\problemdiff{4}
+\begin{problem}
+   %  [OMM 2024/4]
+    Sea $ABC$ un triangulo acutángulo con ortocentro $H$ y sea $M$ un punto del segmento $BC$. La recta por $M$ y perpendicular a $BC$, corta a las rectas $BH$ y $CH$ en los puntos $P$ y $Q$, respectivamente. Muestra que la recta $AM$ pasa por el ortocentro del triangulo $HPQ$.
+\end{problem}
+\problemdiff{4}
+\begin{problem}
+    %[OMMock 2025/2]
+Sea $ABC$ un triángulo acutángulo escaleno, y sean $M, N$ y $L$ los puntos medios de $BC, CA$ y $AB$ respectivamente. Los puntos $P$ sobre el segmento $ML$ y $Q$ sobre el segmento $MN$ satisfacen $\angle BAQ = \angle PAC$. $X$ y $Y$ son los pies de altura de $B$ a $AQ$ y de $C$ a $AP$, respectivamente. Demuestra que los puntos $M, P, Q, X$ y $Y$ son concíclicos.
+\end{problem}
+\problemdiff{4}
+\begin{problem}
+    %[OMCC 2024/3]
+    Sea $ABC$ un triangulo, $H$ su ortocentro, $\Gamma$ su circuncirculo. Sea $J$ el punto diametralmente opuesto a $A$ en $\Gamma$. Los puntos $D,E$ y $F$ son los pies de altura desde $A,B,C$, respectivamente. La recta $AD$ intersecta a $\Gamma$ de nuevo en $P$. El circuncirculo de $EFP$ intersecta a $\Gamma$ de nuevo en $Q$. 
+    Sea $K$ el segundo punto de intersección de $JH$ con $\Gamma$. Prueba que $K,D,Q$ son colineales.
+\end{problem}
+
+\problemdiff{4}
+
+\begin{problem}
+ %   [APMO 2015/1]
+    Sea $ABC$ un triangulo, $D$ un punto en el lado $BC$. Una recta que pasa por $D$ intersecta a $AB$ en $X$ y al rato $AC$ en $Y$ 
+    El circuncirculo de $BXD$ intersecta al circuncirculo $\omega$ del triangulo $ABC$ de nuevo en el punto $Z$ distinto de $B$. Las rectas $ZD$ y $ZY$ intersectan a $\omega$ de nuevo en $V$ y $W$. Prueba que 
+    $AB=VW$.
+
+\end{problem}
+
+\end{document}

@@ -1,0 +1,107 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+\usepackage{multicol}
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\title {Lista Fuentes Diciembres}
+\subtitle{Entrenas Nacionales Centros, PAGMOs}
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+\maketitle
+\begin{multicols}{2}
+\section{AngleChasing}
+\begin{itemize}
+    \item \textbf{2.9: } OMM 2011/2
+    \item \textbf{2.10: } OMM 2021/4
+    \item \textbf{2.11:} OMM 2010/5
+    \item \textbf{2.12:} USAMO 2023/1 \gad
+    \item \textbf{2.13:} USA TSTST 2023/1 \gad
+    \item \textbf{2.14:} EGMO 2015/1
+    \item \textbf{2.15:} USAJMO 2018/3
+\end{itemize}
+
+\section{Potencia}
+\begin{itemize}
+    \item \textbf{2.6: } \href{https://medium.com/intuition/a-geometry-problem-solved-using-radical-axes-77b2dbbc282e}{Bekhuz Niyazov}
+    \item \textbf{2.9: } USAJMO 2012/1
+    \item \textbf{2.11:} USAMO 1998/2
+    \item \textbf{2.12:} USAMO 2023/1 \gad 
+    \item \textbf{2.13:} Jalisco TST 2025/Final/3, Original mio. 
+    \item \textbf{2.14: } Mexico TST 2025 \gad 
+    \item \textbf{2.15: } IMO 2009/2
+\end{itemize}
+
+\section{Mix}
+\begin{itemize}
+    \item \textbf{1.3:} ORO 2025/4
+    \item \textbf{1.4:} ORO 2024/4
+    \item \textbf{1.5:} Jalisco TST 2025/Final/4, Original mio 
+    \item \textbf{1.6:} OMCC 2024/4
+    \item \textbf{1.7: } OMCC 2020/4
+    \item \textbf{1.8: } OMCC 2023/5
+    \item \textbf{1.10:} OMCC 2021/2 \gad 
+    \item \textbf{1.11: } OMM 2024/4
+    \item \textbf{1.12: } OMMock 2025/2
+    \item \textbf{1.13:} OMCC 2024/3
+    \item \textbf{1.14:} APMO 2015/1
+\end{itemize}
+\end{multicols}
+
+
+\end{document}

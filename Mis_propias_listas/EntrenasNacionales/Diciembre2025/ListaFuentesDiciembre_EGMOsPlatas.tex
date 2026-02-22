@@ -1,0 +1,162 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+\usepackage{multicol}
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\title {Lista Fuentes Diciembre }
+\subtitle{Entrenas Nacionales EGMOs, Platas}
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+\maketitle
+\begin{multicols}{3}
+\section{Conteo}
+\begin{itemize}
+    \item \textbf{1.1: } Online Monmouth Math Competition 2021/4
+    \item \textbf{1.2: } AIME II 2021/6
+    \item \textbf{1.3: } ARML 2023 T-6
+    \item \textbf{1.6: } KJMO 2022/2
+    \item \textbf{1.8: } OMM 2015/2
+    \item \textbf{1.9: } OMM 2006/3
+    \item \textbf{1.10: } Canada 2019/3
+    \item \textbf{1.11: } OMM 2021/3
+    \item \textbf{1.12: } EGMO 2015/2
+    \item \textbf{1.13: } OMM 2025/3
+\end{itemize}
+\columnbreak
+\section{Sucesiones I}
+\begin{itemize}
+    \item \textbf{2.1: } ARML Local 2021
+    \item \textbf{2.2: } Centro 2015/2
+    \item \textbf{2.3: } MEX TST 2024
+    \item \textbf{2.4:} Centro 2021/5
+    \item \textbf{2.5: } EGMO 2023/1
+    \item \textbf{2.6: } EGMO 2022/4
+    \item \textbf{2.7: } MEX EGMO TST 2025
+    \item \textbf{2.8: } Canadian Training Camp
+    \item \textbf{2.9: } EGMO 2024/4
+    \item \textbf{2.10: } OMM 2011/3
+    \item \textbf{2.11: } OMM 2020/6
+    \item \textbf{2.12: } IMOSL 2015/A1 
+    \item \textbf{2.13: } EGMO 2025/2
+    \item \textbf{2.14: } EGMO 2020/2
+    \item \textbf{2.15: } IMO 2018/2
+    \item \textbf{2.16: } IMOSL 2024/A5
+\end{itemize}
+\columnbreak
+\section{Sucesiones II}
+\begin{itemize}
+    \item \textbf{3.1: } ASHME 1999/20
+    \item \textbf{3.2: } Baltic Way 2025/1
+    \item \textbf{3.3: } EGMO 2016/1
+    \item \textbf{3.4: } Ibero 2009/5
+    \item \textbf{3.5: } IMOSL 2013/A1 
+    \item \textbf{3.6: } IMO 2014/1
+    \item \textbf{3.7: } IMOSL 2006/A1 
+    \item \textbf{3.8: } IMOSL 2014/A2 
+    \item \textbf{3.9: } IMO 2007/1
+    \item \textbf{3.10: } IMOSL 2022/A1 
+    \item \textbf{3.11: } EGMO 2015/4
+    \item \textbf{3.12: } Baltic Way 2025/2
+    \item \textbf{3.13: } EGMO 2022/3
+    \item \textbf{3.14: } IMO SL 2013/A4 
+    \item \textbf{3.15: } IMO SL 2018/A4 
+    \item \textbf{3.16: } IMO SL 2023/A5 
+    \item \textbf{3.17: } IMO 2023/3
+\end{itemize}
+\end{multicols}
+\begin{multicols}{2}
+\section{Fermat}
+\begin{itemize}
+    \item \textbf{2.6: } \href{https://artofproblemsolving.com/community/c6t32742f6h2232770_find_all_p_n_satisfy_conditions}{nhhlqd}
+    \item \textbf{2.7: } Rioplantese 2004/4
+    \item \textbf{2.8: } Canada 1983/4 
+    \item \textbf{2.9: } IMO 2005/4
+    \item \textbf{2.10: } Libro de Justin Stevens 
+    \item \textbf{2.11: } Balkan 1999/2
+    \item \textbf{2.12: } JBMO 2020/4
+    \item \textbf{2.14: } OMM 2010/6
+    \item \textbf{2.15: } Korselt's Criterion 
+    \item \textbf{2.16: } Iran Finals 2016/ N1 
+    \item \textbf{2.17: } IMO SL 2017/N2 
+    \item \textbf{2.18: } USAMO 1991/3
+    \item \textbf{2.19: } OMMFEM 2024/8
+    \item \textbf{2.20: } IMO SL 2024/N3 
+    \item \textbf{2.21: } IMO SL 2005/N6 
+    \item \textbf{2.22: } IMO SL 2006/N5
+    \item \textbf{2.23: } IMO 2025/3
+\end{itemize}
+\columnbreak
+\section{Orden}
+\begin{itemize}
+    \item \textbf{2.5: } IzHO 2020/1
+    \item \textbf{2.7: } HMMT 2016 T2 
+    \item \textbf{2.9: } Bulgaria 1997
+    \item \textbf{2.11: } MOP 2011
+    \item \textbf{2.12: } Schinzel 
+    \item \textbf{2.13: } USA TST 2003/3
+    \item \textbf{2.14: } USA TST 2008/4 
+    \item \textbf{2.15: } Romania TST 1996
+    \item \textbf{2.16: } China 2009/2 
+    \item \textbf{2.17: } USA EGMO TST 2019/3
+    \item \textbf{2.18: } China TST 2005/18    
+\end{itemize}
+\end{multicols}
+
+
+\end{document}

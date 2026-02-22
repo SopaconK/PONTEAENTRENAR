@@ -1,0 +1,202 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+\usepackage{multicol}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\title {LTUFPJ2}
+\subtitle {Ponganse a entrenar ps }
+
+\author{ }
+
+\begin{document}
+\maketitle
+
+\section{Lista 1}
+
+\epigraph{Te inscribí como el delegado oficial}{ Sofia }
+
+
+\problemdiff{5}
+\begin{problema} [OMM 2015/5]
+
+    Sea $I$ el incentro de un triángulo acutángulo $ABC$. La recta $AI$ corta por segunda vez al
+circuncírculo del triángulo $BIC$ en $E$. Sean $D$ el pie de la altura desde $A$ sobre $BC$ y $J$
+la reflexión de $I$ con respecto a $BC$. Muestra que los puntos $D$, $J$ y $E$ son colineales.
+    
+\end{problema}
+
+\problemdiff{4}
+\begin{problema} [OMM 2014/5]
+
+    Sean $a$, $b$ y $c$ números reales positivos tales que $a + b + c = 3$. Muestra que 
+\[ \frac{a^2}{a + \sqrt[3]{bc}} + \frac{b^2}{b + \sqrt[3]{ca}} + \frac{c^2}{c + \sqrt[3]{ab}} \geq \frac{3}{2} \]
+y determina para qué números $a$, $b$ y $c$ se alcanza la igualdad.
+    
+\end{problema}
+
+\problemdiff{5}
+\begin{problema} [IMO 2025/1]
+A line in the plane is called $sunny$ if it is not parallel to any of the $x$–axis, the $y$–axis, or the line $x+y=0$.
+
+Let $n\ge3$ be a given integer. Determine all nonnegative integers $k$ such that there exist $n$ distinct lines in the plane satisfying both of the following:
+for all positive integers $a$ and $b$ with $a+b\le n+1$, the point $(a,b)$ lies on at least one of the lines; and
+exactly $k$ of the $n$ lines are sunny.
+\end{problema}
+
+
+\begin{problem} %[OMM 2023/5]
+        Sea $ABC$ un triangulo acutangulo, $\Gamma$ su circuncirculo y $O$ su circuncentro. Sea $F$ el punto en $AC$ tal que $\angle COF=\angle ACB$, donde $F$ y $B$ estan de lados opuestos respecto a $CO$. La recta $FO$ corta a $BC$ en $G$. La paralela a $BC$ por $A$ intersecta a $\Gamma$ de nuevo en $M$. Las rectas $MG$ y $CO$ se cortan en $K$. Demuestra que los circuncirculos de los triangulos $BGK$ y $AOK$ concurren en $AB$.
+\end{problem}
+
+
+\begin{problem} %[IMO 2023/1]
+    Determine all composite integers $n>1$ that satisfy the following property: if $d_1$, $d_2$, $\ldots$, $d_k$ are all the positive divisors of $n$ with $1 = d_1 < d_2 < \cdots < d_k = n$, then $d_i$ divides $d_{i+1} + d_{i+2}$ for every $1 \leq i \leq k - 2$.
+\end{problem}
+
+\begin{problem} %[IMO 2024/1]
+    Determine all real numbers $\alpha$ such that, for every positive integer $n,$ the integer
+$$\lfloor\alpha\rfloor +\lfloor 2\alpha\rfloor +\cdots +\lfloor n\alpha\rfloor$$is a multiple of $n.$ (Note that $\lfloor z\rfloor$ denotes the greatest integer less than or equal to $z.$ For example, $\lfloor -\pi\rfloor =-4$ and $\lfloor 2\rfloor= \lfloor 2.9\rfloor =2.$)
+\end{problem}
+
+\begin{problem} %[OMMFEM 2025/7]
+    Let $n$ be a positive integer. The rows and columns of an $n \times n$ grid are labeled from $1$ to $n$. Inside each square, a non-negative integer is written such that the number in the cell in row $i$ and column $j$ is equal to the number of squares with the number $i \cdot j$ written on it. Determine how many different ways this can be done.
+\end{problem}
+
+\begin{problem} %[OMM 2017/5]
+Sobre una circunferencia $\Gamma$ se encuentran los puntos $A$, $B$, $N$, $C$, $D$ y $M$ colocados en el sentido de las manecillas del reloj de manera que $M$ y $N$ son los puntos medios de los arcos $DA$ y $BC$ (recorridos en el sentido de las manecillas del reloj). Sea $P$ la intersección de los segmentos $AC$ y$BD$; y sea $Q$ un punto sobre $MB$ de manera que las rectas $PQ$ y $MN$ son perpendiculares. Sobre el segmento $MC$ se considera un punto $R$ de manera que $QB = RC$. Muestra que $AC$ pasa por el punto medio del segmento $QR$.
+
+\end{problem}
+
+\begin{problem} %[OMM 2015/4]
+ Sea $n$ un entero positivo. María escribe las $n^3$ ternas que se pueden formar tomando tres enteros, no necesariamente distintos, entre 1 y $n$, incluyendolos. Despues, para cada una de las ternas, Maria determina el mayor (o los mayores, en caso de que haya mas de uno) y borra los demas. Por ejemplo, en la terna $(1,3,4)$ borrara los números $1$ y $3$, mientras que en la terna $(1,2,2)$ borrara solo el número 1. \\
+Muestra que, al terminal este proceso, la cantidad de numeros que quedan escritos en el pizarron no puede ser igual al cuadrado de un número entero.
+\end{problem}
+
+\begin{problem} %[USAMO 2018/1]
+    	Let \(a,b,c\) be positive real numbers such that \(a+b+c=4\sqrt[3]{abc}\). Prove that\[2(ab+bc+ca)+4\min(a^2,b^2,c^2)\ge a^2+b^2+c^2.\]
+\end{problem}
+
+
+\newpage
+\section{20Oct - Divisores}
+
+\begin{problem} %me lo paso isaac
+    Encuentra todos los enteros positivos $n$ tales que si $d(n)$ es la cantidad de divisores positivos de $n$, se cumple que
+    \[d(n)=\sqrt{n+1}\] 
+\end{problem}
+
+\begin{problem} %[OMM 2024/2]
+     Determina todas las parejas $(a,b)$ de enteros que satisfacen
+    \begin{itemize}
+        \item $5 \leq b < a$
+        \item Existe un número natural $n$ tal que los números $\frac ab$ y $a-b$ son divisores consecutivos de $n$, en ese orden.
+    \end{itemize}
+\end{problem}
+
+\begin{problem} %[OMM 2022/5]
+    
+    Sea $n>1$ un entero positivo y sean $d_1 < d_2 < \dots <  d_m$ sus $m$ divisores positivos de manera que $d_1=1$ y $d_m=n$. Lalo escribe los siguientes $2m$ números en un pizarrón:
+\[d_1,d_2,\dots,d_m,d_1+d_2,d_2+d_3,\dots,d_{m-1}+d_m,N\]
+donde $N$ es un entero positivo. Después Lalo borra los números repetidos (por ejemplo, si un número aparece dos veces, él borrará uno de los dos). Después de esto, Lalo nota que los números en el pizarrón son precisamente la lista completa de divisores positivos de $N$. Encuentra todos los posibles valores del entero positivo $n$.
+    
+\end{problem}
+
+
+\begin{problem} %[Ibero 2024/1]
+    	For each positive integer $n$, let $d(n)$ be the number of positive integer divisors of $n$.
+Prove that for all pairs of positive integers $(a,b)$ we have that:
+\[ d(a)+d(b) \le d(\gcd(a,b))+d(\text{lcm}(a,b)) \]and determine all pairs of positive integers $(a,b)$ where we have equality case.
+\end{problem}
+
+
+\newpage
+
+\section{21Oct- Sucesiones }
+
+\begin{problem} % Lista pablo/violeta
+    La sucesión $(a_n)$ esta definida por
+    \[ a_1=1, a_2=3, a_n=a_{n-1}+a_{n-2}, \text{ para } n\geq 3\]
+    Muestre que $a_n < \left( \frac{7}{4} \right)^n $
+\end{problem}
+
+
+\begin{problem} % [OMM 2013/1] 
+Se escriben los números primos en orden $p_1=2, p_2=3, p_3=5,\ldots$ Encuentra todas las parejas de números enteros positivos $a$ y $b$ con $a-b\geq 2$, tales que $p_a-p_b$ divide al numero entero $2(a-b)$.
+\end{problem}
+
+
+\begin{problem} % [IMOSL 2006 A1]
+    A sequence of real numbers $ a_{0},\ a_{1},\ a_{2},\dots$ is defined by the formula
+\[ a_{i + 1} = \left\lfloor a_{i}\right\rfloor\cdot \left\langle a_{i}\right\rangle\qquad\text{for}\quad i\geq 0;
+\]here $a_0$ is an arbitrary real number, $\lfloor a_i\rfloor$ denotes the greatest integer not exceeding $a_i$, and $\left\langle a_i\right\rangle=a_i-\lfloor a_i\rfloor$. Prove that $a_i=a_{i+2}$ for $i$ sufficiently large.
+    
+\end{problem}
+
+
+\begin{problem} % [OMM 2011/3] 
+Sea $n\geq 3$ un entero positivo.Encuentra todas las soluciones $(a_1,a_2,\ldots,a_n)$ de números reales que satisfacen el siguiente sistema de $n$ ecuaciones:
+$$a_1^2+a_1-1=a_2$$
+$$a_2^2+a_2-1=a_3$$
+$$\vdots$$
+$$a_{n-1}^2+a_{n-1}-1=a_n$$
+$$a_n^2+a_n-1=a_1.$$
+\end{problem}
+
+
+
+\end{document}

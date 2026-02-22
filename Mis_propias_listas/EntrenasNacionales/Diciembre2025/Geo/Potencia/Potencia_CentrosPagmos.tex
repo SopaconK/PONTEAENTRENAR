@@ -1,0 +1,172 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\title {Potencia de un Punto}
+\subtitle{Entrenas Nacionales Centros, PAGMOs}
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+\maketitle
+
+\section{Ejemplos}
+\begin{example}
+  [Teorema de Euler]
+  Sea $ABC$ un triangulo. Sea $R$ y $r$ el circunradio y el inradio, respectivamente. Sean $O,I$ el circuncentro e incentro. Prueba que \[OI^2=R(R-2r)\]
+\end{example}
+
+
+\section{Problemas}
+\epigraph{La belleza, con el paso del tiempo, se vuelve más bella}
+
+\problemdiff{1}
+\begin{problem}
+    Demuestra que el eje radical de dos circunferencias que se intersecan es perpendicular a la recta que une a los centros de las circunferencias.
+\end{problem}
+
+\problemdiff{2}
+\begin{problem}
+    Sea $ABC$ un triangulo acutangulo, $H$ su ortocentro $D,E,F$ los pies de altura de $A,B,C$. Demuestra que 
+    \[AH \cdot HD = BH \cdot HE = CH \cdot HF\]
+\end{problem}
+
+\problemdiff{2}
+\begin{problem}
+Sea $ABC$ un triangulo y considera un punto $P$ en su interior, de forma que $BC$ es tangente a los circuncirculos de los triangulos 
+$ABP$ y $ACP$. Prueba que la recta $AP$ intersecta a $BC$ en su punto medio.
+\end{problem}
+
+\problemdiff{2}
+\begin{problem}
+    Sean $\Gamma_1, \Gamma_2$ dos circunferencias que se intersectan. La tangente comun de estas circunferencias intersecta a $\Gamma_1$ en $A$ y a $\Gamma_2$ en $B$. Prueba que cuando extiendes la cuerda comun de $\Gamma_1, \Gamma_2$ bisecta a la tangente comun.
+\end{problem}
+
+
+\problemdiff{2}
+\begin{problem}
+    Sean $\Gamma_1, \Gamma_2$ dos circunferencias que se intersectan en $P,Q$. Una recta que pasa por $P$ intersecta a $\Gamma_1$ en $A$ y a $\Gamma_2$ en $B$. Sea $X$ el 
+    punto medio de $AB$. La recta $QX$ intersecta nuevamente a $\Gamma_1$ en $Y$ y a $\Gamma_2$ en $Z$. Demuestra que $X$ es el punto medio de $YZ$.
+\end{problem}
+
+\problemdiff{2}
+\begin{problem}
+ %   [\href{https://medium.com/intuition/a-geometry-problem-solved-using-radical-axes-77b2dbbc282e}{Bekhuz Niyazov}]
+    Sea $ABC$ un triangulo. Y sean $BB_1, CC_1$ sus alturas (con $B_1,C_1$ en $AC,AB$, respectivamente). Si $BB_1$ intersecta al circulo de diametro $AC$ en los puntos $P,Q$, y $CC_1$ intersecta al circulo de diametro $AB$ en los puntos $MN$. Demuestra que $M,N,P,Q$ son conciclicos.
+\end{problem}
+\problemdiff{2.5}
+\begin{problem}
+    Sean $A,B,C$ tres puntos en el circulo $\Gamma$ con $AB=BC$. Las tangentes desde $A$ y $B$ se intersectan en $D$. $DC$ intersecta de nuevo a $\Gamma$ en $E$. Prueba que la recta $AE$ bisecta $BD$. 
+\end{problem}
+
+
+\problemdiff{3}
+\begin{problem}
+    Sea $C$ un punto en el semicirculo de diametro $AB$ y sea $D$ el punto medio del arco $AC$. Sea $E$ la proyeción de $D$ hacia la recta $BC$ y $F$ la intersección de la recta $AE$ con el semicirculo. Prueba que $BF$ bisecta al segmento $DE$. 
+\end{problem}
+
+
+\problemdiff{3}
+\begin{problem}
+ %   [USAJMO 2012]
+
+    Sea $ABC$ un triangulo. Los puntos $P$ y $Q$ estan en los segmentos $AB,AC$, respectivamente, tal que $AP=AQ$. Sean $S$ y $R$ puntos distintos en el segmento $BC$ tal que $S$ esta entre $B$ y $R$ y 
+    \[\angle BPS= \angle PRS , \angle CQR= \angle QSR\]
+    Prueba que $P,Q,R,S$ estan en una misma circunferencia.
+\end{problem}
+
+\problemdiff{3}
+\begin{problem}
+    Sea $ABC$ un triángulo y $D$ un punto en
+el lado $BC$. Supongamos que $AB = AD = 5, AC = 7$ y
+$BC = 9$. Calcular la medida del segmento $CD$.
+\end{problem}
+
+
+\problemdiff{3}
+\begin{problem}
+ %   [USAMO 1998/2]
+    Sean ${\cal C}_1$ y ${\cal C}_2$ dos circunferencias cocentricas (tienen el mismo centro), con ${\cal C}_2$ en el interior de ${\cal C}_1$. Desde un punto $A$ en ${\cal C}_1$ se traza la tangente $AB$ hacia ${\cal C}_2$ con $B\in {\cal C}_2$. Sea $C$ el segundo punto de intersección 
+    de la recta $AB$ con ${\cal C}_1$, y $D$ el punto medio de $AB$. Una linea que pasa por $A$ intersecta ${\cal C}_2$ en $E$ y en $F$, de forma que las mediatrices de $DE,CF$ se intersectan en un punto $M$ sobre $AB$. Calcula el valor de $\frac{AM}{MC}$.
+\end{problem}
+
+\problemdiff{4}
+\begin{problem}  [\gad]
+%[USAMO 2023/1 \gad]
+    En un triangulo acutangulo $ABC$, sea $M$ el punto medio de $BC$. Sea $P$ el pie de altura de $C$ hacia $AM$. Supon que el circuncirculo de el triangulo $ABP$ intersecta la linea $BC$ en $B$ y $Q$.Sea $N$ el punto medio de $AQ$. Muestra que $NB=NC$.
+\end{problem}
+\problemdiff{4}
+\begin{problem} %[Jalisco TST 2025/Final/3]
+    Sea $ABC$ un triángulo acutangulo, sea $\omega$ el circuncirculo,  $H$ el ortocentro, $Q_A, Q_B$ las intersecciones de los círculos con diámetro $AH, BH$ con $\omega$ , sea $T$ la intersección de $AQ_A, BQ_B$, sean $M,N$ los pies de perpendicular de $T$ a $AH,BH$.
+Demuestra que $MN, Q_AQ_B,AB$ concurren.
+\end{problem}
+\problemdiff{4.5}
+\begin{problem}
+%      [Mexico TST 2025 \gad]
+    Sea $ABCD$ un cuadrilatero convexo, supón que existe un punto $P$ en el interior del cuadrilatero tal que: 
+    \[\angle PAD= \angle ADP = \angle PCB  = \angle CBP = \angle CPD\]
+    Sea $O$ el circuncentro de $CPD$. Demuestra que $OA=OB$.
+\end{problem}
+
+\problemdiff{5.5}
+\begin{problem}
+%    [IMO 2009/2]
+    Sea $ABC$ un triangulo con circuncentro $O$. Los puntos $P$ y $Q$ son puntos en los segmentos $CA,AB$, respectivamente. Sean $K,L,M$ los puntos medios de los segmentos $BP,CQ,PQ$ respectivamente. Sea $\Gamma$ el circuncirculo de $KLM$. Si la linea $PQ$ es tangente al circulo $\Gamma$, prueba que $OP=OQ$.
+\end{problem}
+
+\end{document}

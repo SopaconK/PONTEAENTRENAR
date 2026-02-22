@@ -1,0 +1,8 @@
+    for(auto x: mp){
+            if(x.first<=a){
+                lli aux=mp[x.first]*mp[b/x.first];
+                aux%=MOD;
+                ans+=aux;
+                ans%=MOD;
+            }
+        }

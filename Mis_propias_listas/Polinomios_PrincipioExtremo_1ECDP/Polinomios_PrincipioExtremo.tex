@@ -1,0 +1,125 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\title {Polinomios y Principio Extremo}
+\subtitle {1er Entrenamiento Conjunto del Pacífico de la OMM}
+
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+\maketitle
+
+\section{Problemas Polinomios}
+
+\problemdiff{3}
+\begin{problema}[OMCC 2008/5]
+    
+    Encuentre un polinomio $ P\left(x\right)$ con coeficientes reales tal que
+
+$$(x+10)P(2x) = (8x - 32)P(x + 6)$$
+
+para todo real $x$ y $P(1) = 210$.
+
+    
+\end{problema}
+
+\problemdiff{4}
+\begin{problema} [OMCC 2020/5]
+
+    Sea $P(x)$ un polinomio con coeficientes reales no negativos. Sea $k$ un número entero positivo y $x_1, x_2, \dots, x_k$ números reales positivos tales que $x_1x_2\cdots x_k=1$. Demuestre que
+\[ P(x_1)+P(x_2)+\cdots+P(x_k)\geq kP(1). \]
+\end{problema}
+
+
+\problemdiff{4}
+\begin{problema} [OMCC 2018/5]
+    Sea $n$ un número entero positivo, $1< n < 2018$. Para cada $i=1, 2, \ldots ,n$ definimos el polinomio $S_i(x)=x^2-2018x+l_i$, donde $l_1, l_2, \ldots, l_n$ son enteros positivos distintos. Si el polinomio $S_1(x)+S_2(x)+\cdots+S_n(x)$ tiene al menos una raíz entera, demostrar que al menos uno de los $l_i$ es mayor o igual que $2018$.
+\end{problema}
+
+\problemdiff{4}
+\begin{problema} [OMCC 2017/5]
+    
+    Susana y Brenda juegan a escribir polinomios en la pizarra. Susana empieza y juegan por turnos.
+ En el turno preparatorio (turno $0$), Susana elige un entero positivo $n_0$ y escribe el polinomio $P_0(x)=n_0$. En el turno $1$, Brenda elige un entero positivo $n_1$, distinto de $n_0$, y escribe el polinomio
+\[ P_1(x)=n_1x+P_0(x) \textup{ o } P_1(x)=n_1x-P_0(x). \]
+En general, en el turno $k$, el jugador respectivo elige un número entero $n_k$, diferente de $n_0, n_1, \ldots, n_{k-1}$, y escribe el polinomio
+\[P_k(x)=n_kx^k+P_{k-1}(x) \textup{ o } P_k(x)=n_kx^k-P_{k-1}(x).\]
+
+El primer jugador que escriba un polinomio con al menos una raíz entera gana. Encuentra y describe una estrategia ganadora.
+
+    
+\end{problema}
+
+
+\problemdiff{4}
+\begin{problema} [OMCC 2016/3]
+    El polinomio $Q(x)=x^3-21x+35$ tiene tres raíces reales diferentes. Encontrar números reales $a$ y $b$ tales que el polinomio $x^2+ax+b$ permute cíclicamente las raíces de $Q$, es decir, si $r$, $s$ y $t$ son las raíces de $Q$ (en algún orden) entonces $P(r)=s$, $P(s)=t$ y $P(t)=r$.
+\end{problema}
+
+\problemdiff{5}
+\begin{problema} [OMCC 2013/6]
+    
+    Determine todas las parejas de polinomios no constantes $p(x)$ y $q(x)$, cada uno con coeficiente principal $1$, grado $n$ y $n$ raíces enteras no negativas, tales que $p(x)-q(x)=1$. 
+
+    
+\end{problema}
+
+
+\end{document}

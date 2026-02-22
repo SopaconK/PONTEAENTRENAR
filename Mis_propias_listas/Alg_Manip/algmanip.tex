@@ -1,0 +1,193 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\title{Alg Manip}
+\subtitle{OMMJAL}
+\author{Emmanuel Buenrostro}
+
+\begin{document}
+
+\maketitle.
+
+\section{Tecnicas}
+
+\subsection{SFFT}
+
+Simon's Favorite Factoring Trick. Este truco sirve para factorizas cosas de la forma: (Esto lo vamos a nombrar SFFT con $(x,y,n,m)$)
+\[ xy+xn+ym \]
+
+Para esto vamos a usar que 
+\[ xy+xn+ym+nm =(x+m)(y+n)\]
+Es bastante parecido, entonces el truco es agregarle $nm$ para poder factorizarlo, entonces
+
+\[ xy+xn+ym = (x+m)(y+n)-nm \]
+
+Algunos casos especiales muy comunes son:
+
+\[xy+x+y=(x+1)(y+1)-1  \text{ y } xy-x-y=(x-1)(y-1)-1\]
+
+Si tienes cosas de la forma
+\[ kxy+ax+by=0 \]
+Tambien puedes aplicarlo, pero de una forma más curiosa que es multiplicando por $k$. 
+
+\[ k^2xy +akx +bky =0\]
+y usando SFFT con $(kx,ky,+a, +b)$.
+\[(kx+b)(ky+a)=ab\]
+
+\begin{example}
+    [Brilliant]
+    Encuentra las soluciones enteras a la ecuación $xy+9(x+y)=86$
+\end{example}
+
+\begin{example}
+    [Brilliant]
+    Encuentra las soluciones enteras a la ecuación $2b+3c=5bc$.
+\end{example}
+
+
+
+\newpage
+\section{Problemas}
+
+
+\begin{problem} %OMM 2023/1
+    Encuentra los enteros positivos de cuatro digitos, tal que la suma del cuadrado
+    de los digitos sea igual a el doble de la suma de los digitos.
+\end{problem}
+
+
+
+
+\begin{problem}
+    %OMM 2010/1
+    Encuentra todas las ternas de números naturales $(a,b,c)$ tales que $abc=a+b+c+1$.
+    
+\end{problem}
+
+\begin{problem}
+    %Lista ommbc
+    Resuelve el sistema de ecuaciones:
+    \begin{align*}
+        x^3-y^3&=19(x-y)\\
+        x^3+y^3&=7(x+y)
+    \end{align*}
+\end{problem}
+
+
+\begin{problem}
+Sean $p,q$ dos números primos. Resuelve en enteros la siguiente ecuación:
+\[ \frac 1x +\frac 1y = \frac{1}{pq}\]
+\end{problem}
+
+\begin{problem} %sophie-germain
+    Factoriza $a^4+4b^4$
+\end{problem}
+
+\begin{problem}
+    %lista ommbc
+    Demuestra que si $n$ es la suma de dos cuadrados, entonces $2m$ tambien lo es.
+\end{problem}
+
+(Si no has visto log saltate este problema)
+\begin{problem}
+    %Girls Math at Yale
+    Sean $x,y$ reales positivos tal que $\log_2 x =\log_x y = \log_y 256$. ¿Cuánto vale $xy$?
+\end{problem}   
+
+\begin{problem} %Lista ommbc
+    Resolver el sistema de ecuaciones:
+    \begin{align*}
+        x^2+xy+y^2&=4 \\
+        x+xy+y&=2 
+    \end{align*}
+\end{problem}
+
+\begin{problem}
+    %lista ommbc
+    Encuentra las soluciones reales a:
+    \begin{align*}
+        x^3+y^3 &=1 \\
+        x^2y+2xy^2+y^3 &= 2 
+    \end{align*}    
+\end{problem}
+
+\begin{problem}
+    %OMM 2022/1
+    Un número $x$ es Tlahiuca si existen primos positivos distintos $p_1,p_2,\dots,p_k$ tales que 
+\[x=\frac{1}{p_1}+\frac{1}{p_2}+\cdots+\frac{1}{p_k}.\]
+Deterimina el mayor número Tlahuica $x$ que satisface las dos siguientes propiedades:
+ \begin{itemize} 
+ \item  $0 < x < 1$. 
+ \item  Existe un número entero $0< m\leq 2022$ tal que $mx$ es un número entero. 
+ \end{itemize} 
+    
+\end{problem}
+
+
+
+
+\begin{problem}
+    %IMOSL 2013 A1
+    Sea $n$ un entero positivo, y sean $a_1, \ldots, a_{n-1}$ números reales arbitrarios.
+    Las sucesiones $u_0, u_1, \ldots , u_n$ y $v_0, v_1, \ldots, v_n$ como $u_0=u_1=v_0=v_1=1$ y 
+    \[u_{k+1}=u_k+a_ku_{k-1} \text{ y } v_{k+1}=v_k+a_{n-k}v_{k-1}\]
+    para $k=1,2,\ldots, n-1$. \\
+    Prueba que $u_n=v_n$.
+\end{problem}
+
+
+\end{document}

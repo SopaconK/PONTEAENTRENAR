@@ -1,0 +1,426 @@
+\documentclass[11pt]{scrartcl}
+
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+\title {Sucesiones}
+
+\author{Emmanuel Buenrostro}
+
+
+\begin{document}
+\maketitle
+
+\section{Teoria?}
+
+
+\subsection{Posibles atributos}
+\begin{itemize}
+\item Una sucesi\'on $\{a_n\}$ es \textit{aritmetica} si $a_n-a_{n-1}$ es constante para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{geometrica} si $\frac{a_n}{a_{n-1}}$ es constante para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{periodica} si $a_{n+m}=a_n$ para toda $n>C$ para algunos $m,C$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{acotada superiormente} si existe una constante $M$ tal que $a_n < M$ para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{acotada inferiormente} si existe una constante $M$ tal que $a_n > M$ para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{acotada} si esta acotada superiormente e inferiormente.
+\item Una sucesi\'on $\{a_n\}$ es \textit{creciente} si $a_n>a_{n-1}$ para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{decreciente} si $a_n < a_{n-1}$ para toda $n$.
+\item Una sucesi\'on $\{a_n\}$ es \textit{no creciente} si $a_n \leq a_{n-1}$ para toda $n$. (Las sucesiones decrecientes son sucesiones no crecientes)
+\item Una sucesi\'on $\{a_n\}$ es \textit{no decreciente} si $a_n \geq a_{n-1}$ para toda $n$. (Las sucesiones crecientes son sucesiones no decrecientes)
+\item Una sucesi\'on $\{a_n\}$ es \textit{monotona} si es no creciente o no decreciente.
+\end{itemize}
+
+
+\subsection{¿C\'omo tienes problemas con esto?}
+
+Bueno, usualmente los problemas te dan alguna condici\'on que cumple la sucesi\'on, puede ser
+que te definan $a_n$ en terminos de los terminos anteriores, una secuencia cualquiera que cumple una condici\'on,
+encontrar las sucesiones que cumplen esta condici\'on, etc. \\
+
+Estos problemas siento que son de dos tipos, hacer cuentitas o algunas idea tipo "combinatorias", refiriendome a que tienes que 
+jugar con las sucesiones, hayar alguna propiedad (por ejemplo alguna de las mencionadas anteriormente), mientras que la de hacer cuentitas 
+refiriendome a cosas como encontrar una formula, calcular un valor, una recursi\'on, etc. 
+
+
+\subsection{Tips}
+\begin{itemize}
+    \item Buscar Forma Cerrada \begin{itemize}
+        \item Inducción
+    \end{itemize}
+    \item Desigualdades
+    \item Muevele :p 
+    \item Buscar algun atributo.
+\end{itemize}
+
+\newpage 
+\section{Problemas}
+\epigraph{Cada vez que te pase algo malo \\
+"Ya te tocaba"}{}
+
+\subsection{Nivel I}
+
+\problemdiff{2}
+\begin{problem}
+%[ARML Local 2021]
+Una sucesión de números $a_1, a_2, \ldots$ de números reales cumple que: 
+\[a_n = na_{n-1}+(n-1)(n!(n-1)!-1)\]
+para los enteros $n \geq 2$. Si $a_{2021}=(2021!+1)^2+2020!$. ¿Cuál es el valor de $a_1$?
+\end{problem}
+
+\problemdiff{3}
+\begin{problem}
+%[Centro 2015/2]
+
+    Una sucesión $(a_n)$ de números reales está definida por $a_0=1$, $a_1=2015$ y para todo $n\geq1$, tenemos:
+\[a_{n+1}=\frac{n-1}{n+1}a_n-\frac{n-2}{n^2+n}a_{n-1}. \]
+Calcule el valor de
+ $$\frac{a_1}{a_2}-\frac{a_2}{a_3}+\frac{a_3}{a_4}-\frac{a_4}{a_5}+\ldots+\frac{a_{2013}}{a_{2014}}-\frac{a_{2014}}{a_{2015}}.$$
+\end{problem}
+
+\problemdiff{3}
+\begin{problem}
+ %   [MEX TST 2024]
+    Una secuencia de $11$ números no ceros $a_1,a_2,\ldots, a_{10},a_{11}$, cumple que $a_i=a_{i-1}a_{i+1}-1$ para $i=2,\ldots, 10$. Muestra que $a_1=a_{11}$.
+\end{problem}
+
+
+\problemdiff{3.5}
+\begin{problem}
+ %   [Centro 2021/5]
+    
+    Sea $n \geq 3$ un número entero y $a_1,a_2,...,a_n$ números reales positivos tales que $m$ es el menor y $M$ el mayor de estos números. Se sabe que para cualesquiera enteros distintos $1 \leq i,j,k \leq n$, si $a_i \leq a_j \leq a_k$ entonces $a_ia_k \leq a_j^2$. Demostrar que
+\[ a_1a_2 \cdots a_n \geq m^2M^{n-2} \]
+y determinar cuando la igualdad se mantiene.
+
+\end{problem}
+
+
+\subsection{Nivel II}
+
+\problemdiff{4}
+\begin{problem}
+%    [EGMO 2023/1]
+    
+    Se tienen $n\geq 3$ números reales positivos $a_1,a_2,\dots,a_n$. Para cada $1\leq i\leq n$ se define $b_i=\frac{a_{i-1}+a_{i+1}}{a_i}$, donde $a_0=a_n$ y $a_{n+1}=a_1$. Suponga que para cada $1\leq i\leq n$ cada $i\leq j\leq n$ se tiene que $a_i\leq a_j$ si y sólo si $b_i\leq b_j$.  \newline 
+
+Demuestre que $a_1=a_2=\dots =a_n$.
+\end{problem}
+
+
+\problemdiff{4}
+\begin{problem}
+ %   [EGMO 2022/4]
+    
+    Para cada entero positivo $n \ge 2$, determine el mayor entero positivo $N$ con la propiedad de que existen $N +1$ números reales $a_0,a_1,\dots,a_N$ tales que
+ \begin{itemize} 
+ \item  $a_0+a_1=-\frac 1n$, y
+ \item  $(a_k+a_{k-1})(a_k+a_{k+1})=a_{k-1}-a_{k+1}$ para todo $1\leq k \leq N-1$.
+ \end{itemize} 
+    
+\end{problem}
+
+\problemdiff{4}
+\begin{problem}
+ %   [MEX EGMO TST 2025]
+    ¿Existen 2024 números reales distintos de cero $a_1,a_2, \ldots, a_{2024}$ tales que:
+    \[\sum_{i=1}^{2024}\left(a_i^2+\frac{1}{a_{i}^2}\right) + 2\sum_{i=1}^{2024}\frac{a_i}{a_{i+1}}+2024=2\sum_{i=1}^{2024}\left(a_i+\frac{1}{a_i}\right)?\]
+\end{problem}
+
+\problemdiff{4.5}
+\begin{problem}
+ %   [Canadian Training Camp]
+    Las sucesiones $a_n$ y $b_n$ cumplen que para cada entero positivo $n$ 
+    \[ a_n > 0,\qquad\ b_n>0,\qquad\ a_{n+1}=a_n+\dfrac{1}{b_n},\qquad\ b_{n+1} = b_n+\dfrac{1}{a_n}. \]
+    Prueba que $a_{50}+b_{50}>20$.
+\end{problem}
+
+\subsection{Nivel III}
+
+\problemdiff{5}
+\begin{problem}
+ %   [EGMO 2024/4]
+    Para una sucesión $a_1 < a_2 < \ldots < a_n$ de enteros, un par $(a_i, a_j)$ con $1 \leq i < j \leq n$ es llamada \textit{interesante} si existe un par $(a_k, a_l)$ de enteros con $1\leq k < l \leq n$ tal que:
+    $$\frac{a_l-a_k}{a_j-a_i}=2.$$
+    Para cada $n \geq 3$, encuentra el número de pares \textit{interesantes} en una sucesión de tamaño $n$.
+\end{problem}
+
+\problemdiff{5}
+\begin{problem}
+ %   [OMM 2011/3]
+    
+    Sea $n$ un entero positivo. Encuentra todas las soluciones $(a_1, a_2,\dots , a_n)$ de números reales
+que satisfacen el siguiente sistema de $n$ ecuaciones:
+
+\[a_1^2 + a_1 - 1 = a_2\]
+\[ a_2^2 + a_2 - 1 = a_3\]
+\[\vdots \]
+\[a_{n}^2 + a_n - 1 = a_1.\]
+ 
+\end{problem}
+
+
+\problemdiff{5}
+\begin{problem}
+ %   [OMM 2020/6]
+    
+    Sea $n\ge 2$ un número entero positivo. Sean $x_1, x_2, \dots, x_n$ números reales no nulos que satisfacen la ecuación
+\[\left(x_1+\frac{1}{x_2}\right)\left(x_2+\frac{1}{x_3}\right)\dots\left(x_n+\frac{1}{x_1}\right)=\left(x_1^2+\frac{1}{x_2^2}\right)\left(x_2^2+\frac{1}{x_3^2}\right)\dots\left(x_n^2+\frac{1}{x_1^2}\right). \]
+Encuentra todos los valores posibles de $x_1, x_2, \dots, x_n$.
+\end{problem}
+
+\problemdiff{5}
+\begin{problem}
+ %   [IMOSL 2015/A1]
+    Supón que una sucesión $a_1,a_2,\ldots$ de números reales positivos satisface\[a_{k+1}\geq\frac{ka_k}{a_k^2+(k-1)}\]para cada entero positivo $k$. Demuestra que $a_1+a_2+\ldots+a_n\geq n$ para cada $n\geq2$.
+\end{problem}
+
+
+\problemdiff{5.5}
+\begin{problem}
+  %  [EGMO 2025/2]
+    Una sucesión infinita creciente  $a_1 < a_2 < a_3 < \ldots$ de enteros positivos es llamada \textit{central} si para cada entero positivo $n$, la media aritmetica de los primeros $a_n$ terminos es igual a $a_n$. \\
+    Prueba que existe una sucesión infinita $b_1, b_2, b_3,\ldots$ de enteros positivos tal que para cada sucesión central $a_1, a_2, a_3, \ldots$ hay infinitos enteros positivos $n$ tal que $a_n=b_n$. 
+\end{problem}
+
+\subsection{Nivel IV}
+
+\problemdiff{6}
+\begin{problem}
+  %  [EGMO 2020/2]
+    
+    Encontrar todas las listas $(x_1, x_2, \ldots, x_{2020})$ de números reales no negativos tales que se satisfagan las tres condiciones siguientes:
+
+    $x_1 \le x_2 \le \ldots \le x_{2020}$; $\qquad$  
+    $x_{2020} \le x_1 + 1$;  $\qquad$ 
+    Existe una permutación $(y_1, y_2, \ldots, y_{2020})$ de $(x_1, x_2, \ldots, x_{2020})$ tal que
+
+\[\sum_{I = 1}^{2020} ((x_i + 1)(y_i + 1))^2 = 8 \sum_{i = 1}^{2020} x_i^3\]
+
+
+Una permutación de una lista es una lista de la misma longitud, con los mismos elementos pero en un
+orden cualquiera. Por ejemplo, $(2, 1, 2)$ es una permutación de $(1, 2, 2)$, y ambas son permutaciones
+de $(2, 2, 1)$. En particular cualquier lista es una permutación de ella misma.
+    
+\end{problem}
+
+
+\problemdiff{6}
+\begin{problem}
+  %  [IMO 2018/2]
+    Encuentra todos los enteros $n \geq 3$ para los cuales existen números reales $a_1, a_2, \dots a_{n + 2}$ que satisfacen $a_{n + 1} = a_1$, $a_{n + 2} = a_2$ y
+$$a_ia_{i + 1} + 1 = a_{i + 2},$$for $i = 1, 2, \dots, n$.
+\end{problem}
+
+\problemdiff{7}
+\begin{problem}
+ %   [IMOSL 2024/A5]
+    Encuentra todas las sucesiones periodicas $a_1,a_2, \ldots$ de reales tales que lo siguiente se cumple para todo $n \geq 1$.
+    $$a_{n+2}+a_{n}^2=a_n+a_{n+1}^2\quad\text{y}\quad |a_{n+1}-a_n|\leqslant 1.$$
+\end{problem}
+
+\newpage
+\section{Problemas Parte II}
+\epigraph{Vemos jaja}
+
+\subsection{Nivel I}
+
+\begin{problem}
+ %   [ASHME 1999/20]
+    La sucesión $a_1, a_2, \ldots, a_n$ cumple que $a_1=19, a_9=99$ y para todo $n\geq 3$, $a_n$ es el promedio de los primeros $n-1$ terminos. Calcula $a_2$. 
+\end{problem}
+
+
+\begin{problem}
+  %  [Baltic Way 2025/1]
+    Does there exist a sequence of integers $a_1, a_2,\dots$ such that for each integer $d\neq 0$ there are exactly $2025$ distinct pairs of indices $(i,j)$ for which $a_i - a_j = d$?
+\end{problem}
+
+\subsection{Nivel II}
+\begin{problem}
+  %  [EGMO 2016/1]
+    Sean $n$ un entero positivo impar, y $x_1, \dots, x_n$ números reales no negativos. Muestra
+que
+\[ \min_{i=1,\ldots,n} (x_i^2+x_{i+1}^2) \leq \max_{j=1,\ldots,n} (2x_jx_{j+1}) \]
+donde $x_{n+1}= x_1$.
+    
+\end{problem}
+
+
+\begin{problem}
+   % [Ibero 2009/5]
+    
+    La sucesión $a_n$ está definida por $a_1 = 1$, $a_{2k} = 1 + a_k$ y $a_{2k+1} = \frac{1}{a_{2k}}$, para todo entero $k \geq 1$. \newline 
+Demostrar que todo número racional positivo aparece exactamente una vez en esta sucesión.
+
+    
+\end{problem}
+
+
+\begin{problem}
+    %[IMOSL 2013/A1]
+    Sea $n$ un entero positivo y sean $a_1, \ldots, a_{n-1} $ números reales arbitrarios. Definimos las sucesiones $u_0, \ldots, u_n $ y $v_0, \ldots, v_n $ inductivamente por $u_0 = u_1  = v_0 = v_1 = 1$, y $u_{k+1} = u_k + a_k u_{k-1}$, $v_{k+1} = v_k + a_{n-k} v_{k-1}$ para $k=1, \ldots, n-1.$
+
+Demuestra que $u_n = v_n.$
+\end{problem}
+
+
+\subsection{Nivel III}
+
+\begin{problem}
+
+  %  [IMO 2014/1]
+    
+    Sea $a_0 < a_1 < a_2 < \dots$ una sucesión infinita de números enteros positivos. Demostrar que existe un único entero $n \geq 1$ tal que
+\[a_n < \frac{a_0+a_1+a_2+\cdots+a_n}{n} \leq a_{n+1}.\]
+    
+\end{problem}
+
+
+\begin{problem}
+ %   [IMO SL 2006/A1]
+     Una sucesión de números reales $ a_{0},\ a_{1},\ a_{2},\dots$ se define por la fórmula
+\[ a_{i + 1} = \left\lfloor a_{i}\right\rfloor\cdot \left\langle a_{i}\right\rangle\qquad\text{para}\quad i\geq 0;
+\]aquí $a_0$ es un número real arbitrario, $\lfloor a_i\rfloor$ denota el mayor entero que no excede $a_i$, y $\left\langle a_i\right\rangle=a_i-\lfloor a_i\rfloor$. Muestra que $a_i=a_{i+2}$ para todo $i$ suficientemente grande.
+\end{problem}
+
+\begin{problem}
+%    [IMOSL 2014/A2]
+     Se define la función $f:(0,1)\to (0,1)$ por\[\displaystyle f(x) = \left\{ \begin{array}{lr} x+\frac 12 & \text{si}\ \  x < \frac 12\\ x^2 & \text{si}\ \  x \ge \frac 12 \end{array} \right.\]Sean $a$ y $b$ dos números reales tales que $0 < a < b < 1$. Se definen las secuencias $a_n$ y $b_n$ por $a_0 = a, b_0 = b$, y $a_n = f( a_{n -1})$, $b_n = f (b_{n -1} )$ para $n > 0$. Muestra que existe un entero positivo $n$ tal que \[(a_n - a_{n-1})(b_n-b_{n-1})<0.\]
+\end{problem}
+
+
+\begin{problem}
+ %   [IMO 2007/1]
+    Sean $ a_{1}$, $ a_{2}$, $ \ldots$, $ a_{n}$ números reales. Para cada $ i$, $ (1 \leq i \leq n )$, se define
+\[ d_{i} = \max \{ a_{j}\mid 1 \leq j \leq i \} - \min \{ a_{j}\mid i \leq j \leq n \}
+\]
+y sea $ d = \max \{d_{i}\mid 1 \leq i \leq n \}$.
+
+(a) Muestra que, para cualesquiera números reales $ x_{1}\leq x_{2}\leq \cdots \leq x_{n}$,
+\[ \max \{ |x_{i} - a_{i}| \mid 1 \leq i \leq n \}\geq \frac {d}{2}. \quad \quad (*)
+\]
+(b) Muestra que existen números reales $ x_{1}\leq x_{2}\leq \cdots \leq x_{n}$ tales que se da la igualdad en (*).
+\end{problem}
+
+
+\begin{problem}
+ %   [IMOSL 2022/A1]
+    Let $(a_n)_{n\geq 1}$ be a sequence of positive real numbers with the property that
+$$(a_{n+1})^2 + a_na_{n+2} \leq a_n + a_{n+2}$$for all positive integers $n$. Show that $a_{2022}\leq 1$.
+\end{problem}
+\begin{problem}
+  %  [EGMO 2015/4]
+    
+    Determina si existe una sucesión infinita $a_1, a_2, a_3, \dots$ de enteros positivos que satisface
+la igualdad
+
+\[a_{n+2}=a_{n+1}+\sqrt{a_{n+1}+a_{n}} \]
+
+para todo entero positivo $n$.
+    
+\end{problem}
+
+\begin{problem}
+  %  [Baltic Way 2025/2]
+    Let $a_1, a_2, \dots$ be a sequence of real numbers such that
+$$ \{a_n\}\lfloor {a_{n+1}} \rfloor = \lfloor{a_n} \rfloor \{a_{n+1}\} $$for each positive integer $n$.
+Prove that there is a real number $\lambda$ such that $\{a_m\}\lfloor{a_m} \rfloor = \lambda$ for infinitely many positive integers $m$.
+Remark: For a real number \(x\), \(\lfloor x \rfloor\) denotes the greatest integer that does not exceed \(x\), and ${\{x\}=x-\lfloor x \rfloor}$.
+\end{problem}
+
+\begin{problem}
+%    [EGMO 2022/3]
+    
+    Se dice que una sucesión infinita de enteros positivos $a_1, a_2, \dots$ es húngara si
+ \begin{itemize} 
+ \item  $a_1$ es un cuadrado perfecto, y
+ \item  para todo entero $n\ge 2$, $a_n$ es el menor entero positivo tal que \[na_1+(n-1)a_2+\dots+2a_{n-1}+a_n\]
+es un cuadrado perfecto.
+ \end{itemize} 
+Pruebe que si $a_1, a_2, \dots$ es una sucesión húngara, entonces existe un entero positivo $k$ tal que $a_n=a_k$ para todo entero $n\geq k$.
+    
+\end{problem}
+
+
+\subsection{Nivel IV}
+
+\begin{problem}
+ %   [IMO SL 2013/A4]
+    Sea $n$ un entero positivo, y considera la sucesión $a_1 , a_2 , \cdots , a_n $ de enteros positivos. Esta se extiende de forma periódica a $a_1 , a_2 , \cdots $ definiendo $a_{n+i} = a_i $ para cada $i \ge 1$. Si\[a_1 \le a_2 \le \cdots \le a_n \le a_1 +n  \]y \[a_{a_i } \le n+i-1 \quad\text{for}\quad i=1,2,\cdots, n, \]muestra que\[a_1 + \cdots +a_n \le n^2. \]
+\end{problem}
+
+\begin{problem}
+ %   [IMO SL 2018/A4]
+    Sea $a_0,a_1,a_2,\dots $ una sucesión de números reales tales que $a_0=0, a_1=1,$ y para cada $n\geq 2$ existe algún $1 \leq k \leq n$ que satisface\[ a_n=\frac{a_{n-1}+\dots + a_{n-k}}{k}. \]Encuentra el mayor valor posible de $a_{2018}-a_{2017}$.
+\end{problem}
+
+\begin{problem}
+   % [IMO SL 2023/A5]
+    Let $a_1,a_2,\dots,a_{2023}$ be positive integers such that
+$a_1,a_2,\dots,a_{2023}$ is a permutation of $1,2,\dots,2023$, and
+$|a_1-a_2|,|a_2-a_3|,\dots,|a_{2022}-a_{2023}|$ is a permutation of $1,2,\dots,2022$.
+Prove that $\max(a_1,a_{2023})\ge 507$.
+\end{problem}
+
+\begin{problem}
+ %   [IMO 2023/3]
+    For each integer $k\geq 2$, determine all infinite sequences of positive integers $a_1$, $a_2$, $\ldots$ for which there exists a polynomial $P$ of the form\[ P(x)=x^k+c_{k-1}x^{k-1}+\dots + c_1 x+c_0, \]where $c_0$, $c_1$, \dots, $c_{k-1}$ are non-negative integers, such that\[ P(a_n)=a_{n+1}a_{n+2}\cdots a_{n+k} \]for every integer $n\geq 1$
+\end{problem}
+
+
+
+\end{document}

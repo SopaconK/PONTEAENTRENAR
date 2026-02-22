@@ -1,0 +1,221 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{import}
+\usepackage[table]{xcolor}
+\usepackage{xfp}
+\usepackage{multicol}
+
+\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
+\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
+
+\definecolor{dcol0}{HTML}{C8E6C9}
+\definecolor{dcol1}{HTML}{D4E9B3}
+\definecolor{dcol2}{HTML}{E5ED9A}
+\definecolor{dcol3}{HTML}{FFF59D}
+\definecolor{dcol4}{HTML}{FFE082}
+\definecolor{dcol5}{HTML}{FFCC80}
+\definecolor{dcol6}{HTML}{FFAB91}
+\definecolor{dcol7}{HTML}{F49890}
+\definecolor{dcol8}{HTML}{E57373}
+\definecolor{dcol9}{HTML}{D32F2F}
+
+\makeatletter
+\newcommand{\getcolorname}[1]{dcol#1}
+\makeatother
+
+\newcommand{\dif}[1]{%
+    \edef\colorindex{\number\fpeval{floor(#1)}}%
+    \edef\fulltext{#1}%
+    \colorbox{\getcolorname{\colorindex}}{%
+        \ifnum\colorindex>8
+            \textbf{\textcolor{white}{\,\fulltext\,}}%
+        \else
+            \textbf{\textcolor{black}{\,\fulltext\,}}%
+        \fi
+    }%
+}
+% Variable para dificultad (inicial 0)
+\newcommand{\thmdifficulty}{0}
+
+% Comando para asignar dificultad antes del problema
+\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
+
+% Estilo del problema que incluye dificultad antes del título
+\declaretheoremstyle[
+    headfont=\color{blue!40!black}\normalfont\bfseries,
+    headformat={%
+      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
+    },
+    postheadspace=1em,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    bodyfont=\normalfont
+]{problemstyle}
+
+    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
+    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
+
+\definecolor{yellow4}{RGB}{255, 206, 0}
+
+
+\newcommand{\indicacion}[1]{\noindent\textit{\small #1}}
+
+
+
+\title {Problemas Diarios}
+\subtitle {Ponte a entrenar ps}
+
+\author{Emmanuel Buenrostro}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+
+Si entrenan IMC intenten los problemas de IMC, si no ¿pa que? (estos no vienen necesariamente en orden). \\
+
+De OMM vienen 2 problemas, el 2do suele estar algo más dificil (o eso intento). \\
+
+Los problemas que pongo usualmente no conozco la sol, pero si no les sale vemos como sale y si hay algo de teoria util pues lo vemos. \\
+
+Creo que lo ideal es que si estan en IMC intenten los 2 de IMC y el 1 de OMM, y si estan en OMM intenten los 2 de OMM. \\
+
+Aunque no se presionen hacer 2 problemas de OMM al dia es bastante y a veces los dias estan más saturados de lo normal (o lo normal es que esten muy saturados), y a veces los problemas estan muy dificiles, igual cualquier cosa pregunten este es todo el punto. \\
+
+Asumo que el plan podria hacer eventualmente checar soluciones, podriamos hacerlo por texto o hacerlo por llamada (aunque creo que estan muy saturados de llamadas, y yo de cetichamba).
+
+Las fuentes de los problemas se los pongo como 2 dias despues o asi 
+
+\newpage
+\section{Febrero}
+\subsection{16 de Febrero}
+\textbf{IMC: }
+\indicacion{Creo que lo ideal es que lo intenten como IMC (tratar de sacarlo lo más rapido posible, los que digan que solo respuesta pueden asumir cosas que no demuestran pero confian en que son verdad (aunque despues si pruebenlo bien pues))}
+\begin{problem} [Justificacion] %IMC 2001/13
+    Sean $a,b$ dos reales positivos diferentes, sea $A=\frac{a+b}{2}$ y $G=\sqrt{ab}$. Prueba la siguiente desigualdad:
+    \[G < \frac{(a-b)^2}{8(A-G)}<A\]
+\end{problem}
+
+\begin{problem}  [Solo Respuesta] %IMC 2005/10
+    Sea $a=9 \left[ n\left( \frac{10}{9}\right)^n-1-\left( \frac{10}{9}\right)-\left( \frac{10}{9}\right)^2-\ldots-\left( \frac{10}{9}\right)^{n-1}\right]$, donde $n$ es un entero positivo. Si $a$ es un entero, determina el maximo valor de $a$.
+\end{problem}
+
+\textbf{OMM:}
+\begin{problem} %[OMM 2017/1]
+    
+    En un tablero de ajedrez de $2017 \times 2017$, se han colocado en la primera columna $2017$
+caballos de ajedrez, uno en cada casilla de la columna. Una tirada consiste en elegir dos
+caballos distintos y de manera simulátnea moverlos como se mueven los caballos de ajedrez.
+Encuentra todos los posibles valores enteros de $k$ con $1 \leq k \leq 2017$, para los cuales es
+posible llegar a través de varias tiradas, a que todos los caballos están en la columna $k$, uno
+en cada casilla.
+Nota. Un caballo se mueve de una casilla $X$ a otra $Y$, solamente si $X$ y $Y$ son las esquinas
+opuestas de un rectángulo de $3 \times 2$ o de $2 \times 3$.
+    
+\end{problem}
+
+\begin{problem} %[IMOSL 2019 C2]
+    Se te da un conjunto de $n$ bloques, cada uno con peso al menos $1$; su peso total es $2n$. Demuestra que para todo número real $r$ con $0 \leq r \leq 2n - 2$, puedes elegir un subconjunto de los bloques cuyo peso total sea al menos $r$ pero a lo más $r + 2$.
+\end{problem}
+\begin{remark*}
+    Lo traduci con GPT porque me dio flojera, aqui esta en ingles por si GPT tradujo mal:
+    \begin{problem*}
+    You are given a set of $n$ blocks, each weighing at least $1$; their total weight is $2n$. Prove that for every real number $r$ with $0 \leq r \leq 2n-2$ you can choose a subset of the blocks whose total weight is at least $r$ but at most $r + 2$.
+    \end{problem*}
+\end{remark*}
+
+
+\newpage
+\subsection{17 de Febrero}
+\textbf{IMC:}
+\begin{problem} %IMC 2018/2
+    Sean $m,n$ enteros positivos tales que $m(n-m)=-11n+8$. Encuentra la suma de todos los posibles valores de $m-n$.
+\end{problem}
+
+\begin{problem} %IMC 2006/8
+    El cuadrado $ABCD$ tiene lado $2$. $E$ y $F$ son los puntos medios de $AB,AD$ respectivamente. $G$ es un punto en $CF$ tal que $3CG=2GF$. Determina el area de $BEG$.
+\end{problem}
+
+\textbf{OMM:}
+\begin{problem} %[OMCC 1999/1]
+    
+    Se supone que $5$ personas conocen, cada una, informaciones parciales diferentes sobre cierto asunto. Cada vez que la persona $A$ llama a la persona $B$, $A$ le da a $B$ toda la información que conoce en ese momento sobre el asunto, mientras que $B$ no le dice nada de él. ¿Cuál es el mínimo número de llamadas necesarias para que todos lo sepan todo sobre el asunto? ¿Cuántas llamadas son necesarias si son $n$ personas?
+\end{problem}
+
+\begin{problem} %[APMO 2023/2]
+    Find all integers $n$ satisfying $n \geq 2$ and $\dfrac{\sigma(n)}{p(n)-1} = n$, in which $\sigma(n)$ denotes the sum of all positive divisors of $n$, and $p(n)$ denotes the largest prime divisor of $n$.
+\end{problem}
+
+\newpage
+\subsection{18 de Febrero }
+
+\textbf{IMC:}
+\begin{problem} %[IMC 2016/9]
+    Tres lineas paralelas $L_1, L_2$ y $L_3$ son tales que $L_1$ esta 1 cm arriba de $L_2$ y $L_3$ esta dos centimetros abajo de $L_2$. Un triangulo isosceles recto tiene uno de sus vertices en cada linea. ¿Cuál es la suma, en $\text{cm}^2$, de todos los posibles valores para el área de este triangulo?.
+\end{problem}
+
+\begin{problem} %[IMC 2014/6]
+    Si $x,y,z$ son tres enteros positivos consecutivos tales que $\frac xy+\frac yz+\frac zx +\frac yx+\frac xz+\frac zy$ es un entero. ¿Cuál es el valor de $x+y+z$?.
+\end{problem}
+
+\textbf{OMM:}
+\begin{problem} %[OMCC 2009/5]
+    
+    Dado un triángulo agudo y escaleno $ ABC$, sea $ H$ su ortocentro, $ O$ su circuncentro, $ E$ y $ F$ los pies de las altitudes trazadas desde $ B$ y $ C$, respectivamente. La recta $ AO$ vuelve a cortar la circunferencia del triángulo en el punto $ G$ y los segmentos $ FE$ y $ BC$ en los puntos $ X$ e $ Y$ respectivamente. Sea $ Z$ el punto de intersección de la recta $ AH$ y la recta tangente a la circunferencia en $ G$. Demostrar que $ HX$ es paralela a $ YZ$.
+\end{problem}
+
+\begin{problem} %[IMO SL 2009/G2]
+    	Let $ABCD$ be a cyclic quadrilateral whose diagonals $AC$ and $BD$ meet at $E$. The extensions of the sides $AD$ and $BC$ beyond $A$ and $B$ meet at $F$. Let $G$ be the point such that $ECGD$ is a parallelogram, and let $H$ be the image of $E$ under reflection in $AD$. Prove that $D,H,F,G$ are concyclic.
+\end{problem}
+
+\newpage 
+
+\subsection{19 de Febrero}
+\textbf{IMC: }
+\begin{problem} %[IMC 2006/4]
+    El profe dijo, "Yo tengo dos números $a$ y $b$ que cumplen $a+b-ab=1$. Si te digo que $a$ no es un entero, ¿Qué puedes afirmar sobre $b$?". Alex dijo "Entonces $b$ tampoco es un entero". Brian dijo, "No, Yo pienso que $b$ debe ser algun entero positivo". Colin dijo,"No yo creo que $b$ debe ser algun entero negativo". ¿Quién tiene la razon? 
+\end{problem}
+
+\begin{problem} %[IMC 2006/2]
+    El segmento $AB$ tiene longitud 5. En un plano que contiene a $AB$, ¿cuantas rectas estan a distancia $2$ de $A$ y $3$ de $B$?
+\end{problem}
+
+\textbf{OMM:}
+\begin{problem} %[ORO 2016/6]
+    The vertices of a regular polygon with $2016$ sides are colored gold or silver. Prove that there are at least $512$ different isosceles triangles whose vertices have the same color.
+\end{problem}
+
+\begin{problem} %[IMO SL 2010/G1]
+    Let $ABC$ be an acute triangle with $D, E, F$ the feet of the altitudes lying on $BC, CA, AB$ respectively. One of the intersection points of the line $EF$ and the circumcircle is $P.$ The lines $BP$ and $DF$ meet at point $Q.$ Prove that $AP = AQ.$
+\end{problem}
+
+\newpage
+\subsection{20 de Febrero}
+\textbf{IMC:}
+\begin{problem} %[IMC 2024/8]
+    En la imagen hay 14 puntos en un circulo. ¿De cuántas formas se puede dibujar 7 cuerdas que no se intersequen? (Dos cuerdas no pueden tener extremos en común).
+    \begin{center}
+        \includegraphics{24IMC8.png}
+    \end{center}
+\end{problem}
+
+\begin{problem} %[IMC 2014/11]
+    Considera todos los enteros positivos menores a 10000000000 en los cuales todos los digitos son 0 o 2. ¿Cuál es el total de 0s entre todos sus digitos?. 
+\end{problem}
+
+\textbf{OMM:}
+\begin{problem} %[OMCC 2008/1]
+    
+    Encontrar el menor número entero positivo $ N$ tal que la suma de sus dígitos sea 100 y la suma de los dígitos de $ 2N$ sea 110.
+\end{problem}
+
+\begin{problem} %[OMCC 2016/6]
+    
+    Sea $\triangle ABC$ un triángulo con incentro $I$ y circuncírculo $\Gamma$. Sean $M=BI\cap \Gamma$ y $N=CI\cap \Gamma$, la recta paralela a $MN$ por $I$ corta a $AB$, $AC$ en $P$ y $Q$. Demostrar que el circunradio de $\odot (BNP)$ y $\odot (CMQ)$ son iguales.
+
+    
+\end{problem}
+
+\end{document}
