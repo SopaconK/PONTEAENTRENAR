@@ -1,65 +1,5 @@
 \documentclass[11pt]{scrartcl}
-
-\usepackage[sexy]{evan}
-\usepackage{import}
-\usepackage[table]{xcolor}
-\usepackage{xfp}
-\usepackage{multicol}
-
-\newcommand{\gad}{\textcolor{yellow}{$\bigstar$}}
-\newcommand{\bad}{\textcolor{red}{$\bigstar$}}
-
-\definecolor{dcol0}{HTML}{C8E6C9}
-\definecolor{dcol1}{HTML}{D4E9B3}
-\definecolor{dcol2}{HTML}{E5ED9A}
-\definecolor{dcol3}{HTML}{FFF59D}
-\definecolor{dcol4}{HTML}{FFE082}
-\definecolor{dcol5}{HTML}{FFCC80}
-\definecolor{dcol6}{HTML}{FFAB91}
-\definecolor{dcol7}{HTML}{F49890}
-\definecolor{dcol8}{HTML}{E57373}
-\definecolor{dcol9}{HTML}{D32F2F}
-
-\makeatletter
-\newcommand{\getcolorname}[1]{dcol#1}
-\makeatother
-
-\newcommand{\dif}[1]{%
-    \edef\colorindex{\number\fpeval{floor(#1)}}%
-    \edef\fulltext{#1}%
-    \colorbox{\getcolorname{\colorindex}}{%
-        \ifnum\colorindex>8
-            \textbf{\textcolor{white}{\,\fulltext\,}}%
-        \else
-            \textbf{\textcolor{black}{\,\fulltext\,}}%
-        \fi
-    }%
-}
-% Variable para dificultad (inicial 0)
-\newcommand{\thmdifficulty}{0}
-
-% Comando para asignar dificultad antes del problema
-\newcommand{\problemdiff}[1]{\renewcommand{\thmdifficulty}{#1}}
-
-% Estilo del problema que incluye dificultad antes del título
-\declaretheoremstyle[
-    headfont=\color{blue!40!black}\normalfont\bfseries,
-    headformat={%
-      \dif{\thmdifficulty}\quad \NAME~\NUMBER\ifx\relax\EMPTY\relax\else\ \NOTE\fi
-    },
-    postheadspace=1em,
-    spaceabove=8pt,
-    spacebelow=8pt,
-    bodyfont=\normalfont
-]{problemstyle}
-
-    \declaretheorem[style=problemstyle,name=Problema,sibling=theorem]{problema}
-    \declaretheorem[style=problemstyle,name=Problema,numbered=no]{problema*}
-
-\definecolor{yellow4}{RGB}{255, 206, 0}
-
-
-\newcommand{\indicacion}[1]{\noindent\textit{\small #1}}
+\usepackage{ebb}
 
 
 
@@ -93,17 +33,20 @@ Las fuentes de los problemas se los pongo como 2 dias despues o asi
 \subsection{16 de Febrero}
 \textbf{IMC: }
 \indicacion{Creo que lo ideal es que lo intenten como IMC (tratar de sacarlo lo más rapido posible, los que digan que solo respuesta pueden asumir cosas que no demuestran pero confian en que son verdad (aunque despues si pruebenlo bien pues))}
-\begin{problem} [Justificacion] %IMC 2001/13
+\begin{problem} [IMC 2001/13]
     Sean $a,b$ dos reales positivos diferentes, sea $A=\frac{a+b}{2}$ y $G=\sqrt{ab}$. Prueba la siguiente desigualdad:
     \[G < \frac{(a-b)^2}{8(A-G)}<A\]
 \end{problem}
 
-\begin{problem}  [Solo Respuesta] %IMC 2005/10
+\begin{problem}  [IMC 2005/10]
     Sea $a=9 \left[ n\left( \frac{10}{9}\right)^n-1-\left( \frac{10}{9}\right)-\left( \frac{10}{9}\right)^2-\ldots-\left( \frac{10}{9}\right)^{n-1}\right]$, donde $n$ es un entero positivo. Si $a$ es un entero, determina el maximo valor de $a$.
 \end{problem}
 
 \textbf{OMM:}
-\begin{problem} %[OMM 2017/1]
+
+\problemdiff{4}
+\problemtags{Combi, Invarianza, Coloraciones}
+\begin{problem} [OMM 2017/1]
     
     En un tablero de ajedrez de $2017 \times 2017$, se han colocado en la primera columna $2017$
 caballos de ajedrez, uno en cada casilla de la columna. Una tirada consiste en elegir dos
@@ -116,7 +59,7 @@ opuestas de un rectángulo de $3 \times 2$ o de $2 \times 3$.
     
 \end{problem}
 
-\begin{problem} %[IMOSL 2019 C2]
+\begin{problem} [IMOSL 2019 C2]
     Se te da un conjunto de $n$ bloques, cada uno con peso al menos $1$; su peso total es $2n$. Demuestra que para todo número real $r$ con $0 \leq r \leq 2n - 2$, puedes elegir un subconjunto de los bloques cuyo peso total sea al menos $r$ pero a lo más $r + 2$.
 \end{problem}
 \begin{remark*}
@@ -130,21 +73,21 @@ opuestas de un rectángulo de $3 \times 2$ o de $2 \times 3$.
 \newpage
 \subsection{17 de Febrero}
 \textbf{IMC:}
-\begin{problem} %IMC 2018/2
+\begin{problem} [IMC 2018/2]
     Sean $m,n$ enteros positivos tales que $m(n-m)=-11n+8$. Encuentra la suma de todos los posibles valores de $m-n$.
 \end{problem}
 
-\begin{problem} %IMC 2006/8
+\begin{problem} [IMC 2006/8]
     El cuadrado $ABCD$ tiene lado $2$. $E$ y $F$ son los puntos medios de $AB,AD$ respectivamente. $G$ es un punto en $CF$ tal que $3CG=2GF$. Determina el area de $BEG$.
 \end{problem}
 
 \textbf{OMM:}
-\begin{problem} %[OMCC 1999/1]
+\begin{problem} [OMCC 1999/1]
     
     Se supone que $5$ personas conocen, cada una, informaciones parciales diferentes sobre cierto asunto. Cada vez que la persona $A$ llama a la persona $B$, $A$ le da a $B$ toda la información que conoce en ese momento sobre el asunto, mientras que $B$ no le dice nada de él. ¿Cuál es el mínimo número de llamadas necesarias para que todos lo sepan todo sobre el asunto? ¿Cuántas llamadas son necesarias si son $n$ personas?
 \end{problem}
 
-\begin{problem} %[APMO 2023/2]
+\begin{problem} [APMO 2023/2]
     Find all integers $n$ satisfying $n \geq 2$ and $\dfrac{\sigma(n)}{p(n)-1} = n$, in which $\sigma(n)$ denotes the sum of all positive divisors of $n$, and $p(n)$ denotes the largest prime divisor of $n$.
 \end{problem}
 
@@ -214,8 +157,57 @@ opuestas de un rectángulo de $3 \times 2$ o de $2 \times 3$.
 \begin{problem} %[OMCC 2016/6]
     
     Sea $\triangle ABC$ un triángulo con incentro $I$ y circuncírculo $\Gamma$. Sean $M=BI\cap \Gamma$ y $N=CI\cap \Gamma$, la recta paralela a $MN$ por $I$ corta a $AB$, $AC$ en $P$ y $Q$. Demostrar que el circunradio de $\odot (BNP)$ y $\odot (CMQ)$ son iguales.
+\end{problem}
+
+\newpage
+\subsection{23 de Febrero}
+\textbf{IMC:}
+
+\begin{problem} %[IMC 2002/3]
+    Para encontrar el valor de $x^8$ dado $x$ necesitas 3 operaciones aritmeticas: $x^2=x \cdot x$, $x^4=x^2\cdot x^2$, y $x^8=x^4\cdot x^4$. Para encontrar $x^{15}$ ocupas cinco operaciones: las primeras 3 son las mismas que en el anterior, luego $x^{16}=x^8 \cdot x^8$ y $x^{15}=x^{16}\div x$. ¿Cuál es el minimo de operaciones aritmeticas que ocupas para encontrar el valor de $x^{1000}$.
+\end{problem}
+
+\begin{problem} %[IMC 2006/9]
+    Determina el valor de $x+y$ donde $x, y$ son números reales que cumplen 
+    \[(2x+1)^2+y^2+(y-2x)^2 =\frac 13\]
+\end{problem}
+
+\textbf{OMM:}
+\begin{problem} %[OMCC 2014/5]
+    Points $A$, $B$, $C$ and $D$ are chosen on a line in that order, with $AB$ and $CD$ greater than $BC$. Equilateral triangles $APB$, $BCQ$ and $CDR$ are constructed so that $P$, $Q$ and $R$ are on the same side with respect to $AD$. If $\angle PQR=120^\circ$, show that
+
+\[\frac{1}{AB}+\frac{1}{CD}=\frac{1}{BC}.\]
+\end{problem}
+
+\begin{problem} %[OMCC 2018/6]
+    
+    En La Habana se realiza un baile con $2018$ parejas. Para el baile, se dispone de una circunferencia donde inicialmente se marcan $2018$ puntos distintos, etiquetados con los números $0,1,\ldots,2017$. Las parejas son ubicadas sobre los puntos marcados, una en cada punto. Para $i\ge1$, se define $s_i$ como el residuo de dividir $i$ entre $2018$ y $r_i$ como el residuo de dividir $2i$ entre $2018$. El baile comienza en el minuto $0$. En el $i-$ésimo minuto después de haber inciado el baile, la pareja ubicada en el punto $s_i$ (si la hay) se mueve al punto $r_i$, la pareja que ocupaba el punto $r_i$ (si la hay) se retira, y el baile continúa con las parejas restantes. El baile termina después de $2018^2$ minutos. Determine cuantas parejas quedarán al terminar el baile.
 
     
 \end{problem}
 
+\newpage
+\subsection{24 de Febrero }
+
+\textbf{IMC:}
+\begin{problem} %[IMC 2013/11]
+    Los enteros positivos $a<b$ son tales que $\frac{a+b}{2}$ y $\sqrt{ab}$ son enteros positivos que consisten de los mismos dos digitos en orden inverso. ¿Cuál es el minimo valor posible de $a$? 
+\end{problem}
+
+\begin{problem} %[IMC 2007/3]
+    En un triangulo $ABC$, $E$ es un punto en $AC$ y $F$ es un punto en $AB$. $BE$ y $CF$ se intersecan en $D$. Si las áreas de los triangulos $BDF,BCD$ y $CDE$ son $3,7$ y 7 respectivamente, ¿Cuál es el área de el cuadrilatero $AEDF$?
+\end{problem}
+
+\textbf{OMM:}
+\begin{problem} %[OMM 2012/4]
+    
+    A cada entero positivo se le aplica el siguiente proceso: al número se le resta la suma de sus dígitos, y el resultado se divide entre $9$. Por ejemplo, el proceso aplicado al $938$ es $102$, ya que  $\frac{938-(9+3+8)}{9}=102$. Aplicado dos veces el proceso a $938$ se llega a $11$, aplicado tres veces se llega a $1$, y aplicado cuatro veces se llega al $0$. Cuando a un entero positivo $n$ se le aplica el proceso una o varias veces, se termina en $0$. Al número al que se llega antes de llegar al cero, lo llamamos la casa de $n$. ¿ Cuántos
+números menores que $26000$ tienen la misma casa que el $2012$?
+    
+\end{problem}
+
+\begin{problem} %[MEX TST 2024/5/2]
+    Sean $x,y,z$ números reales positivos tales que $x+y+z=1$. Muestra que
+    \[\sum_{\text{cyc}}\frac{x^2-yz}{x^2+x} \leq 0\]
+\end{problem}
 \end{document}

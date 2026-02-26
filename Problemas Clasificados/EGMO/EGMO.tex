@@ -1,0 +1,66 @@
+\documentclass[11pt]{scrartcl}
+\usepackage{ebb}
+
+
+
+\title {Problemas de EGMO}
+\subtitle {Ponte a entrenar ps}
+
+\author{Emmanuel Buenrostro}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{EGMO 2025}
+\problemdiff{4}
+\problemqual{4}
+\problemtags{Algoritmo Euclides}
+\begin{problema} [EGMO 2025/1]
+    Para un entero positivo $N$, sean $c_1 < c_2 <\ldots < c_m$ todos los enteros positivos menores que $N$, que son coprimos con $N$. Encuentre todos los $N \geq 3$ tales que 
+    \[\text{mcd} (N, c_i+c_{i+1}) \neq 1\] 
+\end{problema}
+
+\problemdiff{5}
+\problemqual{4}
+\problemtags{Manipulación Algebraica, Sucesiones}
+\begin{problema} [EGMO 2025/2]
+    Una sucesión infinita y creciente $a_1 < a_2 < a_3 < \ldots$ de enteros positivos se llama \textit{central} si, para todo entero positivo $n$, la media aritmética de los primeros $a_n$ términos de la sucesión es igual a $a_n$. 
+    
+    Demuestre que existe una sucesión infinita $b_1, b_2, b_3, \ldots$ de enteros positivos tal que, para toda sucesión central $a_1, a_2, a_3, \ldots$, hay infinitos enteros positivos $n$ con $a_n=b_n$.
+\end{problema}
+
+\problemdiff{5}
+\problemqual{5}
+\problemtags{Angle Chasing }
+\begin{problema} [EGMO 2025/3]
+    Sea $ABC$ un triángulo acutángulo. Tomamos punto $D$ y $E$ de manera que $B,D,E,$ y $C$ están sobre una recta (en ese orden) y tales que $BD=DE=EC$. Supongamos que el triángulo $ADE$ es acutángulo y sea $H$ su ortocentro. Sean $M$ y $N$ los puntos medios de los segmentos $AD$ y $AE$ respectivamente. Sean $P$ y $Q$ puntos en la recta $BM$ y $CN$ respectivamente, tales que $D,H,M$ y $P$ son todos distintos entre sí y concíclicos. Demuestre que $P,Q,N$ y $M$ también son concíclicos. 
+\end{problema}
+
+\newpage
+
+\problemdiff{4}
+\problemqual{4}
+\problemtags{Rotohomotecia}
+\begin{problema} [EGMO 2025/4]
+    Sea $ABC$ un triángulo acutángulo con $AB\neq AC$. Sea $I$ su incentro. Las rectas $BI$ y $CI$ intersecan a la circunferencia circunscrita de $ABC$ en $P\neq B$ y en $Q\neq C$ respectivamente. Se toman puntos $R$ y $S$ tales que $AQRB$ y $ACSP$ son paralelogramos (con $AQ \| RB, AB \| QR, AC \| SP$, y $AP \| CS$). Sea $T$ el punto de intersección de las rectas $RB$ y $SC$. Demuestre que los puntos $R,S,T$ y $I$ están sobre una misma circunferencia.
+\end{problema}
+
+\problemdiff{6}
+\problemqual{4}
+\problemtags{Optimizacion}
+\begin{problema} [EGMO 2025/5]
+    Sea $n>1$ un entero. Una \textit{configuración} de un tablero de tamaño $n \times n$ consiste en colocar, en cada una de las $n^2$ casillas del tablero, una flecha que puede apuntar hacia arriba, abajo, la derecha o izquierda. Dada una configuración inicial, el caracol Turbo empieza en una de las casillas del tablero y se mueve de casilla en casilla. En cada movimiento, Turbo se mueve una casilla (posiblemente dejando el tablero) en la direccion indicada por la flecha de la casilla donde está. Después de cada movimiento, las flechas de todas las casillas giran $90^{\circ}$ en sentido antihorario. Decimos que una casilla es \textit{buena} si, al empezar en dicha casilla, Turbo visita exactamente una vez cada casilla del tablero (sin dejarlo), terminando en la casilla donde empezó. Determine, en términos de $n$, el mayor valor posible del número de casillas buenas de las configuraciones iniciales del tablero.
+\end{problema}
+
+\problemdiff{7}
+\problemqual{4}
+\problemtags{Desigualdades, Desigualdades Escondidas}
+\begin{problema} [EGMO 2025/6]
+    En cada casilla de un tablero de tamaño $2025 \times 2025$, se escribe un número real no negativo de manera que la suma de los números en cada una de sus filas es 1, y la suma de los números en cada una de sus columnas es 1. Para cada $i$, denotemos por $r_i$ al mayor de los números de las casillas de la fila $i$, y por $c_i$ al mayor de los números de las casillas de la columna $i$. Sean $R=r_1+r_2+\ldots+r_{2025}$ y $C=c_1+c_2+\ldots+c_{2025}$. ¿Cuál es el mayor valor posible de $\frac RC$?.
+\end{problema}
+
+
+
+
+\end{document}
