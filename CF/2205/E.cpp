@@ -24,7 +24,7 @@
             for(lli j=i; j>=0; --j){
                 vector<lli> v2;
                 for(lli x=j; x<=i; ++x) v2.pb(v[x]);
-            
+                
                 ans+=(mp[v2]*powtwo[n-1-i])%MOD;
                 ans%=MOD;
                 mp[v2]+=powtwo[i];
